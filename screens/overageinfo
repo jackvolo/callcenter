@@ -1,0 +1,12 @@
+title: Overage info
+buttons: conclude: Do nothing
+
+<p>Our connection speed is based on the amount of data you've transferred in the past 24 hours, versus the amount you have purchased.  Your allocation, the amount you have purchased, is on the second line of that page: <strong>%LIMIT megabytes</strong>. As you can see from the graph, the amount you've used over the last 24 hours (the blue line) has exceeded the amount that you pay for (the green line).  The cost for a higher limit is &#36;10 a month for each additional 250 megabytes.</p>
+
+<p>You can also give yourself a temporary increase by clicking the "Use a temporary upgrade" link at <span class="url">volo.net/usage</span></p>
+
+<h4>Last 24 hours</h4>
+%GRAPH
+
+<h4>Dates of bumps</h4>
+%BUMPS

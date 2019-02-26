@@ -1,0 +1,23 @@
+title: Reset the Volo equipment
+requires: firstname?+lastname+phone+company?+serviceaddress+aptunit+servicezip|phone+ip
+buttons: robot: Test connection
+
+<script type="text/javascript">
+    $('dl.voloreset dd').hide();
+    $('dl.voloreset dt').wrapInner('<a href="#"></a>');
+    $('dl.voloreset dt a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        return(false);
+    });
+</script>
+<p>The box should will have a black cord coming out of it, going to a power outlet. Unplug that cord for 10 seconds, and tell me when you've plugged it back in.</p>
+
+<dl class="voloreset">
+<dt>Show image</dt>
+<dd><img src="images/poe.png"></dd>
+</dl>
+
+<p class="dont-say">Once they've plugged it back in click "Test connection". This test automatically waits 40 seconds before testing.</p>

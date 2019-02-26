@@ -1,0 +1,18 @@
+title: Outgoing email settings
+buttons: conclude: Yes, problememailticket: No
+
+<p>Okay, we need to make sure your outgoing email settings are correct.</p>
+
+<ol>
+    <li>The server name for outgoing mail is <b>volomail.net</b>. Sometimes this will just be called "SMTP server".</li>
+    <li>The port number is <b>587</b>, but if you're off the Volo network, you might need to try 925, 25525, or 55525.</li>
+    <li>The outgoing server requires authentication. This may show up under a button or tab labeled "advanced" or "more settings".</li>
+    <li>You may need to enter your email account name again for authentication.</li>
+</ol>
+
+<p>Can you try sending an email now?</p>
+
+<p class="dont-say">Wait for the caller to try it out...</p>
+
+<p>Did that fix the problem?</p>
+

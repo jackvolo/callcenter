@@ -1,0 +1,7 @@
+title: Cancel Service
+requires: service+deactivated+message?+retrieve?+cancelagain?
+buttons: robot: Continue
+
+<p>When would you like the service to end? Can you tell me why you're cancelling service?</p>
+<p class="dont-say">Use the message field to record the reason why the customer is cancelling.</p>
+<p class="dont-say">Change retrieve to "yes" if you are cancelling STDSRV, or any WRLS service.</p>

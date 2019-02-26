@@ -1,0 +1,10 @@
+title: No Services
+buttons: problemaccountticket
+
+<p>No active services were found for this customer number or address.</p>
+
+%MESSAGE
+
+<p class="dont-say">You can click "<a href="#" class="foo">go back</a>" and try again,
+or continue and file a ticket with the customer's question.</p>
+

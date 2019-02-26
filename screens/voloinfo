@@ -1,0 +1,21 @@
+title: About Volo
+buttons: potentialinstall: Yes, conclude: No
+
+<script type="text/javascript">
+    $('div.screen-voloinfo dd').hide();
+    $('div.screen-voloinfo dt').wrapInner('<a href="#"></a>');
+    $('div.screen-voloinfo dt a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        return(false);
+    });
+</script>
+
+[screen:volospiel]
+
+[screen:volofaq]
+
+<p><strong>Are you interested in getting Volo Broadband?</strong></p>
+

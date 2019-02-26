@@ -1,0 +1,40 @@
+title: Potential Customer
+buttons: robot: File Ticket
+requires: firstname+lastname+serviceaddress+aptunit+servicezip+phone+email?+referredby?+message?+operator
+
+<p>Check coverage area by looking at the <a class='coverage' href="https://volo.net/coverage-map" target="_blank">coverage map</a>.</p>
+
+<p class="dont-say">Find the address on the coverage map and then read the appropriate section from below.</p>
+
+<p class="dont-say">Backbone Fiber is generally not for residential customers and has install costs in the thousands. For apartment buildings in this area, let residents know it's not on our schedule to install this year, and that schedule is already set.</p>
+
+<dl>
+<dt category='wireless' class="menu">Wireless Services</dt>
+<dd class='menu'>[screen:wirelessfaq]</dd>
+<dt category='fiber' class='menu'>Fiber Services</dt>
+<dd class='menu'>[screen:fiberfaq]</dd>
+<dt category='other' class="menu">Other Questions</dt>
+<dd class='menu'>[screen:otherfaq]</dd>
+</dl>
+
+<p class="dont-say">If the customer gives an address that is an apartment inform them that they will need their landlord's permission for us to do an install. This involves an antenna on the roof for wireless, and similar installation as comcast with fiber.</p>
+
+<script type="text/javascript">
+    $('div.screen-potentialinstall dd.menu').hide();
+    $('div.screen-potentialinstall dt.menu').wrapInner('<a href="#"></a>');
+    $('div.screen-potentialinstall dt.menu a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        return(false);
+    });
+
+    function addressLink() {
+        $address = $('#serviceaddress').val() + "+" + $('#servicezip').val();
+        $('div.screen-potentialinstall a.coverage').attr("href", "https://volo.net/coverage-map?address="+$address);
+    }
+
+    $('#serviceaddress').change(addressLink());
+    $('#servicezip').change(addressLink());
+</script>

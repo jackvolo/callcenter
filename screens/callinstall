@@ -1,0 +1,13 @@
+title: Forward to sales rep
+buttons: robot: No one answered, conclude
+
+<p class="dont-say">Forward the call to Ray at ext 709</p>
+
+<p class="dont-say ticket-tell">Please tell him this is regarding ticket
+<strong class="ticket-tell-number">_</strong>.</p>
+
+<script type="text/javascript">
+    if($('#v-ticket').val()) $('.ticket-tell-number').html($('#v-ticket').val());
+    else $('p.ticket-tell').hide();
+</script>
+

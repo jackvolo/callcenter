@@ -1,0 +1,19 @@
+title: File a ticket
+buttons: robot: File ticket, conclude: Abandon ticket
+requires: firstname?+lastname+username?+customer?+serviceaddress+aptunit+servicezip+switchip+phone+problem?+urgency+operator
+
+<p>The test showed that we have an unresponsive switch. Please hold while I contact a technician.</p>
+
+<p class="dont-say">Please send the following message to chat: "There is an unresponsive switch at <span id="switchdown-serviceaddress">_</span> with IP <span class="switchdown-switchip">_</span>. Is anyone available to work on this?" Wait 60 seconds and if there's no reply call one of the tech admins:</p>
+
+<p class="dont-say">During business hours call these people in order to find out what to do: Thomas: 217-840-0736, Tony: 217-898-8669, Peter: 217-721-3893. Relay what they say to the customer and write it in the problem box.</p> 
+
+<p class="dont-say">After hours use this order: Tony, Peter, Thomas</p>
+
+<script type="text/javascript">
+    if($('#v-switchip').val()) $('#switchdown-switchip').html($('#v-switchip').val());
+    else $('#switchdown-switchip').hide();
+    if($('#v-serviceaddress').val()) $('#switchdown-serviceaddress').html($('#v-serviceaddress').val());
+    else $('#switchdown-serviceaddress').hide();
+</script>
+

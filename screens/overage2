@@ -1,0 +1,7 @@
+title: Second overage
+buttons: overage1: Info about overages, bwupgrade: Purchase upgrade, bwtempup: Free temporary upgrade, conclude: Do nothing
+
+<p>OK, it looks like you're over your allocation again.  Do you know that you can track your usage at <span class="url">volo.net/usage</span>?  This is only the second time you've had a problem. I'd be happy to increase your allocation temporarily, or if you find think you're going to download this much on a regular basis, I can increase your allocation permanently.  The cost for a higher limit is &#36;10 a month for each additional 250 megabytes.</p>
+
+<h4>More overage info</h4>
+[screen:overageinfo]

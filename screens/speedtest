@@ -1,0 +1,9 @@
+title: Speedtest
+requires: pingtime+speedtestdown+speedtestup
+buttons: conclude: Good, problemslowticket: Slow
+
+<p>Lets do a test to see what speed your service is running at right now.</p>
+<p>Please go to <strong>speedtest.net</strong> in your browser. Click "go" or "begin test", don't click on "start" that's an ad.</p>
+<p>You will get 3 numbers, ping, download, and upload. Please report them as the tests finish.</p>
+
+%MESSAGE

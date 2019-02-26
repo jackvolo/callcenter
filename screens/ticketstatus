@@ -1,0 +1,8 @@
+title: Ticket status
+buttons: conclude: Conclude, schedule: Schedule Tech Visit, ticketcomment: Comment, calltech: Get Status, findtickets: Find a different ticket
+
+<p>Here is the latest information on your ticket:</p>
+
+<h4>Title: %TICKETNAME</h4>
+
+%COMMENTS

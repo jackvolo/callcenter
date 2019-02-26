@@ -1,0 +1,4 @@
+title: Problem sending email
+buttons: problememailsend_outlook: Outlook, problememailsend_oe: Outlook Express, problememailsend_tb: Thunderbird, problememailsend_generic: Other (generic instructions)
+
+<p>Let's check that you've got your email software set up correctly. Are you using Outlook, Outlook Express, Thunderbird, or another program?</p>

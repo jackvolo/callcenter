@@ -1,0 +1,11 @@
+title: Look up tickets
+requires: phone+firstname?+lastname?+serviceaddress?+servicezip?
+buttons: robot: Find tickets
+
+Let me try to find your ticket.
+
+<script type="text/javascript">
+    $(function() {
+        $('#v-ticket').val('');
+    });
+</script>

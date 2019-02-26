@@ -1,0 +1,5 @@
+title: File a ticket
+buttons: robot: File ticket, conclude: Abandon ticket
+requires: firstname+lastname+company?+username?+customer?+serviceaddress+aptunit+servicezip+phone+problem?+urgency+ip?+googleloadtime?+operator
+
+<p>We believe this is a problem with your equipment, but to be safe, I am going to file a ticket for a technician to look into your problem sometime within the next business day. Please wait for a moment, and I'll have a ticket number for you and will be able to schedule a technician visit.</p>

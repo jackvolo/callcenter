@@ -1,0 +1,10 @@
+title: Potential Customer/New Customer Info
+buttons: robot: Look up services
+requires: firstname?+lastname?+serviceaddress+aptunit+servicezip+phone?+email?
+
+%MESSAGE
+
+<p>That's fantastic! We are super proud of our gigabit fiber internet and our great rural wireless services. Let me see if you are in our coverage area:</p>
+
+
+<p class="dont-say">You can ask for more information at this time, but only the address is needed</p>

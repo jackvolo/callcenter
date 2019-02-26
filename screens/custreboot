@@ -1,0 +1,12 @@
+title: Reboot customer's computer
+buttons: custendprobticket: Didn't work - file a ticket, conclude: Worked
+
+<p>We are showing no problems with our service.</p>
+
+<p>There may be a problem with the settings on your computer, or a program running that's preventing you from accessing the Internet.</p>
+
+<p>Please restart your computer.  The way to do this depends on your system, but usually there's an item for it in the Start menu.<br/>
+<span class="dont-say">If the customer can't figure out how to restart their computer, click "Didn't work - File a ticket".</span></p>
+
+<p class="dont-say">Wait for the customer's computer to reboot.</p>
+

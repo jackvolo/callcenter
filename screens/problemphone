@@ -1,0 +1,7 @@
+title: Problem with phone
+requires: firstname+lastname+company?+customer?+callerphone+callout?+callin?+phonetype
+buttons: robot: Run tests
+
+<p>Are you having trouble with calling out or receiving calls (or both)?</p>
+
+<p>Do you have a Polycom IP phone or Grandstream converter box?</p>

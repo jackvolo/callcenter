@@ -1,0 +1,35 @@
+title: Test web browser connection
+requires: googleloadtime
+
+<p>Let's test your connection to <span class="url">google.com</span>:</p>
+<p>Open up your web browser: Internet Explorer, Firefox, or Safari.</p>
+
+<p class="dont-say">Wait for the browser to be open. If it takes more than 60 seconds or is too confusing, click "Didn't work"</p>
+
+<p>Type <span class="url">google.com</span> into the Address Bar, but don't press Enter yet.</p>
+
+<p class="dont-say">Wait for them to be done typing.</p>
+
+<p>Press Enter now, and tell me when the page has finished loading.</p>
+
+<p class="dont-say">Press <input type="button" value="Start" class="start-timer"/>.
+When the page has loaded, press <input type="button" value="Stop" class="stop-timer"/><br/>
+If timer reaches 60 seconds, press "Didn't work" and move on.</p>
+
+<script type="text/javascript">
+    var timeoutID;
+    $(function() {
+        $('input.start-timer').click(function() {
+            timeoutID=window.setTimeout('updateTimer()', 1000);
+        });
+        $('input.stop-timer').click(function() {
+            window.clearTimeout(timeoutID);
+            $('#v-googleloadtime').val($('div.screen:last-child div.input-googleloadtime input').val());
+        });
+    });
+
+    function updateTimer() {
+        $('div.screen:last-child div.input-googleloadtime input').val(parseInt($('div.screen:last-child div.input-googleloadtime input').val())+1);
+        timeoutID=window.setTimeout('updateTimer()', 1000);
+    }
+</script>

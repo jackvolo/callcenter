@@ -1,0 +1,14 @@
+title: Slow speed
+buttons: robot: Continue
+requires: routerwifi+minimumspeed
+
+<p>I need some more information to diagnose speed problems.</p>
+
+<ul>
+Which best describes your current setup:
+<li>Device plugged directly into the Volo connection</li>
+<li>Device plugged into router</li>
+<li>Device using WiFi on my own router</li>
+<li>Device using builtin WiFi at my building</li>
+</ul>
+

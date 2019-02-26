@@ -1,0 +1,5 @@
+title: Increase Flag Point Permanently
+buttons: robot
+requires: username|ip
+
+<p>I'm going to increase how much bandwidth our system expects you to use permanently</p>

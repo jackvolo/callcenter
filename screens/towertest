@@ -1,0 +1,5 @@
+title: Tower Test
+buttons: robot: Run Tests
+requires: ip
+
+%MESSAGE

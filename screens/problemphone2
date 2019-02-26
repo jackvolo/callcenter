@@ -1,0 +1,9 @@
+title: Problem with phone
+requires: callout?+callin?+voipreg?+phonetype
+buttons: robot: Run tests
+
+%MESSAGE
+
+<p>Are you having trouble with calling out or receiving calls (or both)?</p>
+
+<p>Do you have a Polycom IP phone or Grandstream converter box?</p>

@@ -1,0 +1,38 @@
+title: Customer Prospect List
+buttons: robot: File Ticket
+requires: firstname+lastname+serviceaddress+aptunit+servicezip+phone+email?+referredby?+message?+operator
+
+<script type="text/javascript">
+    $('dl.potentialwireless dd').hide();
+    $('dl.potentialwireless dt').wrapInner('<a href="#"></a>');
+    $('dl.potentialwireless dt a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        return(false);
+    });
+</script>
+
+<p> It doesn't look as though you're presently in our coverage area. That said, we are constantly working on expanding our coverage throughout the Champaign-Urbana area. If you'd like, I'd be more than happy to take down your information, and we can let you know when services do become available at your location.</p>
+
+<dl class="prospectfaq">
+<dt question='1'>Do you know how long it will take before service is available?</dt><!--{{{-->
+<dd>
+<p>At the moment, I do not. If you go to volo.net/coverage-map, you can see where we presently have services available. The dark and light blue areas are where we currently cover, which if you're close then it's more likely sooner than later. However, I do not have a concrete timeline for any specific areas, and it maybe be even a year or more before we serve your location, so you would likely need another Internet service provider in the meantime. Hopefully, once we are available at your location you'd be willing to switch to our service!</p>
+</dd><!--}}}-->
+<dt question='2'>Do you do anything else with my information?</dt><!--{{{-->
+<dd>
+<p>Absolutely not. The information you give us is solely for our purposes to follow up with you at a later time once services are available at your location. We do not collect your contact information to sell or redistribute to other companies.</p>
+</dd><!--}}}-->
+<dt question='3'>Can you tell me a bit more about the fiber service (once it becomes available)?</dt><!--{{{-->
+<dd>
+<p>Our fiber optic internet service runs at 1000 mbps which makes it the among the fastest in the country. Pricing starts at 29.95 per month for the light tier, and all of our users get the full 1000 mbps. By separating our services into usage tiers we can deliver a super fast connection to all our customers. </p>
+<p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage, and is available for &#36;29.95 per month.</p>
+<p>Medium is for customers who want to watch up to 12 hours of Netflix (streaming) per day or equivalent amount of usage, available for &#36;49.95 per month.</p>
+<p>Heavy is for customers who use more than that, available for &#36;59.95 per month.</p>
+</dd> <!--}}}-->
+
+<!--
+vi:foldmethod=marker:
+-->

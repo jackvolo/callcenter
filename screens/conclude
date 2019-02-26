@@ -1,0 +1,20 @@
+title: Anything else?
+requires: username?+ticket?+schedule
+buttons: root: Yes, robot: No
+
+<p>%MESSAGE</p>
+
+<script type="text/javascript">
+  $('.screen-conclude').load(function() {
+    var ticket = $('#v-ticket').val();
+    if (ticket) {
+      console.log("ticket: "+ticket);
+      $('#conclude > div.screen-body').html("<p id='unique123'>stuff</p>");
+    }
+  });
+</script>
+
+<div name="ticketconclude" id="ticketconclude"></div>
+
+<p>Is there anything further I can help you with today?</p>
+

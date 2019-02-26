@@ -1,0 +1,23 @@
+title: Outgoing email for Outlook
+buttons: conclude: Yes, problememailticket: No
+
+<p>Okay, we need to make sure your outgoing email settings are correct.</p>
+
+<ol>
+    <li>Go to the <strong>Tools</strong> menu and choose <strong>Email Accounts</strong></li>
+    <li>Select the button next to <i>View or change existing email accounts</i>and click <b>Next</b>, then select the account you want to change and click <strong>Change</strong>.</li>
+    <li>Fill in your name and email address, enter <b>volomail.net</b> as both the incoming and outgoing servers, and enter your username and password per the above</li>
+    <li>Click the <b>More Settings</b> button</li>
+    <li>Check the box next to <i>My outgoing server (SMTP) requires authentication</i> on the <b>Outgoing Server</b> tab.</li>
+    <li>Enter <b>587</b> in the box next to <i>Outgoing server (SMTP)</i> in the <b>Advanced</b> tab</li>
+    <li>Click <b>OK</b></li>
+    <li>Click <b>Next</b></li>
+    <li>Click <b>Finish</b></li>
+</ol>
+
+<p>Can you try sending an email now?</p>
+
+<p class="dont-say">Wait for the caller to try it out...</p>
+
+<p>Did that fix the problem?</p>
+

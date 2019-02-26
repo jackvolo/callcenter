@@ -1,0 +1,7 @@
+title: Couldn't find ticket
+requires: ticket
+buttons: robot: Look up status, findtickets: Try to find ticket
+
+I couldn't find a ticket with that number. Are you sure of the number?
+If not, I can try to find the ticket.
+

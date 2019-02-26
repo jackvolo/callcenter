@@ -1,0 +1,39 @@
+title: Customer has open tickets 
+buttons: problemweb: Continue 
+requires: callerphone?+customer?+ticket?
+
+<p>The system is reporting that you have open tickets. Is this the same problem you've been having or should I make a new ticket?</p>
+
+<p class='dont-say'>Click on the make new ticket option if it should be a new ticket. That will clear out the ticket number.</p>
+
+%TICKETS
+
+<script type="text/javascript">
+    $('div.screen-opentickets dd').hide();
+    $('div.screen-opentickets dt').wrapInner('<a href="#"></a>');
+    $('div.screen-opentickets dt a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        $(this).parents('div.screen').find('div.input input').add('#v-ticket').val(
+            $(this).parents('dt').attr('ticket')
+        );
+        robot_check();
+        return(false);
+    });
+</script>
+
+<style type="text/css">
+    div.screen-opentickets dl dt a
+    {
+        color: #027AC6;
+        padding: 0.3em;
+    }
+
+    div.screen-opentickets dl dt a:hover
+    {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+</style>

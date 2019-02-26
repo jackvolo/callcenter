@@ -1,0 +1,5 @@
+title: Tower has been reset
+requires: firstname+lastname+company?+username?+customer?+ip?+serviceaddress+aptunit+servicezip+hasrouter+onecomputer
+buttons: robot: Run tests
+
+<p>I reset the tower. Now I'm going to run the connection test again.</p>

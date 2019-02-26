@@ -1,0 +1,38 @@
+title: Choose a service
+buttons: robot: Edit this service
+
+<p>Here are the services I found:</p>
+
+<p class='dont-say'>Enter the service id number. You can click on them to have it auto fill the box.</p>
+
+%SERVICES
+
+<script type="text/javascript">
+    $('div.screen-pickaservice dd').hide();
+    $('div.screen-pickaservice dt').wrapInner('<a href="#"></a>');
+    $('div.screen-pickaservice dt a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        $(this).parents('div.screen').find('div.input input').add('#v-service').val(
+            $(this).parents('dt').attr('service')
+        );
+        robot_check();
+        return(false);
+    });
+</script>
+
+<style type="text/css">
+    div.screen-pickaservice dl dt a
+    {
+        color: #027AC6;
+        padding: 0.3em;
+    }
+
+    div.screen-pickaservice dl dt a:hover
+    {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+</style>

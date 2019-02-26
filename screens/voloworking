@@ -1,0 +1,8 @@
+title: Volo connection working
+buttons: custreboot: Customer doesn't have a router, routerreset: Reboot customer router
+
+%MESSAGE
+
+<p>Let's try to restore your connection now by resetting or rebooting your equipment.</p>
+
+<p>Do you use a router?</p>

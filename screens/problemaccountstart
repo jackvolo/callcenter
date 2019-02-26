@@ -1,0 +1,11 @@
+title: Billing and Account problems
+buttons: problemaccount: Continue, paypal: Pay Bill, problemaccountticket: File Ticket, robot: Update Password
+requires: accountpassword?+customer?
+
+We have implemented a password system for customers who want to limit who can make changes to their account. Passwords are printed on your statements in the top right section. If you have already set a password please provide it now. If not, we can set one or tell the system you don't want one.
+
+Or if you just want to pay your bill I can process that.
+
+<p class="dont-say">Verify the person knows the password if there is one. If they don't know it, you can still file a ticket and we will call back using another method of verification.</p>
+
+<p class="dont-say">No verification is needed to make a payment</p>

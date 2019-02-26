@@ -1,0 +1,21 @@
+title: Potential Joe Allan Customer
+buttons: conclude: Finished 
+requires: firstname+lastname+serviceaddress+aptunit+servicezip+phone+operator
+
+<p>Joe Allan apartments offers complimentary Volo internet service.</p>
+
+<p>You don't have to sign up or pay anything extra. To start using your service, just plug an ethernet cable into the jack in your apartment and connect to either your computer or router.</p>
+
+<h4>FAQs:</h4>
+<dl>
+<dt>What does an ethernet port look like?</dt>
+<dd>It's like a phone port except larger</dd>
+<dt>Does your service need a modem?</dt>
+<dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>
+<dt>Can I use a router with your service?</dt>
+<dd>Yes, our service is compatible with routers. It should work with any router you have.</dd>
+<dt>Does Volo sell routers?</dt>
+<dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>
+<dt>I need help configuring my wireless router</dt>
+<dd>Volo can setup a router for you for $35.</dd>
+</dl>

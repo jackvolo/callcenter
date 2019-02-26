@@ -1,0 +1,12 @@
+title: Problem with web pages
+requires: firstname+lastname+company?+username?+customer?+ip?+serviceaddress+aptunit+servicezip+hasrouter+onecomputer+webproblemtype
+buttons: robot: Run tests
+
+<p>Let me take down some information, and we'll run some automatic tests.</p>
+
+<p>Is the problem the service is not working at all, it's running slowly, or do you see an Xfinity login screen?</p>
+
+<p>Do you have a router?</p>
+
+<p>Is the problem affecting more than one computer or device (phone, tablet, smart tv, etc)?</p>
+

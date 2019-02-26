@@ -1,0 +1,5 @@
+title: Problem at Joe Allan Apts
+requires: firstname?+lastname?+serviceaddress
+buttons: robot: Continue
+
+<p>Let me take down some information, and we'll run some automatic tests and reset the switch you're connected to.</p>

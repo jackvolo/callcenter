@@ -1,0 +1,7 @@
+title: File ticket regarding problem
+buttons: robot: File ticket, conclude: Abandon ticket
+requires: firstname+lastname+company?+username?+customer?+phone+serviceaddress+aptunit+servicezip+hasrouter+onecomputer+problem+urgency+ip?+pingtime+speedtestdown+speedtestup+operator
+
+<p>I'm filing a ticket for a technician to look into the speeds. Slow speeds can be tricky to diagnose sometimes, but you should expect a call back on the next business day.</p>
+
+<p>After this I can schedule a technician visit for your location, but if the problem is with your equipment it will incur a service fee.</p>

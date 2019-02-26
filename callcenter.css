@@ -1,0 +1,200 @@
+/* Palette
+ * medium yellow:       #FF7
+ * light yellow:        #FFC
+ * volo blue:           #027AC6
+ */
+
+body
+{
+    background: #FFC;
+    padding: 0em;
+    margin: 0em;
+}
+
+div.panel
+{
+    border: 1px solid #AAA;
+    background: white;
+    height: 100%;
+}
+
+html, body { height: 90%; }
+#container, #panels { height: 100%; }
+div.panel h3
+{
+    margin: 0em;
+    padding: 0.5em;
+    border-bottom: 1px solid #AAA;
+    background: #FF7;
+}
+
+#i
+{
+    float: left;
+    width: 66%;
+}
+
+#i div.panel-content { max-height: 95%; overflow: scroll; }
+#i div.panel-content { overflow-x: hidden; }
+
+#i input.selected { border-color: #027AC6; background-color: #DEF; }
+
+#o
+{
+    float: right;
+    width: 32%;
+}
+
+#panels { margin: 1em; }
+
+div.required { color: #027AC6; }
+
+.invalid { background: #FEE; color: #900; border-color: #900; }
+
+#o { background: #FFC; border: none; }
+
+fieldset
+{
+    margin-top: 0; margin-bottom: 1em;
+    background: white;
+    border: 1px solid #AAA;
+}
+
+legend
+{
+    margin: 0em;
+    padding: 0.3em;
+    border: 1px solid #AAA;
+    background: #FF7;
+}
+
+div.element { clear: left; }
+
+div.element label
+{
+    display: block;
+    padding-top: 0.3em;
+    width: 7.5em;
+    float: left;
+}
+
+#i div.element label { width: 9em; }
+#i div.element input { font-size: 100%; }
+
+#o div.element label
+{
+    font-size: 90%;
+    color: #777;
+}
+
+#o div.element input
+{
+    background: white;
+    color: black;
+    border: none;
+    padding-top: 0.3em;
+    width: 14em;
+}
+
+#top-buttons { float: right; padding-top: 0.7em; }
+#top-buttons span.wrapper { padding-left: 0.5em; }
+#top-buttons a { padding: 0.3em; }
+#top-buttons a:hover { background: #F33; color: white; }
+
+a
+{
+    color: #027AC6;
+    text-decoration: none;
+}
+
+div.screen
+{
+    border-bottom: 1px solid #AAA;
+    padding-bottom: 0.5em;
+}
+
+div.screen-title
+{
+    padding: 0.5em;
+    font-weight: bolder;
+    font-size: larger;
+    background: #FFC;
+}
+
+div.screen-old { background: #EEE; }
+div.screen-old div.screen-title { background: #DDD; }
+
+div.screen-body
+{
+    padding: 0.5em;
+    padding-bottom: 0.3;
+    padding-top: 0.3;
+}
+
+div.screen-body span.url { font-family: monospace; }
+div.screen-body { font-family: sans-serif; }
+div.screen-body .dont-say { font-family: serif; color: #555; }
+div.screen-body::before { content: "Say: "; }
+div.screen-body .dont-say::before { content: "FYI: "; }
+
+.todo { color: red; }
+
+#inputs { display: none; }
+
+div.input-set { margin-left: 2em; }
+
+div.buttons { clear: all; text-align: center; padding-top: 0.5em; }
+
+div.screen p { padding: 0; margin-top: 0; margin-bottom: 0.7em; }
+
+div.screen { position: relative; }
+a.back
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+    background: inherit;
+    font-weight: bolder;
+    font-size: 90%;
+    color: #AAA;
+}
+
+a.back:hover
+{
+    color: #027AC6;
+}
+
+div.screen:first-child a.back { display: none; }
+div.screen-old:first-child a.back { display: inline; }
+
+#f-account-info { display: none; } /* Not ready yet */
+#f-other-info { display: none; } /* Misc fields that don't need to be seen */
+
+p.ticket-name { font-weight: bold; }
+p.ticket-comment
+{
+    font-size: 90%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.3em;
+}
+span.comment-date { font-weight: bold; }
+span.comment-user { color: #777; font-style: italic; }
+span.comment-user:before { content: ' by '; }
+span.comment-body { white-space: pre-line; }
+
+input.not-an-apartment
+{
+    font-size: 80%!important;
+}
+
+input.copy-caller-id
+{
+    font-size: 80%!important;
+}
+
+.todo { display: none; }
+

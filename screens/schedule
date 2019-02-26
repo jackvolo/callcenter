@@ -1,0 +1,11 @@
+title: File ticket regarding problem
+requires: hour+date+ticket
+buttons: robot: Schedule, conclude: Conclude without scheduling
+
+%MESSAGE
+
+I can schedule a technician to come to your location. The earliest time we have available is %TECHTIME. When would you like the technician to come by?
+
+<p class="dont-say">The system will give you the earliest time. If that doesn't work pick any time later than that between 9-5 Mon-Fri. If the customer requires a time outside that let them know you can't schedule that, and a manager will have to reach out to them for scheduling.</p>
+
+<p class="dont-say"><strong>Make sure the customer understands that the technician is scheduled to arrive AT SOME POINT during the hour following the time above. The technician will also need time to fix the problem. The customer should expect to be home for at least 2 hours to account for arrival and repair time.</strong></p>

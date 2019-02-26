@@ -1,0 +1,8 @@
+title: Captivated unit
+buttons: robot: Uncaptivate, conclude: Conclude
+requires: firstname+lastname+serviceaddress+aptunit+servicezip
+
+<p>Your unit has been captivated by our system.</p>
+
+<p>If you try to open a website on a phone, tablet, or computer you should be redirected to our portal. If this doesn't work or you don't have access to one of those devices I can uncapture it</p>
+

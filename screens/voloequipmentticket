@@ -1,0 +1,5 @@
+title: File a ticket
+buttons: robot: File ticket, conclude: Abandon ticket
+requires: firstname?+lastname+company?+username?+customer?+serviceaddress+aptunit+servicezip+phone+problem?+urgency+ip?+operator
+
+<p>There is still no connection from the tower to your location. I'm going to file a ticket now and we'll have a technician get to work on the problem.</p>

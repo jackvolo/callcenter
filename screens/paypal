@@ -1,0 +1,104 @@
+title: Paypal
+buttons: conclude: conclude
+
+<script type="text/javascript">
+    $('#servicezip').on("ready load change", function () {
+        $zip = $('#servicezip').val();
+        $.ajax({
+            url: 'https://volo.net/secure/cs/v.cgi',
+            data: {q: "dump_json silent report city_state_from_zip "+$zip, raw: 1, type: "application/json"},
+            success: function(data, status) {
+                $('#city').val(data[0]);
+                $('#state').val(data[1]);
+            },
+            error: function(data, status) {
+                console.log(status);
+            },
+        });
+    });
+</script>
+
+%MESSAGE
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="volo-payment-form" accept-charset="UTF-8" target="_blank"><div>
+<p>Payments are processed via PayPal. You can pay by credit card at PayPal, or if you already have a PayPal account, you can pay by the other methods they offer.</p>
+
+<p>There is a 5% convenience fee that will be added when you submit. It will appear on the statement as a tax.</p>
+
+<p>If you are suspended and you pay the amount owed in full, you will be unsuspended by the end of the call.</p>
+
+<p style="strong;">Make sure you tell the customer the full amount that will be paid (displayed once you get to the paypal page).</p>
+
+<div class="element input-billingemail required">
+    <label for="billingemail">Email</label>
+    <div class="input">
+        <input id="billingemail" class="" type="text" size="10" name="email">
+    </div>
+</div>
+<div class="element input-firstname required">
+    <label for="firstname">First name</label>
+    <div class="input">
+        <input id="firstname" class="" type="text" size="10" name="first_name">
+    </div>
+</div>
+<div class="element input-lastname required">
+    <label for="lastname">Last name</label>
+    <div class="input">
+        <input id="lastname" class="" type="text" size="10" name="last_name">
+    </div>
+</div>
+<div class="element input-callerphone required">
+    <label for="callerphone">Phone</label>
+    <div class="input">
+        <input id="callerphone" class="" type="text" size="10" name="night_phone_a">
+    </div>
+</div>
+<div class="element input-customer required">
+    <label for="customer">Account #</label>
+    <div class="input">
+        <input id="customer" class="account" type="text" size="6" name="custom">
+    </div>
+</div>
+<div class="element input-serviceaddress required">
+    <label for="serviceaddress">Service address</label>
+    <div class="input">
+        <input id="serviceaddress" class="ac_input" type="text" size="40" name="address1" autocomplete="off">
+    </div>
+</div>
+<div class="element input-servicezip required">
+    <label for="servicezip">Zip code</label>
+    <div class="input">
+        <input id="servicezip" class="zip" type="text" size="5" name="zip">
+    </div>
+</div>
+<div class="element input-servicecity required">
+    <label for="servicecity">City</label>
+    <div class="input">
+        <input id="servicecity" class="city" type="text" size="15" name="city">
+    </div>
+</div>
+<div class="element input-estate required">
+    <label for="state">State</label>
+    <div class="input">
+        <input id="state" class="state" type="text" size="5" name="state" value="IL">
+    </div>
+</div>
+<div class="element input-balance required">
+    <label for="customer">Amount</label>
+    <div class="input">
+        <input id="balance" class="account" type="text" size="6" name="amount">
+    </div>
+</div>
+<input type="hidden" id="item_name" name="item_name" value="Volo Internet" />
+<input type="hidden" name="business" value="paypal@volo.net" />
+<input type="hidden" name="cmd" value="_xclick" />
+<input type="hidden" name="no_shipping" value="1" />
+<input type="hidden" name="tax" value="0" />
+<input type="hidden" name="tax_rate" value="5" />
+<input type="hidden" name="lc" value="US" />
+<input type="hidden" name="address_override" value="1" />
+<input type="hidden" name="return" value="https://volo.net/payment/return" />
+<input type="hidden" name="cancel_return" value="https://volo.net/payment/failed" />
+<input type="hidden" name="rm" value="2" />
+<input type="submit" id="edit-submit" name="op" value="Proceed to PayPal" class="form-submit" />
+</div></form>

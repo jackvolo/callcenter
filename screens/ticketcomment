@@ -1,0 +1,3 @@
+title: Leave a comment
+buttons: robot: Record comment, conclude: Abandon comment
+requires: ticket+message+operator

@@ -1,0 +1,7 @@
+title: Third overage
+buttons: bwupgrade: Purchase upgrade, bwtempup: Free temporary upgrade, conclude: Do nothing
+
+<p>Okay, it looks like you're over your allocation again.  Do you know that you can track your usage at <span class="url">volo.net/usage</span>?  This is the third time you've had a problem. I'd be happy to increase your allocation temporarily, or if you're going to download this much on a regular basis, I can increase your allocation permanently.</p>
+
+<h4>More overage info</h4>
+[screen:overageinfo]

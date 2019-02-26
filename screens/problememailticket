@@ -1,0 +1,7 @@
+title: File Ticket
+buttons: robot: File Ticket, conclude: No thanks
+requires: firstname+lastname+company?+username?+customer?+phone+email+onecomputer+problem+operator
+
+%MESSAGE
+
+<p>I can file a ticket for a technician to give you a call back and help troubleshoot the problem further.</p>

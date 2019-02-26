@@ -1,0 +1,8 @@
+title: Town and Country Captivated unit
+buttons: robot: Uncaptivate, conclude: Conclude
+requires: firstname+lastname+serviceaddress+aptunit+servicezip
+
+<p>Your unit has been captivated by our system.</p>
+
+<p>If you try to open a website on a phone, tablet, or computer you should be redirected to our portal and you can click to use the free service for another 2 weeks or sign up for the upgraded service. If this doesn't work you can browse to volo.net/tnc manually and do the same. If you don't have access to one of those devices, or the website doesn't open, I can uncapture your unit.</p>
+

@@ -1,0 +1,20 @@
+title: Outgoing email for Outlook
+buttons: conclude: Yes, problememailticket: No
+
+<p>Okay, we need to make sure your outgoing email settings are correct.</p>
+
+<ol>
+    <li>Go to the <strong>Tools</strong> menu, then select <strong>Account Settings</strong></li>
+    <li>Click on <strong>Outgoing Server (SMTP)</strong></li>
+    <li>Select the server in the box and click <strong>Edit</strong></li>
+    <li>The SMTP server should be <strong>volomail.net</strong></li>
+    <li>The port number should be <strong>587</strong></li>
+    <li>The box next to "Use name and password" under "Security and Authentication" should be checked.</li>
+</ol>
+
+<p>Can you try sending an email now?</p>
+
+<p class="dont-say">Wait for the caller to try it out...</p>
+
+<p>Did that fix the problem?</p>
+

@@ -1,0 +1,5 @@
+title: Other problem
+buttons: robot: Report problem
+requires: firstname+lastname+company?+email?+phone+ip?+serviceaddress+aptunit+servicezip+problem+urgency+operator
+
+Please describe the problem, and we'll file a ticket to make sure someone gets back to you.

@@ -1,0 +1,24 @@
+title: Outgoing email for Outlook Express
+buttons: conclude: Yes, problememailticket: No
+
+<p>Okay, we need to make sure your outgoing email settings are correct.</p>
+
+<p>Outlook Express:</p>
+<ol>
+    <li>Go to the <strong>Tools</strong> menu and choose <strong>Accounts...</strong></li>
+    <li>Select your Volo account from the list and click <b>Properties</b></li>
+    <li>Select the <b>Servers</b> tab</li>
+    <li>The incoming and outgoing servers should be <b>volomail.net</b></li>
+    <li>Check the box next to <i>My server requires authentication</i> under <i>Outgoing Mail Server</i></li>
+    <li>Select the <b>Advanced</b> tab</li>
+    <li>Change the port number for Outgoing Mail (SMTP) to <strong>587</strong></li>
+    <li>Click <b>OK</b></li>
+    <li>Click <b>Close</b></li>
+</ol>
+
+<p>Can you try sending an email now?</p>
+
+<p class="dont-say">Wait for the caller to try it out...</p>
+
+<p>Did that fix the problem?</p>
+

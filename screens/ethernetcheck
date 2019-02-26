@@ -1,0 +1,5 @@
+title: Check Physical Connection
+requires: serviceaddress+aptunit+servicezip+switchip+switchport
+buttons: robot: Continue, conclude
+
+%MESSAGE

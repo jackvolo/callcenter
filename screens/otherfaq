@@ -1,0 +1,49 @@
+title:Frequency Asked Questions
+buttons: conclude
+
+<script type="text/javascript">
+    $('dl.otherfaq dd').hide();
+    $('dl.otherfaq dt').wrapInner('<a href="#"></a>');
+    $('dl.otherfaq dt a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        return(false);
+    });
+</script>
+
+<dl class="otherfaq">
+<dt question='tv'>Can I get TV with Volo?</dt> <!--{{{-->
+<dd>
+<p>Yes! We have partnered with Direct TV and Dish Network to provide 
+television. If you sign up for new service with us, your installation fee
+will be waived.</p>
+<p>Dish starts at 19.99 per month, and Direct TV starts at 24.99 per month.
+Both require 2 year contacts.</p>
+</dd> <!--}}}-->
+<dt question='keeptv'>I already have Dish/Direct, can I keep my TV service?</dt> <!--{{{-->
+<dd>
+<p>You can keep your current TV service, but to qualify for a free install, 
+you have to sign up for a new service.</p>
+</dd> <!--}}}-->
+<dt question='phone'>Can I get phone service with Volo</dt> <!--{{{-->
+<dd>
+<p>Yes! Volo offers a VOIP (voice over internet protocol) service. We're able 
+to deliver crystal clear call quality using your internet service.</p>
+<p>We sell converter boxes so you can continue to use your current phone, or 
+you can buy an "internet" phone from us.</p>
+<p>You can keep your current phone number, and we'll help you transfer it</p>
+</dd> <!--}}}-->
+<dt question='contract'>Does Volo have a contract?</dt> <!--{{{-->
+<dd>
+<p>We don't believe in locking our customers in, so we generally do not have contracts with our customers. If you would like one we can call you back later to discuss that.</p>
+</dd> <!--}}}-->
+<dt question='hosting'>Can I host a server/Get a static IP address?</dt> <!--{{{-->
+<dd>
+<p>Yes! We don't put any limitations on what our customers do with their service (as long as they're in the appropriate tier for bandwidth). All of our fiber and wireless customers get a static IP address.</p>
+</dd> <!--}}}-->
+</dl>
+<!-- 
+vi:foldmethod=marker: 
+-->

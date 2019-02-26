@@ -1,0 +1,5 @@
+title: Tower Re-Test
+buttons: robot: Run Tests
+requires: ip
+
+<p>I've reset the tower, now I'm going to run another test to see if it's working correctly.</p>

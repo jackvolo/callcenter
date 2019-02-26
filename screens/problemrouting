@@ -1,0 +1,14 @@
+title: Forward to technician
+buttons: routingticket: No one answered, conclude
+
+<p>The test shows a configuration problem. Please hold while I contact a technician.</p>
+
+<p class="dont-say">Please send the following message to chat: "There is a routing problem for customer <span class="username">_</span> at <span class="serviceaddress">_</span>. Is anyone available to work on this." Wait 60 seconds and if there's no reply let the customer know you will file a ticket to have a technician work on the problem and click "No one answered".</p>
+
+<script type="text/javascript">
+    if($('#v-username').val()) $('.username').html($('#v-username').val());
+    else $('span.username').hide();
+    if($('#v-serviceaddress').val()) $('.serviceaddress').html($('#v-serviceaddress').val());
+    else $('span.serviceaddress').hide();
+</script>
+

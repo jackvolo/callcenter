@@ -1,0 +1,5 @@
+title: Verify account
+requires: customer
+buttons: customer_verify: Verify account, customer_lookup: Don't know
+
+<p>Can you tell me your account number?</p>

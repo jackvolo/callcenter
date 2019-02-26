@@ -1,0 +1,5 @@
+title: Change Email Password
+requires: customer+password
+buttons: robot: Continue
+
+<p>What would you like your new password to be?</p>

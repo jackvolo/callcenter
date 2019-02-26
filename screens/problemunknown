@@ -1,0 +1,11 @@
+title: Test for problem
+requires: firstname+lastname+company?+username?+customer?+serviceaddress+aptunit+servicezip+hasrouter+onecomputer+problem
+buttons: robot: Run tests, problemcomputer: Paid support, conclude: No thanks
+
+%MESSAGE
+
+<p>I can run some automatic tests to check if there's a problem with your Volo equipment. If that doesn't indicate a problem, you may need to contact a company that can provide support.</p>
+
+<p>Do you have a router?</p>
+
+<p>Is the problem affecting more than one computer?</p>

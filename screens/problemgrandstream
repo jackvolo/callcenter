@@ -1,0 +1,35 @@
+title: Reset the Volo equipment
+buttons: conclude: Service restored, problemwebticket: File ticket 
+
+<script type="text/javascript">
+    $('dl.problemgrandstream dd').hide();
+    $('dl.problemgrandstream dt').wrapInner('<a href="#"></a>');
+    $('dl.problemgrandstream dt a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        return(false);
+    });
+</script>
+
+<p>The grandstream is a small grey and black box. It should have 3 cables plugged into the back: power, phone, and internet. In the front there should be 4 green lights. From left to right those are: power, internet, link/act, and phone.</p>
+<p>All lights should be either solid or blinking green. Please let me know which if any are not lighting up.</p>
+
+
+<dl class="problemgrandstream">
+<dt>Power is off/All are off</dt>
+<dd>
+<p>This indicates the device is not getting power. Can you confirm the connection on the power connector is solid and the plug goes into a working outlet?</p>
+</dd>
+<dt>Internet or Link/Act light is off</dt>
+<dd>
+<p>This indicates the device is not connected to the internet. Please confirm that the ethernet cable is snugly connected to both the grandstream and your router.</p>
+</dd>
+<dt>Phone light is off</dt>
+<dd>
+<p>This indicates the grandstream is not correctly communicating with our service. Unplug the power from the grandstream for 10 seconds and then plug it back in.</p>
+</dd>
+</dl>
+
+<p class='dont-say'>If these steps don't fix the problem click on file ticket and tell the customer a technician will need to look into the problem further.</p>

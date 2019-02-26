@@ -1,0 +1,8 @@
+title: Couldn't find account
+requires: firstname+lastname+company?+username?+customer?+serviceaddress+aptunit+servicezip+hasrouter+onecomputer
+buttons: robot: Run tests, problemwebticket: File ticket
+
+<p>I couldn't find your account based on the information you gave me. I can try again, or I can file a ticket for someone to look into the issue.</p>
+
+<p class="dont-say">Please verify the last name, service address, and zip code before trying again.</p>
+

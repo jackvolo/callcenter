@@ -1,0 +1,7 @@
+title: Choose a ticket
+buttons: robot: Look up this ticket
+requires: ticket
+
+[screen:pickaticketcore]
+
+<p class="dont-say">Check with the caller if one of these is the right ticket. Click on a ticket to show details or select it.</p>

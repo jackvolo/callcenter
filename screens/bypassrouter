@@ -1,0 +1,9 @@
+title: Volo connection working
+buttons: custreboot: Didn't work or No Router - Reboot computer, conclude: Worked
+
+%MESSAGE
+
+<p>Lets try bypassing your router. Please unplug your the cable going from the Volo equipment or ethernet port to your router, and connect the cable directly from the wall to your computer.</p>
+
+<p class="dont-say">The customer may need to leave the phone to do this.</p>
+

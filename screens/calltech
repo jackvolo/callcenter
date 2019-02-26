@@ -1,0 +1,20 @@
+title: Forward to technician
+requires: ticket?+message+eta+operator
+buttons: robot: Update/Make Ticket, cantreachtech: No one answered, conclude
+
+%MESSAGE
+
+<p class="dont-say">Send a message to the Volo Hangout Chat asking the question. If you don't get answer within 60 seconds, you can call the following numbers for urgent calls. Otherwise let the caller know we will reach out to them by the next business day.</p>
+
+<p class="dont-say">Tony at <strong>(217) 898-8669</strong>.</p>
+
+<p class="dont-say">Peter at <strong>(217)721-3893</strong>.</p>
+
+<p class="dont-say ticket-tell">Please tell him this is regarding ticket
+<strong class="ticket-tell-number">_</strong>. If there is a ticket.</p>
+
+<script type="text/javascript">
+    if($('#v-ticket').val()) $('.ticket-tell-number').html($('#v-ticket').val());
+    else $('p.ticket-tell').hide();
+</script>
+

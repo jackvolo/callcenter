@@ -1,0 +1,10 @@
+title: Account
+buttons: robot: Check for account
+requires: firstname?+lastname+company?+serviceaddress+aptunit+servicezip+password|ip+password
+
+<p>Before I can access your information, I need to verify your account.</p>
+
+<p>Could you tell me your last name, address, and password? Or, if you know your IP address, I can use that.</p>
+
+<p class="dont-say">The account password is printed on the statements at the top right under the account number</p>
+

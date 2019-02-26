@@ -1,0 +1,35 @@
+title: Usage Calc
+buttons:conclude
+
+<script>
+    function calculate() {
+        var video = parseInt($('#fiber-video').val(), 10);
+        var games = parseInt($('#fiber-games').val(), 10);
+        var other = parseInt($('#fiber-other').val(), 10);
+
+        var bandwidth = parseFloat((video * 2) + (games * 1) + (other * 1));
+        if (bandwidth < 9) {
+            $('#fiber-output').text("Light Fiber service at $29.95 per month");
+        } else if (bandwidth < 29) {
+            $('#fiber-output').text("Medium Fiber service at $49.95 per month");
+        } else {
+            $('#fiber-output').text("Heavy Fiber service at $59.95 per month");
+        }
+    }
+    $('div.fiberfaq input.fiber-calc').change(calculate()); 
+</script>
+
+<form>
+<p>If you can answer 3 quick questions for me, I can recommend the best tier to match your needs.</p>
+<label for="fiber-video">How many hours of streaming video would you like to watch in a day, if any?</label>
+<input type="number" class="fiber-calc" id="fiber-video" onkeyup=calculate() value=0>
+<br />
+<label for="fiber-games">How many hours of gaming would you like to do in one day, if any?</label>
+<input type="number" class="fiber-calc" id="fiber-games" onkeyup=calculate() value=0>
+<br />
+<label for="fiber-peer">How much peer to peer or other high bandwidth activities do you do in gigabytes per day, if any?</label>
+<input type="number" class="fiber-calc" id="fiber-other" onkeyup=calculate() value=0>
+<br />
+<p>We recommend: <span style="font-weight: bold;" id="fiber-output"></span> based on you usage level.</p>
+</form>
+

@@ -1,0 +1,5 @@
+title: Tower Reset
+buttons: robot: Reset Tower
+requires: ip
+
+<p>The test shows that the tower in your area might be down. I'm going to reset it, and we'll see if you have a connection after that. It will take about a minute for the reset to finish.</p>

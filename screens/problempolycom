@@ -1,0 +1,38 @@
+title: Reset the Volo equipment
+buttons: conclude: Service restored, problemwebticket: File ticket 
+
+<script type="text/javascript">
+    $('dl.problempolycom dd').hide();
+    $('dl.problempolycom dt').wrapInner('<a href="#"></a>');
+    $('dl.problempolycom dt a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        return(false);
+    });
+</script>
+
+<p>Please tell me what the screen is displaying right now.</p>
+
+
+<dl class="problempolycom">
+<dt>Nothing/Blank</dt>
+<dd>
+<p>This indicates the device is not getting power. Can you confirm the connection on the power connector is solid and the plug goes into a working outlet?</p>
+</dd>
+<dt>Waiting for network to initilize</dt>
+<dd>
+<p>This indicates the device has rebooted and is trying to connect to your network. This can take up to 2 min. If it has been longer than that, make sure the ethernet cable is connected from the LAN port on the back of the phone to your router. Sometimes it will look connected but be loose, please unplug and replug each end.</p>
+</dd>
+<dt>Network link is down</dt>
+<dd>
+<p>This indicates the cannot connect to your network. Make sure the ethernet cable is connected from the LAN port on the back of the pho    ne to your router. Sometimes it will look connected but be loose, please unplug and replug each end.</p>
+</dd>
+<dt>Running sip.ld</dt>
+<dd>
+<p>This indicates the phone is starting up. It can take a few minutes, please wait and it should start up.</p>
+</dd>
+</dl>
+
+<p class='dont-say'>If these steps don't fix the problem or the screen display is not listed click on file ticket and tell the customer a technician will need to look into the problem further.</p>

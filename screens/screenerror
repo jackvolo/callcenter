@@ -1,0 +1,10 @@
+title: Error in Volo script
+buttons: calltech
+
+<p class="dont-say">The call script got a bad reply from Volo, so
+we can't move forward from here. You can click "<a href="#" class="foo">go back</a>" and try again.
+if that doesn't work, please reload the page and start the script over.
+Finally, call Thomas, Tony or Peter and let them know it's not working.
+</p>
+
+<script type="text/javascript">$(function() { $('a.foo').click(function() { $('div.screen:last-child a.back').click(); return false; }) });</script>

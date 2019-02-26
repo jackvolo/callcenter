@@ -1,0 +1,5 @@
+title: Customer problem
+buttons: robot: No, ticketcheck: Yes
+requires: callerphone?+customer?
+
+Let me check on that. Have you already reported the problem?

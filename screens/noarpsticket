@@ -1,0 +1,8 @@
+title: File a ticket
+buttons: robot: File ticket, conclude: Abandon ticket
+requires: firstname+lastname+company?+username?+customer?+serviceaddress+aptunit+servicezip+phone+problem?+urgency|ip+phone+operator
+
+<p class="dont-say">If during work hours</p>
+<p>There is a connection problem between the equipment on the roof and your computer. I'm going file a ticket and a technician will get back to you by the end of the day.</p>
+<p class="dont-say">If during work hours</p>
+<p>There is a connection problem between the equipment on the roof and your computer. I'm going file a ticket and a technician will get back to you tomorrow.</p>

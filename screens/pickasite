@@ -1,0 +1,39 @@
+title: Choose a site
+requires: ip?
+buttons: robot: Continue
+
+<p>Here are the sites I found:</p>
+
+<p class="dont-say">If the street addresses are the same and the customer doesn't know which IP to choose, pick the one with the highest bandwidth.</p>
+
+%SITES
+
+<script type="text/javascript">
+    $('div.screen-pickasite dd').hide();
+    $('div.screen-pickasite dt').wrapInner('<a href="#"></a>');
+    $('div.screen-pickasite dt a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        $(this).parents('div.screen').find('div.input input').add('#v-ip').val(
+            $(this).parents('dt').attr('ip')
+        );
+        robot_check();
+        return(false);
+    });
+</script>
+
+<style type="text/css">
+    div.screen-pickasite dl dt a
+    {
+        color: #027AC6;
+        padding: 0.3em;
+    }
+
+    div.screen-pickasite dl dt a:hover
+    {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+</style>

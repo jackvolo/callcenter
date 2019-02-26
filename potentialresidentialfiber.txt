@@ -1,0 +1,77 @@
+title: Potential Residential Fiber Customer
+buttons: robot: File Ticket
+requires: firstname+lastname+serviceaddress+aptunit+servicezip+phone+email?+referredby?+message?+operator
+
+<p>Our fiber optic internet service runs at 1000 mbps which makes it the among the fastest in the country. Pricing starts at 29.95 per month for the light tier, and all of our users get the full 1000 mbps. By separating our services into usage tiers we can deliver a super fast connection to all our customers. </p>
+
+[screen:usagecalc]
+
+<p class='dont-say'>If they have questions regarding the fiber service, click the subsection below for more details.</p>
+<p class='dont-say'>If they ask a question you cannot answer from below, DO NOT GUESS. Let them know that you're not sure, and file a ticket for them. A representative can follow up with them during the next business day and answer any other technical questions they may have. </p>
+
+<dl class="fiberfaq">
+<dt class="fiberfaq" question='router'>Modems or Routers?</dt> <!--{{{-->
+<dd class="fiberfaq">
+<p>Our service would be provided directly through an ethernet port in your location. You are free to plug your computer directly into the ethernet port to connect to the service, or you can use a router to connect multiple devices or to have a WiFi network at your location.</p>
+<p>However, most low end or older routers will not be able to keep up with Volo's blazing fast gigabit speed, and Modems will NOT WORK with our service, including modem/router combos.</p>
+<p>We don't recommend any specific brands, but you want to look for routers marked as Gibabit to make full use of the service. We also recommend an AC router for the best WiFi connection.</p>
+</dd> <!--}}}-->
+<dt class="fiberfaq" question='tiers'>Prices and Differences between Service Tiers</dt> <!--{{{-->
+<dd class="fiberfaq">
+<p>The difference between the service tiers is how much usage they are designed for. None of the tiers will throttle your speed, cut you off, or charge you for overages, but each tier has a target usage amount. If you exceed than amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.</p>
+<p>We usually describe our tiers in terms of video streaming because it is the biggest user of bandwidth on the internet.</p>
+<p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage, and is available for &#36;29.95 per month.</p>
+<p>Medium is for customers who want to watch up to 12 hours of Netflix (streaming) per day or equivalent amount of usage, available for &#36;49.95 per month.</p>
+<p>Heavy is for customers who use more than that, available for &#36;59.95 per month.</p>
+<p class='dont-say'>You may need to remind the potential customer that watching a steam on two different devices at the same time counts double (or triple with 3, etc)</p>
+</dd> <!--}}}-->
+<dt class="fiberfaq" question='whytiers'>Why do you have usage based tiers instead of speed based?</dt> <!--{{{-->
+<dd class="fiberfaq">
+<p>Our costs are based on how much total bandwidth you use, not how fast you use it. By separating our tiers into usage levels we can deliver our fastest service to all customers whether they use it a lot or a little.</p>
+<p>By doing this we are able to offer our high tier for only &#36;60 compared to over &#36;100 with some of our competitors, and we can offer 1000 mbps to our light users.</p>
+</dd> <!--}}}-->
+<dt class="fiberfaq" question='install'>Installation Cost/Timeline</dt> <!--{{{-->
+<dd class="fiberfaq">
+<p>For new fiber installations, we do need to schedule it a minimum of a week in advance, as we would be laying a new fiber optic cable up to your location. Beyond this, fiber installation can take up to four hours, so we generally want to block off a timeslot either from 9am to 1pm or from 2pm to 6pm. A technician will be able to give you a call back to help schedule the installation.</p>
+<p>Installation cost for a new install is typically &#36;150. That can be waived if you sign up for a new TV service or sign a 1 year contract for our Heavy Service.</p>
+<p>We also offer a 30 day guarantee. If you're not happy with your service, and cancel in the first 30 days, we'll refund your installation fee.</p>
+<p>Some apartments are pre-installed and there is no install fee.</p>
+</dd> <!--}}}-->
+<dt class="fiberfaq" question='price'>Does Volo offer Phone Services?</dt> <!--{{{-->
+<dd class="fiberfaq">
+<p>Volo offers a VOIP (voice over internet protocol) service. We're able to deliver crystal clear call quality using your internet service. You can even keep your current phone number, and we'll help you transfer it.</p>
+<p>A single phone number with an unlimited calling plan is &#36;12.95 per month, or roughly &#36;16-17 after taxes.</p>
+<p>We sell converter boxes so you can continue to use your current phone, or we can sell you an "internet" phone. Either device would be &#36;50, which you can pick up from our office and plug into your internet service, or we can install them for you for an additional &#36;50.</p>
+</dd> <!--}}}-->
+</dl>
+<dt class="fiberfaq" question='TV'>Can I get TV with Volo?</dt> 
+<dd class="fiberfaq">
+<!--{{{--> <dd>
+<p>Yes! We have partnered with Direct TV and Dish Network to provide television. If you sign up for new service with us, your installation fee will be waived.</p>
+<p>Dish starts at 19.99 per month, and Direct TV starts at 24.99 per month. Both require 2 year contacts.</p>
+<p>If you already have Dish or DirecTV, you're welcome to keep it, but to qualify for a free install, you have to sign up for a new service.</p>
+</dd> <!--}}}-->
+<dt question='contract'>Does Volo have a contract?</dt> <!--{{{-->
+<dd>
+<p>We don't believe in locking our customers in, so we generally do not have contracts with our customers. If you would like one we can call you back later to discuss that.</p>
+</dd> <!--}}}-->
+<dt question='hosting'>Can I host a server/Get a static IP address?</dt> <!--{{{-->
+<dd>
+<p>Yes! We don't put any limitations on what our customers do with their service (as long as they're in the appropriate tier for bandwidth). All of our fiber and wireless customers get a static IP address.</p>
+</dd> <!--}}}-->
+</dl><!-- 
+vi:foldmethod=marker: 
+-->
+
+
+<script type="text/javascript">
+    $('div.screen-potentialresidentialfiber dd.menu').hide();
+    $('div.screen-potentialresidentialfiber dt.menu').wrapInner('<a href="#"></a>');
+    $('div.screen-potentialresidentialfiber dt.menu a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        return(false);
+    });
+</script>

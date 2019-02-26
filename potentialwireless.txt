@@ -1,0 +1,81 @@
+title: Potential Wireless Customer
+buttons: robot: File Ticket
+requires: firstname+lastname+serviceaddress+aptunit+servicezip+phone+email?+referredby?+message?+operator
+
+<p> It does look like you're within range of one of our wireless towers. Our Wireless service connects you to the Internet through a receiver we install on the roof of your building, and runs into an ethernet port we would install in your location. In addition to being in range of a tower, it does also require a clear line of sight from the tower to your location, which I would like a technician to verify before affirming we can provide service, but I'd be happy to discuss the wireless options Volo has to offer.</p>
+
+<p>Volo has two wireless Internet service choices available.</p>
+
+<p><strong>Basic Broadband</strong> is available for &#36;39.95 per month, and is ideal for someone looking for basic high-speed Internet service.  This service works like the cell phone service where you have a limit each day, except if you exceed your limit your service slows down instead of incurring additional charges. It includes 250 Mega Bytes per day of Priority Bandwidth delivered over the trademark Volo connection. Basic Broadband includes, in our experience, ample bandwidth to browse the Internet and check your email. Other usage (particularly, streaming video like Netflix) can use that bandwidth up quickly.</p>
+<p><strong>Streaming</strong> service costs &#36;75 per month and is geared towards users who enjoy watching Youtube, Netflix, Hulu, other video streaming sites, or listening to online radio for more than four hours per day. Streaming service doesn't permit peer-to-peer file sharing and do contain a data cap to prevent runaway processes like virus infections, but that cap will be tailored to your needs and even by default is ample for most streaming media uses (about 10GB/day).
+
+<dl class="wirelessfaq">
+<dt question='1'>Installation Costs/Timeframe?</dt><!--{{{-->
+<dd>
+<p>Usually wireless installations can take up to two hours. They require fairly little prep work however, so one of our technicians can help schedule an installation likely in the next couple of days for you.</p>
+<p>There is also an installation fee of &#36;300, though this can be prorated over the first 3 months of service.</p>
+</dd><!--}}}-->
+<dt question='3'>How the Service works, plus Modems and Routers</dt><!--{{{-->
+<dd>
+<p>Our Wireless service connects you to the Internet through a receiver we install on the roof of your building: The receiver hooks into our wireless network in town. We run a cable from that receiver to an appropriate place on the outside of your house, near where your computer or network hub is located. The cable enters your house there, and plugs into a small black box that provides electrical power for the receiver.</p>
+<p>Our service would be provided directly through an ethernet port in your location. You are free to plug your computer directly into the ethernet port to connect to the service, or you can use a router to connect multiple devices or to have a WiFi network at your location. The "Wireless" service is how it is delivered, so if you do want a WiFi connection, you would still need a router.</p>
+</dd><!--}}}-->
+<dt question='5'>Do I own the equipment?</dt><!--{{{-->
+<dd>
+<p>For security reasons, we can't sell the equipment to you. Even if we could, it wouldn't do you much good. The equipment is designed to work with our system, and wouldn't be much use without it.</p>
+</dd><!--}}}-->
+<dt question='6'>What does the Volo receiver look like / How big is your antenna?</dt><!--{{{-->
+<dd>
+<p>Customers in strong coverage areas use a receiver that's 12 inches square, either white or a medium gray.</p>
+<p>Some customers require a larger antenna, a 36-inch wide wire grid. Usually the larger antenna would be in addition to the smaller one.</p>
+</dd><!--}}}-->
+<dt question='7'>What do I get for my Installation?</dt><!--{{{-->
+<dd>
+<p>Your installation cost pays for a professional installation of the receiver, running cabling, mounting hardware, and setting up your computer or router. It also covers maintenance of the Volo equipment at your location for as long as you are a customer.</p>
+</dd><!--}}}-->
+<dt question='8'>If I move, do I pay for installation again?</dt><!--{{{-->
+<dd>
+<p>If you move to an area that Volo serves, we will transfer your service to your new location for a nominal fee.</p>
+</dd><!--}}}-->
+<dt question='9'>Speed: Volo vs Cable/DSL/Dialup</dt><!--{{{-->
+<dd>
+<p>Volo Wireless speeds vary based on location. Customers can see download speeds up to 20 megabits per second, and upload speeds up to 12 megabits per second. Typical speeds are 2-5 megabits per seconds down and 1-2 megabits per second up.</p>
+</dd><!--}}}-->
+<dt question='10'>I have Unlimited Service, how can I go over a bandwidth allocation?</dt><!--{{{-->
+<dd>
+<p>On our unlimited streaming connections we still set a technical bandwidth limit. This is intended to catch problems such as viruses on our customer's computers. Sudden increases in bandwidth usage are often a sign that a computer has been comprimised.</p>
+<p>If you are hitting the limit with regular usage, we will raise the technical limit to a level where it does not interfere with your enjoyment of the internet.</p>
+</dd><!--}}}-->
+</dl>
+<dt class="fiberfaq" question='TV'>Can I get TV with Volo?</dt> 
+<dd class="fiberfaq">
+<!--{{{--> <dd>
+<p>Yes! We have partnered with Direct TV and Dish Network to provide television. If you sign up for new service with us, your installation fee will be reduced by &#36;150.</p>
+<p>Dish starts at 19.99 per month, and Direct TV starts at 24.99 per month. Both require 2 year contacts.</p>
+<p>If you already have Dish or DirecTV, you're welcome to keep it, but to qualify for a free install, you have to sign up for a new service.</p>
+</dd> <!--}}}-->
+<dt question='contract'>Does Volo have a contract?</dt> <!--{{{-->
+<dd>
+<p>We don't believe in locking our customers in, so we generally do not have contracts with our customers. If you would like one we can call you back later to discuss that.</p>
+</dd> <!--}}}-->
+<dt question='hosting'>Can I host a server/Get a static IP address?</dt> <!--{{{-->
+<dd>
+<p>Yes! We don't put any limitations on what our customers do with their service (as long as they're in the appropriate tier for bandwidth). All of our fiber and wireless customers get a static IP address.</p>
+</dd> <!--}}}-->
+<!--
+vi:foldmethod=marker:
+-->
+
+
+
+<script type="text/javascript">
+    $('dl.potentialwireless dd').hide();
+    $('dl.potentialwireless dt').wrapInner('<a href="#"></a>');
+    $('dl.potentialwireless dt a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        return(false);
+    });
+</script>

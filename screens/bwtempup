@@ -1,0 +1,6 @@
+title: Increase bandwidth temporarily
+buttons: robot: Perform upgrade
+requires: firstname?+lastname+company?+serviceaddress+aptunit+servicezip|ip
+
+<p>I'll increase your bandwidth for one day, but I can only do this once.</p>
+

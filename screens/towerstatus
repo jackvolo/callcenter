@@ -1,0 +1,5 @@
+title: File a ticket
+buttons: robot: File ticket, conclude: Abandon ticket
+requires: firstname?+lastname+username?+customer?+serviceaddress+aptunit+servicezip+phone+problem?+urgency
+
+%MESSAGE

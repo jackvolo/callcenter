@@ -1,0 +1,5 @@
+title: Add Email to Account
+requires: email+customer
+buttons: robot: Add
+
+<p>What email address would you like to add to the account?</p>

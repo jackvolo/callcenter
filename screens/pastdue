@@ -1,0 +1,4 @@
+title: Past Due Balance 
+buttons: problemweb: Continue 
+
+<p>Before I continue troubleshooting, I have to inform you that our system is showing a past due balance on your account. The amount due is %PASTDUEB, and it's showing %PASTDUEM months past due</p>

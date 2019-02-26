@@ -1,0 +1,85 @@
+#!/usr/bin/perl
+# dot -Tsvg -oscreens.svg screens.dot
+
+use strict;
+
+open JS, ">testscreens.js" or die "Can't open screens.js";
+open DOT, ">testscreens.dot" or die "Can't open screens.dot";
+
+print JS "var screens = {};\n";
+print DOT <<DOT;
+digraph callcenter {
+    size = "12,12";
+    node [shape = doublecircle]; root goodbye callpeter;
+    node [shape = hexagon]; robot;
+    node [shape = circle];
+DOT
+
+foreach my $s (<screens/*>)
+{
+    if($s =~ s:^screens/([^.].*)$:$1:)
+    {
+        my %screen=readscreen($s);
+        print JS <<SCREEN;
+screens['$s'] = {
+    title: "$screen{title}",
+    body: "$screen{body}"
+SCREEN
+        if($screen{buttons}) {
+            print JS "    ,buttons: {";
+            print JS join(',', map { "$_: \"$screen{buttons}{$_}\"" } keys %{$screen{buttons}});
+            print JS "}\n";
+            print JS "    ,buttonOrder: [";
+            print JS join(',', map { "'$_'" } @{$screen{buttonOrder}});
+            print JS "]\n";
+        }
+        if(my $r = $screen{requires}) {
+            print JS "    ,requires: [";
+            print JS join(',', map { "[$_]" } map { join(',', map {"'$_'"} @{$_}) } @{$screen{requires}});
+            print JS "]\n";
+            print JS "    ,requiresSet: {";
+            print JS join(',', map { "$_: 1" } keys %{$screen{requiresSet}});
+            print JS "}\n";
+        }
+        print JS "};\n";
+
+        foreach my $button (keys %{$screen{buttons}})
+        {
+            print DOT "    $screen{sid} -> $button [ label = \"$screen{buttons}{$button}\" ];\n";
+        }
+    }
+}
+
+print DOT "}\n";
+
+sub readscreen {
+    my %screen = ();
+    $screen{sid} = $_[0];
+    open(SCREEN, "screens/$screen{sid}");
+    while(<SCREEN>) {
+        last if /^$/;
+        chomp;
+        my ($key, $value) = split /: /, $_, 2;
+        $screen{$key} = $value;
+    }
+    my @lines = <SCREEN>;
+    $screen{body} = join("", @lines);
+    $screen{body} =~ s/\n/\\n/g;
+    $screen{body} =~ s/"/\\"/g;
+    $screen{body} =~ s:</script>:<"+"/script>:g;
+
+    if($screen{buttons}) {
+        $screen{buttonOrder} = [map { /:/?(split /: /)[0]:($_) } split /, /, $screen{buttons}];
+        $screen{buttons} = {map { /:/?split /: /:($_,$_) } split /, /, $screen{buttons}};
+    }
+
+    $screen{requires} = $screen{'require'} if($screen{'require'})
+        and warn "Use 'requires:' not 'require:' in $screen{sid}\n";
+    if($screen{requires}) {
+        $screen{requires} = [map { [split /\+/, $_] } split /\|/, $screen{requires}];
+        $screen{requiresSet} = {map { s/\?//; ($_ => 1) } map { @{$_} } map { @{$_} } $screen{requires}};
+    }
+
+    return %screen;
+}
+

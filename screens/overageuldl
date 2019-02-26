@@ -1,0 +1,13 @@
+title: Unlimited Overage
+buttons: bwtempup: Temporary Increase, bwuldlupgrade: Permanent Increase, message: Technician Investigate, conclude: Do nothing
+
+<p>We monitor all accounts for abnormal activity. Our system has flagged your account becuase of unusually high usage. This means you used more bandwidth than we expected. There are a few possible causes for this. 
+
+<p>The first is that your usage pattern was different. For example you watched more netflix that usual. The system uses the past 24 hours as it's measuring period. So usage after this time yesterday is still counting. This is the most common reason. The second is that someone else is using your connection. The third is that your computer has contracted a virus and the virus is using high amounts of bandwidth. These two reasons are rare and should only be considered if you think it's unlikely that you used the bandwidth our system measured.</p>
+
+<p>If it's the first, we can temporaily  or we can permanently tell our system to expect more usage from you.</p>
+
+<p>If you think it's the second or third, the first two steps are to change the password for your wireless (if you have it) and run a virus check on all your computers.</p>
+
+<h4>Last 24 hours</h4>
+%GRAPH

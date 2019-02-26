@@ -1,0 +1,10 @@
+title: Couldn't find account
+requires: firstname?+lastname+company?+serviceaddress+aptunit+servicezip|ip
+buttons: robot: Try again, problemother: Report problem and call technician
+
+%MESSAGE
+
+<p>Is this the name associated with the account, and is the
+address you gave me the address of service?</p>
+
+<p class="dont-say">Try to verify the name, address, and spelling.</p>

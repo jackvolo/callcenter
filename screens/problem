@@ -1,0 +1,7 @@
+title: Connection problem
+requires: firstname+lastname+company?+username?+customer?+serviceaddress+aptunit+servicezip|ip
+buttons: robot: Test connection
+
+<p>Lets figure out what's wrong.</p>
+
+<p>This will be just a few moments while we test the connection to your location.</p>

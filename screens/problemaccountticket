@@ -1,0 +1,5 @@
+title: Billing or account issue
+buttons: robot: File ticket, conclude: Abandon ticket
+requires: account?+firstname+lastname+company?+username?+customer?+phone+serviceaddress?+servicezip?+problem+urgency+operator
+
+<p>I'll file a ticket for our account staff to look into the issue. Can I have your account number? It's on your Volo statement.</p>

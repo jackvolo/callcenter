@@ -1,0 +1,7 @@
+title: Upgrade bandwidth permanently
+buttons: robot
+requires: firstname?+lastname+company?+serviceaddress+aptunit+servicezip|ip
+
+<p class="dont-say">Confirm that the customer would like to purchase a permanent
+upgrade of 250 megabytes per month for an additional $10 per month.</p>
+

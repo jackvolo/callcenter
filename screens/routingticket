@@ -1,0 +1,5 @@
+title: File ticket regarding problem
+buttons: robot: File ticket, conclude: Abandon ticket
+requires: firstname+lastname+company?+username?+customer?+phone+serviceaddress+aptunit+servicezip+hasrouter+onecomputer+problem+urgency+ip?+operator
+
+<p>There is a problem with our configuration, I'm going to file a ticket for a technician to update it which should resolve the problem.</p>
