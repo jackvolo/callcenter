@@ -90,6 +90,8 @@ digraph callcenter {
     forcetowerreset -> robot [ label = "Reset Tower" ];
     greencrestinfo -> conclude [ label = "Conclude" ];
     greencrestinfo -> problemweb [ label = "I need help" ];
+    gsr_bulkinfo -> conclude [ label = "Conclude" ];
+    gsr_bulkinfo -> problemweb [ label = "I need help" ];
     hardwickinfo -> conclude [ label = "Conclude" ];
     hardwickinfo -> problemweb [ label = "I need help" ];
     joeallanproblem -> robot [ label = "Continue" ];
