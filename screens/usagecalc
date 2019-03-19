@@ -9,11 +9,11 @@ buttons:conclude
 
         var bandwidth = parseFloat((video * 2) + (games * 1) + (other * 1));
         if (bandwidth < 9) {
-            $('#fiber-output').text("Light Fiber service at &#36;29.95 per month");
+            $('#fiber-output').text("Light Fiber service at $29.95 per month");
         } else if (bandwidth < 29) {
-            $('#fiber-output').text("Medium Fiber service at &#36;49.95 per month");
+            $('#fiber-output').text("Medium Fiber service at $49.95 per month");
         } else {
-            $('#fiber-output').text("Heavy Fiber service at &#36;59.95 per month");
+            $('#fiber-output').text("Heavy Fiber service at $59.95 per month");
         }
     }
     $('div.fiberfaq input.fiber-calc').change(calculate()); 

@@ -2,7 +2,7 @@ title: Potential Customer
 buttons: robot: File Ticket
 requires: firstname+lastname+serviceaddress+aptunit+servicezip+phone+referredby?+message?+operator
 
-<p>Check coverage area by looking at the <a class='coverage' href="https://volo.net/coverage-map" target="_blank">coverage map</a>.</p>
+<p class="dont-say">Check coverage area by looking at the <a class='coverage' href="https://volo.net/coverage-map" target="_blank">coverage map</a>.</p>
 
 <script type="text/javascript">
     $('div.screen-potentialstjoe dd.menu').hide();

@@ -12,8 +12,6 @@ requires: firstname?+lastname+username?+customer?+serviceaddress+aptunit+service
 
 <script type="text/javascript">
     if($('#v-switchip').val()) $('#switchdown-switchip').html($('#v-switchip').val());
-    else $('#switchdown-switchip').hide();
     if($('#v-serviceaddress').val()) $('#switchdown-serviceaddress').html($('#v-serviceaddress').val());
-    else $('#switchdown-serviceaddress').hide();
 </script>
 
