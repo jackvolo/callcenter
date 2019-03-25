@@ -2,6 +2,8 @@ title: Problem with phone
 requires: firstname+lastname+company?+customer?+callerphone+callout?+callin?+phonetype
 buttons: robot: Run tests
 
+<p>What is the phone number for the devices you're experiencing issues? </p>
+
 <p>Are you having trouble with calling out or receiving calls (or both)?</p>
 
 <p>Do you have a Polycom IP phone or Grandstream converter box?</p>
