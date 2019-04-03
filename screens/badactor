@@ -1,7 +1,7 @@
 title: Account Suspended 
 buttons: conclude: Continue
 
-<p>You account has been <strong>%MESSAGE</strong>. Our system shows you owe <strong>%PASTDUEB</strong>. If you would like to make it current, I can take a credit card payment now, but there will be a 5% convience fee. You may also come to our store at 822 Pioneer St and pay with check or cash, or mail us a check. However, I cannot restore your account until we receive a payment.</p>
+<p>You account has been <strong>%MESSAGE</strong>. Our system shows you owe <strong>%PASTDUEB</strong>. If you would like to make it current, I can take a credit card payment now, but there will be a 5% convience fee. You may also come to our store at 3310 N Cunningham Ave, Champaign IL 61802, and pay with check or cash, or mail us a check. However, I cannot restore your account until we receive a payment.</p>
 
 <p class='dont-say'>The total with the convience fee is %CCFEE.</p>
 <p class='dont-say'>If the customer chooses to make a payment click here: <a href=http://volo.net/payment>volo.net/payment</a></p>
