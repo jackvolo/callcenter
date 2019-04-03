@@ -1,7 +1,11 @@
 title: Error connecting to Volo
 buttons: calltech
 
-<p class="dont-say">The call script could not connect to the Volo server. Ask the customer to hold and call Thomas (217)840-0736.
-If you can't reach him or he instructs you, click "<a href="#" class="foo">go back</a>" and try again or use a different path.</p>
+<p class="dont-say">The call script got a bad reply from Volo, so
+we can't move forward from here. You can click "<a href="#" class="foo">go back</a>" and try again.
+if that doesn't work, please reload the page and start the script over.
+Finally, call Thomas, Tony or Peter and let them know it's not working.
+</p>
+
 
 <script type="text/javascript">$(function() { $('a.foo').click(function() { $('div.screen:last-child a.back').click(); return false; }) });</script>
