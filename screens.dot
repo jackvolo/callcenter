@@ -18,6 +18,7 @@ digraph callcenter {
     browsertest -> custreboot [ label = "Didn't work" ];
     browsertest2 -> conclude [ label = "Worked" ];
     browsertest2 -> robot [ label = "Didn't work" ];
+    bulksuspended -> conclude [ label = "Continue" ];
     bwtempup -> robot [ label = "Perform upgrade" ];
     bwuldlupgrade -> robot [ label = "robot" ];
     bwupgrade -> robot [ label = "robot" ];
