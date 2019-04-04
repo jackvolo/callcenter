@@ -1,6 +1,0 @@
-title: Check coverage
-buttons: robot: Check coverage, voloinfo_nosched: Skip to About Volo
-requires: serviceaddress+aptunit+servicezip
-
-Let's see what the coverage is like in your area.
-
