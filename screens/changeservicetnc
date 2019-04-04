@@ -1,7 +1,0 @@
-title: Make changes to this service
-requires: service+activated?+deactivated?+tncplan
-buttons: robot: Continue
-
-<p>%MESSAGE</p>
-
-<p class="dont-say">Format the date as YYYY-MM-DD</p>
