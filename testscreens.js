@@ -427,14 +427,6 @@ screens['hardwickinfo'] = {
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
 };
-screens['joeallanproblem'] = {
-    title: "Problem at Joe Allan Apts",
-    body: "<p>Let me take down some information, and we'll run some automatic tests and reset the switch you're connected to.</p>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['firstname?','lastname?','serviceaddress']]
-    ,requiresSet: {firstname: 1,serviceaddress: 1,lastname: 1}
-};
 screens['kennedywilsoninfo'] = {
     title: "Kennedy Wilson",
     body: "<p>Kennedy-Wilson is providing Volo's gigabit fiber internet to your unit as an included amenity. The provided service provides speeds up to 1 gigabit (1000mbps), just about the fastest service in the country. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. Do not use a modem, our service is proved directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>This is an included ammenity, you do not have to pay for it. Just connect to the ethernet port and start enjoying it!</p>\n"
@@ -1230,42 +1222,6 @@ screens['wamplerinfo'] = {
     body: "<p>Wampler Apartments is providing Volo's fiber internet to your unit as an included amenity. The provided service provides speeds up to 1 gigabit (1000mbps), just about the fastest service in the country. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. <b>Do not use a modem or modem/router combo device</b>, our service is provided directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>The internet at Wampler is very fast, so to take full advantage of the service you will need to get a router that is capable of 1000 megabits on all its ports, and supports 802.11AC wi-fi.</p>\n\n<p>Your service should be active now, you don't need to sign up.  If you pay anything for the service, you'd pay that directly to Wampler Apartments along with your rent.</p>\n"
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
-};
-screens['winfieldcheck'] = {
-    title: "Confirm as Winfield Village resident",
-    body: "Are you a resident of Winfield Village?\n"
-    ,buttons: {winfieldsignup: "Yes",voloinfo: "No"}
-    ,buttonOrder: ['winfieldsignup','voloinfo']
-};
-screens['winfieldinfo'] = {
-    title: "Volo at Winfield Village",
-    body: "<p>Residents at Winfield Village don't pay an installation cost. There are\nthree Volo service options for residents at Winfield Village.</p>\n\n<p>Light users generally choose <b>Priority 250</b> for <b>$20</b>/month.\nRegular users choose <b>Priority 500</b> for <b>$25</b>/month because this\nservice allows for twice the download capability. Both Priority 250 and\nPriority 500 have speeds up to 30 megabits per second.</p>\n\n<p>The third option is <b>Bulk Broadband</b>. Select users choose this\nservice because it allows for unlimited downloading, but reduces speed to\none megabit per second.</p>\n\n<p><b>Would you like to schedule an installation?</b></p>\n\n"
-    ,buttons: {conclude: "No thanks",schedule: "schedule"}
-    ,buttonOrder: ['schedule','conclude']
-};
-screens['winfieldplan'] = {
-    title: "Change Plan",
-    body: "\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['winfieldplan','serviceaddress']]
-    ,requiresSet: {serviceaddress: 1,winfieldplan: 1}
-};
-screens['winfieldproblem'] = {
-    title: "Reset Switch",
-    body: "I'm going to reset the switch you're connected to, and then we'll see if you can connect.\n\n<script type=\"text/javascript\">\n    $(function() {\n        $('#v-ticket').val('');\n    });\n<"+"/script>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['customer'],['username'],['serviceaddress']]
-    ,requiresSet: {serviceaddress: 1,customer: 1,username: 1}
-};
-screens['winfieldsignup'] = {
-    title: "Winfield Sign Up",
-    body: "%MESSAGE\n"
-    ,buttons: {robot: "Sign Up"}
-    ,buttonOrder: ['robot']
-    ,requires: [['firstname','lastname','email?','phone?','serviceaddress','aptunit','servicezip','winfieldplan']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,email: 1,winfieldplan: 1}
 };
 screens['wirelessfaq'] = {
     title: "",
