@@ -4,11 +4,12 @@ buttons: conclude: conclude
 <script type="text/javascript">
     $('#servicezip').on("ready load change", function () {
         $zip = $('#servicezip').val();
+        console.log("https://volo.net/secure/cs/v.cgi?q=dump_json+silent+report+city_state_from_zip+"+$zip+"&raw=1&type=application/json");
         $.ajax({
             url: 'https://volo.net/secure/cs/v.cgi',
             data: {q: "dump_json silent report city_state_from_zip "+$zip, raw: 1, type: "application/json"},
             success: function(data, status) {
-                $('#city').val(data[0]);
+                $('#servicecity').val(data[0]);
                 $('#state').val(data[1]);
             },
             error: function(data, status) {

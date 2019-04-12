@@ -95,7 +95,6 @@ digraph callcenter {
     gsr_bulkinfo -> problemweb [ label = "I need help" ];
     hardwickinfo -> conclude [ label = "Conclude" ];
     hardwickinfo -> problemweb [ label = "I need help" ];
-    joeallanproblem -> robot [ label = "Continue" ];
     kennedywilsoninfo -> conclude [ label = "Conclude" ];
     kennedywilsoninfo -> problemweb [ label = "I need help" ];
     lancasterinfo -> conclude [ label = "Conclude" ];
@@ -325,12 +324,5 @@ digraph callcenter {
     waholdingsinfo -> problemweb [ label = "I need help" ];
     wamplerinfo -> conclude [ label = "Conclude" ];
     wamplerinfo -> problemweb [ label = "I need help" ];
-    winfieldcheck -> winfieldsignup [ label = "Yes" ];
-    winfieldcheck -> voloinfo [ label = "No" ];
-    winfieldinfo -> conclude [ label = "No thanks" ];
-    winfieldinfo -> schedule [ label = "schedule" ];
-    winfieldplan -> robot [ label = "Continue" ];
-    winfieldproblem -> robot [ label = "Continue" ];
-    winfieldsignup -> robot [ label = "Sign Up" ];
     wirelessfaq -> conclude [ label = "conclude" ];
 }
