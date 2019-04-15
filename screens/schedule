@@ -2,10 +2,18 @@ title: File ticket regarding problem
 requires: hour+date+ticket
 buttons: robot: Schedule, conclude: Conclude without scheduling
 
-%MESSAGE
+<p>Your ticket has been filed. If you need to follow up, please refer to ticket number <strong>%TICKET</strong>. </p>
 
-I can schedule a technician to come to your location. The earliest time we have available is %TECHTIME. When would you like the technician to come by?
+<p>Given the troubleshooting so far has not restored your connection, I would recommend scheduling for a technician to come to your location, to further troubleshoot and verify the service is working as expected. </p>
+
+<p>Once they confirm the service is working as expected, they can work to resolve any remaining issues on your personal devices (including routers); however, service work pertaining to personal devices is billed at a rate of &#36;60/hr. 
+
+<p>If a technician is able to resolve your connectivity problems remotely before the scheduled time, we will call back to confirm functionality is restored and to cancel the tech visit.</p>
+
+<p>The earliest time we have available is %TECHTIME. When would you like the technician to come by? </p>
 
 <p class="dont-say">The system will give you the earliest time. If that doesn't work pick any time later than that between 9-5 Mon-Fri. If the customer requires a time outside that let them know you can't schedule that, and a manager will have to reach out to them for scheduling.</p>
 
-<p class="dont-say"><strong>Make sure the customer understands that the technician is scheduled to arrive AT SOME POINT during the hour following the time above. The technician will also need time to fix the problem. The customer should expect to be home for at least 2 hours to account for arrival and repair time.</strong></p>
+<p class="dont-say"><strong>Make sure the customer understands that the technician is scheduled to arrive AT SOME POINT during the hour following the time above. The technician will also need time to fix the problem. Thus, once a timeframe is selected, please confirm with the customer: </strong></p>
+
+<p>I am scheduling for a (X am/pm appointment). The tech should arrive between at (X) and (X + 1 hours), but will likely be on his way. If the tech HASN'T arrived by (X + 1 hours), feel free to call and check their status with ticket number <strong>%TICKET</strong>. Our tech will need some time to work after their arrival, but should hopefully complete the visit before (X + 2 hours). Does this timeframe work for you, or would you need a different time? </p>
