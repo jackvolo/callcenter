@@ -1,5 +1,0 @@
-title: Bailey Apts Sign Up
-buttons: robot: Sign Up
-requires: firstname+lastname+email+phone?+serviceaddress+aptunit+servicezip+baileyplan
-
-%MESSAGE

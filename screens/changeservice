@@ -1,6 +1,0 @@
-title: Make changes to this service
-requires: service+activated?+deactivated?
-buttons: robot: Continue
-
-<p>What changes would you like to make?</p>
-
