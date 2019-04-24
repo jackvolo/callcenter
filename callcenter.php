@@ -836,7 +836,7 @@
 <script type="text/javascript" src="jquery.autocomplete.js"></script>
 <script type="text/javascript" src="geolocate.js" async defer></script>
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW05P51PQsDWL8JUjUlI7no-ds2FdaI8E&libraries=places" async defer></script>
+<?php require_once(".maps.php") ?>
 </body>
 
 </html>

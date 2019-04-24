@@ -843,7 +843,7 @@
 <script type="text/javascript" src="jquery.autocomplete.js"></script>
 <script type="text/javascript" src="geolocate.js" async defer></script>
 
-<?php require_once("maps.php") ?>
+<?php require_once(".maps.php") ?>
 </body>
 
 </html>

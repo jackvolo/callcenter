@@ -12,6 +12,7 @@ digraph callcenter {
     badpassword -> drupaladdemail [ label = "Retry" ];
     badticket -> findtickets [ label = "Try to find ticket" ];
     badticket -> robot [ label = "Look up status" ];
+    billingfaq -> conclude [ label = "conclude" ];
     bulksuspended -> conclude [ label = "Continue" ];
     bwtempup -> robot [ label = "Perform upgrade" ];
     bwuldlupgrade -> robot [ label = "robot" ];
@@ -112,6 +113,7 @@ digraph callcenter {
     overageuldl -> message [ label = "Technician Investigate" ];
     pastdue -> problemweb [ label = "Continue " ];
     paypal -> conclude [ label = "conclude" ];
+    phonefaq -> conclude [ label = "conclude" ];
     pickaip -> robot [ label = "Bump this IP" ];
     pickaservice -> robot [ label = "Edit this service" ];
     pickasite -> robot [ label = "Continue" ];
@@ -279,6 +281,8 @@ digraph callcenter {
     ucomminfo -> problemweb [ label = "I need help" ];
     unknownprobticket -> conclude [ label = "Abandon ticket" ];
     unknownprobticket -> robot [ label = "File ticket" ];
+    updatestatements -> conclude [ label = "Cancel" ];
+    updatestatements -> robot [ label = "Update" ];
     upgraded -> conclude [ label = "conclude" ];
     volodown -> problemwebticket [ label = "Already Reset" ];
     volodown -> nopoeprobticket [ label = "No" ];
