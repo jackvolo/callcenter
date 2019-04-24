@@ -1,0 +1,26 @@
+title:Frequency Asked Questions
+buttons: conclude
+
+<script type="text/javascript">
+    $('dl.phonefaq dd').hide();
+    $('dl.phonefaq dt').wrapInner('<a href="#"></a>');
+    $('dl.phonefaq dt a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        return(false);
+    });
+</script>
+
+
+<p>Our phone service works with any active internet connection, thus eliminating many of the common upcharges for analog telephone infrastructure. That way we can offer a quality phone service at minimal cost!</p>
+
+<p>Our Voice over Internet Protocol (VoIP) phone service does make use of a specific type of phone designed to operate with the service. If you have an existing handset you're especially attached to, we do offer Grandstream converter boxes which can convert the signal from VoIP to analog; however, the Polycom phones are far more reliable as they are designed to work with the service, and do require at least the installation of the Polycom as well to ensure you're able to receive your calls.</p>
+
+<p>We do offer either brand new numbers or we can use your existing phone number. "Porting" a phone number from your current provider does take a bit longer (generally between 2-4 weeks, depending on your current provider), but we'd be happy to start the process prior to the installation of our phone service. To start the process, we need a <strong>signed copy of your most recent phone bill</strong>.</p>
+
+<p>VoIP offers an incredible flexibility for either office or residential. If you're looking for a custom-tailored solution for a more complex network of phones, or if there are particular advanced features you're looking for, do let us know so that our technicians can work with you regarding those options.</p>
+
+<p>We do offer voicemail in addition to our phone services. To access your voicemail from the Polycom phone, simply dial *97 to be taken directly to your mailbox. Should this not work, you can dial *98 to access the general mailbox system, and then enter your mailbox code (this is distinct from your telephone number). If you don't have your mailbox number, a technician will need to followup with you to confirm the mailbox details.</p>
+

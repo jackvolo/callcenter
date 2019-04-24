@@ -1,0 +1,37 @@
+title: Update Statement Delivery Preference
+buttons: robot: Update, conclude: Cancel
+requires: statementtype+email?
+
+>>TODO>> Insert into callcenter.php sections
+
+                    <div class="element" id="r-statementtype">
+                        <label for="v-statementtype">Statement Type</label>
+                        <div class="value">
+                            <input type="text" name="v-statementtype" id="v-statementtype" size="10"/>
+                        </div>
+                    </div>
+                    
+                    
+        <div class="element input-statementtype">
+            <label for="statementtype">Statement Type</label>
+            <div class="input">
+                <select name="statementtype" id="statementtype">
+                    <option>email</option>
+                    <option>paper</option>
+                    <option>paper, email</option>
+                    <option>Invoice</option>
+                    <option>Email Invoice</option>
+                </select>
+            </div>
+        </div>
+
+>>TODO>> Implement v_command to query current billing preference - noted as %BILLING (probably update to %MESSAGE?)
+>>TODO>> Probaby also auto-fill their email, if robot has not done so already
+
+<p>I can certainly help out with updating your statement delivery method. I'm showing you are currently set to %BILLING.</p>
+
+<p>Please note: effective June 16th, 2019, paper statements and invoices will have a $1.50 paper billing fee applied each billing cycle.</p>
+
+<p>How would you like your bills delivered?</p>
+
+<p class="dont-say">Also confirm email address is accurate, especially when changing to email statements/invoices.</p>

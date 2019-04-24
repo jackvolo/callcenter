@@ -1,0 +1,28 @@
+title:Frequency Asked Questions
+buttons: conclude
+
+<script type="text/javascript">
+    $('dl.billingfaq dd').hide();
+    $('dl.billinbfaq dt').wrapInner('<a href="#"></a>');
+    $('dl.billingfaq dt a').click(function() {
+        var $dd=$(this).parents('dt').next();
+        if($dd.hasClass('open')) $dd.hide('fast');
+        else $dd.show('fast');
+        $dd.toggleClass('open');
+        return(false);
+    });
+
+</script>
+
+<p>We have several ways you can pay your bill:
+First, is via automatic debit from your checking account.  Print, fill out, and sign the form at volo.net/ach then return it to us with a VOIDed check, and we'll make sure your bill is paid on-time every month from your bank account.
+Second, we can process check, cash, or money order to our office: 3310 N Cunningham Ave, Urbana IL 61802. We do not recommend sending cash through the mail. Our office is generally open 9am to 6pm Monday through Friday.
+Finally, you can pay online with a credit card at volo.net/payment or by calling us at 217 367-8656.  Paying with a credit card will incur a 5% convenience fee. The same fee applies to in-office debit or credit card payments. </p>
+
+<p>Statements are sent out on the 16th of each month, and payments are due (as in received by our office) on the 1st of each month. Monthly service charges cover from the 1st to the end of each month. Putting a payment in the post on the 1st will likely cause the payment to be late.</p>
+
+<p>We do bill for the month forward---thus, this month's bill on the 16th reflects service charges for next month's service. Especially for new customers, you may see two service charges, which reflects the timeframe since installation to the statement date plus then the month ahead</p>
+
+<p>July 16th, 2019, marks the implementation of a $1.50 administrative charge for paper statements. We do have the option of delivering statements via email, which remains a free service. If you're interested, email us at billing@volo.net so we have a positive confirmation of the spelling of your email address, and we can update your billing preferences.</p>
+
+<p>If you're having trouble paying off a large past-due balance, we do offer payment plans to help space out the balance over several months. Please let the Customer Service Representative know you're needing to do so and have them file a billing ticket with roughly how much each month you would be able to pay on top of your normal monthly service charges, and an accounting representative will contact you back to set up the payment plan.</p>
