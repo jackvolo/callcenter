@@ -57,6 +57,7 @@ digraph callcenter {
     ethernetcheck -> robot [ label = "Continue" ];
     faqs -> conclude [ label = "continue" ];
     fiberfaq -> conclude [ label = "conclude" ];
+    fiberinstallwarnings -> conclude [ label = "Finished " ];
     findpoe -> voloreset [ label = "Yes" ];
     findpoe -> nopoeprobticket [ label = "No" ];
     findticket -> robot [ label = "Check for tickets" ];
@@ -236,6 +237,7 @@ digraph callcenter {
     root -> problemwebstart [ label = "Internet Problem/Outage Check" ];
     root -> problemphone [ label = "Phone Problem" ];
     root -> calltech [ label = "Forward to tech " ];
+    routerfaq -> conclude [ label = "conclude" ];
     routerreset -> conclude [ label = "Worked" ];
     routerreset -> bypassrouter [ label = "Didn't work - Bypass Router" ];
     routerresetspeedtest -> speedtest [ label = "Continue" ];
