@@ -837,23 +837,13 @@
 
 </div>
 
-<!--
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
--->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
 <script type="text/javascript" src="testscreens.js"></script>
 <script type="text/javascript" src="testcallcenter.js"></script>
 <script type="text/javascript" src="jquery.autocomplete.js"></script>
 <script type="text/javascript" src="geolocate.js" async defer></script>
 
-<!--
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW05P51PQsDWL8JUjUlI7no-ds2FdaI8E&libraries=places" async defer></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8Yo6EEQDs1RZyXc5iq0CD5d_dJDGmX8w"></script>
--->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW05P51PQsDWL8JUjUlI7no-ds2FdaI8E&libraries=places&callback=initAutocomplete"></script>
-<script type="text/javascript" src="javascript/map/geoxml3.js"></script>
-<script type="text/javascript" src="javascript/map/ProjectedOverlay.js"></script>
-<script type="text/javascript" src="javascript/map/v3_epoly.js"></script>
+<?php require_once("maps.php") ?>
 </body>
 
 </html>
