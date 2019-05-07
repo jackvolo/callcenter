@@ -837,13 +837,11 @@
 
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
 <script type="text/javascript" src="testscreens.js"></script>
 <script type="text/javascript" src="testcallcenter.js"></script>
-<script type="text/javascript" src="jquery.autocomplete.js"></script>
-<script type="text/javascript" src="javascript/geolocate.js" async defer></script>
 
-<?php require_once(".maps.php") ?>
+<?php require_once(".includes.php") ?>
 </body>
 
 </html>

@@ -829,14 +829,11 @@
 <link href="jsxc.volo.css" media="all" rel="stylesheet" type="text/css" />
 -->
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
 <script type="text/javascript" src="screens.js"></script>
 <script type="text/javascript" src="callcenter.js"></script>
-<script type="text/javascript" src="jquery.autocomplete.js"></script>
-<script type="text/javascript" src="javascript/geolocate.js" async defer></script>
 
-<?php require_once(".maps.php") ?>
+<?php require_once(".includes.php") ?>
 </body>
 
 </html>
