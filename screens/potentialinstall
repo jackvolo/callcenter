@@ -32,9 +32,10 @@ requires: firstname+lastname+serviceaddress+aptunit+servicezip+phone+email?+refe
 
     function addressLink() {
         $address = $('#serviceaddress').val() + "+" + $('#servicezip').val();
-        $('div.screen-potentialinstall a.coverage').attr("href", "https://volo.net/coverage-map?address="+$address);
+        console.log($address);
+        //$('div.screen-potentialinstall a.coverage').attr("href", "https://volo.net/coverage-map?address="+$address);
     }
 
-    $('#serviceaddress').change(addressLink());
-    $('#servicezip').change(addressLink());
+    //$('#serviceaddress').change(addressLink());
+    //$('#servicezip').change(addressLink());
 </script>

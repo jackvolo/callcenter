@@ -841,7 +841,7 @@
 <script type="text/javascript" src="testscreens.js"></script>
 <script type="text/javascript" src="testcallcenter.js"></script>
 <script type="text/javascript" src="jquery.autocomplete.js"></script>
-<script type="text/javascript" src="geolocate.js" async defer></script>
+<script type="text/javascript" src="javascript/geolocate.js" async defer></script>
 
 <?php require_once(".maps.php") ?>
 </body>
