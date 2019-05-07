@@ -1087,6 +1087,7 @@ input.copy-caller-id
 var screens = {};
 screens['1404lincolninfo'] = {
     title: "Chateau Normand",
+
     body: "<p>Good news! Volo's internet service is being provided to your unit as an included amenity. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. <b>Do not use a modem or modem/router combo device</b>, our service is provided directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>Additionally WiFi is provided. Each unit has it's own network and your landlord should have the information to get you signed on.</p>\n\n<p>Your service should be active now, you don't need to sign up.  If you pay anything for the service, you'd pay that directly to Chateau Normand along with your rent.</p>\n"
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']

@@ -1,11 +1,13 @@
 title: 
-buttons: potentialcustomerstart: Potential Customer/New Customer Info, problemwebstart: Internet Problem/Outage Check, problemphone: Phone Problem, problememailstart: Email Problem, problemaccountstart: Pay Bill / Billing / Account, ticketcheck, message: Message / Other, faqs: FAQs, calltech: Forward to tech 
+buttons: potentialcustomerstart: Potential Customer/New Customer Info, problemwebstart: Internet Problem/Outage Check, problemphone: Phone Problem, problememailstart: Email Problem, problemaccountstart: Pay Bill / Billing / Account, ticketcheck, message: Message / Other, faqs: FAQs, calltech: Forward to tech, ccomputer: Champaign Computer
 requires: callerphone?+customer?+operator
 
-<p>Volo Broadband this is _____, how can I help you?</p>
+<p>Thank you for calling Volo Broadband! This is _____, how can I help you?</p>
 
 <p class="dont-say">Not everyone we serve has an account or customer number. Just continue and fill their information in manually</p>
 
 <p class="dont-say">If the person says they just moved into an apartment and needs instructions or needs to set up an account, use "Potential Customer"</p>
 
 <p class="dont-say">217-367-8656 is the Volo Office number. If that comes up as the caller ID, you have to ask the customer for their phone number and use that.</p>
+
+<p class="dont-say">If the customer inquires about Champaign Computer or computer repair services, use the new Champaign Computer branch</p>
