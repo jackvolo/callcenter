@@ -892,5 +892,6 @@ Date.DATE_ISO8601 = "Y-m-d%TH:i:sO";
 Date.DATE_RFC2822 = "D, d M Y H:i:s O";
 // W3C       "2005-08-15 15:52:01+00:00"
 Date.DATE_W3C     = "Y-m-d%TH:i:sP";
+//}}}1
 
 // vim:foldmethod=marker

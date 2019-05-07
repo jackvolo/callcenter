@@ -1,7 +1,7 @@
 var screens = {};
 screens['1404lincolninfo'] = {
     title: "Chateau Normand",
-    body: "<p>Good news!  Volo's internet service is being provided to your unit as an included amenity. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. <b>Do not use a modem or modem/router combo device</b>, our service is provided directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>Additionally WiFi is provided. Each unit has it's own network and your landlord should have the information to get you signed on.</p>\n\n<p>Your service should be active now, you don't need to sign up.  If you pay anything for the service, you'd pay that directly to Chateau Normand along with your rent.</p>\n"
+    body: "<p>Good news! Volo's internet service is being provided to your unit as an included amenity. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. <b>Do not use a modem or modem/router combo device</b>, our service is provided directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>Additionally WiFi is provided. Each unit has it's own network and your landlord should have the information to get you signed on.</p>\n\n<p>Your service should be active now, you don't need to sign up.  If you pay anything for the service, you'd pay that directly to Chateau Normand along with your rent.</p>\n"
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
 };
@@ -21,7 +21,7 @@ screens['autopay'] = {
 };
 screens['badactor'] = {
     title: "Account Suspended ",
-    body: "<p>You account has been <strong>%MESSAGE</strong>. Our system shows you owe <strong>%PASTDUEB</strong>. If you would like to make it current, I can take a credit card payment now, but there will be a 5% convience fee. You may also come to our store at 822 Pioneer St and pay with check or cash, or mail us a check. However, I cannot restore your account until we receive a payment.</p>\n\n<p class='dont-say'>The total with the convience fee is %CCFEE.</p>\n<p class='dont-say'>If the customer chooses to make a payment click here: <a href=http://volo.net/payment>volo.net/payment</a></p>\n"
+    body: "<p>You account has been <strong>%MESSAGE</strong>. Our system shows you owe <strong>%PASTDUEB</strong>. If you would like to make it current, I can take a credit card payment now, but there will be a 5% convience fee. You may also come to our store at 3310 N Cunningham Ave, Champaign IL 61802, and pay with check or cash, or mail us a check. However, I cannot restore your account until we receive a payment.</p>\n\n<p class='dont-say'>The total with the convience fee is %CCFEE.</p>\n<p class='dont-say'>If the customer chooses to make a payment click here: <a href=http://volo.net/payment>volo.net/payment</a></p>\n"
     ,buttons: {conclude: "Continue"}
     ,buttonOrder: ['conclude']
 };
@@ -39,39 +39,17 @@ screens['badticket'] = {
     ,requires: [['ticket']]
     ,requiresSet: {ticket: 1}
 };
-screens['baileyproblem'] = {
-    title: "Reset Switch",
-    body: "I'm going to reset the switch you're connected to, and then we'll see if you can connect.\n\n<script type=\"text/javascript\">\n    $(function() {\n        $('#v-ticket').val('');\n    });\n<"+"/script>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['customer'],['username'],['serviceaddress']]
-    ,requiresSet: {serviceaddress: 1,customer: 1,username: 1}
+screens['billingfaq'] = {
+    title: "",
+    body: "<script type=\"text/javascript\">\n    $('dl.billingfaq dd').hide();\n    $('dl.billinbfaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.billingfaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n\n<"+"/script>\n\n<p>We have several ways you can pay your bill:\nFirst, is via automatic debit from your checking account.  Print, fill out, and sign the form at volo.net/ach then return it to us with a VOIDed check, and we'll make sure your bill is paid on-time every month from your bank account.\nSecond, we can process check, cash, or money order to our office: 3310 N Cunningham Ave, Urbana IL 61802. We do not recommend sending cash through the mail. Our office is generally open 9am to 6pm Monday through Friday.\nFinally, you can pay online with a credit card at volo.net/payment or by calling us at 217 367-8656.  Paying with a credit card will incur a 5% convenience fee. The same fee applies to in-office debit or credit card payments. </p>\n\n<p>Statements are sent out on the 16th of each month, and payments are due (as in received by our office) on the 1st of each month. Monthly service charges cover from the 1st to the end of each month. Putting a payment in the post on the 1st will likely cause the payment to be late.</p>\n\n<p>We do bill for the month forward---thus, this month's bill on the 16th reflects service charges for next month's service. Especially for new customers, you may see two service charges, which reflects the timeframe since installation to the statement date plus then the month ahead</p>\n\n<p>July 16th, 2019, marks the implementation of a $1.50 administrative charge for paper statements. We do have the option of delivering statements via email, which remains a free service. If you're interested, email us at billing@volo.net so we have a positive confirmation of the spelling of your email address, and we can update your billing preferences.</p>\n\n<p>If you're having trouble paying off a large past-due balance, we do offer payment plans to help space out the balance over several months. Please let the Customer Service Representative know you're needing to do so and have them file a billing ticket with roughly how much each month you would be able to pay on top of your normal monthly service charges, and an accounting representative will contact you back to set up the payment plan.</p>\n"
+    ,buttons: {conclude: "conclude"}
+    ,buttonOrder: ['conclude']
 };
-screens['baileysignup'] = {
-    title: "Bailey Apts Sign Up",
-    body: "%MESSAGE\n"
-    ,buttons: {robot: "Sign Up"}
-    ,buttonOrder: ['robot']
-    ,requires: [['firstname','lastname','email','phone?','serviceaddress','aptunit','servicezip','baileyplan']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,baileyplan: 1,lastname: 1,phone: 1,email: 1}
-};
-screens['browsertest'] = {
-    title: "Run browser test",
-    body: "[screen:browsertestcore]\n"
-    ,buttons: {conclude: "Worked",custreboot: "Didn't work"}
-    ,buttonOrder: ['custreboot','conclude']
-};
-screens['browsertest2'] = {
-    title: "Run browser test 2",
-    body: "<p>Test their connection to N. Y. Times dot com:</p>\n\n<ol>\n    <li>Say: Open up your web browser. (Internet Explorer, Firefox, or Safari)</li>\n    <li>Wait for the browser to be open. If it takes more than 60 seconds or is too confusing, skip to \"When did you first notice the problem?\"</li>\n    <li>Say: Type nytimes.com into the Address Bar, but don't press Enter yet.  Spell nytimes.com \"n y times dot com\"</li>\n    <li>Wait for them to be done typing.</li>\n    <li>Say: Press Enter now, and tell me when the page has finished loading.</li>\n    <li>Press [button here?] NYT load time: seconds</li>\n    <li>When the page has loaded, press</li>\n    <li>If timer reaches 60 seconds, press and move on.</li>\n</ol>\n\n"
-    ,buttons: {conclude: "Worked",robot: "Didn't work"}
-    ,buttonOrder: ['conclude','robot']
-};
-screens['browsertestcore'] = {
-    title: "Test web browser connection",
-    body: "<p>Let's test your connection to <span class=\"url\">google.com</span>:</p>\n<p>Open up your web browser: Internet Explorer, Firefox, or Safari.</p>\n\n<p class=\"dont-say\">Wait for the browser to be open. If it takes more than 60 seconds or is too confusing, click \"Didn't work\"</p>\n\n<p>Type <span class=\"url\">google.com</span> into the Address Bar, but don't press Enter yet.</p>\n\n<p class=\"dont-say\">Wait for them to be done typing.</p>\n\n<p>Press Enter now, and tell me when the page has finished loading.</p>\n\n<p class=\"dont-say\">Press <input type=\"button\" value=\"Start\" class=\"start-timer\"/>.\nWhen the page has loaded, press <input type=\"button\" value=\"Stop\" class=\"stop-timer\"/><br/>\nIf timer reaches 60 seconds, press \"Didn't work\" and move on.</p>\n\n<script type=\"text/javascript\">\n    var timeoutID;\n    $(function() {\n        $('input.start-timer').click(function() {\n            timeoutID=window.setTimeout('updateTimer()', 1000);\n        });\n        $('input.stop-timer').click(function() {\n            window.clearTimeout(timeoutID);\n            $('#v-googleloadtime').val($('div.screen:last-child div.input-googleloadtime input').val());\n        });\n    });\n\n    function updateTimer() {\n        $('div.screen:last-child div.input-googleloadtime input').val(parseInt($('div.screen:last-child div.input-googleloadtime input').val())+1);\n        timeoutID=window.setTimeout('updateTimer()', 1000);\n    }\n<"+"/script>\n"
-    ,requires: [['googleloadtime']]
-    ,requiresSet: {googleloadtime: 1}
+screens['bulksuspended'] = {
+    title: "Bulk Apartment - Service Suspended",
+    body: "<p> Your service has been suspended by your apartment management group. Typically this is due to nonpayment of rent, though may be for other reasons. We recommend getting in touch with your property manager and confirm the reason why they suspended your service, and once the situation is resolved they should be able to reactivate internet service to your apartment from there. </p>\n\n<p class='dont-say'> Unfortunately, we are not given a specific reason for suspensions by the property management, and they should contact them directly. </p>\n"
+    ,buttons: {conclude: "Continue"}
+    ,buttonOrder: ['conclude']
 };
 screens['bwtempup'] = {
     title: "Increase bandwidth temporarily",
@@ -109,12 +87,6 @@ screens['bypassrouterspeedtest'] = {
     ,buttons: {speedtest: "No router or bypassed",routerresetspeedtest: "Unable to bypass"}
     ,buttonOrder: ['speedtest','routerresetspeedtest']
 };
-screens['callinstall'] = {
-    title: "Forward to sales rep",
-    body: "<p class=\"dont-say\">Forward the call to Ray at ext 709</p>\n\n<p class=\"dont-say ticket-tell\">Please tell him this is regarding ticket\n<strong class=\"ticket-tell-number\">_</strong>.</p>\n\n<script type=\"text/javascript\">\n    if($('#v-ticket').val()) $('.ticket-tell-number').html($('#v-ticket').val());\n    else $('p.ticket-tell').hide();\n<"+"/script>\n\n"
-    ,buttons: {conclude: "conclude",robot: "No one answered"}
-    ,buttonOrder: ['robot','conclude']
-};
 screens['calltech'] = {
     title: "Forward to technician",
     body: "%MESSAGE\n\n<p class=\"dont-say\">Send a message to the Volo Hangout Chat asking the question. If you don't get answer within 60 seconds, you can call the following numbers for urgent calls. Otherwise let the caller know we will reach out to them by the next business day.</p>\n\n<p class=\"dont-say\">Tony at <strong>(217) 898-8669</strong>.</p>\n\n<p class=\"dont-say\">Peter at <strong>(217)721-3893</strong>.</p>\n\n<p class=\"dont-say ticket-tell\">Please tell him this is regarding ticket\n<strong class=\"ticket-tell-number\">_</strong>. If there is a ticket.</p>\n\n<script type=\"text/javascript\">\n    if($('#v-ticket').val()) $('.ticket-tell-number').html($('#v-ticket').val());\n    else $('p.ticket-tell').hide();\n<"+"/script>\n\n"
@@ -140,8 +112,8 @@ screens['cancelservicepickservice'] = {
     ,requiresSet: {service: 1}
 };
 screens['cancelservicestart'] = {
-    title: "Change Service",
-    body: "[screen:findservices]\n"
+    title: "Cancel Service",
+    body: "<p>I need to look up your account info.</p>\n"
     ,buttons: {robot: "Continue"}
     ,buttonOrder: ['robot']
     ,requires: [['customer'],['serviceaddress','aptunit','servicezip']]
@@ -160,54 +132,6 @@ screens['captivatedunit'] = {
     ,buttonOrder: ['robot','conclude']
     ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip']]
     ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1}
-};
-screens['changeservice'] = {
-    title: "Make changes to this service",
-    body: "<p>What changes would you like to make?</p>\n\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['service','activated?','deactivated?']]
-    ,requiresSet: {activated: 1,deactivated: 1,service: 1}
-};
-screens['changeservicepickservice'] = {
-    title: "Choose a service",
-    body: "\n[screen:pickaservice]\n\n<script type=\"text/javascript\">\n    $('div.screen-changeservicepickservice dd').hide();\n    $('div.screen-changeservicepickservice dt').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-changeservicepickservice dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        $(this).parents('div.screen').find('div.input input').add('#v-service').val(\n            $(this).parents('dt').attr('service')\n        );\n        robot_check();\n        return(false);\n    });\n<"+"/script>\n"
-    ,buttons: {robot: "Edit this service"}
-    ,buttonOrder: ['robot']
-    ,requires: [['service']]
-    ,requiresSet: {service: 1}
-};
-screens['changeservicestart'] = {
-    title: "Change Service",
-    body: "[screen:findservices]\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['customer'],['serviceaddress','aptunit','servicezip']]
-    ,requiresSet: {servicezip: 1,aptunit: 1,serviceaddress: 1,customer: 1}
-};
-screens['changeservicetnc'] = {
-    title: "Make changes to this service",
-    body: "<p>%MESSAGE</p>\n\n<p class=\"dont-say\">Format the date as YYYY-MM-DD</p>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['service','activated?','deactivated?','tncplan']]
-    ,requiresSet: {activated: 1,deactivated: 1,tncplan: 1,service: 1}
-};
-screens['changeservicewinfield'] = {
-    title: "Make changes to this service",
-    body: "<p>What changes would you like to make?</p>\n\n<p class=\"dont-say\">Format the date as YYYY-MM-DD</p>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['service','activated?','deactivated?','winfieldplan']]
-    ,requiresSet: {activated: 1,deactivated: 1,winfieldplan: 1,service: 1}
-};
-screens['checkcoverage'] = {
-    title: "Check coverage",
-    body: "Let's see what the coverage is like in your area.\n\n"
-    ,buttons: {voloinfo_nosched: "Skip to About Volo",robot: "Check coverage"}
-    ,buttonOrder: ['robot','voloinfo_nosched']
-    ,requires: [['serviceaddress','aptunit','servicezip']]
-    ,requiresSet: {servicezip: 1,aptunit: 1,serviceaddress: 1}
 };
 screens['cochranesinfo'] = {
     title: "Cochranes",
@@ -229,31 +153,9 @@ screens['conclude'] = {
     ,requires: [['username?','ticket?','schedule']]
     ,requiresSet: {ticket: 1,schedule: 1,username: 1}
 };
-screens['coveragegood'] = {
-    title: "Good Coverage",
-    body: "<p>It looks like we have good coverage in your area.</p>\n\n<p>Would you like to learn more about our services?</p>\n\n"
-    ,buttons: {conclude: "Neither",voloinfo: "Learn more",schedule: "Schedule install"}
-    ,buttonOrder: ['voloinfo','schedule','conclude']
-};
-screens['coveragenone'] = {
-    title: "No Coverage",
-    body: "<p>It looks like we do not yet cover your area.</p>\n\n<p>Would you like to learn more about Volo anyway?</p>\n\n"
-    ,buttons: {voloinfo_nosched: "Yes",conclude: "No"}
-    ,buttonOrder: ['conclude','voloinfo_nosched']
-};
-screens['coverageretry'] = {
-    title: "Try coverage check again",
-    body: "<p>I couldn't place your address on our coverage map.</p>\n\n<p>I can try again, or I can forward your call to someone who can tell\nyou more about what areas we cover. I can also tell you more about\nthe services Volo offers.</p>\n\n<p class=\"dont-say\">Please ask for the caller's name if you need to forward the call to a sales rep.</p>\n\n"
-    ,buttons: {voloinfo_nogeo: "Skip to About Volo",callinstall: "callinstall",robot: "Check coverage"}
-    ,buttonOrder: ['robot','voloinfo_nogeo','callinstall']
-    ,requires: [['firstname?','lastname?','serviceaddress','aptunit','servicezip']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1}
-};
-screens['coveragesome'] = {
-    title: "Some Coverage",
-    body: "<p>It looks like we have some coverage in your area, but we'll a technician to make sure the signal is strong enough.</p>\n\n<p>Would you like to learn more about our services?</p>\n\n"
-    ,buttons: {conclude: "Neither",schedulesurvey: "Schedule technician",voloinfo: "Learn more"}
-    ,buttonOrder: ['voloinfo','schedulesurvey','conclude']
+screens['coveragemapcore'] = {
+    title: "Coverage Map",
+    body: "\n<div id=\"coverage-map\" style=\"width: 100%; height: 600px;\">\n&nbsp;\n</div>\n\n<script type=\"text/javascript\" src=\"javascript/map/coverage_map.js\"><"+"/script>\n"
 };
 screens['cpmbulkinfo'] = {
     title: "Campus Property Management",
@@ -355,25 +257,19 @@ screens['fiberfaq'] = {
     ,buttons: {conclude: "conclude"}
     ,buttonOrder: ['conclude']
 };
-screens['findips'] = {
-    title: "Change Service",
-    body: "<p>I need to look up your account info</p>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['username?','customer?','serviceaddress','aptunit','servicezip']]
-    ,requiresSet: {servicezip: 1,aptunit: 1,serviceaddress: 1,customer: 1,username: 1}
+screens['fiberinstallwarnings'] = {
+    title: "Fiber Installation Fine Print",
+    body: "<p>As the installation is constructing a new utility from our infrastructure up to your location, we do set installations at least a week out in order to schedule the requisite JULIE among other preparations. We aim to complete the installation and bring the service live that day; however, as this is a new construction, we cannot guarantee completion as complications may arise where we will need to return to complete it at a later date; if such occurs, our technicians will keep you appraised of the situation. We would strongly recommend to not cancel any existing service until the technicians confirm that the installation is complete and service is live, however. </p>\n\n<p>In the construction, we do bury our fiber optic cable in your yard.\n\n(If November - March:) In winter especially when the ground is frozen, we may require returning in the spring to bury your fiber optic cable. We will endeavor to drape the fiber through your yard where it is least likely to be damaged until we can bury it.\n\nAt the time of burial, depending on the ground condition, there will be some minor disruption from the trenching may be some disruption from the machinery. We will make efforts to restore your yard after upon completion of installation, though if additional restoration is needed after two weeks then feel free to contact our office to arrange for a technician to survey the situaion.</p>\n\n<p>Though our month-to-month services do not have a term-contract, we do have a Standard Service Agreement which outlines the terms and conditions of our service. We would love to forward you a copy for your records, although our technicians should also have a paper copy for you to sign at the time of installation. What email address should we send a copy to?</p>\n\n"
+    ,buttons: {conclude: "Finished "}
+    ,buttonOrder: ['conclude']
+    ,requires: [['email']]
+    ,requiresSet: {email: 1}
 };
 screens['findpoe'] = {
     title: "Find the Volo termination box",
     body: "<p>Let's try resetting the equipment and see if that restores your service.</p>\n\n<p>You're looking for a small black or white box.  If it's black, it'll be about the size of your thumb and it'll say \"DC  POE  LAN\" on it.  If it's white or off-white it'll be about the size of a bar of soap, and it may say \"CAT-5\" on it.  Can you find that box?</p>\n\n"
     ,buttons: {voloreset: "Yes",nopoeprobticket: "No"}
     ,buttonOrder: ['voloreset','nopoeprobticket']
-};
-screens['findservices'] = {
-    title: "Find Services",
-    body: "<p>I need to look up your account info</p>\n\n<p class=\"dont-say\">Address search only works for Town and Country and Winfield customers</p>\n"
-    ,requires: [['customer'],['serviceaddress','aptunit','servicezip']]
-    ,requiresSet: {servicezip: 1,aptunit: 1,serviceaddress: 1,customer: 1}
 };
 screens['findticket'] = {
     title: "Find a ticket",
@@ -409,19 +305,17 @@ screens['greencrestinfo'] = {
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
 };
+screens['gsr_bulkinfo'] = {
+    title: "Green Street Realty",
+    body: "<p>Green Street Realty is providing Volo's internet to your unit as an included amenity. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. Do not use a modem, our service is proved directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>This is an included ammenity, you do not have to pay for it. Just connect to the ethernet port and start enjoying it!</p>\n"
+    ,buttons: {conclude: "Conclude",problemweb: "I need help"}
+    ,buttonOrder: ['conclude','problemweb']
+};
 screens['hardwickinfo'] = {
     title: "Hardwick",
     body: "<p>Hardwick is providing Volo's gigabit fiber internet service to your unit.</p>\n\n<h4>For 401 E University:</h4>\n<p>You can start using it immediately by connecting your computer or router to the ethernet port in your apartment with a label. The label will be a letter followed a number 1 - 24. There will be 3 ports in your apartment, unfortunately the electrician did not wire the building correctly so we have a work around. You are meant to have 2 working ports but there is only one cable run. To work around this we have installed a 3rd port next to the live port which is connected to the port in the other room. If you wish to use only the port in the other room, connect the provided cable between the two ports and plug your computer or router into the last port. If you wish to use both ports you will need a router or switch. With a router plug the internet/WAN/modem port into the live port (again the one with the label) and plug the provided cable from a local port into the other port on the wall. With a switch simply plug both wall ports into any ports on the switch.</p>\n\n<h4>Other locations:</h4>\n<p>You can start using it immediately by connecting your computer or router to the ethernet port in your apartment.</p>\n\n<h4>All locations:</h4>\n<p>Do not use a modem, our service is proved directly through ethernet ports in the wall. \n\n<p>You are a free to use a router, just connect the internet, WAN, or modem port to the wall port with the label. You can also connect a computer directly.</p>\n\n<p>This is an included ammenity, you do not have to pay for it. Just connect to the ethernet port and start enjoying it.</p>\n\n<p>The provided service is 1 gigabit for 1000 megabits per second, about the fastest internet available in the country!</p>\n"
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
-};
-screens['joeallanproblem'] = {
-    title: "Problem at Joe Allan Apts",
-    body: "<p>Let me take down some information, and we'll run some automatic tests and reset the switch you're connected to.</p>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['firstname?','lastname?','serviceaddress']]
-    ,requiresSet: {firstname: 1,serviceaddress: 1,lastname: 1}
 };
 screens['kennedywilsoninfo'] = {
     title: "Kennedy Wilson",
@@ -561,7 +455,13 @@ screens['pastdue'] = {
 };
 screens['paypal'] = {
     title: "Paypal",
-    body: "<script type=\"text/javascript\">\n    $('#servicezip').on(\"ready load change\", function () {\n        $zip = $('#servicezip').val();\n        $.ajax({\n            url: 'https://volo.net/secure/cs/v.cgi',\n            data: {q: \"dump_json silent report city_state_from_zip \"+$zip, raw: 1, type: \"application/json\"},\n            success: function(data, status) {\n                $('#city').val(data[0]);\n                $('#state').val(data[1]);\n            },\n            error: function(data, status) {\n                console.log(status);\n            },\n        });\n    });\n<"+"/script>\n\n%MESSAGE\n\n<form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" id=\"volo-payment-form\" accept-charset=\"UTF-8\" target=\"_blank\"><div>\n<p>Payments are processed via PayPal. You can pay by credit card at PayPal, or if you already have a PayPal account, you can pay by the other methods they offer.</p>\n\n<p>There is a 5% convenience fee that will be added when you submit. It will appear on the statement as a tax.</p>\n\n<p>If you are suspended and you pay the amount owed in full, you will be unsuspended by the end of the call.</p>\n\n<p style=\"strong;\">Make sure you tell the customer the full amount that will be paid (displayed once you get to the paypal page).</p>\n\n<div class=\"element input-billingemail required\">\n    <label for=\"billingemail\">Email</label>\n    <div class=\"input\">\n        <input id=\"billingemail\" class=\"\" type=\"text\" size=\"10\" name=\"email\">\n    </div>\n</div>\n<div class=\"element input-firstname required\">\n    <label for=\"firstname\">First name</label>\n    <div class=\"input\">\n        <input id=\"firstname\" class=\"\" type=\"text\" size=\"10\" name=\"first_name\">\n    </div>\n</div>\n<div class=\"element input-lastname required\">\n    <label for=\"lastname\">Last name</label>\n    <div class=\"input\">\n        <input id=\"lastname\" class=\"\" type=\"text\" size=\"10\" name=\"last_name\">\n    </div>\n</div>\n<div class=\"element input-callerphone required\">\n    <label for=\"callerphone\">Phone</label>\n    <div class=\"input\">\n        <input id=\"callerphone\" class=\"\" type=\"text\" size=\"10\" name=\"night_phone_a\">\n    </div>\n</div>\n<div class=\"element input-customer required\">\n    <label for=\"customer\">Account #</label>\n    <div class=\"input\">\n        <input id=\"customer\" class=\"account\" type=\"text\" size=\"6\" name=\"custom\">\n    </div>\n</div>\n<div class=\"element input-serviceaddress required\">\n    <label for=\"serviceaddress\">Service address</label>\n    <div class=\"input\">\n        <input id=\"serviceaddress\" class=\"ac_input\" type=\"text\" size=\"40\" name=\"address1\" autocomplete=\"off\">\n    </div>\n</div>\n<div class=\"element input-servicezip required\">\n    <label for=\"servicezip\">Zip code</label>\n    <div class=\"input\">\n        <input id=\"servicezip\" class=\"zip\" type=\"text\" size=\"5\" name=\"zip\">\n    </div>\n</div>\n<div class=\"element input-servicecity required\">\n    <label for=\"servicecity\">City</label>\n    <div class=\"input\">\n        <input id=\"servicecity\" class=\"city\" type=\"text\" size=\"15\" name=\"city\">\n    </div>\n</div>\n<div class=\"element input-estate required\">\n    <label for=\"state\">State</label>\n    <div class=\"input\">\n        <input id=\"state\" class=\"state\" type=\"text\" size=\"5\" name=\"state\" value=\"IL\">\n    </div>\n</div>\n<div class=\"element input-balance required\">\n    <label for=\"customer\">Amount</label>\n    <div class=\"input\">\n        <input id=\"balance\" class=\"account\" type=\"text\" size=\"6\" name=\"amount\">\n    </div>\n</div>\n<input type=\"hidden\" id=\"item_name\" name=\"item_name\" value=\"Volo Internet\" />\n<input type=\"hidden\" name=\"business\" value=\"paypal@volo.net\" />\n<input type=\"hidden\" name=\"cmd\" value=\"_xclick\" />\n<input type=\"hidden\" name=\"no_shipping\" value=\"1\" />\n<input type=\"hidden\" name=\"tax\" value=\"0\" />\n<input type=\"hidden\" name=\"tax_rate\" value=\"5\" />\n<input type=\"hidden\" name=\"lc\" value=\"US\" />\n<input type=\"hidden\" name=\"address_override\" value=\"1\" />\n<input type=\"hidden\" name=\"return\" value=\"https://volo.net/payment/return\" />\n<input type=\"hidden\" name=\"cancel_return\" value=\"https://volo.net/payment/failed\" />\n<input type=\"hidden\" name=\"rm\" value=\"2\" />\n<input type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"Proceed to PayPal\" class=\"form-submit\" />\n</div></form>\n"
+    body: "<script type=\"text/javascript\">\n    $('#servicezip').on(\"ready load change\", function () {\n        $zip = $('#servicezip').val();\n        console.log(\"https://volo.net/secure/cs/v.cgi?q=dump_json+silent+report+city_state_from_zip+\"+$zip+\"&raw=1&type=application/json\");\n        $.ajax({\n            url: 'https://volo.net/secure/cs/v.cgi',\n            data: {q: \"dump_json silent report city_state_from_zip \"+$zip, raw: 1, type: \"application/json\"},\n            success: function(data, status) {\n                $('#servicecity').val(data[0]);\n                $('#state').val(data[1]);\n            },\n            error: function(data, status) {\n                console.log(status);\n            },\n        });\n    });\n<"+"/script>\n\n%MESSAGE\n\n<form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" id=\"volo-payment-form\" accept-charset=\"UTF-8\" target=\"_blank\"><div>\n<p>Payments are processed via PayPal. You can pay by credit card at PayPal, or if you already have a PayPal account, you can pay by the other methods they offer.</p>\n\n<p>There is a 5% convenience fee that will be added when you submit. It will appear on the statement as a tax.</p>\n\n<p>If you are suspended and you pay the amount owed in full, you will be unsuspended by the end of the call.</p>\n\n<p style=\"strong;\">Make sure you tell the customer the full amount that will be paid (displayed once you get to the paypal page).</p>\n\n<div class=\"element input-billingemail required\">\n    <label for=\"billingemail\">Email</label>\n    <div class=\"input\">\n        <input id=\"billingemail\" class=\"\" type=\"text\" size=\"10\" name=\"email\">\n    </div>\n</div>\n<div class=\"element input-firstname required\">\n    <label for=\"firstname\">First name</label>\n    <div class=\"input\">\n        <input id=\"firstname\" class=\"\" type=\"text\" size=\"10\" name=\"first_name\">\n    </div>\n</div>\n<div class=\"element input-lastname required\">\n    <label for=\"lastname\">Last name</label>\n    <div class=\"input\">\n        <input id=\"lastname\" class=\"\" type=\"text\" size=\"10\" name=\"last_name\">\n    </div>\n</div>\n<div class=\"element input-callerphone required\">\n    <label for=\"callerphone\">Phone</label>\n    <div class=\"input\">\n        <input id=\"callerphone\" class=\"\" type=\"text\" size=\"10\" name=\"night_phone_a\">\n    </div>\n</div>\n<div class=\"element input-customer required\">\n    <label for=\"customer\">Account #</label>\n    <div class=\"input\">\n        <input id=\"customer\" class=\"account\" type=\"text\" size=\"6\" name=\"custom\">\n    </div>\n</div>\n<div class=\"element input-serviceaddress required\">\n    <label for=\"serviceaddress\">Service address</label>\n    <div class=\"input\">\n        <input id=\"serviceaddress\" class=\"ac_input\" type=\"text\" size=\"40\" name=\"address1\" autocomplete=\"off\">\n    </div>\n</div>\n<div class=\"element input-servicezip required\">\n    <label for=\"servicezip\">Zip code</label>\n    <div class=\"input\">\n        <input id=\"servicezip\" class=\"zip\" type=\"text\" size=\"5\" name=\"zip\">\n    </div>\n</div>\n<div class=\"element input-servicecity required\">\n    <label for=\"servicecity\">City</label>\n    <div class=\"input\">\n        <input id=\"servicecity\" class=\"city\" type=\"text\" size=\"15\" name=\"city\">\n    </div>\n</div>\n<div class=\"element input-estate required\">\n    <label for=\"state\">State</label>\n    <div class=\"input\">\n        <input id=\"state\" class=\"state\" type=\"text\" size=\"5\" name=\"state\" value=\"IL\">\n    </div>\n</div>\n<div class=\"element input-balance required\">\n    <label for=\"customer\">Amount</label>\n    <div class=\"input\">\n        <input id=\"balance\" class=\"account\" type=\"text\" size=\"6\" name=\"amount\">\n    </div>\n</div>\n<input type=\"hidden\" id=\"item_name\" name=\"item_name\" value=\"Volo Internet\" />\n<input type=\"hidden\" name=\"business\" value=\"paypal@volo.net\" />\n<input type=\"hidden\" name=\"cmd\" value=\"_xclick\" />\n<input type=\"hidden\" name=\"no_shipping\" value=\"1\" />\n<input type=\"hidden\" name=\"tax\" value=\"0\" />\n<input type=\"hidden\" name=\"tax_rate\" value=\"5\" />\n<input type=\"hidden\" name=\"lc\" value=\"US\" />\n<input type=\"hidden\" name=\"address_override\" value=\"1\" />\n<input type=\"hidden\" name=\"return\" value=\"https://volo.net/payment/return\" />\n<input type=\"hidden\" name=\"cancel_return\" value=\"https://volo.net/payment/failed\" />\n<input type=\"hidden\" name=\"rm\" value=\"2\" />\n<input type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"Proceed to PayPal\" class=\"form-submit\" />\n</div></form>\n"
+    ,buttons: {conclude: "conclude"}
+    ,buttonOrder: ['conclude']
+};
+screens['phonefaq'] = {
+    title: "",
+    body: "<script type=\"text/javascript\">\n    $('dl.phonefaq dd').hide();\n    $('dl.phonefaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.phonefaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n\n<p>Our phone service works with any active internet connection, thus eliminating many of the common upcharges for analog telephone infrastructure. That way we can offer a quality phone service at minimal cost!</p>\n\n<p>Our Voice over Internet Protocol (VoIP) phone service does make use of a specific type of phone designed to operate with the service. If you have an existing handset you're especially attached to, we do offer Grandstream converter boxes which can convert the signal from VoIP to analog; however, the Polycom phones are far more reliable as they are designed to work with the service, and do require at least the installation of the Polycom as well to ensure you're able to receive your calls.</p>\n\n<p>We do offer either brand new numbers or we can use your existing phone number. \"Porting\" a phone number from your current provider does take a bit longer (generally between 2-4 weeks, depending on your current provider), but we'd be happy to start the process prior to the installation of our phone service. To start the process, we need a <strong>signed copy of your most recent phone bill</strong>.</p>\n\n<p>VoIP offers an incredible flexibility for either office or residential. If you're looking for a custom-tailored solution for a more complex network of phones, or if there are particular advanced features you're looking for, do let us know so that our technicians can work with you regarding those options.</p>\n\n<p>We do offer voicemail in addition to our phone services. To access your voicemail from the Polycom phone, simply dial *97 to be taken directly to your mailbox. Should this not work, you can dial *98 to access the general mailbox system, and then enter your mailbox code (this is distinct from your telephone number). If you don't have your mailbox number, a technician will need to followup with you to confirm the mailbox details.</p>\n\n"
     ,buttons: {conclude: "conclude"}
     ,buttonOrder: ['conclude']
 };
@@ -643,7 +543,7 @@ screens['potentialhousing'] = {
 };
 screens['potentialinstall'] = {
     title: "Potential Customer",
-    body: "<p class=\"dont-say\">Check coverage area by looking at the <a class='coverage' href=\"https://volo.net/coverage-map\" target=\"_blank\">coverage map</a>.</p>\n\n<p class=\"dont-say\">Find the address on the coverage map and then read the appropriate section from below.</p>\n\n<p class=\"dont-say\">Backbone Fiber is generally not for residential customers and has install costs in the thousands. For apartment buildings in this area, let residents know it's not on our schedule to install this year, and that schedule is already set.</p>\n\n<dl>\n<dt category='wireless' class=\"menu\">Wireless Services</dt>\n<dd class='menu'>[screen:wirelessfaq]</dd>\n<dt category='fiber' class='menu'>Fiber Services</dt>\n<dd class='menu'>[screen:fiberfaq]</dd>\n<dt category='other' class=\"menu\">Other Questions</dt>\n<dd class='menu'>[screen:otherfaq]</dd>\n</dl>\n\n<p class=\"dont-say\">If the customer gives an address that is an apartment inform them that they will need their landlord's permission for us to do an install. This involves an antenna on the roof for wireless, and similar installation as comcast with fiber.</p>\n\n<script type=\"text/javascript\">\n    $('div.screen-potentialinstall dd.menu').hide();\n    $('div.screen-potentialinstall dt.menu').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-potentialinstall dt.menu a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n\n    function addressLink() {\n        $address = $('#serviceaddress').val() + \"+\" + $('#servicezip').val();\n        $('div.screen-potentialinstall a.coverage').attr(\"href\", \"https://volo.net/coverage-map?address=\"+$address);\n    }\n\n    $('#serviceaddress').change(addressLink());\n    $('#servicezip').change(addressLink());\n<"+"/script>\n"
+    body: "[screen:coveragemapcore]\n\n<p class=\"dont-say\">Find the address on the coverage map and then read the appropriate section from below.</p>\n\n<p class=\"dont-say\">Custom Fiber is generally not for residential customers and has install costs in the thousands. For apartment buildings in this area, let residents know it's not on our schedule to install this year, and that schedule is already set.</p>\n\n<dl>\n<dt category='wireless' class=\"menu\">Wireless Services</dt>\n<dd class='menu'>[screen:wirelessfaq]</dd>\n<dt category='fiber' class='menu'>Fiber Services</dt>\n<dd class='menu'>[screen:fiberfaq]</dd>\n<dt category='other' class=\"menu\">Other Questions</dt>\n<dd class='menu'>[screen:otherfaq]</dd>\n</dl>\n\n<p class=\"dont-say\">If the customer gives an address that is an apartment inform them that they will need their landlord's permission for us to do an install. This involves an antenna on the roof for wireless, and similar installation as comcast with fiber.</p>\n\n<script type=\"text/javascript\">\n    $('div.screen-potentialinstall dd.menu').hide();\n    $('div.screen-potentialinstall dt.menu').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-potentialinstall dt.menu a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n\n    function addressLink() {\n        $address = $('#serviceaddress').val() + \"+\" + $('#servicezip').val();\n        console.log($address);\n        //$('div.screen-potentialinstall a.coverage').attr(\"href\", \"https://volo.net/coverage-map?address=\"+$address);\n    }\n\n    //$('#serviceaddress').change(addressLink());\n    //$('#servicezip').change(addressLink());\n<"+"/script>\n"
     ,buttons: {robot: "File Ticket"}
     ,buttonOrder: ['robot']
     ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','email?','referredby?','message?','operator']]
@@ -795,6 +695,14 @@ screens['problememailsend_tb'] = {
     ,buttons: {conclude: "Yes",problememailticket: "No"}
     ,buttonOrder: ['conclude','problememailticket']
 };
+screens['problememailstart'] = {
+    title: "Email Problem",
+    body: "Let me check on that. Have you already reported the problem?\n"
+    ,buttons: {ticketcheck: "Yes",problememail: "No"}
+    ,buttonOrder: ['problememail','ticketcheck']
+    ,requires: [['callerphone?','customer?']]
+    ,requiresSet: {callerphone: 1,customer: 1}
+};
 screens['problememailticket'] = {
     title: "File Ticket",
     body: "%MESSAGE\n\n<p>I can file a ticket for a technician to give you a call back and help troubleshoot the problem further.</p>\n"
@@ -833,7 +741,7 @@ screens['problemother'] = {
 };
 screens['problemphone'] = {
     title: "Problem with phone",
-    body: "<p>Are you having trouble with calling out or receiving calls (or both)?</p>\n\n<p>Do you have a Polycom IP phone or Grandstream converter box?</p>\n"
+    body: "<p>What is the phone number for the devices you're experiencing issues? </p>\n\n<p>Are you having trouble with calling out or receiving calls (or both)?</p>\n\n<p>Do you have a Polycom IP phone or Grandstream converter box?</p>\n"
     ,buttons: {robot: "Run tests"}
     ,buttonOrder: ['robot']
     ,requires: [['firstname','lastname','company?','customer?','callerphone','callout?','callin?','phonetype']]
@@ -957,17 +865,23 @@ screens['robot'] = {
 };
 screens['roboterror'] = {
     title: "Error connecting to Volo",
-    body: "<p class=\"dont-say\">The call script could not connect to the Volo server. Ask the customer to hold and call Thomas (217)840-0736.\nIf you can't reach him or he instructs you, click \"<a href=\"#\" class=\"foo\">go back</a>\" and try again or use a different path.</p>\n\n<script type=\"text/javascript\">$(function() { $('a.foo').click(function() { $('div.screen:last-child a.back').click(); return false; }) });<"+"/script>\n"
+    body: "<p class=\"dont-say\">The call script got a bad reply from Volo, so\nwe can't move forward from here. You can click \"<a href=\"#\" class=\"foo\">go back</a>\" and try again.\nif that doesn't work, please reload the page and start the script over.\nFinally, call Thomas, Tony or Peter and let them know it's not working.\n</p>\n\n\n<script type=\"text/javascript\">$(function() { $('a.foo').click(function() { $('div.screen:last-child a.back').click(); return false; }) });<"+"/script>\n"
     ,buttons: {calltech: "calltech"}
     ,buttonOrder: ['calltech']
 };
 screens['root'] = {
     title: "",
     body: "<p>Volo Broadband this is _____, how can I help you?</p>\n\n<p class=\"dont-say\">Not everyone we serve has an account or customer number. Just continue and fill their information in manually</p>\n\n<p class=\"dont-say\">If the person says they just moved into an apartment and needs instructions or needs to set up an account, use \"Potential Customer\"</p>\n\n<p class=\"dont-say\">217-367-8656 is the Volo Office number. If that comes up as the caller ID, you have to ask the customer for their phone number and use that.</p>\n"
-    ,buttons: {problemaccountstart: "Pay Bill / Billing / Account",potentialcustomerstart: "Potential Customer/New Customer Info",ticketcheck: "ticketcheck",problememail: "Email Problem",faqs: "FAQs",message: "Message / Other",problemwebstart: "Internet Problem/Outage Check",problemphone: "Phone Problem",calltech: "Forward to tech "}
-    ,buttonOrder: ['potentialcustomerstart','problemwebstart','problemphone','problememail','problemaccountstart','ticketcheck','message','faqs','calltech']
+    ,buttons: {problemaccountstart: "Pay Bill / Billing / Account",potentialcustomerstart: "Potential Customer/New Customer Info",ticketcheck: "ticketcheck",faqs: "FAQs",message: "Message / Other",problememailstart: "Email Problem",problemwebstart: "Internet Problem/Outage Check",problemphone: "Phone Problem",calltech: "Forward to tech "}
+    ,buttonOrder: ['potentialcustomerstart','problemwebstart','problemphone','problememailstart','problemaccountstart','ticketcheck','message','faqs','calltech']
     ,requires: [['callerphone?','customer?','operator']]
     ,requiresSet: {operator: 1,callerphone: 1,customer: 1}
+};
+screens['routerfaq'] = {
+    title: "",
+    body: "<script type=\"text/javascript\">\n    $('dl.routerfaq dd').hide();\n    $('dl.routerfaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.routerfaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n<p>Our service bypasses the need for modems---in fact, <strong>modem and router/modem combos will not work</strong> with our service. However, any standard router should function with our internet service; simply plug the Internet, WAN, or Modem port in the back of the router to the ethernet port in the wall. </p>\n\n<p>We don't have any restrictions on brands or models of router; however, we do recommend two general specifications for optimal functionality. \nWe do suggest confirming the router is gigabit capable (often noted as 10/100/1000), to make full use of our fiber service.\nAC or Dualband routers will give you a strong WiFi capability within your location.</p>\n\n<p>Some routers do require you to complete a setup process, prior to giving access to the internet. (Netgears are especially notorious for this.) If your new router doesn't seem to be working with the service, try bypassing the router and plugging into the service directly. If the service works with a direct connection, it's possible your router simply requires that setup.</p>\n\n<p>Routers have two types of Reset: hard and soft. A soft reset you can complete by unplugging the power to your router, waiting about ten or fifteen seconds, and plugging it back in. This will cause it to refresh it's network settings, without losing any firmware updates. Using the Reset button on the back of the router will cause a hard reset--this reverts the router to factory defaults, and may require it to go through a setup process in order to reconnect to the internet. Network names and passwords will reset as well on a hard reset.</p>\n\n<p>As routers can vary from brand to model, we recommend contacting your router's customer support to assist with any router setup process first. If you would like, we can schedule for a technician to come and help set up your router for you; however this would incur a &#36;60/hour service charge, as our techs would be working on a personal device rather than resolving an issue with the service itself.</p>\n\n<p>WiFi speeds <strong>will be slower</strong> than a hardwired connection. Router companies often advertise WiFi speeds of the router's hypothesized total capacity; though actual speeds on individual devices are often only 1/10th this quoted figure. Additionally, there are a number of environmental factors which may impact your router's WiFi performance. Though WiFi is convenient, for best speed and reliability on your devices, we do strongly recommend a hardwired connection whenever possible. Streaming video devices, gaming consoles, and smart TVs especially will benefit from a hardwired connection either to the service directly or to your router.</p>\n\n<p>If your computer lacks an Ethernet Port, we do strongly recommend purchasing a USB to Ethernet adapter, which permits you to connect to the internet through a standard USB port. This is useful both for utilizing the higher speeds and reliability you find with a hardwired connection, but also for troubleshooting with a direct connection to the service in case your router causes connectivity problems.</p>\n\n"
+    ,buttons: {conclude: "conclude"}
+    ,buttonOrder: ['conclude']
 };
 screens['routerreset'] = {
     title: "Reset customer router",
@@ -999,7 +913,7 @@ screens['routingticket'] = {
 };
 screens['schedule'] = {
     title: "File ticket regarding problem",
-    body: "%MESSAGE\n\nI can schedule a technician to come to your location. The earliest time we have available is %TECHTIME. When would you like the technician to come by?\n\n<p class=\"dont-say\">The system will give you the earliest time. If that doesn't work pick any time later than that between 9-5 Mon-Fri. If the customer requires a time outside that let them know you can't schedule that, and a manager will have to reach out to them for scheduling.</p>\n\n<p class=\"dont-say\"><strong>Make sure the customer understands that the technician is scheduled to arrive AT SOME POINT during the hour following the time above. The technician will also need time to fix the problem. The customer should expect to be home for at least 2 hours to account for arrival and repair time.</strong></p>\n"
+    body: "<p>Your ticket has been filed. If you need to follow up, please refer to ticket number <strong>%TICKET</strong>. </p>\n\n<p>Given the troubleshooting so far has not restored your connection, I would recommend scheduling for a technician to come to your location, to further troubleshoot and verify the service is working as expected. </p>\n\n<p>Once they confirm the service is working as expected, they can work to resolve any remaining issues on your personal devices (including routers); however, service work pertaining to personal devices is billed at a rate of &#36;60/hr. \n\n<p>If a technician is able to resolve your connectivity problems remotely before the scheduled time, we will call back to confirm functionality is restored and to cancel the tech visit.</p>\n\n<p>The earliest time we have available is %TECHTIME. When would you like the technician to come by? </p>\n\n<p class=\"dont-say\">The system will give you the earliest time. If that doesn't work pick any time later than that between 9-5 Mon-Fri. If the customer requires a time outside that let them know you can't schedule that, and a manager will have to reach out to them for scheduling.</p>\n\n<p class=\"dont-say\"><strong>Make sure the customer understands that the technician is scheduled to arrive AT SOME POINT during the hour following the time above. The technician will also need time to fix the problem. Thus, once a timeframe is selected, please confirm with the customer: </strong></p>\n\n<p>I am scheduling for a (X am/pm appointment). The tech should arrive between at (X) and (X + 1 hours), but will likely be on his way. If the tech HASN'T arrived by (X + 1 hours), feel free to call and check their status with ticket number <strong>%TICKET</strong>. Our tech will need some time to work after their arrival, but should hopefully complete the visit before (X + 2 hours). Does this timeframe work for you, or would you need a different time? </p>\n"
     ,buttons: {conclude: "Conclude without scheduling",robot: "Schedule"}
     ,buttonOrder: ['robot','conclude']
     ,requires: [['hour','date','ticket']]
@@ -1069,20 +983,6 @@ screens['tnccaptivatedunit'] = {
     ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip']]
     ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1}
 };
-screens['tnccheck'] = {
-    title: "Confirm as Town and Country resident",
-    body: "Are you a resident of Town and Country?\n"
-    ,buttons: {tncsignup: "Yes",voloinfo: "No"}
-    ,buttonOrder: ['tncsignup','voloinfo']
-};
-screens['tncproblem'] = {
-    title: "Problem at Town and Country",
-    body: "<p>Let me take down some information, and we'll run some automatic tests and reset the switch you're connected to.</p>\n\n<script type=\"text/javascript\">\n    $(function() {\n        $('#v-ticket').val('');\n    });\n<"+"/script>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['customer'],['username'],['serviceaddress']]
-    ,requiresSet: {serviceaddress: 1,customer: 1,username: 1}
-};
 screens['tncsignup'] = {
     title: "Town and Country",
     body: "<p>Volo has partnered with Town and Country to offer internet service to all residents. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. Do not use a modem, our service is incompatible with modems and modem/router combo devices.  If you want to add multiple computers or wifi you will want to install a router that is not a router/modem combo, which you can buy at Walmart, Best Buy, Amazon, or other places.</p>\n\n<p>The provided service is 3mbps, you may also upgrade to 100Mbps for 29.95 per month. Please call the Town and Country office at (217) 866-1755 to if you would like to upgrade to the 100Mpbs service, or navigate to volo.net/tnc.</p>\n"
@@ -1143,6 +1043,14 @@ screens['unknownprobticket'] = {
     ,requires: [['firstname?','lastname','company?','serviceaddress','aptunit','servicezip','phone','problem?','ip?','operator']]
     ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,ip: 1,lastname: 1,phone: 1,operator: 1,problem: 1,company: 1}
 };
+screens['updatestatements'] = {
+    title: "Update Statement Delivery Preference",
+    body: ">>TODO>> Insert into callcenter.php sections\n\n                    <div class=\"element\" id=\"r-statementtype\">\n                        <label for=\"v-statementtype\">Statement Type</label>\n                        <div class=\"value\">\n                            <input type=\"text\" name=\"v-statementtype\" id=\"v-statementtype\" size=\"10\"/>\n                        </div>\n                    </div>\n                    \n                    \n        <div class=\"element input-statementtype\">\n            <label for=\"statementtype\">Statement Type</label>\n            <div class=\"input\">\n                <select name=\"statementtype\" id=\"statementtype\">\n                    <option>email</option>\n                    <option>paper</option>\n                    <option>paper, email</option>\n                    <option>Invoice</option>\n                    <option>Email Invoice</option>\n                </select>\n            </div>\n        </div>\n\n>>TODO>> Implement v_command to query current billing preference - noted as %BILLING (probably update to %MESSAGE?)\n>>TODO>> Probaby also auto-fill their email, if robot has not done so already\n\n<p>I can certainly help out with updating your statement delivery method. I'm showing you are currently set to %BILLING.</p>\n\n<p>Please note: effective June 16th, 2019, paper statements and invoices will have a $1.50 paper billing fee applied each billing cycle.</p>\n\n<p>How would you like your bills delivered?</p>\n\n<p class=\"dont-say\">Also confirm email address is accurate, especially when changing to email statements/invoices.</p>\n"
+    ,buttons: {conclude: "Cancel",robot: "Update"}
+    ,buttonOrder: ['robot','conclude']
+    ,requires: [['statementtype','email?']]
+    ,requiresSet: {email: 1,statementtype: 1}
+};
 screens['upgraded'] = {
     title: "Service upgraded",
     body: "<p>Your upgrade has been confirmed. It will show up on your next bill and\nis effective immediately.</p>\n\n<p>Your new bandwidth limit is %LIMIT megabytes per day.</p>\n\n"
@@ -1170,24 +1078,6 @@ screens['voloequipmentticket'] = {
 screens['volofaq'] = {
     title: "Volo FAQ",
     body: "<script type=\"text/javascript\">\n    $('div.screen-faqs dd.menu').hide();\n    $('div.screen-faqs dt.menu').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-faqs dt.menu a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n<dl>\n<dt class=\"menu\" category='fiber'>What are Volo's Fiber Services?</dt>\n<dd class=\"menu\">[screen:fiberfaq]</dd>\n<dt class=\"menu\" category='wireless'>What are Volo's Wireless Services?</dt>\n<dd class=\"menu\">[screen:wirelessfaq]</dd>\n</dl>\n"
-};
-screens['voloinfo'] = {
-    title: "About Volo",
-    body: "<script type=\"text/javascript\">\n    $('div.screen-voloinfo dd').hide();\n    $('div.screen-voloinfo dt').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-voloinfo dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n[screen:volospiel]\n\n[screen:volofaq]\n\n<p><strong>Are you interested in getting Volo Broadband?</strong></p>\n\n"
-    ,buttons: {conclude: "No",potentialinstall: "Yes"}
-    ,buttonOrder: ['potentialinstall','conclude']
-};
-screens['voloinfo_nogeo'] = {
-    title: "About Volo",
-    body: "[screen:volospiel]\n\n[screen:volofaq]\n\n<p><strong>If you're interested, I'll first need to take down some\ninformation so we can schedule a coverage survey for your site.</strong></p>\n"
-    ,buttons: {conclude: "No thanks",schedulesurvey: "Schedule survey"}
-    ,buttonOrder: ['schedulesurvey','conclude']
-};
-screens['voloinfo_nosched'] = {
-    title: "About Volo",
-    body: "[screen:volospiel]\n\n[screen:volofaq]\n\n"
-    ,buttons: {conclude: "conclude",checkcoverage: "checkcoverage"}
-    ,buttonOrder: ['checkcoverage','conclude']
 };
 screens['voloreset'] = {
     title: "Reset the Volo equipment",
@@ -1218,42 +1108,6 @@ screens['wamplerinfo'] = {
     body: "<p>Wampler Apartments is providing Volo's fiber internet to your unit as an included amenity. The provided service provides speeds up to 1 gigabit (1000mbps), just about the fastest service in the country. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. <b>Do not use a modem or modem/router combo device</b>, our service is provided directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>The internet at Wampler is very fast, so to take full advantage of the service you will need to get a router that is capable of 1000 megabits on all its ports, and supports 802.11AC wi-fi.</p>\n\n<p>Your service should be active now, you don't need to sign up.  If you pay anything for the service, you'd pay that directly to Wampler Apartments along with your rent.</p>\n"
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
-};
-screens['winfieldcheck'] = {
-    title: "Confirm as Winfield Village resident",
-    body: "Are you a resident of Winfield Village?\n"
-    ,buttons: {winfieldsignup: "Yes",voloinfo: "No"}
-    ,buttonOrder: ['winfieldsignup','voloinfo']
-};
-screens['winfieldinfo'] = {
-    title: "Volo at Winfield Village",
-    body: "<p>Residents at Winfield Village don't pay an installation cost. There are\nthree Volo service options for residents at Winfield Village.</p>\n\n<p>Light users generally choose <b>Priority 250</b> for <b>$20</b>/month.\nRegular users choose <b>Priority 500</b> for <b>$25</b>/month because this\nservice allows for twice the download capability. Both Priority 250 and\nPriority 500 have speeds up to 30 megabits per second.</p>\n\n<p>The third option is <b>Bulk Broadband</b>. Select users choose this\nservice because it allows for unlimited downloading, but reduces speed to\none megabit per second.</p>\n\n<p><b>Would you like to schedule an installation?</b></p>\n\n"
-    ,buttons: {conclude: "No thanks",schedule: "schedule"}
-    ,buttonOrder: ['schedule','conclude']
-};
-screens['winfieldplan'] = {
-    title: "Change Plan",
-    body: "\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['winfieldplan','serviceaddress']]
-    ,requiresSet: {serviceaddress: 1,winfieldplan: 1}
-};
-screens['winfieldproblem'] = {
-    title: "Reset Switch",
-    body: "I'm going to reset the switch you're connected to, and then we'll see if you can connect.\n\n<script type=\"text/javascript\">\n    $(function() {\n        $('#v-ticket').val('');\n    });\n<"+"/script>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['customer'],['username'],['serviceaddress']]
-    ,requiresSet: {serviceaddress: 1,customer: 1,username: 1}
-};
-screens['winfieldsignup'] = {
-    title: "Winfield Sign Up",
-    body: "%MESSAGE\n"
-    ,buttons: {robot: "Sign Up"}
-    ,buttonOrder: ['robot']
-    ,requires: [['firstname','lastname','email?','phone?','serviceaddress','aptunit','servicezip','winfieldplan']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,email: 1,winfieldplan: 1}
 };
 screens['wirelessfaq'] = {
     title: "",

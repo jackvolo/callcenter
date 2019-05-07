@@ -1,9 +1,18 @@
 var geoXml = null;
-var map = null;
+//var map = null;
 var geocoder = null;
 var toggleState = 1;
 var infowindow = null;
 var marker = null;
+// create the map
+var mapOptions = {
+    zoom: 11,
+    center: new google.maps.LatLng(40.164, -88.24),
+    mapTypeControl: true,
+    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+    navigationControl: false
+};
+var map = new google.maps.Map(document.getElementById("coverage-map"), mapOptions);
 
 function createPoly(points, colour, width, opacity, fillcolour, fillopacity, bounds, name, description) {
     GLog.write("createPoly("+colour+","+width+"<"+opacity+","+fillcolour+","+fillopacity+","+name+","+description+")");
@@ -16,18 +25,9 @@ function createPoly(points, colour, width, opacity, fillcolour, fillopacity, bou
     return poly;
 }
 
-function initialize() {
+function initializeMap() {
     geocoder = new google.maps.Geocoder();
     infowindow = new google.maps.InfoWindow({size: new google.maps.Size(150,80) });
-    // create the map
-    var mapOptions = {
-        zoom: 11,
-        center: new google.maps.LatLng(40.164, -88.24),
-        mapTypeControl: true,
-        mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
-        navigationControl: false
-    };
-    map = new google.maps.Map(document.getElementById("coverage-map"), mapOptions);
     
     var geoOptions = {
         map: map,
@@ -38,11 +38,15 @@ function initialize() {
         zoom: false
     };
     geoXml = new geoXML3.parser(geoOptions);
-    geoXml.parse('/sites/volo.net/files/services.kml');
+    geoXml.parse('https://volo.net/sites/volo.net/files/services.kml');
+    
+    var $address = $('#v-serviceaddress').val()+" "+$("#v-servicezip").val();
+    showAddress($address);
 }
-google.maps.event.addDomListener(window, 'load', initialize);
+$('#coverage-map').ready(initializeMap);
 
 function showAddress(address) {
+    if (debug) console.log(address);
     geocoder.geocode( { 'address': address, 'bounds': map.getBounds() }, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             var point = results[0].geometry.location;
@@ -60,13 +64,25 @@ function showAddress(address) {
                 if (geoXml.docs[0].gpolygons[i].Contains(point)) {
                     if (!service_hash[geoXml.docs[0].placemarks[i].name]) {
                         service_hash[geoXml.docs[0].placemarks[i].name] = 1;
-                        contentString += '<a href="/services?edit[submitted][internet]['
-                                       + geoXml.docs[0].placemarks[i].name + ']=1">'
-                                       + geoXml.docs[0].placemarks[i].name + '</a>, ';
+                        var serviceString;
+                        console.log(geoXml.docs[0].placemarks[i].name);
+                        if (geoXml.docs[0].placemarks[i].name == 'wireless') {
+                            serviceString = '<a href="/services?edit[submitted][internet]['
+                                          + geoXml.docs[0].placemarks[i].name + ']=1">'
+                                          + geoXml.docs[0].placemarks[i].name + '</a>, ';
+                        } else if (geoXml.docs[0].placemarks[i].name == 'fiber') {
+                            serviceString = '<a href="/services?edit[submitted][internet]['
+                                          + geoXml.docs[0].placemarks[i].name + ']=1">'
+                                          + geoXml.docs[0].placemarks[i].name + '</a>, ';
+                        } else if (geoXml.docs[0].placemarks[i].name == 'custom fiber') {
+                            serviceString = '<a href=business/apartment-complex-services>'
+                                          + geoXml.docs[0].placemarks[i].name + '</a>, ';
+                        }
+                        contentString += serviceString;
                     }
                 }
             }
-            contentString += '<a href="/services?edit[submitted][phoneservice][phone]=1">phone</a> and <a href="/services?edit[submitted][hostedservices][hosted]=1">hosted services</a>.';
+            contentString += '<a href="/services?edit[submitted][phoneservice][phone]=1">phone</a> and <a href="/hosting">hosted services</a>.';
             
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.setContent(contentString);
@@ -77,4 +93,5 @@ function showAddress(address) {
             alert("Geocode was not successful for the following reason: " + status);
         }
     });
+    map.setZoom(12);
 }

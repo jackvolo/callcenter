@@ -1,0 +1,8 @@
+title: Coverage Map
+
+
+<div id="coverage-map" style="width: 100%; height: 600px;">
+&nbsp;
+</div>
+
+<script type="text/javascript" src="javascript/map/coverage_map.js"></script>

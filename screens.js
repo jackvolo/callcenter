@@ -1,7 +1,7 @@
 var screens = {};
 screens['1404lincolninfo'] = {
     title: "Chateau Normand",
-    body: "<p>Good news!  Volo's internet service is being provided to your unit as an included amenity. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. <b>Do not use a modem or modem/router combo device</b>, our service is provided directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>Additionally WiFi is provided. Each unit has it's own network and your landlord should have the information to get you signed on.</p>\n\n<p>Your service should be active now, you don't need to sign up.  If you pay anything for the service, you'd pay that directly to Chateau Normand along with your rent.</p>\n"
+    body: "<p>Good news! Volo's internet service is being provided to your unit as an included amenity. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. <b>Do not use a modem or modem/router combo device</b>, our service is provided directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>Additionally WiFi is provided. Each unit has it's own network and your landlord should have the information to get you signed on.</p>\n\n<p>Your service should be active now, you don't need to sign up.  If you pay anything for the service, you'd pay that directly to Chateau Normand along with your rent.</p>\n"
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
 };
@@ -21,7 +21,7 @@ screens['autopay'] = {
 };
 screens['badactor'] = {
     title: "Account Suspended ",
-    body: "<p>You account has been <strong>%MESSAGE</strong>. Our system shows you owe <strong>%PASTDUEB</strong>. If you would like to make it current, I can take a credit card payment now, but there will be a 5% convience fee. You may also come to our store at 822 Pioneer St and pay with check or cash, or mail us a check. However, I cannot restore your account until we receive a payment.</p>\n\n<p class='dont-say'>The total with the convience fee is %CCFEE.</p>\n<p class='dont-say'>If the customer chooses to make a payment click here: <a href=http://volo.net/payment>volo.net/payment</a></p>\n"
+    body: "<p>You account has been <strong>%MESSAGE</strong>. Our system shows you owe <strong>%PASTDUEB</strong>. If you would like to make it current, I can take a credit card payment now, but there will be a 5% convience fee. You may also come to our store at 3310 N Cunningham Ave, Champaign IL 61802, and pay with check or cash, or mail us a check. However, I cannot restore your account until we receive a payment.</p>\n\n<p class='dont-say'>The total with the convience fee is %CCFEE.</p>\n<p class='dont-say'>If the customer chooses to make a payment click here: <a href=http://volo.net/payment>volo.net/payment</a></p>\n"
     ,buttons: {conclude: "Continue"}
     ,buttonOrder: ['conclude']
 };
@@ -72,6 +72,12 @@ screens['browsertestcore'] = {
     body: "<p>Let's test your connection to <span class=\"url\">google.com</span>:</p>\n<p>Open up your web browser: Internet Explorer, Firefox, or Safari.</p>\n\n<p class=\"dont-say\">Wait for the browser to be open. If it takes more than 60 seconds or is too confusing, click \"Didn't work\"</p>\n\n<p>Type <span class=\"url\">google.com</span> into the Address Bar, but don't press Enter yet.</p>\n\n<p class=\"dont-say\">Wait for them to be done typing.</p>\n\n<p>Press Enter now, and tell me when the page has finished loading.</p>\n\n<p class=\"dont-say\">Press <input type=\"button\" value=\"Start\" class=\"start-timer\"/>.\nWhen the page has loaded, press <input type=\"button\" value=\"Stop\" class=\"stop-timer\"/><br/>\nIf timer reaches 60 seconds, press \"Didn't work\" and move on.</p>\n\n<script type=\"text/javascript\">\n    var timeoutID;\n    $(function() {\n        $('input.start-timer').click(function() {\n            timeoutID=window.setTimeout('updateTimer()', 1000);\n        });\n        $('input.stop-timer').click(function() {\n            window.clearTimeout(timeoutID);\n            $('#v-googleloadtime').val($('div.screen:last-child div.input-googleloadtime input').val());\n        });\n    });\n\n    function updateTimer() {\n        $('div.screen:last-child div.input-googleloadtime input').val(parseInt($('div.screen:last-child div.input-googleloadtime input').val())+1);\n        timeoutID=window.setTimeout('updateTimer()', 1000);\n    }\n<"+"/script>\n"
     ,requires: [['googleloadtime']]
     ,requiresSet: {googleloadtime: 1}
+};
+screens['bulksuspended'] = {
+    title: "Bulk Apartment - Service Suspended",
+    body: "<p> Your service has been suspended by your apartment management group. Typically this is due to nonpayment of rent, though may be for other reasons. We recommend getting in touch with your property manager and confirm the reason why they suspended your service, and once the situation is resolved they should be able to reactivate internet service to your apartment from there. </p>\n\n<p class='dont-say'> Unfortunately, we are not given a specific reason for suspensions by the property management, and they should contact them directly. </p>\n"
+    ,buttons: {conclude: "Continue"}
+    ,buttonOrder: ['conclude']
 };
 screens['bwtempup'] = {
     title: "Increase bandwidth temporarily",
@@ -409,19 +415,17 @@ screens['greencrestinfo'] = {
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
 };
+screens['gsr_bulkinfo'] = {
+    title: "Green Street Realty",
+    body: "<p>Green Street Realty is providing Volo's internet to your unit as an included amenity. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. Do not use a modem, our service is proved directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>This is an included ammenity, you do not have to pay for it. Just connect to the ethernet port and start enjoying it!</p>\n"
+    ,buttons: {conclude: "Conclude",problemweb: "I need help"}
+    ,buttonOrder: ['conclude','problemweb']
+};
 screens['hardwickinfo'] = {
     title: "Hardwick",
     body: "<p>Hardwick is providing Volo's gigabit fiber internet service to your unit.</p>\n\n<h4>For 401 E University:</h4>\n<p>You can start using it immediately by connecting your computer or router to the ethernet port in your apartment with a label. The label will be a letter followed a number 1 - 24. There will be 3 ports in your apartment, unfortunately the electrician did not wire the building correctly so we have a work around. You are meant to have 2 working ports but there is only one cable run. To work around this we have installed a 3rd port next to the live port which is connected to the port in the other room. If you wish to use only the port in the other room, connect the provided cable between the two ports and plug your computer or router into the last port. If you wish to use both ports you will need a router or switch. With a router plug the internet/WAN/modem port into the live port (again the one with the label) and plug the provided cable from a local port into the other port on the wall. With a switch simply plug both wall ports into any ports on the switch.</p>\n\n<h4>Other locations:</h4>\n<p>You can start using it immediately by connecting your computer or router to the ethernet port in your apartment.</p>\n\n<h4>All locations:</h4>\n<p>Do not use a modem, our service is proved directly through ethernet ports in the wall. \n\n<p>You are a free to use a router, just connect the internet, WAN, or modem port to the wall port with the label. You can also connect a computer directly.</p>\n\n<p>This is an included ammenity, you do not have to pay for it. Just connect to the ethernet port and start enjoying it.</p>\n\n<p>The provided service is 1 gigabit for 1000 megabits per second, about the fastest internet available in the country!</p>\n"
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
-};
-screens['joeallanproblem'] = {
-    title: "Problem at Joe Allan Apts",
-    body: "<p>Let me take down some information, and we'll run some automatic tests and reset the switch you're connected to.</p>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['firstname?','lastname?','serviceaddress']]
-    ,requiresSet: {firstname: 1,serviceaddress: 1,lastname: 1}
 };
 screens['kennedywilsoninfo'] = {
     title: "Kennedy Wilson",
@@ -561,7 +565,7 @@ screens['pastdue'] = {
 };
 screens['paypal'] = {
     title: "Paypal",
-    body: "<script type=\"text/javascript\">\n    $('#servicezip').on(\"ready load change\", function () {\n        $zip = $('#servicezip').val();\n        $.ajax({\n            url: 'https://volo.net/secure/cs/v.cgi',\n            data: {q: \"dump_json silent report city_state_from_zip \"+$zip, raw: 1, type: \"application/json\"},\n            success: function(data, status) {\n                $('#city').val(data[0]);\n                $('#state').val(data[1]);\n            },\n            error: function(data, status) {\n                console.log(status);\n            },\n        });\n    });\n<"+"/script>\n\n%MESSAGE\n\n<form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" id=\"volo-payment-form\" accept-charset=\"UTF-8\" target=\"_blank\"><div>\n<p>Payments are processed via PayPal. You can pay by credit card at PayPal, or if you already have a PayPal account, you can pay by the other methods they offer.</p>\n\n<p>There is a 5% convenience fee that will be added when you submit. It will appear on the statement as a tax.</p>\n\n<p>If you are suspended and you pay the amount owed in full, you will be unsuspended by the end of the call.</p>\n\n<p style=\"strong;\">Make sure you tell the customer the full amount that will be paid (displayed once you get to the paypal page).</p>\n\n<div class=\"element input-billingemail required\">\n    <label for=\"billingemail\">Email</label>\n    <div class=\"input\">\n        <input id=\"billingemail\" class=\"\" type=\"text\" size=\"10\" name=\"email\">\n    </div>\n</div>\n<div class=\"element input-firstname required\">\n    <label for=\"firstname\">First name</label>\n    <div class=\"input\">\n        <input id=\"firstname\" class=\"\" type=\"text\" size=\"10\" name=\"first_name\">\n    </div>\n</div>\n<div class=\"element input-lastname required\">\n    <label for=\"lastname\">Last name</label>\n    <div class=\"input\">\n        <input id=\"lastname\" class=\"\" type=\"text\" size=\"10\" name=\"last_name\">\n    </div>\n</div>\n<div class=\"element input-callerphone required\">\n    <label for=\"callerphone\">Phone</label>\n    <div class=\"input\">\n        <input id=\"callerphone\" class=\"\" type=\"text\" size=\"10\" name=\"night_phone_a\">\n    </div>\n</div>\n<div class=\"element input-customer required\">\n    <label for=\"customer\">Account #</label>\n    <div class=\"input\">\n        <input id=\"customer\" class=\"account\" type=\"text\" size=\"6\" name=\"custom\">\n    </div>\n</div>\n<div class=\"element input-serviceaddress required\">\n    <label for=\"serviceaddress\">Service address</label>\n    <div class=\"input\">\n        <input id=\"serviceaddress\" class=\"ac_input\" type=\"text\" size=\"40\" name=\"address1\" autocomplete=\"off\">\n    </div>\n</div>\n<div class=\"element input-servicezip required\">\n    <label for=\"servicezip\">Zip code</label>\n    <div class=\"input\">\n        <input id=\"servicezip\" class=\"zip\" type=\"text\" size=\"5\" name=\"zip\">\n    </div>\n</div>\n<div class=\"element input-servicecity required\">\n    <label for=\"servicecity\">City</label>\n    <div class=\"input\">\n        <input id=\"servicecity\" class=\"city\" type=\"text\" size=\"15\" name=\"city\">\n    </div>\n</div>\n<div class=\"element input-estate required\">\n    <label for=\"state\">State</label>\n    <div class=\"input\">\n        <input id=\"state\" class=\"state\" type=\"text\" size=\"5\" name=\"state\" value=\"IL\">\n    </div>\n</div>\n<div class=\"element input-balance required\">\n    <label for=\"customer\">Amount</label>\n    <div class=\"input\">\n        <input id=\"balance\" class=\"account\" type=\"text\" size=\"6\" name=\"amount\">\n    </div>\n</div>\n<input type=\"hidden\" id=\"item_name\" name=\"item_name\" value=\"Volo Internet\" />\n<input type=\"hidden\" name=\"business\" value=\"paypal@volo.net\" />\n<input type=\"hidden\" name=\"cmd\" value=\"_xclick\" />\n<input type=\"hidden\" name=\"no_shipping\" value=\"1\" />\n<input type=\"hidden\" name=\"tax\" value=\"0\" />\n<input type=\"hidden\" name=\"tax_rate\" value=\"5\" />\n<input type=\"hidden\" name=\"lc\" value=\"US\" />\n<input type=\"hidden\" name=\"address_override\" value=\"1\" />\n<input type=\"hidden\" name=\"return\" value=\"https://volo.net/payment/return\" />\n<input type=\"hidden\" name=\"cancel_return\" value=\"https://volo.net/payment/failed\" />\n<input type=\"hidden\" name=\"rm\" value=\"2\" />\n<input type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"Proceed to PayPal\" class=\"form-submit\" />\n</div></form>\n"
+    body: "<script type=\"text/javascript\">\n    $('#servicezip').on(\"ready load change\", function () {\n        $zip = $('#servicezip').val();\n        console.log(\"https://volo.net/secure/cs/v.cgi?q=dump_json+silent+report+city_state_from_zip+\"+$zip+\"&raw=1&type=application/json\");\n        $.ajax({\n            url: 'https://volo.net/secure/cs/v.cgi',\n            data: {q: \"dump_json silent report city_state_from_zip \"+$zip, raw: 1, type: \"application/json\"},\n            success: function(data, status) {\n                $('#servicecity').val(data[0]);\n                $('#state').val(data[1]);\n            },\n            error: function(data, status) {\n                console.log(status);\n            },\n        });\n    });\n<"+"/script>\n\n%MESSAGE\n\n<form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\" id=\"volo-payment-form\" accept-charset=\"UTF-8\" target=\"_blank\"><div>\n<p>Payments are processed via PayPal. You can pay by credit card at PayPal, or if you already have a PayPal account, you can pay by the other methods they offer.</p>\n\n<p>There is a 5% convenience fee that will be added when you submit. It will appear on the statement as a tax.</p>\n\n<p>If you are suspended and you pay the amount owed in full, you will be unsuspended by the end of the call.</p>\n\n<p style=\"strong;\">Make sure you tell the customer the full amount that will be paid (displayed once you get to the paypal page).</p>\n\n<div class=\"element input-billingemail required\">\n    <label for=\"billingemail\">Email</label>\n    <div class=\"input\">\n        <input id=\"billingemail\" class=\"\" type=\"text\" size=\"10\" name=\"email\">\n    </div>\n</div>\n<div class=\"element input-firstname required\">\n    <label for=\"firstname\">First name</label>\n    <div class=\"input\">\n        <input id=\"firstname\" class=\"\" type=\"text\" size=\"10\" name=\"first_name\">\n    </div>\n</div>\n<div class=\"element input-lastname required\">\n    <label for=\"lastname\">Last name</label>\n    <div class=\"input\">\n        <input id=\"lastname\" class=\"\" type=\"text\" size=\"10\" name=\"last_name\">\n    </div>\n</div>\n<div class=\"element input-callerphone required\">\n    <label for=\"callerphone\">Phone</label>\n    <div class=\"input\">\n        <input id=\"callerphone\" class=\"\" type=\"text\" size=\"10\" name=\"night_phone_a\">\n    </div>\n</div>\n<div class=\"element input-customer required\">\n    <label for=\"customer\">Account #</label>\n    <div class=\"input\">\n        <input id=\"customer\" class=\"account\" type=\"text\" size=\"6\" name=\"custom\">\n    </div>\n</div>\n<div class=\"element input-serviceaddress required\">\n    <label for=\"serviceaddress\">Service address</label>\n    <div class=\"input\">\n        <input id=\"serviceaddress\" class=\"ac_input\" type=\"text\" size=\"40\" name=\"address1\" autocomplete=\"off\">\n    </div>\n</div>\n<div class=\"element input-servicezip required\">\n    <label for=\"servicezip\">Zip code</label>\n    <div class=\"input\">\n        <input id=\"servicezip\" class=\"zip\" type=\"text\" size=\"5\" name=\"zip\">\n    </div>\n</div>\n<div class=\"element input-servicecity required\">\n    <label for=\"servicecity\">City</label>\n    <div class=\"input\">\n        <input id=\"servicecity\" class=\"city\" type=\"text\" size=\"15\" name=\"city\">\n    </div>\n</div>\n<div class=\"element input-estate required\">\n    <label for=\"state\">State</label>\n    <div class=\"input\">\n        <input id=\"state\" class=\"state\" type=\"text\" size=\"5\" name=\"state\" value=\"IL\">\n    </div>\n</div>\n<div class=\"element input-balance required\">\n    <label for=\"customer\">Amount</label>\n    <div class=\"input\">\n        <input id=\"balance\" class=\"account\" type=\"text\" size=\"6\" name=\"amount\">\n    </div>\n</div>\n<input type=\"hidden\" id=\"item_name\" name=\"item_name\" value=\"Volo Internet\" />\n<input type=\"hidden\" name=\"business\" value=\"paypal@volo.net\" />\n<input type=\"hidden\" name=\"cmd\" value=\"_xclick\" />\n<input type=\"hidden\" name=\"no_shipping\" value=\"1\" />\n<input type=\"hidden\" name=\"tax\" value=\"0\" />\n<input type=\"hidden\" name=\"tax_rate\" value=\"5\" />\n<input type=\"hidden\" name=\"lc\" value=\"US\" />\n<input type=\"hidden\" name=\"address_override\" value=\"1\" />\n<input type=\"hidden\" name=\"return\" value=\"https://volo.net/payment/return\" />\n<input type=\"hidden\" name=\"cancel_return\" value=\"https://volo.net/payment/failed\" />\n<input type=\"hidden\" name=\"rm\" value=\"2\" />\n<input type=\"submit\" id=\"edit-submit\" name=\"op\" value=\"Proceed to PayPal\" class=\"form-submit\" />\n</div></form>\n"
     ,buttons: {conclude: "conclude"}
     ,buttonOrder: ['conclude']
 };
@@ -833,7 +837,7 @@ screens['problemother'] = {
 };
 screens['problemphone'] = {
     title: "Problem with phone",
-    body: "<p>Are you having trouble with calling out or receiving calls (or both)?</p>\n\n<p>Do you have a Polycom IP phone or Grandstream converter box?</p>\n"
+    body: "<p>What is the phone number for the devices you're experiencing issues? </p>\n\n<p>Are you having trouble with calling out or receiving calls (or both)?</p>\n\n<p>Do you have a Polycom IP phone or Grandstream converter box?</p>\n"
     ,buttons: {robot: "Run tests"}
     ,buttonOrder: ['robot']
     ,requires: [['firstname','lastname','company?','customer?','callerphone','callout?','callin?','phonetype']]
@@ -957,7 +961,7 @@ screens['robot'] = {
 };
 screens['roboterror'] = {
     title: "Error connecting to Volo",
-    body: "<p class=\"dont-say\">The call script could not connect to the Volo server. Ask the customer to hold and call Thomas (217)840-0736.\nIf you can't reach him or he instructs you, click \"<a href=\"#\" class=\"foo\">go back</a>\" and try again or use a different path.</p>\n\n<script type=\"text/javascript\">$(function() { $('a.foo').click(function() { $('div.screen:last-child a.back').click(); return false; }) });<"+"/script>\n"
+    body: "<p class=\"dont-say\">The call script got a bad reply from Volo, so\nwe can't move forward from here. You can click \"<a href=\"#\" class=\"foo\">go back</a>\" and try again.\nif that doesn't work, please reload the page and start the script over.\nFinally, call Thomas, Tony or Peter and let them know it's not working.\n</p>\n\n\n<script type=\"text/javascript\">$(function() { $('a.foo').click(function() { $('div.screen:last-child a.back').click(); return false; }) });<"+"/script>\n"
     ,buttons: {calltech: "calltech"}
     ,buttonOrder: ['calltech']
 };
@@ -1218,42 +1222,6 @@ screens['wamplerinfo'] = {
     body: "<p>Wampler Apartments is providing Volo's fiber internet to your unit as an included amenity. The provided service provides speeds up to 1 gigabit (1000mbps), just about the fastest service in the country. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. <b>Do not use a modem or modem/router combo device</b>, our service is provided directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>The internet at Wampler is very fast, so to take full advantage of the service you will need to get a router that is capable of 1000 megabits on all its ports, and supports 802.11AC wi-fi.</p>\n\n<p>Your service should be active now, you don't need to sign up.  If you pay anything for the service, you'd pay that directly to Wampler Apartments along with your rent.</p>\n"
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
-};
-screens['winfieldcheck'] = {
-    title: "Confirm as Winfield Village resident",
-    body: "Are you a resident of Winfield Village?\n"
-    ,buttons: {winfieldsignup: "Yes",voloinfo: "No"}
-    ,buttonOrder: ['winfieldsignup','voloinfo']
-};
-screens['winfieldinfo'] = {
-    title: "Volo at Winfield Village",
-    body: "<p>Residents at Winfield Village don't pay an installation cost. There are\nthree Volo service options for residents at Winfield Village.</p>\n\n<p>Light users generally choose <b>Priority 250</b> for <b>$20</b>/month.\nRegular users choose <b>Priority 500</b> for <b>$25</b>/month because this\nservice allows for twice the download capability. Both Priority 250 and\nPriority 500 have speeds up to 30 megabits per second.</p>\n\n<p>The third option is <b>Bulk Broadband</b>. Select users choose this\nservice because it allows for unlimited downloading, but reduces speed to\none megabit per second.</p>\n\n<p><b>Would you like to schedule an installation?</b></p>\n\n"
-    ,buttons: {conclude: "No thanks",schedule: "schedule"}
-    ,buttonOrder: ['schedule','conclude']
-};
-screens['winfieldplan'] = {
-    title: "Change Plan",
-    body: "\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['winfieldplan','serviceaddress']]
-    ,requiresSet: {serviceaddress: 1,winfieldplan: 1}
-};
-screens['winfieldproblem'] = {
-    title: "Reset Switch",
-    body: "I'm going to reset the switch you're connected to, and then we'll see if you can connect.\n\n<script type=\"text/javascript\">\n    $(function() {\n        $('#v-ticket').val('');\n    });\n<"+"/script>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['customer'],['username'],['serviceaddress']]
-    ,requiresSet: {serviceaddress: 1,customer: 1,username: 1}
-};
-screens['winfieldsignup'] = {
-    title: "Winfield Sign Up",
-    body: "%MESSAGE\n"
-    ,buttons: {robot: "Sign Up"}
-    ,buttonOrder: ['robot']
-    ,requires: [['firstname','lastname','email?','phone?','serviceaddress','aptunit','servicezip','winfieldplan']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,email: 1,winfieldplan: 1}
 };
 screens['wirelessfaq'] = {
     title: "",

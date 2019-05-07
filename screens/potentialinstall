@@ -2,11 +2,11 @@ title: Potential Customer
 buttons: robot: File Ticket
 requires: firstname+lastname+serviceaddress+aptunit+servicezip+phone+email?+referredby?+message?+operator
 
-<p class="dont-say">Check coverage area by looking at the <a class='coverage' href="https://volo.net/coverage-map" target="_blank">coverage map</a>.</p>
+[screen:coveragemapcore]
 
 <p class="dont-say">Find the address on the coverage map and then read the appropriate section from below.</p>
 
-<p class="dont-say">Backbone Fiber is generally not for residential customers and has install costs in the thousands. For apartment buildings in this area, let residents know it's not on our schedule to install this year, and that schedule is already set.</p>
+<p class="dont-say">Custom Fiber is generally not for residential customers and has install costs in the thousands. For apartment buildings in this area, let residents know it's not on our schedule to install this year, and that schedule is already set.</p>
 
 <dl>
 <dt category='wireless' class="menu">Wireless Services</dt>
@@ -32,9 +32,10 @@ requires: firstname+lastname+serviceaddress+aptunit+servicezip+phone+email?+refe
 
     function addressLink() {
         $address = $('#serviceaddress').val() + "+" + $('#servicezip').val();
-        $('div.screen-potentialinstall a.coverage').attr("href", "https://volo.net/coverage-map?address="+$address);
+        console.log($address);
+        //$('div.screen-potentialinstall a.coverage').attr("href", "https://volo.net/coverage-map?address="+$address);
     }
 
-    $('#serviceaddress').change(addressLink());
-    $('#servicezip').change(addressLink());
+    //$('#serviceaddress').change(addressLink());
+    //$('#servicezip').change(addressLink());
 </script>
