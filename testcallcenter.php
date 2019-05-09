@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><!--{{{1-->
 <?php require_once("authorize.php") ?>
-
+<?php $operator = $_SERVER[REMOTE_USER]; ?>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
@@ -12,8 +12,6 @@
   <link href="testcallcenter.css" rel="stylesheet" type="text/css" media="screen,print"/>
   <link type="text/css" rel="stylesheet" href="jquery.autocomplete.css"/>
 </head>
-
-<?php $operator = $_SERVER[REMOTE_USER]; ?>
 
 <body>
 <!--}}}1-->

@@ -35,7 +35,7 @@ $(function() { //{{{1
   
   $("#v-calltime").val(new Date().format('H:i'));
   
-  $.ajax({ data: { screen: 'root', debug: debug, timestamp: new Date().getTime(), USETHOMAS: 1 },
+  $.ajax({ data: { screen: 'root', debug: debug, timestamp: new Date().getTime() },
     success: function(response) {
       $('#v-call-id').val(response['v-call-id']);
     }
@@ -161,7 +161,6 @@ function show_screen(id, params, $s) { //{{{1
   
   if(debug) console.log("[show_screen] screen: "+id);
   var body=parameterize(screen.body, params); // Fill out parameters returned by robot
-  //if(debug) console.log("[show_screen] body: "+body);
   
   // Include referenced screens
   var fregex=new RegExp(/\[screen:([a-z0-9]+)\]/);
@@ -312,7 +311,7 @@ function behave($s) { //{{{1
       var theUnit = this;
       $(this).next().click(function (){
         theUnit.value = 'n/a';
-        //$(theUnit).trigger('change');
+        $(theUnit).trigger('change');
       });
     }
   });
@@ -361,7 +360,7 @@ function add_button(sid, $s, tid, title, requires) { //{{{1
       $('div.screen:last-child input.b-robot').val("Waiting...").prop('disabled', true);
       $.ajax({ data: data,
         success: function(response) {
-          console.log("robot response: "+JSON.stringify(response));
+          if (debug) console.log("robot response: "+JSON.stringify(response));
           if(response.screen && screens[response.screen])
             show_screen(response.screen, response);
           else {
@@ -468,7 +467,7 @@ function build_data(sid) { //#{{{1
         if($("#v-"+field).val() && screens[sid].requires && screens[sid].requiresSet[field])
             data[field]=$("#v-"+field).val();
     });
-    console.log("[build_data] data: "+JSON.stringify(data));
+    if (debug) console.log("[build_data] data: "+JSON.stringify(data));
     return data;
 } //}}}
 

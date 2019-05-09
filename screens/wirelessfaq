@@ -20,19 +20,19 @@ buttons: conclude
 <p>Our basic service starts at &#36;39.95 per month, and our streaming service costs &#36;75 per month.</p>
 
 <p><strong>Basic Broadband</strong> is ideal for someone looking for basic high-speed Internet service.  This service works like the cell phone service where you have a limit each day, except if you exceed your limit your service slows down instead of incurring additional charges. It includes 250 Mega Bytes per day of Priority Bandwidth delivered over the trademark Volo connection. Basic Broadband includes, in our experience, ample bandwidth to browse the Internet and check your email. Other usage (particularly, streaming video like Netflix) can use that bandwidth up quickly.</p>
-<p><strong>Streaming</strong> service is designed for users who enjoy watching Youtbe, Netflix, Hulu, other video streaming sites, or listening to online radio for more than four hours per day. This service is not available in all locations. Streaming service doesn't permit peer-to-peer file sharing and do contain a data cap to prevent runaway processes like virus infections, but that cap will be tailored to your needs and even by default is ample for most streaming media uses (about 10GB/day).
+<p><strong>Streaming</strong> service is designed for users who enjoy watching Youtube, Netflix, Hulu, other video streaming sites, or listening to online radio for more than four hours per day. This service is not available in all locations. Streaming service doesn't permit peer-to-peer file sharing and do contain a data cap to prevent runaway processes like virus infections, but that cap will be tailored to your needs and even by default is ample for most streaming media uses (about 10GB/day).
 
 <dl class="wirelessfaq">
 <dt question='1'>How much does Volo Wireless cost?</dt><!--{{{-->
 <dd>
 <p>The basic rate is &#36;39.95/month. That covers 250 MB/day of usage. You can add additional bandwith in increments of 250/day at &#36;10/month.</p>
-<p>The streaming price is &#36;$75 per month.</p>
+<p>The streaming price is &#36;75 per month.</p>
 <p>There is also an installation fee of &#36;200-&#36;300 depending on location. The installation fee can be paid over the first 3 months of service.</p>
-<p>If you sign up for a qualilfying DirectTV or Dish Network service through us, we will reduce the installation by &#36;150.</p>
+<p>If you sign up for a qualifying DirectTV or Dish Network service through us, we will reduce the installation by &#36;150.</p>
 </dd><!--}}}-->
 <dt question='2'>What's the difference between megabits and megabytes?</dt><!--{{{-->
 <dd>
-<p>One megabyte is equal to eight megabits, but the terms are used in specific ways: Megai<strong>bits</strong> per second (mbps) are generally used to describe the <strong>speed</strong> of an Internet connection, whereas mega<strong>bytes</strong> (MB) usually refer to the <strong>size</strong> of a file or storage space.</p>
+<p>One megabyte is equal to eight megabits, but the terms are used in specific ways: Mega<strong>bits</strong> per second (mbps) are generally used to describe the <strong>speed</strong> of an Internet connection, whereas mega<strong>bytes</strong> (MB) usually refer to the <strong>size</strong> of a file or storage space.</p>
 <p>In practical terms, one megabit per second is slow but usable broadband Internet. Five to ten web pages, one minute of music, or a half a minute of video is about one megabyte of data.</p>
 </dd><!--}}}-->
 <dt question='3'>How the Service works</dt><!--{{{-->
