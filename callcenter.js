@@ -239,7 +239,7 @@ function show_screen(id, params, $s) { //{{{1
       },
     });
   }
-  
+
   // Attach validation behavior to inputs
   behave($s);
 
@@ -330,7 +330,10 @@ function robot_check($s) { //{{{1
   $s.find('div.input-set input, div.input-set textarea, div.input-set select').validate();
   
   var $b=$s.find("input.b-robot");
-  if($s.find('div.input-set').length && ($b.length || $s.find('input.b-root'))&& !$s.find(".invalid").length) {
+  if($s.find('div.input-set').length && 
+     ($b.length || $s.find('input.b-root')) && 
+     !$s.find(".invalid").length) 
+  {
     var good_set=false;
     $s.find("div.input-set").each(function() {
       var requirements_met=true;
@@ -356,7 +359,7 @@ function add_button(sid, $s, tid, title, requires) { //{{{1
   $s.append('<input type="button" value="'+title+'" class="b-'+tid+'"/>');
   var $b=$s.find("input:last-child").attr('tid', tid);
   
-  if(tid == "robot") {
+  if(tid == "robot") { //{{{2
     $b.val(title == 'Robot' ? 'Submit' : title).attr('roboval', $b.val());
     $b.click(function() {
       $(this).addClass('selected');
@@ -364,6 +367,7 @@ function add_button(sid, $s, tid, title, requires) { //{{{1
       $('div.screen:last-child input.b-robot').val("Waiting...").prop('disabled', true);
       $.ajax({ data: data,
         success: function(response) {
+          if (debug) console.log("robot response: "+JSON.stringify(response));
           if(response.screen && screens[response.screen])
             show_screen(response.screen, response);
           else {
@@ -379,7 +383,8 @@ function add_button(sid, $s, tid, title, requires) { //{{{1
     $b.ajaxStop(function() {
         $(this).val($(this).attr('roboval'));
     });
-  } else {
+  } //}}}2
+  else { //{{{2
     $b.click(function() {
       $(this).addClass('selected');
       var data=build_data(sid);
@@ -389,7 +394,10 @@ function add_button(sid, $s, tid, title, requires) { //{{{1
         global: false,
         success: function(response) {
           for(var param in response) {
-            if(param.match(/^v-/)) $("#"+param).val(response[param]);
+            if(param.match(/^v-/)) {
+              $("#"+param).val(response[param]);
+              if(debug) console.log("[add_button]#"+param+": "+response[param]);
+            }
           }
           $("#i div.screen:last-child input").each(function() {
             // copy info into input fields
@@ -406,18 +414,19 @@ function add_button(sid, $s, tid, title, requires) { //{{{1
         complete: function(data, status) {
         },
       });
-
+      
       show_screen($(this).attr('tid'));
     });
-      if(sid == "root") {
-          $b.val(title).attr('class', 'b-root');
-          $b.val(title).attr('roboval', $b.val());
-          $b.val(title).prop('disabled', true);
-          $b.ajaxStop(function() {
-              $(this).val($(this).attr('roboval'));
-          });
-      }
+    if(sid == "root") {
+      $b.val(title).attr('class', 'b-root');
+      $b.val(title).attr('roboval', $b.val());
+      $b.val(title).prop('disabled', true);
+      $b.ajaxStop(function() {
+        $(this).val($(this).attr('roboval'));
+      });
     }
+  } //}}}2
+  
 } //}}}
 
 function build_data(sid) { //#{{{1
@@ -427,6 +436,7 @@ function build_data(sid) { //#{{{1
         if($("#v-"+field).val() && screens[sid].requires && screens[sid].requiresSet[field])
             data[field]=$("#v-"+field).val();
     });
+    if (debug) console.log("[build_data] data: "+JSON.stringify(data));
     return data;
 } //}}}
 
@@ -850,5 +860,6 @@ Date.DATE_ISO8601 = "Y-m-d%TH:i:sO";
 Date.DATE_RFC2822 = "D, d M Y H:i:s O";
 // W3C       "2005-08-15 15:52:01+00:00"
 Date.DATE_W3C     = "Y-m-d%TH:i:sP";
+//}}}1
 
 // vim:foldmethod=marker

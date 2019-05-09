@@ -23,7 +23,7 @@ buttons: conclude
 <dd class="fiberfaq">
 <p>You are free to use your own router. However, most low end or older routers will not be able
 to keep up with Volo's blazing fast gigabit speed.</p>
-<p>We don't recommend any specific brands, but you want to look for routers marked as gigabit for the WAN or internet port and the LAN or local network ports.</p>
+<p>We don't recommend any specific brands, but you want to look for routers rated for gigabit speed on the WAN or internet port, and the LAN or local network ports.</p>
 <p>You can also check www.smallnetbuilder.com--a site that tests routers to see they're as fast as advertised.</p>
 </dd> <!--}}}-->
 <dt class="fiberfaq" question='tiers'>What is the difference between the service tiers?</dt> <!--{{{-->
@@ -42,7 +42,7 @@ to keep up with Volo's blazing fast gigabit speed.</p>
 </dd> <!--}}}-->
 <dt class="fiberfaq" question='overage'>What happens if I go over my tier?</dt> <!--{{{-->
 <dd class="fiberfaq">
-<p>We will not throttle your speed, cut you off, or charge you for overages. Each tier has a target usage amount, and if you exceed than amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.</p>
+<p>We will not throttle your speed, cut you off, or charge you for overages. Each tier has a target usage amount, and if you exceed the amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.</p>
 </dd> <!--}}}-->
 <dt class="fiberfaq" question='install'>Installation Cost</dt> <!--{{{-->
 <dd class="fiberfaq">
