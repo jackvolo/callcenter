@@ -28,7 +28,7 @@ to keep up with Volo's blazing fast gigabit speed.</p>
 </dd> <!--}}}-->
 <dt class="fiberfaq" question='tiers'>What is the difference between the service tiers?</dt> <!--{{{-->
 <dd class="fiberfaq">
-<p>The difference between the service tiers is how much usage they are designed for. None of the tiers will throttle your speed, cut you off, or charge you for overages, but each tier has a target usage amount. If you exceed the amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.</p>
+<p>The difference between the service tiers is how much usage they are designed for. None of the tiers will throttle your speed, cut you off, or charge you for overages, but each tier has a target usage amount. If you exceed that amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.</p>
 <p>We usually describe our tiers in terms of video streaming because it is the biggest user of bandwidth on the internet.</p>
 <p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage.</p>
 <p>Medium is for customers who want to watch up to 12 hours of Netflix (streaming) per day or equivalent amount of usage.</p>

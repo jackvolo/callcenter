@@ -5,7 +5,7 @@ buttons: conclude: Yes, problememailticket: No
 
 <ol>
     <li>Go to the <strong>Tools</strong> menu and choose <strong>Email Accounts</strong></li>
-    <li>Select the button next to <i>View or change existing email accounts</i>and click <b>Next</b>, then select the account you want to change and click <strong>Change</strong>.</li>
+    <li>Select the button next to <i>View or change existing email accounts</i> and click <b>Next</b>, then select the account you want to change and click <strong>Change</strong>.</li>
     <li>Fill in your name and email address, enter <b>volomail.net</b> as both the incoming and outgoing servers, and enter your username and password per the above</li>
     <li>Click the <b>More Settings</b> button</li>
     <li>Check the box next to <i>My outgoing server (SMTP) requires authentication</i> on the <b>Outgoing Server</b> tab.</li>

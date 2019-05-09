@@ -46,7 +46,7 @@ buttons: conclude
 </dd><!--}}}-->
 <dt question='5'>Do I own the equipment?</dt><!--{{{-->
 <dd>
-<p>For security reasons, we can't sell the equipment to you. Even if we could, it wouldn't do you much good. The equipment is designed to work with our system, and wouldn't be much use without it.</p>
+<p>For security reasons, we can't sell the equipment to you. Beyond security reasons, the equipment is designed to work with our system, and wouldn't be much use outside of our network.</p>
 </dd><!--}}}-->
 <dt question='6'>What does the Volo receiver look like / How big is your antenna?</dt><!--{{{-->
 <dd>
