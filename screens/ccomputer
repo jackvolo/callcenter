@@ -1,6 +1,6 @@
 title: Champaign Computer Inquiry
 buttons: robot: File ticket, conclude: Abandon ticket
-requires: firstname+lastname+company?+phone+problem?
+requires: phone+firstname+lastname+company?+email?+message
 
 <p>To reach Champaign Computer, you should call 217-356-9770. Our office hours are 9am to 5pm, Monday through Friday.</p>
 
