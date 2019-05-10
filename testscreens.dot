@@ -30,6 +30,8 @@ digraph callcenter {
     cantreachtech -> conclude [ label = "conclude" ];
     captivatedunit -> conclude [ label = "Conclude" ];
     captivatedunit -> robot [ label = "Uncaptivate" ];
+    ccomputer -> conclude [ label = "Abandon ticket" ];
+    ccomputer -> robot [ label = "File ticket" ];
     cochranesinfo -> conclude [ label = "Conclude" ];
     cochranesinfo -> problemweb [ label = "I need help" ];
     comcast -> root [ label = "Finished" ];
@@ -238,7 +240,8 @@ digraph callcenter {
     root -> problememailstart [ label = "Email Problem" ];
     root -> problemwebstart [ label = "Internet Problem/Outage Check" ];
     root -> problemphone [ label = "Phone Problem" ];
-    root -> calltech [ label = "Forward to tech " ];
+    root -> calltech [ label = "Forward to tech" ];
+    root -> ccomputer [ label = "Champaign Computer" ];
     routerfaq -> conclude [ label = "conclude" ];
     routerreset -> conclude [ label = "Worked" ];
     routerreset -> bypassrouter [ label = "Didn't work - Bypass Router" ];
