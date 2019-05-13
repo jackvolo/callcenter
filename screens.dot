@@ -89,6 +89,7 @@ digraph callcenter {
     nextchapterinfo -> problemweb [ label = "I need help" ];
     noarpsticket -> conclude [ label = "Abandon ticket" ];
     noarpsticket -> robot [ label = "File ticket" ];
+    nonservicefaq -> conclude [ label = "conclude" ];
     nopoeprobticket -> conclude [ label = "Abandon ticket" ];
     nopoeprobticket -> robot [ label = "File ticket" ];
     noservices -> problemaccountticket [ label = "problemaccountticket" ];
