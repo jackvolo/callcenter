@@ -2,9 +2,9 @@ title:Frequency Asked Questions
 buttons: conclude
 
 <script type="text/javascript">
-    $('dl.routerfaq dd').hide();
-    $('dl.routerfaq dt').wrapInner('<a href="#"></a>');
-    $('dl.routerfaq dt a').click(function() {
+    $('dl.routerfaq dd.routerfaq').hide();
+    $('dl.routerfaq dt.routerfaq').wrapInner('<a href="#"></a>');
+    $('dl.routerfaq dt.routerfaq a').click(function() {
         var $dd=$(this).parents('dt').next();
         if($dd.hasClass('open')) $dd.hide('fast');
         else $dd.show('fast');
