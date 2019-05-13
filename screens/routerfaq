@@ -15,19 +15,31 @@ buttons: conclude
 
 <p>Our service bypasses the need for modems---in fact, <strong>modem and router/modem combos will not work</strong> with our service. However, any standard router should function with our internet service; simply plug the Internet, WAN, or Modem port in the back of the router to the ethernet port in the wall. </p>
 
+<dl class="fiberfaq">
+
+<dt class="fiberfaq" question='brand'>Do you have any recommendations for routers?</dt> <!--{{{-->
+<dd class="fiberfaq">
 <p>We don't have any restrictions on brands or models of router; however, we do recommend two general specifications for optimal functionality. 
 We do suggest confirming the router is gigabit capable (often noted as 10/100/1000), to make full use of our fiber service.
 AC or Dualband routers will give you a strong WiFi capability within your location.</p>
-
 <p>Some routers do require you to complete a setup process, prior to giving access to the internet. (Netgears are especially notorious for this.) If your new router doesn't seem to be working with the service, try bypassing the router and plugging into the service directly. If the service works with a direct connection, it's possible your router simply requires that setup.</p>
+</dd> <!--}}}-->
 
+<dt class="fiberfaq" question='resettrouble'>I'm having issues with my router after resetting it.</dt> <!--{{{-->
+<dd class="fiberfaq">
 <p>Routers have two types of Reset: hard and soft. A soft reset you can complete by unplugging the power to your router, waiting about ten or fifteen seconds, and plugging it back in. This will cause it to refresh it's network settings, without losing any firmware updates. Using the Reset button on the back of the router will cause a hard reset--this reverts the router to factory defaults, and may require it to go through a setup process in order to reconnect to the internet. Network names and passwords will reset as well on a hard reset.</p>
-
 <p>As routers can vary from brand to model, we recommend contacting your router's customer support to assist with any router setup process first. If you would like, we can schedule for a technician to come and help set up your router for you; however this would incur a &#36;60/hour service charge, as our techs would be working on a personal device rather than resolving an issue with the service itself.</p>
+</dd> <!--}}}-->
 
+<dt class="fiberfaq" question='routerspeeds'>What sorts of speeds can I expect from my router?</dt> <!--{{{-->
+<dd class="fiberfaq">
 <p>WiFi speeds <strong>will be slower</strong> than a hardwired connection. Router companies often advertise WiFi speeds of the router's hypothesized total capacity; though actual speeds on individual devices are often only 1/10th this quoted figure. Additionally, there are a number of environmental factors which may impact your router's WiFi performance. Though WiFi is convenient, for best speed and reliability on your devices, we do strongly recommend a hardwired connection whenever possible. Streaming video devices, gaming consoles, and smart TVs especially will benefit from a hardwired connection either to the service directly or to your router.</p>
+</dd> <!--}}}-->
 
+<dt class="fiberfaq" question='cannotbypass'>I can't bypass my router; my computer doesn't have an ethernet port. What do I do?</dt> <!--{{{-->
+<dd class="fiberfaq">
 <p>If your computer lacks an Ethernet Port, we do strongly recommend purchasing a USB to Ethernet adapter, which permits you to connect to the internet through a standard USB port. This is useful both for utilizing the higher speeds and reliability you find with a hardwired connection, but also for troubleshooting with a direct connection to the service in case your router causes connectivity problems.</p>
+</dd> <!--}}}-->
 
 <!-- 
 vi:foldmethod=marker: 
