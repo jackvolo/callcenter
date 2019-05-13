@@ -26,6 +26,12 @@ to keep up with Volo's blazing fast gigabit speed.</p>
 <p>We don't recommend any specific brands, but you want to look for routers rated for gigabit speed on the WAN or internet port, and the LAN or local network ports.</p>
 <p>You can also check www.smallnetbuilder.com--a site that tests routers to see they're as fast as advertised.</p>
 </dd> <!--}}}-->
+<dt class="fiberfaq" question='typicalspeeds'>What sorts of speeds can I anticipate at my location?</dt> <!--{{{-->
+<dd class="fiberfaq">
+<p>Speeds may vary, though customer should anticipate seeing speeds around 400mbps on an average speed test through speedtest.net. While the fiber permits speeds up to 1000mbps, it is dependent on the site or server you're connecting to, which may be slower than the fiber permits.</p>
+<p>If speeds ever drop below 150mbps with a direction connection to the service, that would be a situation we would want our technicians to come out and diagnose at your location.</p>
+<p>Speeds through your router, either wired or on WiFi, we <strong>cannot guarantee</strong> as this is largely dependent on your router device. Similarly, older computer models may only be capable of a 100mbps (one hundred megabit per second) connection, depending on their hardware. If you ever believe you are having a problem with speeds, we are happy to schedule a technician visit to look into it, although keep in mind it may be caused by limitations of personal hardware rather than an issue with the service itself.</p>
+</dd> <!--}}}-->
 <dt class="fiberfaq" question='tiers'>What is the difference between the service tiers?</dt> <!--{{{-->
 <dd class="fiberfaq">
 <p>The difference between the service tiers is how much usage they are designed for. None of the tiers will throttle your speed, cut you off, or charge you for overages, but each tier has a target usage amount. If you exceed that amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.</p>
@@ -46,16 +52,13 @@ to keep up with Volo's blazing fast gigabit speed.</p>
 </dd> <!--}}}-->
 <dt class="fiberfaq" question='install'>Installation Cost</dt> <!--{{{-->
 <dd class="fiberfaq">
-<p>Installation cost for a new install is typically &#36;150. That can be waived if you sign up 
-for TV service or sign a 1 year contract for our Heavy Service.</p>
-<p>We also offer a 30 day guarantee. If you're not happy with your service, and 
-cancel in the first 30 days, we'll refund your installation fee.</p>
+<p>Installation cost for a new install is typically &#36;150. That can be waived if you sign up for TV service or sign a 1 year contract for our Heavy Service.</p>
+<p>We also offer a 30 day guarantee. If you're not happy with your service, and cancel in the first 30 days, we'll refund your installation fee.</p>
 <p>Some apartments are pre-installed and there is no install fee.</p>
 </dd> <!--}}}-->
 <dt class="fiberfaq" question='price'>How much does Fiber cost?</dt> <!--{{{-->
 <dd class="fiberfaq">
-<p>You can get lightning fast gigabit internet for as little as 29.95 per 
-month!</p>
+<p>You can get lightning fast gigabit internet for as little as 29.95 per month!</p>
 <p class="dont-say">The following table lists all the monthly fees. Add the line free, plus up to one from each section. Except "other services", you can add both of those.</p>
 <table>
 <tr>
