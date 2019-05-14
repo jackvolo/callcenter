@@ -1,0 +1,11 @@
+title: Champaign Computer Customer Visit
+buttons: robot: File ticket, conclude: Abandon ticket
+requires: firstname+lastname+company?+username?+customer?+serviceaddress+aptunit+servicezip+phone+problem?+urgency+operator
+
+<p>We can certainly schedule for a technician to look into your issue.</p>
+
+<p>If the problem is strictly a software issue (for example, if your email client is acting up or you need help getting a program installed), we may be able to assist you remotely from our office. Our remote service actually only costs $1/minute with no minimum charge. This would also waive the on-site visit fee.</p>
+
+<p>Alternatively, if this may be a hardware based problem, a tech visit may be necessary to resolve your issues.</p>
+
+<p>Let me take down some information, including your address as well as the problems you seem to be experiencing. If the situation may be resolved remotely, our technicians will follow up to let you know to expect a call from them at the scheduled timeframe.</p>
