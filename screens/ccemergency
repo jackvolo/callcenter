@@ -2,7 +2,7 @@ title: Forward to Technician
 requires: ticket?+message+eta+operator+urgency?
 buttons: robot: Update/Make Ticket, cantreachtech: No one answered, conclude
 
-<p>Certainly. Let me put you on hold while I try to get you in touch with one of our technicians.</p>
+<p>Certainly. May I put you on hold while I try to get you in touch with one of our technicians?</p>
 
 <p class="dont-say">Send a message to the Volo Hangout Chat asking the question. If you don't get answer within 60 seconds, you can call the following numbers for urgent calls. Otherwise let the caller know we will reach out to them by the next business day.</p>
 
