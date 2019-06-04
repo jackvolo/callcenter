@@ -8,4 +8,8 @@ requires: firstname+lastname+company?+username?+customer?+serviceaddress+aptunit
 
 <p>Alternatively, if this may be a hardware based problem, a tech visit may be necessary to resolve your issues.</p>
 
-<p>Let me take down some information, including your address as well as the problems you seem to be experiencing. If the situation may be resolved remotely, our technicians will follow up to let you know to expect a call from them at the scheduled timeframe.</p>
+<p>Let me take down some information. What address are you located at? </p>
+
+<p>What problems are you experiencing?</p> 
+
+<p>If the situation may be resolved remotely, our technicians will follow up to let you know to expect a call from them at the scheduled timeframe.</p>
