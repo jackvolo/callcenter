@@ -320,7 +320,7 @@ input.copy-caller-id
                     <div class="element" id="r-serviceaddress">
                         <label for="v-serviceaddress">Service addr</label>
                         <div class="value">
-                            <input type="text" name="v-serviceaddress" id="v-serviceaddress" size="36"/>
+                            <input type="text" name="v-serviceaddress" id="v-serviceaddress" size="18"/>
                         </div>
                     </div>
                     <div class="element" id="r-aptunit">
@@ -385,22 +385,22 @@ input.copy-caller-id
                             <input type="text" name="v-service" id="v-service" size="15"/>
                         </div>
                     </div>
-                    <div class="element" id="r-tncplan">
-                        <label for="v-tncplan">TNC Plan</label>
-                        <div class="value">
-                            <input type="text" name="v-tncplan" id="v-tncplan" size="15"/>
-                        </div>
-                    </div>
-                    <div class="element" id="r-winfieldplan">
-                        <label for="v-winfieldplan">Winfield Plan</label>
-                        <div class="value">
-                            <input type="text" name="v-winfieldplan" id="v-winfieldplan" size="15"/>
-                        </div>
-                    </div>
                     <div class="element" id="r-baileyplan">
                         <label for="v-baileyplan">Bailey Plan</label>
                         <div class="value">
                             <input type="text" name="v-baileyplan" id="v-baileyplan" size="15"/>
+                        </div>
+                    </div>
+                    <div class="element" id="r-ncservice">
+                        <label for="v-ncservice">Nextchapter Service Level</label>
+                        <div class="value">
+                            <input type="text" name="v-ncservice" id="v-ncservice" size="10"/>
+                        </div>
+                    </div>
+                    <div class="element" id="r-aptservice">
+                        <label for="v-aptservice">Service Level</label>
+                        <div class="value">
+                            <input type="text" name="v-aptservice" id="v-aptservice" size="10"/>
                         </div>
                     </div>
                     <div class="element" id="r-company">
@@ -624,22 +624,14 @@ input.copy-caller-id
                         </div>
                     </div>
                     <div class="element" id="r-node">
-                        <label for="v-node">Service</label>
+                        <label for="v-node">Node</label>
                         <div class="value">
                             <input type="text" name="v-node" id="v-node" size="15"/>
-                        </div>
-                    </div>
-                    <div class="element" id="r-aptservice">
-                        <label for="v-aptservice">Service Level</label>
-                        <div class="value">
-                            <input type="text" name="v-aptservice" id="v-aptservice" size="10"/>
                         </div>
                     </div>
                 </fieldset>
             </div><!--2}}}-->
 
-            <button id="start_chat">Open Chat</button>
-            
         </div><!--#o }}}-->
     </div>
 
@@ -747,26 +739,6 @@ input.copy-caller-id
             <label for="node">Node</label>
             <div class="input">
                 <input type="text" name="node" id="node" size="6"/>
-            </div>
-        </div>
-        <div class="element input-tncplan">
-            <label for="tncplan">TNC Plan</label>
-            <div class="input">
-                <select name="tncplan" id="tncplan">
-                    <option value="">&mdash; Select one &mdash;</option>
-                    <option value="128">75 Mbs - $29.95/month</option>
-                </select>
-            </div>
-        </div>
-        <div class="element input-winfieldplan">
-            <label for="winfieldplan">Winfield Plan</label>
-            <div class="input">
-                <select name="winfieldplan" id="winfieldplan">
-                    <option value="">&mdash; Select one &mdash;</option>
-                    <option value="59">250 MB/day - $20/month</option>
-                    <option value="60">500 MB/day - $25/month</option>
-                    <option value="61">Bulk (unlimited) - $25/month</option>
-                </select>
             </div>
         </div>
         <div class="element input-baileyplan">
@@ -1036,7 +1008,7 @@ input.copy-caller-id
             </div>
         </div>
         <div class="element input-ncservice">
-            <label for="ncservice">Service level</label>
+            <label for="ncservice">NC Service level</label>
             <div class="input">
                 <select name="ncservice" id="ncservice">
                     <option selected>Choose Service Level</option>
@@ -1062,23 +1034,6 @@ input.copy-caller-id
     </div><!--#inputs }}}-->
 
 </div>
-
-<!-- JSXC Javascript
-<script src="jsxc/lib/jquery.min.js"></script>
-<script src="jsxc/lib/jquery.ui.min.js"></script>
-<script src="jsxc/lib/jquery.slimscroll.js"></script>
-<script src="jsxc/lib/jquery.fullscreen.js"></script>
-<script src="jsxc/lib/jsxc.dep.js"></script>
-<script src="jsxc/jsxc.js"></script>
-<script src="jsxc.volo.js"></script>
-
-<!-- JSXC Stylesheets -->
-<link href="jsxc/css/jquery-ui.min.css" media="all" rel="stylesheet" type="text/css" />
-<!-- link href="jsxc/css/jquery.mCustomScrollbar.css" media="all" rel="stylesheet" type="text/css" / -->
-<link href="jsxc/css/jsxc.css" media="all" rel="stylesheet" type="text/css" />
-<link href="jsxc/css/jsxc.webrtc.css" media="all" rel="stylesheet" type="text/css" />
-<link href="jsxc.volo.css" media="all" rel="stylesheet" type="text/css" />
--->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
 <script type="text/javascript">
@@ -1666,11 +1621,11 @@ screens['potentialmxu'] = {
 };
 screens['potentialnextchapter'] = {
     title: "Potential A La Carte Customer",
-    body: "<p>At your location, we offer superfast internet starting at &#36;19.95 per month. There are no installation or setup fees.</p>\n\n<p>You should find an ethernet port in your unit you can plug into.  Once plugged in, our system will usually direct you to a web page that will allow you to sign up and choose a package.  If that doesn't work, I can also sign you up over the phone.</p>\n\n<p>We offer 4 tiers of service at your location: Apartment10, Light, Medium and Heavy service.  Light, Medium and Heavy service all run at up to 1000Mbps (one Gigabit) and are differentiated based on how much you use the service, which I can go over with you in a few moments.</p>\n\n<p>As a special offer to certain apartments, including yours, we also offer a budget-friendly lower-speed service called Aparment 10. This has the same target usage amount as the Light service, but runs at 10Mbps instead of the full gigabit speed of the other services. Because of that, Apartment 10 service is adequate for typical web surfing and email use, but won't work well for you if you watch much online video.</p>\n\n<p>Light service costs $29.95 per month.  Medium service costs $49.95 per month.  Heavy service costs $59.95 per month.Apartment 10 service costs $19.95 per month. You can also prepay for a year for Medium or Heavy service and get 2 months free, which makes the Heavy service cost what Medium normally would cost.</p>\n\n<p>Due to internal wiring at 111 S Lincoln Ave and 911 W Springfield Ave, those buildings are limited to 100Mbps. All other Bailey buildings have 1000Mbps available.</p>\n\n<dl class=\"alacartefaq\">\n<dt>Service FAQs (click to open)</dt>\n<dd>\n  <dl class=\"alacartefaq\">\n    <dt>What does an ethernet port look like?</dt>\n    <dd>It's like a phone port except larger</dd>\n    <dt>Does your service need a modem?</dt>\n    <dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>\n    <dt>Can I use a router with your service?</dt>\n    <dd>Yes, our service is compatible with routers. It should work with any router you have.</dd>\n    <dt>Does Volo sell routers?</dt>\n    <dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>\n    <dt>I need help configuring my wireless router</dt>\n    <dd>Volo can setup a router for you for $50.</dd>\n    <dt question='tiers'>What is the difference between the service tiers?</dt>\n    <dd>\n    <p>Our fiber pricing is designed to give even light users affordable access to the highest speeds.  All our high speed fiber packages offer speeds up to 1000mbps; they only differ in the expected customer usage level. We do not enforce hard data limits--you do not have to worry about overage charges or speed throttling.  Instead, each tier of service has a target usage level; if you go over the target usage more than three times in a month, we may call and ask you to upgrade to tier of service more appropriate for your usage.</p>\n    <p>The difference between the service tiers is how much usage they are designed for. We usually describe our tiers in terms of video streaming because it is the biggest user of bandwidth on the internet:</p>\n    <p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage.</p>\n    <p>Medium is for customers who want to watch up to 12 hours of Netflix or other streaming video per day, or equivalent other usage.</p>\n    <p>Heavy is for customers who use more than that.</p>\n    <p class='dont-say'>You may need to remind the potential customer that watching a steam on two different devices at the same time counts double (or triple with 3, etc)</p>\n    </dd>\n    <dt question='whytiers'>Why do you have usage based tiers instead of speed based?</dt>\n    <dd>\n    <p>Our costs are based on how much total bandwidth you use, not how fast you use it. By separating our tiers into usage levels we can deliver our fastest service to all customers whether they use it a lot or a little.</p>\n    <p>By doing this we are able to offer our high tier for only &#36;60 compared to over &#36;100 with some of our competitors, and we can offer 1000 mbps to our light users.</p>\n    </dd>\n    <dt question='overage'>What happens if I go over my tier?</dt>\n    <dd>\n    We will not throttle your speed, cut you off, or charge you for overages. Each tier has a target usage amount, and if you exceed the amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.\n    </dd>\n  </dl>\n</dd>\n</dl>\n\n[screen:usagecalc]\n\n<script type=\"text/javascript\">\n    $('dl.alacartefaq dd').hide();\n    $('dl.alacartefaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.alacartefaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n"
+    body: "<p>At your location, we offer superfast internet starting at &#36;19.95 per month. There are no installation or setup fees.</p>\n\n<p>You should find an ethernet port in your unit you can plug into. Once plugged in, our system will usually direct you to a web page that will allow you to sign up and choose a package. If that doesn't work, I can also sign you up over the phone.</p>\n\n<p>We offer 4 tiers of service at your location: Apartment10, Light, Medium and Heavy service. Light, Medium and Heavy service all run at up to 1000Mbps (one Gigabit) and are differentiated based on how much you use the service, which I can go over with you in a few moments.</p>\n\n<p>As a special offer to certain apartments, including yours, we also offer a budget-friendly lower-speed service called Aparment 10. This has the same target usage amount as the Light service, but runs at 10Mbps instead of the full gigabit speed of the other services. Because of that, Apartment 10 service is adequate for typical web surfing and email use, but won't work well for you if you watch much online video.</p>\n\n<p>Light service costs $29.95 per month. Medium service costs $49.95 per month. Heavy service costs $59.95 per month. Apartment 10 service costs $19.95 per month. You can also prepay for a year for Medium or Heavy service and get 2 months free, which makes the Heavy service cost what Medium normally would cost.</p>\n\n<dl class=\"alacartefaq\">\n<dt>Service FAQs (click to open)</dt>\n<dd>\n  <dl class=\"alacartefaq\">\n    <dt>What does an ethernet port look like?</dt>\n    <dd>It's like a phone port except larger</dd>\n    <dt>Does your service need a modem?</dt>\n    <dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>\n    <dt>Can I use a router with your service?</dt>\n    <dd>Yes, our service is compatible with routers. It should work with any router you have.</dd>\n    <dt>Does Volo sell routers?</dt>\n    <dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>\n    <dt>I need help configuring my wireless router</dt>\n    <dd>Volo can setup a router for you for $50.</dd>\n    <dt question='tiers'>What is the difference between the service tiers?</dt>\n    <dd>\n    <p>Our fiber pricing is designed to give even light users affordable access to the highest speeds.  All our high speed fiber packages offer speeds up to 1000mbps; they only differ in the expected customer usage level. We do not enforce hard data limits--you do not have to worry about overage charges or speed throttling.  Instead, each tier of service has a target usage level; if you go over the target usage more than three times in a month, we may call and ask you to upgrade to tier of service more appropriate for your usage.</p>\n    <p>The difference between the service tiers is how much usage they are designed for. We usually describe our tiers in terms of video streaming because it is the biggest user of bandwidth on the internet:</p>\n    <p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage.</p>\n    <p>Medium is for customers who want to watch up to 12 hours of Netflix or other streaming video per day, or equivalent other usage.</p>\n    <p>Heavy is for customers who use more than that.</p>\n    <p class='dont-say'>You may need to remind the potential customer that watching a steam on two different devices at the same time counts double (or triple with 3, etc)</p>\n    </dd>\n    <dt question='whytiers'>Why do you have usage based tiers instead of speed based?</dt>\n    <dd>\n    <p>Our costs are based on how much total bandwidth you use, not how fast you use it. By separating our tiers into usage levels we can deliver our fastest service to all customers whether they use it a lot or a little.</p>\n    <p>By doing this we are able to offer our high tier for only &#36;60 compared to over &#36;100 with some of our competitors, and we can offer 1000 mbps to our light users.</p>\n    </dd>\n    <dt question='overage'>What happens if I go over my tier?</dt>\n    <dd>\n    We will not throttle your speed, cut you off, or charge you for overages. Each tier has a target usage amount, and if you exceed the amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.\n    </dd>\n  </dl>\n</dd>\n</dl>\n\n[screen:usagecalc]\n\n<script type=\"text/javascript\">\n    $('dl.alacartefaq dd').hide();\n    $('dl.alacartefaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.alacartefaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n"
     ,buttons: {conclude: "Nevermind",robot: "Signup"}
     ,buttonOrder: ['robot','conclude']
-    ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','email','ncservice','servicestart','message?','operator']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,message: 1,operator: 1,email: 1,servicestart: 1,ncservice: 1}
+    ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','email','aptservice','servicestart','message?','operator']]
+    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,aptservice: 1,lastname: 1,phone: 1,message: 1,operator: 1,email: 1,servicestart: 1}
 };
 screens['potentialshlens'] = {
     title: "Potential A La Carte Customer",

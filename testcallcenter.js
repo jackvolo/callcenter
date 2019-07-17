@@ -26,7 +26,7 @@ $(function() { //{{{1
     data: {USETHOMAS: 1},
     dataType: 'json',
     error: function(request, status, error) {
-      if(debug) console.log(error);
+      if(debug) console.log("Error: "+error);
       if(debug) console.log('AJAX error: %o', this);
       var last_screen = $("#i div.screen:last-child").attr("sid");
       show_screen('roboterror');

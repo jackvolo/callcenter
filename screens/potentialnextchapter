@@ -1,6 +1,6 @@
 title: Potential A La Carte Customer
 buttons: robot: Signup, conclude: Nevermind
-requires: firstname+lastname+serviceaddress+aptunit+servicezip+phone+email+ncservice+servicestart+message?+operator
+requires: firstname+lastname+serviceaddress+aptunit+servicezip+phone+email+aptservice+servicestart+message?+operator
 
 <p>At your location, we offer superfast internet starting at &#36;19.95 per month. There are no installation or setup fees.</p>
 
