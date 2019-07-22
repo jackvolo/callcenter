@@ -61,9 +61,10 @@ buttons: conclude
 <dd>
 <p>If you move to an area that Volo serves, we will transfer your service to your new location for a nominal fee.</p>
 </dd><!--}}}-->
-<dt question='9'>Speed: Volo vs Cable/DSL/Dialup</dt><!--{{{-->
+<dt question='9'>How fast is Volo's wireless service</dt><!--{{{-->
 <dd>
-<p>Volo Wireless speeds vary based on location. Customers can see download speeds up to 20 megabits per second, and upload speeds up to 12 megabits per second. Typical speeds are 2-5 megabits per seconds down and 1-2 megabits per second up.</p>
+<p>Volo Wireless speeds vary based on location. Customers can see download speeds between 2 to 20 megabits per second. There are many factors that affect speed so we cannot promise anything specific but I can file a ticket and have a technician attempt to provide a more precise estimate if needed.</p>
+<p>For a sense of what this means, Netflix requires a 3mbps connection for DVD quality streaming.</p>
 </dd><!--}}}-->
 <dt question='10'>I have Unlimited Service, how can I go over a bandwidth allocation?</dt><!--{{{-->
 <dd>

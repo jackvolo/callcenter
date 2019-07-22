@@ -1,0 +1,5 @@
+title: Champaign Computer IT Support Contract
+buttons: robot: File ticket, conclude: Abandon ticket
+requires: firstname+lastname+company?+username?+customer?+serviceaddress+aptunit+servicezip+phone+problem?+operator
+
+<p>We would be thrilled to help you with an ongoing IT Support service. We offer custom IT solutions, so I'd like to get you in touch with one of our managers to discuss options that would be available to you. Let me take down some information regarding what sorts of support service you're looking for, and I'll forward the information for a technician to follow up.</p>

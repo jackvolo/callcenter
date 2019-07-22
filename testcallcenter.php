@@ -143,22 +143,22 @@
                             <input type="text" name="v-service" id="v-service" size="15"/>
                         </div>
                     </div>
-                    <div class="element" id="r-tncplan">
-                        <label for="v-tncplan">TNC Plan</label>
-                        <div class="value">
-                            <input type="text" name="v-tncplan" id="v-tncplan" size="15"/>
-                        </div>
-                    </div>
-                    <div class="element" id="r-winfieldplan">
-                        <label for="v-winfieldplan">Winfield Plan</label>
-                        <div class="value">
-                            <input type="text" name="v-winfieldplan" id="v-winfieldplan" size="15"/>
-                        </div>
-                    </div>
                     <div class="element" id="r-baileyplan">
                         <label for="v-baileyplan">Bailey Plan</label>
                         <div class="value">
                             <input type="text" name="v-baileyplan" id="v-baileyplan" size="15"/>
+                        </div>
+                    </div>
+                    <div class="element" id="r-ncservice">
+                        <label for="v-ncservice">Nextchapter Service Level</label>
+                        <div class="value">
+                            <input type="text" name="v-ncservice" id="v-ncservice" size="10"/>
+                        </div>
+                    </div>
+                    <div class="element" id="r-aptservice">
+                        <label for="v-aptservice">Service Level</label>
+                        <div class="value">
+                            <input type="text" name="v-aptservice" id="v-aptservice" size="10"/>
                         </div>
                     </div>
                     <div class="element" id="r-company">
@@ -382,21 +382,9 @@
                         </div>
                     </div>
                     <div class="element" id="r-node">
-                        <label for="v-node">Service</label>
+                        <label for="v-node">Node</label>
                         <div class="value">
                             <input type="text" name="v-node" id="v-node" size="15"/>
-                        </div>
-                    </div>
-                    <div class="element" id="r-aptservice">
-                        <label for="v-aptservice">Service Level</label>
-                        <div class="value">
-                            <input type="text" name="v-aptservice" id="v-aptservice" size="10"/>
-                        </div>
-                    </div>
-                    <div class="element" id="r-ncservice">
-                        <label for="v-ncservice">Service Level</label>
-                        <div class="value">
-                            <input type="text" name="v-ncservice" id="v-ncservice" size="10"/>
                         </div>
                     </div>
                 </fieldset>
@@ -457,8 +445,8 @@
             </div>
             <label for="aptunit">Apt #</label>
             <div class="input">
-                <input type="text" name="aptunit" id="aptunit" size="5"/>
-                <button id="not_an_apartment">Not an apartment</button>
+                <input type="text" name="aptunit" id="aptunit" class="aptunit" size="5"/>
+                <input type="button" class="not-an-apartment" value="Not an apartment"/>
             </div>
             <label for="servicezip">Zip code</label>
             <div class="input">
@@ -517,26 +505,6 @@
             <label for="node">Node</label>
             <div class="input">
                 <input type="text" name="node" id="node" size="6"/>
-            </div>
-        </div>
-        <div class="element input-tncplan">
-            <label for="tncplan">TNC Plan</label>
-            <div class="input">
-                <select name="tncplan" id="tncplan">
-                    <option value="">&mdash; Select one &mdash;</option>
-                    <option value="128">75 Mbs - $29.95/month</option>
-                </select>
-            </div>
-        </div>
-        <div class="element input-winfieldplan">
-            <label for="winfieldplan">Winfield Plan</label>
-            <div class="input">
-                <select name="winfieldplan" id="winfieldplan">
-                    <option value="">&mdash; Select one &mdash;</option>
-                    <option value="59">250 MB/day - $20/month</option>
-                    <option value="60">500 MB/day - $25/month</option>
-                    <option value="61">Bulk (unlimited) - $25/month</option>
-                </select>
             </div>
         </div>
         <div class="element input-baileyplan">

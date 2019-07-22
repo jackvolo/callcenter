@@ -11,7 +11,6 @@ buttons: conclude
         $dd.toggleClass('open');
         return(false);
     });
-
 </script>
 
 <p>Our fiber optic internet service runs at 1000 mbps which makes it the among the fastest in the country. Pricing starts at 29.95 per month for the light tier, and all of our users get the full 1000 mbps. By separating our services into usage tiers we can deliver a super fast connection to all our customers.</p>
