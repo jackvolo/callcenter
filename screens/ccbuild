@@ -1,0 +1,12 @@
+title: Computer Build Inquiry
+buttons: robot: File ticket, conclude: Abandon ticket
+requires: firstname+lastname+company?+phone+problem?
+
+<p>Absolutely. Let me take down some information regarding what it is that you're looking for.</p>
+
+<p>Do you have any requirements regarding specific components? Do you need a particular hard drive? Memory capacity? Video card?</p>
+
+<p>Is there any budgetary we should take into account?</p>
+
+<p class='dont-say'>Take down as much information as they're able to offer regarding what they're looking for.</p>
+
