@@ -6,15 +6,38 @@ buttons:conclude
         var video = parseInt($('#fiber-video').val(), 10);
         var games = parseInt($('#fiber-games').val(), 10);
         var other = parseInt($('#fiber-other').val(), 10);
-
-        var bandwidth = parseFloat((video * 2) + (games * 1) + (other * 1));
-        if (bandwidth < 9) {
-            $('#fiber-output').text("Light Fiber service at $29.95 per month");
-        } else if (bandwidth < 29) {
-            $('#fiber-output').text("Medium Fiber service at $49.95 per month");
+        
+        var $bandwidth = (parseFloat((video * 3) + (games * 1) + (other * 1))) * 1000;
+        var $service_info = [];
+        if (servicelevels === null) {
+            if ($bandwidth < 9000) {
+                $service_info = ['118', 'SFI:Light', 'Light Fiber service', '$29.95'];
+            } else if ($bandwidth < 29000) {
+                $service_info = ['142', 'SFI:Medium', 'Medium Fiber service', '$49.95'];
+            } else {
+                $service_info = ['117', 'SFI:Heavy', 'Heavy Fiber service', '$59.95'];
+            }
         } else {
-            $('#fiber-output').text("Heavy Fiber service at $59.95 per month");
+            for (var $i in servicelevels) {
+                //1 MXU:SHLENS-MED
+                //2 Shlens Apartments Medium Fiber Service
+                //3 $49.95
+                //4 $0.00
+                //5 80000221-1513711059
+                //6 32400
+                //7 1000000000
+                //8 25
+                //9 1
+                if ($bandwidth < servicelevels[$i][6]) {
+                    if ($service_info[6] < servicelevels[$i][6]) {
+                        continue;
+                    } else {
+                        $service_info = servicelevels[$i];
+                    }
+                }
+            }
         }
+        $('#fiber-output').text($service_info[2] + " at " + $service_info[3] + " per month");
     }
     $('div.fiberfaq input.fiber-calc').change(calculate()); 
 </script>
