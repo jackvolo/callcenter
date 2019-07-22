@@ -1,0 +1,15 @@
+title: Outage???
+buttons: problemwebstart: Continue, conclude: Known Outage and ETR Relayed
+
+<p>I'm not aware of any, but give me a moment and I'll verify if there's any ongoing outages in our network.</p>
+
+<p class="dont-say"> Check the technician's chat channels. If there's already a known outage, they would have posted about it. If they haven't posted about it, it's not likely to be a widespread outage, or they're still looking into it.</p>
+<p class="dont-say"> Unless you've taken more than three calls within the last half hour from the same apartment address, you may safely presume there's not an ongoing outage in an area, and should (ultimately) troubleshoot their individual connection.</p>
+<p class="dont-say"> <strong>If there is a known outage reported by the technicians</strong>, they should have an Estimated Time to Repair already reported. If not, feel free to ask for the ETR in chat, and let the customer know that service should be restored by that time AND if not yet restored by then to call back for an update. You do not need to file a ticket for the individual customer in the event of a known outage.</p>
+
+<p> </p>
+
+<p class="dont-say"> If there's not an ongoing outage:</p>
+<p> I'm not showing an outage in your area at this time.</p>
+<p> Volo is implementing a notification system where you can receive a text or email if there's a known outage in your area. Would you like to sign up for this free service? I would just need to take down some information, and then we can proceed with normal troubleshooting.</p>
+<p class="dont-say"> If interested in signing up, go to volo.net/outage and fill in the information requested, with either Phone number capable of getting SMS messages or Email address.</p>

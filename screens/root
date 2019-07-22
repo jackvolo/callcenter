@@ -1,5 +1,5 @@
 title: 
-buttons: potentialcustomerstart: Potential Customer/New Customer Info, problemwebstart: Internet Problem/Outage Check, problemphone: Phone Problem, problememailstart: Email Problem, problemaccountstart: Pay Bill / Billing / Account, ticketcheck, message: Message / Other, faqs: FAQs, calltech: Forward to tech, ccomputer: Champaign Computer
+buttons: potentialcustomerstart: Potential Customer/New Customer Info, problemwebstart: Internet Problem, outagestart: Outage Check, problemphone: Phone Problem, problememailstart: Email Problem, problemaccountstart: Pay Bill / Billing / Account, ticketcheck, message: Message / Other, faqs: FAQs, calltech: Forward to tech, ccomputer: Champaign Computer
 requires: callerphone?+customer?+operator
 
 <p>Thank you for calling Volo Broadband! This is _____, how can I help you?</p>
