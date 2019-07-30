@@ -9,7 +9,7 @@ buttons:conclude
         
         var $bandwidth = (parseFloat((video * 3) + (games * 1) + (other * 1))) * 1000;
         var $service_info = [];
-        if (servicelevels === null) {
+        if (typeof(servicelevels) == 'undefined') {
             if ($bandwidth < 9000) {
                 $service_info = ['118', 'SFI:Light', 'Light Fiber service', '$29.95'];
             } else if ($bandwidth < 29000) {
