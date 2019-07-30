@@ -1,0 +1,8 @@
+title: Conclude
+buttons: root: Yes, robot: No
+
+<p>Your ticket has been filed. Our technicians will review your inquiry and should be in touch within the next business day.</p>
+
+<p>If you need to follow up, please refer to ticket number <strong>%TICKET</strong>. </p>
+
+<p>Is there anything further I can help you with today?</p>

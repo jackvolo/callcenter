@@ -320,7 +320,7 @@ input.copy-caller-id
                     <div class="element" id="r-serviceaddress">
                         <label for="v-serviceaddress">Service addr</label>
                         <div class="value">
-                            <input type="text" name="v-serviceaddress" id="v-serviceaddress" size="36"/>
+                            <input type="text" name="v-serviceaddress" id="v-serviceaddress" size="18"/>
                         </div>
                     </div>
                     <div class="element" id="r-aptunit">
@@ -385,22 +385,22 @@ input.copy-caller-id
                             <input type="text" name="v-service" id="v-service" size="15"/>
                         </div>
                     </div>
-                    <div class="element" id="r-tncplan">
-                        <label for="v-tncplan">TNC Plan</label>
-                        <div class="value">
-                            <input type="text" name="v-tncplan" id="v-tncplan" size="15"/>
-                        </div>
-                    </div>
-                    <div class="element" id="r-winfieldplan">
-                        <label for="v-winfieldplan">Winfield Plan</label>
-                        <div class="value">
-                            <input type="text" name="v-winfieldplan" id="v-winfieldplan" size="15"/>
-                        </div>
-                    </div>
                     <div class="element" id="r-baileyplan">
                         <label for="v-baileyplan">Bailey Plan</label>
                         <div class="value">
                             <input type="text" name="v-baileyplan" id="v-baileyplan" size="15"/>
+                        </div>
+                    </div>
+                    <div class="element" id="r-ncservice">
+                        <label for="v-ncservice">Nextchapter Service Level</label>
+                        <div class="value">
+                            <input type="text" name="v-ncservice" id="v-ncservice" size="10"/>
+                        </div>
+                    </div>
+                    <div class="element" id="r-aptservice">
+                        <label for="v-aptservice">Service Level</label>
+                        <div class="value">
+                            <input type="text" name="v-aptservice" id="v-aptservice" size="10"/>
                         </div>
                     </div>
                     <div class="element" id="r-company">
@@ -624,22 +624,14 @@ input.copy-caller-id
                         </div>
                     </div>
                     <div class="element" id="r-node">
-                        <label for="v-node">Service</label>
+                        <label for="v-node">Node</label>
                         <div class="value">
                             <input type="text" name="v-node" id="v-node" size="15"/>
-                        </div>
-                    </div>
-                    <div class="element" id="r-aptservice">
-                        <label for="v-aptservice">Service Level</label>
-                        <div class="value">
-                            <input type="text" name="v-aptservice" id="v-aptservice" size="10"/>
                         </div>
                     </div>
                 </fieldset>
             </div><!--2}}}-->
 
-            <button id="start_chat">Open Chat</button>
-            
         </div><!--#o }}}-->
     </div>
 
@@ -747,26 +739,6 @@ input.copy-caller-id
             <label for="node">Node</label>
             <div class="input">
                 <input type="text" name="node" id="node" size="6"/>
-            </div>
-        </div>
-        <div class="element input-tncplan">
-            <label for="tncplan">TNC Plan</label>
-            <div class="input">
-                <select name="tncplan" id="tncplan">
-                    <option value="">&mdash; Select one &mdash;</option>
-                    <option value="128">75 Mbs - $29.95/month</option>
-                </select>
-            </div>
-        </div>
-        <div class="element input-winfieldplan">
-            <label for="winfieldplan">Winfield Plan</label>
-            <div class="input">
-                <select name="winfieldplan" id="winfieldplan">
-                    <option value="">&mdash; Select one &mdash;</option>
-                    <option value="59">250 MB/day - $20/month</option>
-                    <option value="60">500 MB/day - $25/month</option>
-                    <option value="61">Bulk (unlimited) - $25/month</option>
-                </select>
             </div>
         </div>
         <div class="element input-baileyplan">
@@ -1036,7 +1008,7 @@ input.copy-caller-id
             </div>
         </div>
         <div class="element input-ncservice">
-            <label for="ncservice">Service level</label>
+            <label for="ncservice">NC Service level</label>
             <div class="input">
                 <select name="ncservice" id="ncservice">
                     <option selected>Choose Service Level</option>
@@ -1063,31 +1035,12 @@ input.copy-caller-id
 
 </div>
 
-<!-- JSXC Javascript
-<script src="jsxc/lib/jquery.min.js"></script>
-<script src="jsxc/lib/jquery.ui.min.js"></script>
-<script src="jsxc/lib/jquery.slimscroll.js"></script>
-<script src="jsxc/lib/jquery.fullscreen.js"></script>
-<script src="jsxc/lib/jsxc.dep.js"></script>
-<script src="jsxc/jsxc.js"></script>
-<script src="jsxc.volo.js"></script>
-
-<!-- JSXC Stylesheets -->
-<link href="jsxc/css/jquery-ui.min.css" media="all" rel="stylesheet" type="text/css" />
-<!-- link href="jsxc/css/jquery.mCustomScrollbar.css" media="all" rel="stylesheet" type="text/css" / -->
-<link href="jsxc/css/jsxc.css" media="all" rel="stylesheet" type="text/css" />
-<link href="jsxc/css/jsxc.webrtc.css" media="all" rel="stylesheet" type="text/css" />
-<link href="jsxc.volo.css" media="all" rel="stylesheet" type="text/css" />
--->
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
 <script type="text/javascript">
 //<![CDATA[
 var screens = {};
 screens['1404lincolninfo'] = {
     title: "Chateau Normand",
-
     body: "<p>Good news! Volo's internet service is being provided to your unit as an included amenity. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. <b>Do not use a modem or modem/router combo device</b>, our service is provided directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>Additionally WiFi is provided. Each unit has it's own network and your landlord should have the information to get you signed on.</p>\n\n<p>Your service should be active now, you don't need to sign up.  If you pay anything for the service, you'd pay that directly to Chateau Normand along with your rent.</p>\n"
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
@@ -1126,39 +1079,17 @@ screens['badticket'] = {
     ,requires: [['ticket']]
     ,requiresSet: {ticket: 1}
 };
-screens['baileyproblem'] = {
-    title: "Reset Switch",
-    body: "I'm going to reset the switch you're connected to, and then we'll see if you can connect.\n\n<script type=\"text/javascript\">\n    $(function() {\n        $('#v-ticket').val('');\n    });\n<"+"/script>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['customer'],['username'],['serviceaddress']]
-    ,requiresSet: {serviceaddress: 1,customer: 1,username: 1}
+screens['billingfaq'] = {
+    title: "",
+    body: "<script type=\"text/javascript\">\n    $('dl.billingfaq dd').hide();\n    $('dl.billinbfaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.billingfaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n\n<"+"/script>\n\n<p>We have several ways you can pay your bill:\nFirst, is via automatic debit from your checking account.  Print, fill out, and sign the form at volo.net/ach then return it to us with a VOIDed check, and we'll make sure your bill is paid on-time every month from your bank account.\nSecond, we can process check, cash, or money order to our office: 3310 N Cunningham Ave, Urbana IL 61802. We do not recommend sending cash through the mail. Our office is generally open 9am to 6pm Monday through Friday.\nFinally, you can pay online with a credit card at volo.net/payment or by calling us at 217 367-8656.  Paying with a credit card will incur a 5% convenience fee. The same fee applies to in-office debit or credit card payments. </p>\n\n<p>Statements are sent out on the 16th of each month, and payments are due (as in received by our office) on the 1st of each month. Monthly service charges cover from the 1st to the end of each month. Putting a payment in the post on the 1st will likely cause the payment to be late.</p>\n\n<p>We do bill for the month forward---thus, this month's bill on the 16th reflects service charges for next month's service. Especially for new customers, you may see two service charges, which reflects the timeframe since installation to the statement date plus then the month ahead</p>\n\n<p>July 16th, 2019, marks the implementation of a $1.50 administrative charge for paper statements. We do have the option of delivering statements via email, which remains a free service. If you're interested, email us at billing@volo.net so we have a positive confirmation of the spelling of your email address, and we can update your billing preferences.</p>\n\n<p>If you're having trouble paying off a large past-due balance, we do offer payment plans to help space out the balance over several months. Please let the Customer Service Representative know you're needing to do so and have them file a billing ticket with roughly how much each month you would be able to pay on top of your normal monthly service charges, and an accounting representative will contact you back to set up the payment plan.</p>\n"
+    ,buttons: {conclude: "conclude"}
+    ,buttonOrder: ['conclude']
 };
-screens['baileysignup'] = {
-    title: "Bailey Apts Sign Up",
-    body: "%MESSAGE\n"
-    ,buttons: {robot: "Sign Up"}
-    ,buttonOrder: ['robot']
-    ,requires: [['firstname','lastname','email','phone?','serviceaddress','aptunit','servicezip','baileyplan']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,baileyplan: 1,lastname: 1,phone: 1,email: 1}
-};
-screens['browsertest'] = {
-    title: "Run browser test",
-    body: "[screen:browsertestcore]\n"
-    ,buttons: {conclude: "Worked",custreboot: "Didn't work"}
-    ,buttonOrder: ['custreboot','conclude']
-};
-screens['browsertest2'] = {
-    title: "Run browser test 2",
-    body: "<p>Test their connection to N. Y. Times dot com:</p>\n\n<ol>\n    <li>Say: Open up your web browser. (Internet Explorer, Firefox, or Safari)</li>\n    <li>Wait for the browser to be open. If it takes more than 60 seconds or is too confusing, skip to \"When did you first notice the problem?\"</li>\n    <li>Say: Type nytimes.com into the Address Bar, but don't press Enter yet.  Spell nytimes.com \"n y times dot com\"</li>\n    <li>Wait for them to be done typing.</li>\n    <li>Say: Press Enter now, and tell me when the page has finished loading.</li>\n    <li>Press [button here?] NYT load time: seconds</li>\n    <li>When the page has loaded, press</li>\n    <li>If timer reaches 60 seconds, press and move on.</li>\n</ol>\n\n"
-    ,buttons: {conclude: "Worked",robot: "Didn't work"}
-    ,buttonOrder: ['conclude','robot']
-};
-screens['browsertestcore'] = {
-    title: "Test web browser connection",
-    body: "<p>Let's test your connection to <span class=\"url\">google.com</span>:</p>\n<p>Open up your web browser: Internet Explorer, Firefox, or Safari.</p>\n\n<p class=\"dont-say\">Wait for the browser to be open. If it takes more than 60 seconds or is too confusing, click \"Didn't work\"</p>\n\n<p>Type <span class=\"url\">google.com</span> into the Address Bar, but don't press Enter yet.</p>\n\n<p class=\"dont-say\">Wait for them to be done typing.</p>\n\n<p>Press Enter now, and tell me when the page has finished loading.</p>\n\n<p class=\"dont-say\">Press <input type=\"button\" value=\"Start\" class=\"start-timer\"/>.\nWhen the page has loaded, press <input type=\"button\" value=\"Stop\" class=\"stop-timer\"/><br/>\nIf timer reaches 60 seconds, press \"Didn't work\" and move on.</p>\n\n<script type=\"text/javascript\">\n    var timeoutID;\n    $(function() {\n        $('input.start-timer').click(function() {\n            timeoutID=window.setTimeout('updateTimer()', 1000);\n        });\n        $('input.stop-timer').click(function() {\n            window.clearTimeout(timeoutID);\n            $('#v-googleloadtime').val($('div.screen:last-child div.input-googleloadtime input').val());\n        });\n    });\n\n    function updateTimer() {\n        $('div.screen:last-child div.input-googleloadtime input').val(parseInt($('div.screen:last-child div.input-googleloadtime input').val())+1);\n        timeoutID=window.setTimeout('updateTimer()', 1000);\n    }\n<"+"/script>\n"
-    ,requires: [['googleloadtime']]
-    ,requiresSet: {googleloadtime: 1}
+screens['bulksuspended'] = {
+    title: "Bulk Apartment - Service Suspended",
+    body: "<p> Your service has been suspended by your apartment management group. Typically this is due to nonpayment of rent, though may be for other reasons. We recommend getting in touch with your property manager and confirm the reason why they suspended your service, and once the situation is resolved they should be able to reactivate internet service to your apartment from there. </p>\n\n<p class='dont-say'> Unfortunately, we are not given a specific reason for suspensions by the property management, and they should contact them directly. </p>\n"
+    ,buttons: {conclude: "Continue"}
+    ,buttonOrder: ['conclude']
 };
 screens['bulksuspended'] = {
     title: "Bulk Apartment - Service Suspended",
@@ -1202,12 +1133,6 @@ screens['bypassrouterspeedtest'] = {
     ,buttons: {speedtest: "No router or bypassed",routerresetspeedtest: "Unable to bypass"}
     ,buttonOrder: ['speedtest','routerresetspeedtest']
 };
-screens['callinstall'] = {
-    title: "Forward to sales rep",
-    body: "<p class=\"dont-say\">Forward the call to Ray at ext 709</p>\n\n<p class=\"dont-say ticket-tell\">Please tell him this is regarding ticket\n<strong class=\"ticket-tell-number\">_</strong>.</p>\n\n<script type=\"text/javascript\">\n    if($('#v-ticket').val()) $('.ticket-tell-number').html($('#v-ticket').val());\n    else $('p.ticket-tell').hide();\n<"+"/script>\n\n"
-    ,buttons: {conclude: "conclude",robot: "No one answered"}
-    ,buttonOrder: ['robot','conclude']
-};
 screens['calltech'] = {
     title: "Forward to technician",
     body: "%MESSAGE\n\n<p class=\"dont-say\">Send a message to the Volo Hangout Chat asking the question. If you don't get answer within 60 seconds, you can call the following numbers for urgent calls. Otherwise let the caller know we will reach out to them by the next business day.</p>\n\n<p class=\"dont-say\">Tony at <strong>(217) 898-8669</strong>.</p>\n\n<p class=\"dont-say\">Peter at <strong>(217)721-3893</strong>.</p>\n\n<p class=\"dont-say ticket-tell\">Please tell him this is regarding ticket\n<strong class=\"ticket-tell-number\">_</strong>. If there is a ticket.</p>\n\n<script type=\"text/javascript\">\n    if($('#v-ticket').val()) $('.ticket-tell-number').html($('#v-ticket').val());\n    else $('p.ticket-tell').hide();\n<"+"/script>\n\n"
@@ -1233,8 +1158,8 @@ screens['cancelservicepickservice'] = {
     ,requiresSet: {service: 1}
 };
 screens['cancelservicestart'] = {
-    title: "Change Service",
-    body: "[screen:findservices]\n"
+    title: "Cancel Service",
+    body: "<p>I need to look up your account info.</p>\n"
     ,buttons: {robot: "Continue"}
     ,buttonOrder: ['robot']
     ,requires: [['customer'],['serviceaddress','aptunit','servicezip']]
@@ -1254,53 +1179,65 @@ screens['captivatedunit'] = {
     ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip']]
     ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1}
 };
-screens['changeservice'] = {
-    title: "Make changes to this service",
-    body: "<p>What changes would you like to make?</p>\n\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['service','activated?','deactivated?']]
-    ,requiresSet: {activated: 1,deactivated: 1,service: 1}
+screens['ccbuild'] = {
+    title: "Computer Build Inquiry",
+    body: "<p>Absolutely. Let me take down some information regarding what it is that you're looking for.</p>\n\n<p>Do you have any requirements regarding specific components? Do you need a particular hard drive? Memory capacity? Video card?</p>\n\n<p>Is there any budgetary we should take into account?</p>\n\n<p class='dont-say'>Take down as much information as they're able to offer regarding what they're looking for.</p>\n\n"
+    ,buttons: {conclude: "Abandon ticket",robot: "File ticket"}
+    ,buttonOrder: ['robot','conclude']
+    ,requires: [['firstname','lastname','company?','phone','problem?']]
+    ,requiresSet: {firstname: 1,problem: 1,lastname: 1,phone: 1,company: 1}
 };
-screens['changeservicepickservice'] = {
-    title: "Choose a service",
-    body: "\n[screen:pickaservice]\n\n<script type=\"text/javascript\">\n    $('div.screen-changeservicepickservice dd').hide();\n    $('div.screen-changeservicepickservice dt').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-changeservicepickservice dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        $(this).parents('div.screen').find('div.input input').add('#v-service').val(\n            $(this).parents('dt').attr('service')\n        );\n        robot_check();\n        return(false);\n    });\n<"+"/script>\n"
-    ,buttons: {robot: "Edit this service"}
-    ,buttonOrder: ['robot']
-    ,requires: [['service']]
-    ,requiresSet: {service: 1}
+screens['ccconclude'] = {
+    title: "Conclude",
+    body: "<p>Your ticket has been filed. Our technicians will review your inquiry and should be in touch within the next business day.</p>\n\n<p>If you need to follow up, please refer to ticket number <strong>%TICKET</strong>. </p>\n\n<p>Is there anything further I can help you with today?</p>\n"
+    ,buttons: {root: "Yes",robot: "No"}
+    ,buttonOrder: ['root','robot']
 };
-screens['changeservicestart'] = {
-    title: "Change Service",
-    body: "[screen:findservices]\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['customer'],['serviceaddress','aptunit','servicezip']]
-    ,requiresSet: {servicezip: 1,aptunit: 1,serviceaddress: 1,customer: 1}
+screens['cccontract'] = {
+    title: "Champaign Computer IT Support Contract",
+    body: "<p>We would be thrilled to help you with an ongoing IT Support service. We offer custom IT solutions, so I'd like to get you in touch with one of our managers to discuss options that would be available to you. Let me take down some information regarding what sorts of support service you're looking for, and I'll forward the information for a technician to follow up.</p>\n"
+    ,buttons: {conclude: "Abandon ticket",robot: "File ticket"}
+    ,buttonOrder: ['robot','conclude']
+    ,requires: [['firstname','lastname','company?','username?','customer?','serviceaddress','aptunit','servicezip','phone','problem?','operator']]
+    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,username: 1,operator: 1,problem: 1,customer: 1,company: 1}
 };
-screens['changeservicetnc'] = {
-    title: "Make changes to this service",
-    body: "<p>%MESSAGE</p>\n\n<p class=\"dont-say\">Format the date as YYYY-MM-DD</p>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['service','activated?','deactivated?','tncplan']]
-    ,requiresSet: {activated: 1,deactivated: 1,tncplan: 1,service: 1}
+screens['ccemergency'] = {
+    title: "Forward to Technician",
+    body: "<p>Certainly. May I put you on hold while I try to get you in touch with one of our technicians?</p>\n\n<p class=\"dont-say\">Send a message to the Volo Hangout Chat asking the question. If you don't get answer within 60 seconds, you can call the following numbers for urgent calls. Otherwise let the caller know we will reach out to them by the next business day.</p>\n\n<p class=\"dont-say\">Tony at <strong>(217) 898-8669</strong>.</p>\n\n<p class=\"dont-say\">Peter at <strong>(217) 721-3893</strong>.</p>\n\n<p class=\"dont-say ticket-tell\">Please tell him this is regarding ticket\n<strong class=\"ticket-tell-number\">_</strong>. If there is a ticket.</p>\n\n<script type=\"text/javascript\">\n    if($('#v-ticket').val()) $('.ticket-tell-number').html($('#v-ticket').val());\n    else $('p.ticket-tell').hide();\n<"+"/script>\n"
+    ,buttons: {conclude: "conclude",cantreachtech: "No one answered",robot: "Update/Make Ticket"}
+    ,buttonOrder: ['robot','cantreachtech','conclude']
+    ,requires: [['ticket?','message','eta','operator','urgency?']]
+    ,requiresSet: {operator: 1,eta: 1,urgency: 1,ticket: 1,message: 1}
 };
-screens['changeservicewinfield'] = {
-    title: "Make changes to this service",
-    body: "<p>What changes would you like to make?</p>\n\n<p class=\"dont-say\">Format the date as YYYY-MM-DD</p>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['service','activated?','deactivated?','winfieldplan']]
-    ,requiresSet: {activated: 1,deactivated: 1,winfieldplan: 1,service: 1}
+screens['ccomputer'] = {
+    title: "Champaign Computer In Store",
+    body: "<p>Our technicians would be happy to take a look at your device.</p>\n\n<p>Our office is located at 3310 N Cunningham Ave, Urbana IL 61802, north on 45 from Urbana, at the intersection of Cunningham and Oaks Road.</p>\n\n<p>Our technicians may be in the field when you arrive, but we'll investigate the issues you're experiencing at the earliest opportunity. In store support is available at a rate of $60/hour, and many repairs may only take one hour to fix; however, our technicians will provide an estimate on how long it would take.</p>\n\n<p>Let me take down some information regarding the problem you're experiencing so our technicians can have an idea of how best to assist you.</p>"
+    ,buttons: {conclude: "Abandon ticket",robot: "File ticket"}
+    ,buttonOrder: ['robot','conclude']
+    ,requires: [['firstname','lastname','company?','phone','problem?','eta?']]
+    ,requiresSet: {eta: 1,firstname: 1,problem: 1,lastname: 1,phone: 1,company: 1}
 };
-screens['checkcoverage'] = {
-    title: "Check coverage",
-    body: "Let's see what the coverage is like in your area.\n\n"
-    ,buttons: {voloinfo_nosched: "Skip to About Volo",robot: "Check coverage"}
-    ,buttonOrder: ['robot','voloinfo_nosched']
-    ,requires: [['serviceaddress','aptunit','servicezip']]
-    ,requiresSet: {servicezip: 1,aptunit: 1,serviceaddress: 1}
+screens['ccomputerstart'] = {
+    title: "Champaign Computer Inquiry",
+    body: "<p>Our technicians are happy to help with your IT needs! We offer several different services through our Champaign Computer branch.</p>\n\n<p>Are you looking for tech support regarding an issue you're having with an existing device? Are you looking for a new computer build tailored to your specific needs? Or are you perhaps looking for ongoing IT support solutions for your home or business?\n"
+    ,buttons: {cccontract: "IT Support",ccproblem: "Computer Problem",ccbuild: "New Build"}
+    ,buttonOrder: ['ccproblem','ccbuild','cccontract']
+};
+screens['cconsite'] = {
+    title: "Champaign Computer Customer Visit",
+    body: "<p>We can certainly schedule for a technician to look into your issue.</p>\n\n<p>If the problem is strictly a software issue (for example, if your email client is acting up or you need help getting a program installed), we may be able to assist you remotely from our office. Our remote service actually only costs $1/minute with no minimum charge. This would also waive the on-site visit fee.</p>\n\n<p>Alternatively, if this may be a hardware based problem, a tech visit may be necessary to resolve your issues.</p>\n\n<p>Let me take down some information. What address are you located at? </p>\n\n<p>What problems are you experiencing?</p> \n\n<p>If the situation may be resolved remotely, our technicians will follow up to let you know to expect a call from them at the scheduled timeframe.</p>\n"
+    ,buttons: {conclude: "Abandon ticket",robot: "File ticket"}
+    ,buttonOrder: ['robot','conclude']
+    ,requires: [['firstname','lastname','company?','username?','customer?','serviceaddress','aptunit','servicezip','phone','problem?','urgency','operator']]
+    ,requiresSet: {firstname: 1,urgency: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,username: 1,operator: 1,problem: 1,customer: 1,company: 1}
+};
+screens['ccproblem'] = {
+    title: "Champaign Computer Inquiry",
+    body: "<p>We have several experts on staff that can certainly look into resolving your problem. </p>\n\n<p>Are you needing immediate help with the problem you're experiencing? I can try to get you in touch with a technician immediately. Please be aware there is a $100 upcharge for <strong>immediate</strong> service. </p>\n\n<p>Alternatively, we'd be happy to take a look at it either in our office, or we can schedule a tech to either visit your address or to assist remotely. Our in-store and on-site support is $60/hour, and there's a flat $30 upcharge for an on-site visit for either troubleshooting or pickup and delivery.</p>\n\n"
+    ,buttons: {ccemergency: "Emergency",cconsite: "Schedule a Tech",ccomputer: "In Store Dropoff"}
+    ,buttonOrder: ['ccemergency','cconsite','ccomputer']
+    ,requires: [['firstname','lastname','company?','phone','problem?']]
+    ,requiresSet: {firstname: 1,problem: 1,lastname: 1,phone: 1,company: 1}
 };
 screens['cochranesinfo'] = {
     title: "Cochranes",
@@ -1322,41 +1259,19 @@ screens['conclude'] = {
     ,requires: [['username?','ticket?','schedule']]
     ,requiresSet: {ticket: 1,schedule: 1,username: 1}
 };
-screens['coveragegood'] = {
-    title: "Good Coverage",
-    body: "<p>It looks like we have good coverage in your area.</p>\n\n<p>Would you like to learn more about our services?</p>\n\n"
-    ,buttons: {conclude: "Neither",voloinfo: "Learn more",schedule: "Schedule install"}
-    ,buttonOrder: ['voloinfo','schedule','conclude']
+screens['coveragemapcore'] = {
+    title: "Coverage Map",
+    body: "\n<div id=\"coverage-map\" style=\"width: 100%; height: 600px;\">\n&nbsp;\n</div>\n\n<script type=\"text/javascript\" src=\"javascript/map/coverage_map.js\"><"+"/script>\n"
 };
-screens['coveragenone'] = {
-    title: "No Coverage",
-    body: "<p>It looks like we do not yet cover your area.</p>\n\n<p>Would you like to learn more about Volo anyway?</p>\n\n"
-    ,buttons: {voloinfo_nosched: "Yes",conclude: "No"}
-    ,buttonOrder: ['conclude','voloinfo_nosched']
-};
-screens['coverageretry'] = {
-    title: "Try coverage check again",
-    body: "<p>I couldn't place your address on our coverage map.</p>\n\n<p>I can try again, or I can forward your call to someone who can tell\nyou more about what areas we cover. I can also tell you more about\nthe services Volo offers.</p>\n\n<p class=\"dont-say\">Please ask for the caller's name if you need to forward the call to a sales rep.</p>\n\n"
-    ,buttons: {voloinfo_nogeo: "Skip to About Volo",callinstall: "callinstall",robot: "Check coverage"}
-    ,buttonOrder: ['robot','voloinfo_nogeo','callinstall']
-    ,requires: [['firstname?','lastname?','serviceaddress','aptunit','servicezip']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1}
-};
-screens['coveragesome'] = {
-    title: "Some Coverage",
-    body: "<p>It looks like we have some coverage in your area, but we'll a technician to make sure the signal is strong enough.</p>\n\n<p>Would you like to learn more about our services?</p>\n\n"
-    ,buttons: {conclude: "Neither",schedulesurvey: "Schedule technician",voloinfo: "Learn more"}
-    ,buttonOrder: ['voloinfo','schedulesurvey','conclude']
+screens['cpm_vpinfo'] = {
+    title: "Campus Property Management",
+    body: "<p>Campus Property Management is providing Volo's internet to your unit as an included amenity. The provided service provides speeds up to 100mpbs, a very fast service. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. Do not use a modem, our service is proved directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>This is an included ammenity, you do not have to pay for it. Just connect to the ethernet port and start enjoying it!</p>\n"
+    ,buttons: {conclude: "Conclude",problemweb: "I need help"}
+    ,buttonOrder: ['conclude','problemweb']
 };
 screens['cpmbulkinfo'] = {
     title: "Campus Property Management",
     body: "<p>Campus Property Management is providing Volo's gigabit fiber internet to your unit as an included amenity. The provided service provides speeds up to 1 gigabit (1000mbps), just about the fastest service in the country. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. Do not use a modem, our service is proved directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>This is an included ammenity, you do not have to pay for it. Just connect to the ethernet port and start enjoying it!</p>\n"
-    ,buttons: {conclude: "Conclude",problemweb: "I need help"}
-    ,buttonOrder: ['conclude','problemweb']
-};
-screens['cpmvpinfo'] = {
-    title: "Campus Property Management",
-    body: "<p>Campus Property Management is providing Volo's internet to your unit as an included amenity. The provided service provides speeds up to 100mpbs, a very fast service. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. Do not use a modem, our service is proved directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>This is an included ammenity, you do not have to pay for it. Just connect to the ethernet port and start enjoying it!</p>\n"
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
 };
@@ -1444,29 +1359,23 @@ screens['faqs'] = {
 };
 screens['fiberfaq'] = {
     title: "",
-    body: "<script type=\"text/javascript\">\n    $('dl.fiberfaq dd.fiberfaq').hide();\n    $('dl.fiberfaq dt.fiberfaq').wrapInner('<a href=\"#\"></a>');\n    $('dl.fiberfaq dt.fiberfaq a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n\n<"+"/script>\n\n<p>Our fiber optic internet service runs at 1000 mbps which makes it the among the fastest in the country. Pricing starts at 29.95 per month for the light tier, and all of our users get the full 1000 mbps. By separating our services into usage tiers we can deliver a super fast connection to all our customers.</p>\n\n[screen:usagecalc]\n\n<dl class=\"fiberfaq\">\n<dt class=\"fiberfaq\" question='router'>Can I use my own router?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>You are free to use your own router. However, most low end or older routers will not be able\nto keep up with Volo's blazing fast gigabit speed.</p>\n<p>We don't recommend any specific brands, but you want to look for routers marked as gibabit for the WAN or internet port and the LAN or local network ports.</p>\n<p>You can also check www.smallnetbuilder.com--a site that tests routers to see they're as fast as advertised.</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='tiers'>What is the difference between the service tiers?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>The difference between the service tiers is how much usage they are designed for. None of the tiers will throttle your speed, cut you off, or charge you for overages, but each tier has a target usage amount. If you exceed than amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.</p>\n<p>We usually describe our tiers in terms of video streaming because it is the biggest user of bandwidth on the internet.</p>\n<p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage.</p>\n<p>Medium is for customers who want to watch up to 12 hours of Netflix (streaming) per day or equivalent amount of usage.</p>\n<p>Heavy is for customers who use more than that.</p>\n<p class='dont-say'>You may need to remind the potential customer that watching a steam on two different devices at the same time counts double (or triple with 3, etc)</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='whytiers'>Why do you have usage based tiers instead of speed based?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>Our costs are based on how much total bandwidth you use, not how fast you use it. By separating our tiers into usage levels we can deliver our fastest service to all customers whether they use it a lot or a little.</p>\n<p>By doing this we are able to offer our high tier for only &#36;60 compared to over &#36;100 with some of our competitors, and we can offer 1000 mbps to our light users.</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='overage'>What happens if I go over my tier?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>We will not throttle your speed, cut you off, or charge you for overages. Each tier has a target usage amount, and if you exceed than amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='install'>Installation Cost</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>Installation cost for a new install is typically &#36;150. That can be waived if you sign up \nfor TV service or sign a 1 year contract for our Heavy Service.</p>\n<p>We also offer a 30 day guarantee. If you're not happy with your service, and \ncancel in the first 30 days, we'll refund your installation fee.</p>\n<p>Some apartments are pre-installed and there is no install fee.</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='price'>How much does Fiber cost?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>You can get lightning fast gigabit internet for as little as 29.95 per \nmonth!</p>\n<p class=\"dont-say\">The following table lists all the monthly fees. Add the line free, plus up to one from each section. Except \"other services\", you can add both of those.</p>\n<table>\n<tr>\n<th>Internet Plans</th> <th>Monthly Rate</th>\n</tr>\n<tr>\n<td>Light</td> <td>&#36;29.95</td>\n</tr>\n<tr>\n<td>Medium</td> <td>&#36;49.95</td>\n</tr>\n<tr>\n<td>Heavy</td><td>&#36;59.95</td>\n</tr>\n<tr>\n<th>Phone Plans</th> <th>Monthly Rate</th>\n</tr>\n<tr>\n<td>Unlimited Calling</td> <td>&#36;12.95</td>\n</tr>\n<tr>\n<th>TV Plans</th> <th>Monthly Rate</th>\n</tr>\n<tr>\n<td>Dish Network</td>\n<td>&#36;19.95+</td>\n</tr>\n<tr>\n<td>Direct TV</td>\n<td>&#36;24.95+</td>\n</tr>\n<tr>\n<th>Other Sevices</th>\n<th>Monthly Rate</th>\n</tr>\n<tr>\n<td>Gigabit Router</td>\n<td>&#36;12.00</td>\n</tr>\n<tr>\n<td>Instant Support</td>\n<td>&#36;10.00</td>\n</tr>\n</table>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='investment'>I want Fiber asap, what can I do?</dt><!--{{{-->\n<dd class=\"fiberfaq\">\n<p>We have an investment club. With a contribution of of &#36;10,000 we will start the permitting process immediately and construction can begin 60-90 days after that. If you'd like to pursue that, I can have somebody call you back.</p>\n</dd> <!--}}}-->\n</dl>\n<!-- \nvi:foldmethod=marker: \n-->\n"
+    body: "<script type=\"text/javascript\">\n    $('dl.fiberfaq dd.fiberfaq').hide();\n    $('dl.fiberfaq dt.fiberfaq').wrapInner('<a href=\"#\"></a>');\n    $('dl.fiberfaq dt.fiberfaq a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n<p>Our fiber optic internet service runs at 1000 mbps which makes it the among the fastest in the country. Pricing starts at 29.95 per month for the light tier, and all of our users get the full 1000 mbps. By separating our services into usage tiers we can deliver a super fast connection to all our customers.</p>\n\n[screen:usagecalc]\n\n<dl class=\"fiberfaq\">\n<dt class=\"fiberfaq\" question='router'>Can I use my own router?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>You are free to use your own router. However, most low end or older routers will not be able\nto keep up with Volo's blazing fast gigabit speed.</p>\n<p>We don't recommend any specific brands, but you want to look for routers rated for gigabit speed on the WAN or internet port, and the LAN or local network ports.</p>\n<p>You can also check www.smallnetbuilder.com--a site that tests routers to see they're as fast as advertised.</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='typicalspeeds'>What sorts of speeds can I anticipate at my location?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>Speeds may vary, though customer should anticipate seeing speeds around 400mbps on an average speed test through speedtest.net. While the fiber permits speeds up to 1000mbps, it is dependent on the site or server you're connecting to, which may be slower than the fiber permits.</p>\n<p>If speeds ever drop below 150mbps with a direction connection to the service, that would be a situation we would want our technicians to come out and diagnose at your location.</p>\n<p>Speeds through your router, either wired or on WiFi, we <strong>cannot guarantee</strong> as this is largely dependent on your router device. Similarly, older computer models may only be capable of a 100mbps (one hundred megabit per second) connection, depending on their hardware. If you ever believe you are having a problem with speeds, we are happy to schedule a technician visit to look into it, although keep in mind it may be caused by limitations of personal hardware rather than an issue with the service itself.</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='tiers'>What is the difference between the service tiers?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>The difference between the service tiers is how much usage they are designed for. None of the tiers will throttle your speed, cut you off, or charge you for overages, but each tier has a target usage amount. If you exceed that amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.</p>\n<p>We usually describe our tiers in terms of video streaming because it is the biggest user of bandwidth on the internet.</p>\n<p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage.</p>\n<p>Medium is for customers who want to watch up to 12 hours of Netflix (streaming) per day or equivalent amount of usage.</p>\n<p>Heavy is for customers who use more than that.</p>\n<p class='dont-say'>You may need to remind the potential customer that watching a steam on two different devices at the same time counts double (or triple with 3, etc)</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='whytiers'>Why do you have usage based tiers instead of speed based?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>Our costs are based on how much total bandwidth you use, not how fast you use it. By separating our tiers into usage levels we can deliver our fastest service to all customers whether they use it a lot or a little.</p>\n<p>By doing this we are able to offer our high tier for only &#36;60 compared to over &#36;100 with some of our competitors, and we can offer 1000 mbps to our light users.</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='overage'>What happens if I go over my tier?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>We will not throttle your speed, cut you off, or charge you for overages. Each tier has a target usage amount, and if you exceed the amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='install'>Installation Cost</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>Installation cost for a new install is typically &#36;150. That can be waived if you sign up for TV service or sign a 1 year contract for our Heavy Service.</p>\n<p>We also offer a 30 day guarantee. If you're not happy with your service, and cancel in the first 30 days, we'll refund your installation fee.</p>\n<p>Some apartments are pre-installed and there is no install fee.</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='price'>How much does Fiber cost?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>You can get lightning fast gigabit internet for as little as 29.95 per month!</p>\n<p class=\"dont-say\">The following table lists all the monthly fees. Add the line free, plus up to one from each section. Except \"other services\", you can add both of those.</p>\n<table>\n<tr>\n<th>Internet Plans</th> <th>Monthly Rate</th>\n</tr>\n<tr>\n<td>Light</td> <td>&#36;29.95</td>\n</tr>\n<tr>\n<td>Medium</td> <td>&#36;49.95</td>\n</tr>\n<tr>\n<td>Heavy</td><td>&#36;59.95</td>\n</tr>\n<tr>\n<th>Phone Plans</th> <th>Monthly Rate</th>\n</tr>\n<tr>\n<td>Unlimited Calling</td> <td>&#36;12.95</td>\n</tr>\n<tr>\n<th>TV Plans</th> <th>Monthly Rate</th>\n</tr>\n<tr>\n<td>Dish Network</td>\n<td>&#36;19.95+</td>\n</tr>\n<tr>\n<td>Direct TV</td>\n<td>&#36;24.95+</td>\n</tr>\n<tr>\n<th>Other Sevices</th>\n<th>Monthly Rate</th>\n</tr>\n<tr>\n<td>Gigabit Router</td>\n<td>&#36;12.00</td>\n</tr>\n<tr>\n<td>Instant Support</td>\n<td>&#36;10.00</td>\n</tr>\n</table>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='investment'>I want Fiber asap, what can I do?</dt><!--{{{-->\n<dd class=\"fiberfaq\">\n<p>We have an investment club. With a contribution of of &#36;10,000 we will start the permitting process immediately and construction can begin 60-90 days after that. If you'd like to pursue that, I can have somebody call you back.</p>\n</dd> <!--}}}-->\n</dl>\n<!-- \nvi:foldmethod=marker: \n-->\n"
     ,buttons: {conclude: "conclude"}
     ,buttonOrder: ['conclude']
 };
-screens['findips'] = {
-    title: "Change Service",
-    body: "<p>I need to look up your account info</p>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['username?','customer?','serviceaddress','aptunit','servicezip']]
-    ,requiresSet: {servicezip: 1,aptunit: 1,serviceaddress: 1,customer: 1,username: 1}
+screens['fiberinstallwarnings'] = {
+    title: "Fiber Installation Fine Print",
+    body: "<p>As the installation is constructing a new utility from our infrastructure up to your location, we do set installations at least a week out in order to schedule the requisite JULIE among other preparations. We aim to complete the installation and bring the service live that day; however, as this is a new construction, we cannot guarantee completion as complications may arise where we will need to return to complete it at a later date; if such occurs, our technicians will keep you appraised of the situation. We would strongly recommend to not cancel any existing service until the technicians confirm that the installation is complete and service is live, however. </p>\n\n<p>In the construction, we do bury our fiber optic cable in your yard.\n\n(If November - March:) In winter especially when the ground is frozen, we may require returning in the spring to bury your fiber optic cable. We will endeavor to drape the fiber through your yard where it is least likely to be damaged until we can bury it.\n\nAt the time of burial, depending on the ground condition, there will be some minor disruption from the trenching may be some disruption from the machinery. We will make efforts to restore your yard after upon completion of installation, though if additional restoration is needed after two weeks then feel free to contact our office to arrange for a technician to survey the situaion.</p>\n\n<p>Though our month-to-month services do not have a term-contract, we do have a Standard Service Agreement which outlines the terms and conditions of our service. We would love to forward you a copy for your records, although our technicians should also have a paper copy for you to sign at the time of installation. What email address should we send a copy to?</p>\n\n"
+    ,buttons: {conclude: "Finished "}
+    ,buttonOrder: ['conclude']
+    ,requires: [['email']]
+    ,requiresSet: {email: 1}
 };
 screens['findpoe'] = {
     title: "Find the Volo termination box",
     body: "<p>Let's try resetting the equipment and see if that restores your service.</p>\n\n<p>You're looking for a small black or white box.  If it's black, it'll be about the size of your thumb and it'll say \"DC  POE  LAN\" on it.  If it's white or off-white it'll be about the size of a bar of soap, and it may say \"CAT-5\" on it.  Can you find that box?</p>\n\n"
     ,buttons: {voloreset: "Yes",nopoeprobticket: "No"}
     ,buttonOrder: ['voloreset','nopoeprobticket']
-};
-screens['findservices'] = {
-    title: "Find Services",
-    body: "<p>I need to look up your account info</p>\n\n<p class=\"dont-say\">Address search only works for Town and Country and Winfield customers</p>\n"
-    ,requires: [['customer'],['serviceaddress','aptunit','servicezip']]
-    ,requiresSet: {servicezip: 1,aptunit: 1,serviceaddress: 1,customer: 1}
 };
 screens['findticket'] = {
     title: "Find a ticket",
@@ -1534,7 +1443,7 @@ screens['lincolnshireinfo'] = {
 };
 screens['message'] = {
     title: "Leave a message",
-    body: "<p>Let me get some information about what you need.</p>\n<p class=\"dont-say\">UNLESS CALLER IS UNWILLING TO PROVIDE THEM, collect email, account #, service address, apt #, andd zip code.</p>\n"
+    body: "<p>Let me get some information about what you need.</p>\n<p class=\"dont-say\">UNLESS CALLER IS UNWILLING TO PROVIDE THEM, collect email, account #, service address, apt #, and zip code.</p>\n"
     ,buttons: {robot: "robot"}
     ,buttonOrder: ['robot']
     ,requires: [['firstname','lastname','company?','phone','email?','customer?','serviceaddress?','aptunit?','servicezip?','messagetype','forwhom?','urgency','message','operator']]
@@ -1551,6 +1460,12 @@ screens['moulinaptsinfo'] = {
     body: "<p>Good news Volo's internet service is being provided to your unit as an included amenity. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. <b>Do not use a modem or modem/router combo device</b>, our service is provided directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>Additionally WiFi is provided. Each unit has it's own network and your landlord should have the information to get you signed on.</p>\n\n<p>The internet at your location is very fast, so to take full advantage of the service you will need to get a router that is capable of 1000 megabits on all its ports, and supports 802.11AC wi-fi.</p>\n\n<p>Your service should be active now, you don't need to sign up.  If you pay anything for the service, you'd pay that directly to Moulin Apts along with your rent.</p>\n"
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
+};
+screens['mxualacartefaq'] = {
+    title: "",
+    body: "<script type=\"text/javascript\">\n    $('dl.alacartefaq dd.alacartefaq').hide();\n    $('dl.alacartefaq dt.alacartefaq').wrapInner('<a href=\"#\"></a>');\n    $('dl.alacartefaq dt.alacartefaq a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n<dl class=\"alacartefaq\">\n  <dt class=\"alacartefaq\">What does an ethernet port look like?</dt>\n  <dd class=\"alacartefaq\">It's like a phone port except larger.</dd>\n  <dt class=\"alacartefaq\">Does your service need a modem?</dt>\n  <dd class=\"alacartefaq\">No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>\n  <dt class=\"alacartefaq\">Can I use a router with your service?</dt>\n  <dd class=\"alacartefaq\">Yes, our service is compatible with routers. It should work with any router you have. However, better routers will deliver faster speeds. We recommend getting a router rated for gigabit speeds and with the AC WiFi designation.</dd>\n  <dt class=\"alacartefaq\">Does Volo sell routers?</dt>\n  <dd class=\"alacartefaq\">Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>\n  <dt class=\"alacartefaq\">I need help configuring my wireless router</dt>\n  <dd class=\"alacartefaq\">Volo can setup a router for you for $50.</dd>\n  </dd>\n</dl>\n\n<!-- \nvi:foldmethod=marker: \n-->\n"
+    ,buttons: {conclude: "conclude"}
+    ,buttonOrder: ['conclude']
 };
 screens['mxunoconnectionticket'] = {
     title: "File ticket regarding problem",
@@ -1573,6 +1488,12 @@ screens['noarpsticket'] = {
     ,buttonOrder: ['robot','conclude']
     ,requires: [['firstname','lastname','company?','username?','customer?','serviceaddress','aptunit','servicezip','phone','problem?','urgency'],['ip','phone','operator']]
     ,requiresSet: {firstname: 1,urgency: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,ip: 1,lastname: 1,phone: 1,username: 1,operator: 1,problem: 1,customer: 1,company: 1}
+};
+screens['nonservicefaq'] = {
+    title: "",
+    body: "<script type=\"text/javascript\">\n    $('dl.nonservicefaq dd').hide();\n    $('dl.nonservicefaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.nonservicefaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n<p>It doesn't look like he have services presently available at your location at this time. That said, I'd be happy to take down your information, and as our coverage area expands, we can reach out and let you know when service does become available.</p>\n\n<dl class=\"nonservicefaq\">\n<dt question='bulk'>Can I get a quote for service for multiple apartments in my building?</dt> <!--{{{-->\n<dd>\n<p>If you're a property manager looking for an Internet Service Provider for an apartment building or complex, we'd be happy to discuss more tailored options rather than individual services. However, that much is handled by a different department. However, I can take down your contact info and they can return your call within the next business day or so.</p>\n</dd> <!--}}}-->\n<dt question='prospect'>Can I get any services with you at present?</dt> <!--{{{-->\n<dd>\n<p>Yes and no. We do offer Voice over Internet Protocol phone services, though this does require an active internet connection. At present, no internet services are available from us at your location. While our phones would work with another Internet Service Provider's internet, we would prefer to have both services with us to we can effectively troubleshoot if it's a phone problem or if the internet might be an issue.</p>\n</dd> <!--}}}-->\n<dt question='customfiber'>It looks like I'm in the light blue fiber region... but I can't get service?</dt> <!--{{{-->\n<dd>\n<p>The light blue region on our coverage map covers where we have fiber infrastructure ran, but the infrastructure is not yet ready for individual installations. Installations are technically possible, although the install cost can range from a couple to several thousand dollars, rather than the typical fiber installation of around $150. If this is something you're interested in however, let us know and one of our technicians can reach out to you with a more specific quote.</p>\n</dd> <!--}}}-->\n<dt question='prospectlist'>Do you do anything with my personal data?</dt> <!--{{{-->\n<dd>\n<p>Absolutely not. All of your data remains in-house, and only for reference so we may reach out when our internet service does become available. We do not sell or distribute any information of what we hope to be potential customers to other companies.</p>\n</dd> <!--}}}-->\n<dt question='futureservices'>Can you tell me a bit about your services as they become available?</dt> <!--{{{-->\n<dd>\n<p>Most likely, the service that will become available at your location will be our fiber services, which we have a few different options starting at just &#36;29.95/month. Depending on your location, there may be an installation charge associated with getting the service, but for the superfast speeds up to 1000mbps at that low monthly cost, it'd definitely be worth it!</p>\n</dd> <!--}}}-->\n\n</dl>\n<!-- \nvi:foldmethod=marker: \n-->\n"
+    ,buttons: {conclude: "conclude"}
+    ,buttonOrder: ['conclude']
 };
 screens['nopoeprobticket'] = {
     title: "File a ticket",
@@ -1604,9 +1525,15 @@ screens['opentickets'] = {
 };
 screens['otherfaq'] = {
     title: "",
-    body: "<script type=\"text/javascript\">\n    $('dl.otherfaq dd').hide();\n    $('dl.otherfaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.otherfaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n<dl class=\"otherfaq\">\n<dt question='tv'>Can I get TV with Volo?</dt> <!--{{{-->\n<dd>\n<p>Yes! We have partnered with Direct TV and Dish Network to provide \ntelevision. If you sign up for new service with us, your installation fee\nwill be waived.</p>\n<p>Dish starts at 19.99 per month, and Direct TV starts at 24.99 per month.\nBoth require 2 year contacts.</p>\n</dd> <!--}}}-->\n<dt question='keeptv'>I already have Dish/Direct, can I keep my TV service?</dt> <!--{{{-->\n<dd>\n<p>You can keep your current TV service, but to qualify for a free install, \nyou have to sign up for a new service.</p>\n</dd> <!--}}}-->\n<dt question='phone'>Can I get phone service with Volo</dt> <!--{{{-->\n<dd>\n<p>Yes! Volo offers a VOIP (voice over internet protocol) service. We're able \nto deliver crystal clear call quality using your internet service.</p>\n<p>We sell converter boxes so you can continue to use your current phone, or \nyou can buy an \"internet\" phone from us.</p>\n<p>You can keep your current phone number, and we'll help you transfer it</p>\n</dd> <!--}}}-->\n<dt question='contract'>Does Volo have a contract?</dt> <!--{{{-->\n<dd>\n<p>We don't believe in locking our customers in, so we generally do not have contracts with our customers. If you would like one we can call you back later to discuss that.</p>\n</dd> <!--}}}-->\n<dt question='hosting'>Can I host a server/Get a static IP address?</dt> <!--{{{-->\n<dd>\n<p>Yes! We don't put any limitations on what our customers do with their service (as long as they're in the appropriate tier for bandwidth). All of our fiber and wireless customers get a static IP address.</p>\n</dd> <!--}}}-->\n</dl>\n<!-- \nvi:foldmethod=marker: \n-->\n"
+    body: "<script type=\"text/javascript\">\n    $('dl.otherfaq dd.otherfaq').hide();\n    $('dl.otherfaq dt.otherfaq').wrapInner('<a href=\"#\"></a>');\n    $('dl.otherfaq dt.otherfaq a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n\n<dl class=\"otherfaq\">\n<dt question='tv' class=\"otherfaq\">Can I get TV with Volo?</dt> <!--{{{-->\n<dd class=\"otherfaq\">\n<p>Yes! We have partnered with Direct TV and Dish Network to provide \ntelevision. If you sign up for new service with us, your installation fee\nwill be waived.</p>\n<p>Dish starts at 19.99 per month, and Direct TV starts at 24.99 per month.\nBoth require 2 year contacts.</p>\n</dd> <!--}}}-->\n<dt question='keeptv' class=\"otherfaq\">I already have Dish/Direct, can I keep my TV service?</dt> <!--{{{-->\n<dd class=\"otherfaq\">\n<p>You can keep your current TV service, but to qualify for a free install, \nyou have to sign up for a new service.</p>\n</dd> <!--}}}-->\n<dt question='phone' class=\"otherfaq\">Can I get phone service with Volo</dt> <!--{{{-->\n<dd class=\"otherfaq\">\n<p>Yes! Volo offers a VOIP (voice over internet protocol) service. We're able \nto deliver crystal clear call quality using your internet service.</p>\n<p>We sell converter boxes so you can continue to use your current phone, or \nyou can buy an \"internet\" phone from us.</p>\n<p>You can keep your current phone number, and we'll help you transfer it</p>\n</dd> <!--}}}-->\n<dt question='contract' class=\"otherfaq\">Does Volo have a contract?</dt> <!--{{{-->\n<dd class=\"otherfaq\">\n<p>We don't believe in locking our customers in, so we generally do not have contracts with our customers. If you would like one we can call you back later to discuss that.</p>\n</dd> <!--}}}-->\n<dt question='hosting' class=\"otherfaq\">Can I host a server/Get a static IP address?</dt> <!--{{{-->\n<dd class=\"otherfaq\">\n<p>Yes! We don't put any limitations on what our customers do with their service (as long as they're in the appropriate tier for bandwidth). All of our fiber and wireless customers get a static IP address.</p>\n</dd> <!--}}}-->\n</dl>\n<!-- \nvi:foldmethod=marker: \n-->\n"
     ,buttons: {conclude: "conclude"}
     ,buttonOrder: ['conclude']
+};
+screens['outagestart'] = {
+    title: "Outage???",
+    body: "<p>I'm not aware of any, but give me a moment and I'll verify if there's any ongoing outages in our network.</p>\n\n<p class=\"dont-say\"> Check the technician's chat channels. If there's already a known outage, they would have posted about it. If they haven't posted about it, it's not likely to be a widespread outage, or they're still looking into it.</p>\n<p class=\"dont-say\"> Unless you've taken more than three calls within the last half hour from the same apartment address, you may safely presume there's not an ongoing outage in an area, and should (ultimately) troubleshoot their individual connection.</p>\n<p class=\"dont-say\"> <strong>If there is a known outage reported by the technicians</strong>, they should have an Estimated Time to Repair already reported. If not, feel free to ask for the ETR in chat, and let the customer know that service should be restored by that time AND if not yet restored by then to call back for an update. You do not need to file a ticket for the individual customer in the event of a known outage.</p>\n\n<p> </p>\n\n<p class=\"dont-say\"> If there's not an ongoing outage:</p>\n<p> I'm not showing an outage in your area at this time.</p>\n<p> Volo is implementing a notification system where you can receive a text or email if there's a known outage in your area. Would you like to sign up for this free service? I would just need to take down some information, and then we can proceed with normal troubleshooting.</p>\n<p class=\"dont-say\"> If interested in signing up, go to volo.net/outage and fill in the information requested, with either Phone number capable of getting SMS messages or Email address.</p>\n"
+    ,buttons: {conclude: "Known Outage and ETR Relayed",problemwebstart: "Continue"}
+    ,buttonOrder: ['problemwebstart','conclude']
 };
 screens['overage1'] = {
     title: "First overage",
@@ -1656,6 +1583,12 @@ screens['paypal'] = {
     ,buttons: {conclude: "conclude"}
     ,buttonOrder: ['conclude']
 };
+screens['phonefaq'] = {
+    title: "",
+    body: "<script type=\"text/javascript\">\n    $('dl.phonefaq dd').hide();\n    $('dl.phonefaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.phonefaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n\n<p>Our phone service works with any active internet connection, thus eliminating many of the common upcharges for analog telephone infrastructure. That way we can offer a quality phone service at minimal cost!</p>\n\n<p>Our Voice over Internet Protocol (VoIP) phone service does make use of a specific type of phone designed to operate with the service. If you have an existing handset you're especially attached to, we do offer Grandstream converter boxes which can convert the signal from VoIP to analog; however, the Polycom phones are far more reliable as they are designed to work with the service, and do require at least the installation of the Polycom as well to ensure you're able to receive your calls.</p>\n\n<p>We do offer either brand new numbers or we can use your existing phone number. \"Porting\" a phone number from your current provider does take a bit longer (generally between 2-4 weeks, depending on your current provider), but we'd be happy to start the process prior to the installation of our phone service. To start the process, we need a <strong>signed copy of your most recent phone bill</strong>.</p>\n\n<p>VoIP offers an incredible flexibility for either office or residential. If you're looking for a custom-tailored solution for a more complex network of phones, or if there are particular advanced features you're looking for, do let us know so that our technicians can work with you regarding those options.</p>\n\n<p>We do offer voicemail in addition to our phone services. To access your voicemail from the Polycom phone, simply dial *97 to be taken directly to your mailbox. Should this not work, you can dial *98 to access the general mailbox system, and then enter your mailbox code (this is distinct from your telephone number). If you don't have your mailbox number, a technician will need to followup with you to confirm the mailbox details.</p>\n\n"
+    ,buttons: {conclude: "conclude"}
+    ,buttonOrder: ['conclude']
+};
 screens['pickaip'] = {
     title: "Choose an IP",
     body: "<p>Here are the IP addresses I found:</p>\n\n<p class='dont-say'>If the street addresses are the same and the customer doesn't know which one to pick choose the one with the highest bandwidth</p>\n\n%IPS\n\n<script type=\"text/javascript\">\n    $('div.screen-pickaip dd').hide();\n    $('div.screen-pickaip dt').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-pickaip dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        $(this).parents('div.screen').find('div.input input').add('#v-ip').val(\n            $(this).parents('dt').attr('ip')\n        );\n        robot_check();\n        return(false);\n    });\n<"+"/script>\n\n<style type=\"text/css\">\n    div.screen-pickaip dl dt a\n    {\n        color: #027AC6;\n        padding: 0.3em;\n    }\n\n    div.screen-pickaip dl dt a:hover\n    {\n        text-decoration: underline;\n        cursor: pointer;\n    }\n</style>\n"
@@ -1694,27 +1627,11 @@ screens['pickaticketcore'] = {
 };
 screens['potentialbaileyapts'] = {
     title: "Potential Bailey Customer",
-    body: "<p>At Bailey Apartments, we offer superfast fiber internet. The pricing starts at &#36;19.95 per month. There are no installation or setup fees.</p>\n\n<p>You should find an ethernet port in your unit you can plug into.  Once plugged in, our system will usually direct you to a web page that will allow you to sign up and choose a package.  If that doesn't work, I can also sign you up over the phone.</p>\n\n<p>We offer 4 tiers of service at your location: Apartment10, Light, Medium and Heavy service.  Light, Medium and Heavy service all run at up to 1000Mbps (one Gigabit) and are differentiated based on how much you use the service, which I can go over with you in a few moments.</p>\n\n<p>As a special offer to certain apartments, including yours, we also offer a budget-friendly lower-speed service called Aparment 10. This has the same target usage amount as the Light service, but runs at 10Mbps instead of the full gigabit speed of the other services. Because of that, Apartment 10 service is adequate for typical web surfing and email use, but won't work well for you if you watch much online video.</p>\n\n<p>Light service costs $29.95 per month.  Medium service costs $49.95 per month.  Heavy service costs $59.95 per month.Apartment 10 service costs $19.95 per month. You can also prepay for a year for Medium or Heavy service and get 2 months free, which makes the Heavy service cost what Medium normally would cost.</p>\n\n<p>Due to internal wiring at 111 S Lincoln Ave and 911 W Springfield Ave, those buildings are limited to 100Mbps. All other Bailey buildings have 1000Mbps available.</p>\n\n<dl class=\"alacartefaq\">\n<dt>Service FAQs (click to open)</dt>\n<dd>\n  <dl class=\"alacartefaq\">\n    <dt>What does an ethernet port look like?</dt>\n    <dd>It's like a phone port except larger</dd>\n    <dt>Does your service need a modem?</dt>\n    <dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>\n    <dt>Can I use a router with your service?</dt>\n    <dd>Yes, our service is compatible with routers. It should work with any router you have.</dd>\n    <dt>Does Volo sell routers?</dt>\n    <dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>\n    <dt>I need help configuring my wireless router</dt>\n    <dd>Volo can setup a router for you for $50.</dd>\n    <dt question='tiers'>What is the difference between the service tiers?</dt>\n    <dd>\n    <p>Our fiber pricing is designed to give even light users affordable access to the highest speeds.  All our high speed fiber packages offer speeds up to 1000mbps; they only differ in the expected customer usage level. We do not enforce hard data limits--you do not have to worry about overage charges or speed throttling.  Instead, each tier of service has a target usage level; if you go over the target usage more than three times in a month, we may call and ask you to upgrade to tier of service more appropriate for your usage.</p>\n    <p>The difference between the service tiers is how much usage they are designed for. We usually describe our tiers in terms of video streaming because it is the biggest user of bandwidth on the internet:</p>\n    <p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage.</p>\n    <p>Medium is for customers who want to watch up to 12 hours of Netflix or other streaming video per day, or equivalent other usage.</p>\n    <p>Heavy is for customers who use more than that.</p>\n    <p class='dont-say'>You may need to remind the potential customer that watching a steam on two different devices at the same time counts double (or triple with 3, etc)</p>\n    </dd>\n    <dt question='whytiers'>Why do you have usage based tiers instead of speed based?</dt>\n    <dd>\n    <p>Our costs are based on how much total bandwidth you use, not how fast you use it. By separating our tiers into usage levels we can deliver our fastest service to all customers whether they use it a lot or a little.</p>\n    <p>By doing this we are able to offer our high tier for only &#36;60 compared to over &#36;100 with some of our competitors, and we can offer 1000 mbps to our light users.</p>\n    </dd>\n    <dt question='overage'>What happens if I go over my tier?</dt>\n    <dd>\n    We will not throttle your speed, cut you off, or charge you for overages. Each tier has a target usage amount, and if you exceed than amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.\n    </dd>\n  </dl>\n</dd>\n</dl>\n\n[screen:usagecalc]\n\n<script type=\"text/javascript\">\n    $('dl.alacartefaq dd').hide();\n    $('dl.alacartefaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.alacartefaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n"
+    body: "<p>At Bailey Apartments, we offer superfast fiber internet. The pricing starts at &#36;19.95 per month. There are no installation or setup fees.</p>\n\n<p>You should find an ethernet port in your unit you can plug into.  Once plugged in, our system will usually direct you to a web page that will allow you to sign up and choose a package.  If that doesn't work, I can also sign you up over the phone.</p>\n\n<p>We offer 4 tiers of service at your location: Apartment10, Light, Medium and Heavy service.  Light, Medium and Heavy service all run at up to 1000Mbps (one Gigabit) and are differentiated based on how much you use the service, which I can go over with you in a few moments.</p>\n\n<p>As a special offer to certain apartments, including yours, we also offer a budget-friendly lower-speed service called Aparment 10. This has the same target usage amount as the Light service, but runs at 10Mbps instead of the full gigabit speed of the other services. Because of that, Apartment 10 service is adequate for typical web surfing and email use, but won't work well for you if you watch much online video.</p>\n\n<p>Light service costs $29.95 per month.  Medium service costs $49.95 per month.  Heavy service costs $59.95 per month.Apartment 10 service costs $19.95 per month. You can also prepay for a year for Medium or Heavy service and get 2 months free, which makes the Heavy service cost what Medium normally would cost.</p>\n\n<p>Due to internal wiring at 111 S Lincoln Ave and 911 W Springfield Ave, those buildings are limited to 100Mbps. All other Bailey buildings have 1000Mbps available.</p>\n\n<dl class=\"alacartefaq\">\n<dt>Service FAQs (click to open)</dt>\n<dd>\n  <dl class=\"alacartefaq\">\n    <dt>What does an ethernet port look like?</dt>\n    <dd>It's like a phone port except larger</dd>\n    <dt>Does your service need a modem?</dt>\n    <dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>\n    <dt>Can I use a router with your service?</dt>\n    <dd>Yes, our service is compatible with routers. It should work with any router you have.</dd>\n    <dt>Does Volo sell routers?</dt>\n    <dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>\n    <dt>I need help configuring my wireless router</dt>\n    <dd>Volo can setup a router for you for $50.</dd>\n    <dt question='tiers'>What is the difference between the service tiers?</dt>\n    <dd>\n    <p>Our fiber pricing is designed to give even light users affordable access to the highest speeds.  All our high speed fiber packages offer speeds up to 1000mbps; they only differ in the expected customer usage level. We do not enforce hard data limits--you do not have to worry about overage charges or speed throttling.  Instead, each tier of service has a target usage level; if you go over the target usage more than three times in a month, we may call and ask you to upgrade to tier of service more appropriate for your usage.</p>\n    <p>The difference between the service tiers is how much usage they are designed for. We usually describe our tiers in terms of video streaming because it is the biggest user of bandwidth on the internet:</p>\n    <p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage.</p>\n    <p>Medium is for customers who want to watch up to 12 hours of Netflix or other streaming video per day, or equivalent other usage.</p>\n    <p>Heavy is for customers who use more than that.</p>\n    <p class='dont-say'>You may need to remind the potential customer that watching a steam on two different devices at the same time counts double (or triple with 3, etc)</p>\n    </dd>\n    <dt question='whytiers'>Why do you have usage based tiers instead of speed based?</dt>\n    <dd>\n    <p>Our costs are based on how much total bandwidth you use, not how fast you use it. By separating our tiers into usage levels we can deliver our fastest service to all customers whether they use it a lot or a little.</p>\n    <p>By doing this we are able to offer our high tier for only &#36;60 compared to over &#36;100 with some of our competitors, and we can offer 1000 mbps to our light users.</p>\n    </dd>\n    <dt question='overage'>What happens if I go over my tier?</dt>\n    <dd>\n    We will not throttle your speed, cut you off, or charge you for overages. Each tier has a target usage amount, and if you exceed the amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.\n    </dd>\n  </dl>\n</dd>\n</dl>\n\n[screen:usagecalc]\n\n<script type=\"text/javascript\">\n    $('dl.alacartefaq dd').hide();\n    $('dl.alacartefaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.alacartefaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n"
     ,buttons: {conclude: "Nevermind",robot: "Signup"}
     ,buttonOrder: ['robot','conclude']
     ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','email','baileyplan','servicestart','message?','operator']]
     ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,baileyplan: 1,lastname: 1,phone: 1,message: 1,operator: 1,email: 1,servicestart: 1}
-};
-screens['potentialcove'] = {
-    title: "Potential Parkland Cove Customer",
-    body: "<p>Parkland Cover offers complimentary Volo internet service.</p>\n\n<p>You don't have to sign up or pay anything extra. To start using your service, just plug an ethernet cable into the jack in your apartment and connect to either your computer or router.</p>\n\n<p>If your address is 1302 Mariner, 3701 Harbor Estates, or 1202 Myrtle Beach, we may need to install the ethernet jack. The construction company made a mistake and put phone jacks in instead. If you don't have an ethernet jack we'll schedule a time to install that.</p>\n\n<h4>FAQs:</h4>\n<dl>\n<dt>What does an ethernet port look like?</dt>\n<dd>It's like a phone port except larger</dd>\n<dt>Does your service need a modem?</dt>\n<dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>\n<dt>Can I use a router with your service?</dt>\n<dd>Yes, our service is compatible with routers. It should work with any router you have.</dd>\n<dt>Does Volo sell routers?</dt>\n<dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>\n<dt>I need help configuring my wireless router</dt>\n<dd>Volo can setup a router for you for $35.</dd>\n</dl>\n"
-    ,buttons: {conclude: "Finished ",message: "No Jack"}
-    ,buttonOrder: ['message','conclude']
-    ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','operator']]
-    ,requiresSet: {operator: 1,firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1}
-};
-screens['potentialcpmalacarte'] = {
-    title: "Potential A La Carte Customer",
-    body: "<h4>608 E CHALMERS ONLY:</h4>\n<p>We have a building wide wifi system here. Connet to the network labeled \"CMI Broadband\" and use the password \"go illini go\".<p>\n<p class='dont-read'>The wifi network and password don't have quotes, but the password DOES have spaces.</p>\n<h4>END OF 608 E CHALMERS SECTION</h4>\n\n<p>At that CPM apartment we offer speeds up to 1000mb/s (or gigabit) using advanced fiber optic.</p>\n\n<p>A few buildings are limited to 100Mbps due to internal wiring. Right now this is <b>1010 W Stoughton St</b> </p>\n\n<p>We offer month-to-month pricing starting at $19.95. There is no installation cost because no installation needs to be done. There is an ethernet port in the unit you can plug into and start using immediately.</p>\n\n<dl class=\"alacartefaq\">\n<dt>Service FAQs</dt>\n<dd>\n<dt>What does an ethernet port look like?</dt>\n<dd>It's like a phone port except larger</dd>\n<dt>Does your service need a modem?</dt>\n<dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>\n<dt>Can I use a router with your service?</dt>\n<dd>Yes, our service is compatible with routers. It should work with any router you have.</dd>\n<dt>Does Volo sell routers?</dt>\n<dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>\n<dt>I need help configuring my wireless router</dt>\n<dd>Volo can setup a router for you for $50.</dd>\n</dd>\n</dl>\n\n[screen:usagecalc]\n\n<p>As a special offer to certain apartments (including yours), we also have an Aparment 10 tier. This has the same target usage amount as the Light tier, but runs at 10mbps. So it's the only tier that doesn't get the full speed. It costs 19.95.</p>\n\n<script type=\"text/javascript\">\n    $('dl.alacartefaq dd').hide();\n    $('dl.alacartefaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.alacartefaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n"
-    ,buttons: {conclude: "Nevermind",robot: "Signup"}
-    ,buttonOrder: ['robot','conclude']
-    ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','email','cpmservice','message?','operator']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,message: 1,operator: 1,email: 1,cpmservice: 1}
 };
 screens['potentialcustomerstart'] = {
     title: "Potential Customer/New Customer Info",
@@ -1724,77 +1641,21 @@ screens['potentialcustomerstart'] = {
     ,requires: [['firstname?','lastname?','serviceaddress','aptunit','servicezip','phone?','email?']]
     ,requiresSet: {email: 1,firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1}
 };
-screens['potentialhousing'] = {
-    title: "Potential Housing Customer",
-    body: "<script type=\"text/javascript\">\n    $('div.screen-potentialhousing dd').hide();\n    $('div.screen-potentialhousing dt').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-potentialhousing dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n<p>Volo offers internet service in your buiding. Speeds up to 10 megabits per second for $19.95 per month.</p>\n\n<dl>\n<dt question='tv'>Can I get TV with Volo</dt> <!--{{{-->\n<dd>\nVolo is offering to install over the air (OTA or broadcast) television. There are 14 channels available locally. Volo will provide you with a high definition DVR to record shows and watch them on your schedule.\n</dd> <!--}}}-->\n<dt question='channels'>What channels are offered</dt> <!--{{{-->\n<dd>\n<table>\n<tr>\n<td>Number</td><td>Network</td><td>Station</td>\n</tr>\n<tr>\n<td>3.1</td><td>CBS</td><td>WCIA</td>\n</tr>\n<tr>\n<td>3.2</td><td>WCIX</td><td>WCIA</td>\n</tr>\n<tr>\n<td>12.1</td><td>PBS</td><td>WILL</td>\n</tr>\n<tr>\n<td>12.2</td><td>WORLD</td><td>WILL</td>\n</tr>\n<tr>\n<td>12.3</td><td>CREATE</td><td>WILL</td>\n</tr>\n<tr>\n<td>15.1</td><td>ABC</td><td>WICD</td>\n</tr>\n<tr>\n<td>17.1</td><td>NBC</td><td>WAND</td>\n</tr>\n<tr>\n<td>17.2</td><td>Cozi TV</td><td>WAND</td>\n</tr>\n<tr>\n<td>23.1</td><td>CW</td><td>WBUI</td>\n</tr>\n<tr>\n<td>23.2</td><td>This TV</td><td>WBUI</td>\n</tr>\n<tr>\n<td>27.1</td><td>FOX</td><td>WCCU</td>\n</tr>\n<tr>\n<td>27.2</td><td>Me-TV</td><td>WCCU</td>\n</tr>\n</table>\n</dd> <!--}}}-->\n<dt question='phone'>Can I get phone service with Volo</dt> <!--{{{-->\n<dd>\n<p>Yes! Volo offers a VOIP (voice over internet protocol) service. We're able \nto deliver crystal clear call quality using your internet connection.</p>\n<p>We sell converter boxes so you can continue to use your current phone, or \nyou can buy an \"internet\" phone from us.</p>\n<p>You can keep your current phone number, and we'll help you transfer it</p>\n</dd> <!--}}}-->\n<dt question='router'>Can I use my own router?</dt> <!--{{{-->\n<dd>\n<p>You are free to use your own router. However, most routers will not be able\nto keep up with Volo's blazing fast gigabit speed.</p>\n</dd> <!--}}}-->\n<dt question='install'>Installation Cost</dt> <!--{{{-->\n<dd>\n<p>Installation cost is $50 for internet, $40 for phone. TV is freely available if you have a digital tv or already own a converter box. Volo sells the converter boxes for $50 and can add DVR functionality for $150.</p>\n</dd> <!--}}}-->\n</dl>\n\n<p class='dont-say'>You can schedule an install for these buildings if you feel comfortable. Otherwise just file the ticket and let them know they'll get a call back to schedule it.</p>\n<!-- \nvi:foldmethod=marker: \n-->\n"
-    ,buttons: {robot: "File Ticket"}
-    ,buttonOrder: ['robot']
-    ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','referredby?','message?','operator']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,message: 1,operator: 1,referredby: 1}
-};
 screens['potentialinstall'] = {
     title: "Potential Customer",
-    body: "<p class=\"dont-say\">Check coverage area by looking at the <a class='coverage' href=\"https://volo.net/coverage-map\" target=\"_blank\">coverage map</a>.</p>\n\n<p class=\"dont-say\">Find the address on the coverage map and then read the appropriate section from below.</p>\n\n<p class=\"dont-say\">Backbone Fiber is generally not for residential customers and has install costs in the thousands. For apartment buildings in this area, let residents know it's not on our schedule to install this year, and that schedule is already set.</p>\n\n<dl>\n<dt category='wireless' class=\"menu\">Wireless Services</dt>\n<dd class='menu'>[screen:wirelessfaq]</dd>\n<dt category='fiber' class='menu'>Fiber Services</dt>\n<dd class='menu'>[screen:fiberfaq]</dd>\n<dt category='other' class=\"menu\">Other Questions</dt>\n<dd class='menu'>[screen:otherfaq]</dd>\n</dl>\n\n<p class=\"dont-say\">If the customer gives an address that is an apartment inform them that they will need their landlord's permission for us to do an install. This involves an antenna on the roof for wireless, and similar installation as comcast with fiber.</p>\n\n<script type=\"text/javascript\">\n    $('div.screen-potentialinstall dd.menu').hide();\n    $('div.screen-potentialinstall dt.menu').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-potentialinstall dt.menu a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n\n    function addressLink() {\n        $address = $('#serviceaddress').val() + \"+\" + $('#servicezip').val();\n        $('div.screen-potentialinstall a.coverage').attr(\"href\", \"https://volo.net/coverage-map?address=\"+$address);\n    }\n\n    $('#serviceaddress').change(addressLink());\n    $('#servicezip').change(addressLink());\n<"+"/script>\n"
+    body: "[screen:coveragemapcore]\n\n<p class=\"dont-say\">Find the address on the coverage map and then read the appropriate section from below.</p>\n\n<p class=\"dont-say\">Custom Fiber is generally not for residential customers and has install costs in the thousands. For apartment buildings in this area, let residents know it's not on our schedule to install this year, and that schedule is already set.</p>\n\n<dl>\n<dt category='wireless' class=\"menu\">Wireless Services</dt>\n<dd class='menu'>[screen:wirelessfaq]</dd>\n<dt category='fiber' class='menu'>Fiber Services</dt>\n<dd class='menu'>[screen:fiberfaq]</dd>\n<dt category='other' class=\"menu\">Other Questions</dt>\n<dd class='menu'>[screen:otherfaq]</dd>\n<dt category='router' class=\"menu\">Router Questions</dt>\n<dd class='menu'>[screen:routerfaq]</dd>\n</dl>\n\n<p class=\"dont-say\">If the customer gives an address that is an apartment inform them that they will need their landlord's permission for us to do an install. This involves an antenna on the roof for wireless, and similar installation as comcast with fiber.</p>\n\n<script type=\"text/javascript\">\n    $('div.screen-potentialinstall dd.menu').hide();\n    $('div.screen-potentialinstall dt.menu').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-potentialinstall dt.menu a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n\n    function addressLink() {\n        $address = $('#serviceaddress').val() + \"+\" + $('#servicezip').val();\n        console.log($address);\n        //$('div.screen-potentialinstall a.coverage').attr(\"href\", \"https://volo.net/coverage-map?address=\"+$address);\n    }\n\n    //$('#serviceaddress').change(addressLink());\n    //$('#servicezip').change(addressLink());\n<"+"/script>\n"
     ,buttons: {robot: "File Ticket"}
     ,buttonOrder: ['robot']
     ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','email?','referredby?','message?','operator']]
     ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,message: 1,operator: 1,email: 1,referredby: 1}
 };
-screens['potentialjoeallan'] = {
-    title: "Potential Joe Allan Customer",
-    body: "<p>Joe Allan apartments offers complimentary Volo internet service.</p>\n\n<p>You don't have to sign up or pay anything extra. To start using your service, just plug an ethernet cable into the jack in your apartment and connect to either your computer or router.</p>\n\n<h4>FAQs:</h4>\n<dl>\n<dt>What does an ethernet port look like?</dt>\n<dd>It's like a phone port except larger</dd>\n<dt>Does your service need a modem?</dt>\n<dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>\n<dt>Can I use a router with your service?</dt>\n<dd>Yes, our service is compatible with routers. It should work with any router you have.</dd>\n<dt>Does Volo sell routers?</dt>\n<dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>\n<dt>I need help configuring my wireless router</dt>\n<dd>Volo can setup a router for you for $35.</dd>\n</dl>\n"
-    ,buttons: {conclude: "Finished "}
-    ,buttonOrder: ['conclude']
-    ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','operator']]
-    ,requiresSet: {operator: 1,firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1}
-};
 screens['potentialmxu'] = {
     title: "Potential A La Carte Customer",
-    body: "<p>Good news, Volo's service is already installed to your building. I just need to get some information to sign you up.</p>\n\n<p>We offer month-to-month pricing starting at $19.95. There is no installation cost because no installation needs to be done. There is an ethernet port in the unit you can plug into and start using as soon as your account is activated.</p>\n\n<dl class=\"alacartefaq\">\n<dt>Service FAQs</dt>\n<dd>\n<dt>What does an ethernet port look like?</dt>\n<dd>It's like a phone port except larger.</dd>\n<dt>Does your service need a modem?</dt>\n<dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>\n<dt>Can I use a router with your service?</dt>\n<dd>Yes, our service is compatible with routers. It should work with any router you have. However, better routers will deliver faster speeds. We recommend getting a router rated for gigabit speeds and with the AC WiFi designation.</dd>\n<dt>Does Volo sell routers?</dt>\n<dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>\n<dt>I need help configuring my wireless router</dt>\n<dd>Volo can setup a router for you for $50.</dd>\n</dd>\n</dl>\n\n[screen:usagecalc]\n\n<script type=\"text/javascript\">\n    $('dl.alacartefaq dd').hide();\n    $('dl.alacartefaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.alacartefaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n"
+    body: "<p>Good news, Volo's service is already installed to your building. I just need to get some information to sign you up.</p>\n\n<p>We offer month-to-month pricing starting at $19.95. There is no installation cost because no installation needs to be done. There is an ethernet port in the unit you can plug into and start using as soon as your account is activated.</p>\n\n<br />\n<span>Service FAQs:</span>\n[screen:mxualacartefaq]\n\n[screen:usagecalc]\n"
     ,buttons: {conclude: "Nevermind",robot: "Signup"}
     ,buttonOrder: ['robot','conclude']
     ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','email','aptservice','message?','operator']]
     ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,aptservice: 1,lastname: 1,phone: 1,message: 1,operator: 1,email: 1}
-};
-screens['potentialnextchapter'] = {
-    title: "Potential A La Carte Customer",
-    body: "<p>At your location, we offer superfast internet starting at &#36;19.95 per month. There are no installation or setup fees.</p>\n\n<p>You should find an ethernet port in your unit you can plug into.  Once plugged in, our system will usually direct you to a web page that will allow you to sign up and choose a package.  If that doesn't work, I can also sign you up over the phone.</p>\n\n<p>We offer 4 tiers of service at your location: Apartment10, Light, Medium and Heavy service.  Light, Medium and Heavy service all run at up to 1000Mbps (one Gigabit) and are differentiated based on how much you use the service, which I can go over with you in a few moments.</p>\n\n<p>As a special offer to certain apartments, including yours, we also offer a budget-friendly lower-speed service called Aparment 10. This has the same target usage amount as the Light service, but runs at 10Mbps instead of the full gigabit speed of the other services. Because of that, Apartment 10 service is adequate for typical web surfing and email use, but won't work well for you if you watch much online video.</p>\n\n<p>Light service costs $29.95 per month.  Medium service costs $49.95 per month.  Heavy service costs $59.95 per month.Apartment 10 service costs $19.95 per month. You can also prepay for a year for Medium or Heavy service and get 2 months free, which makes the Heavy service cost what Medium normally would cost.</p>\n\n<p>Due to internal wiring at 111 S Lincoln Ave and 911 W Springfield Ave, those buildings are limited to 100Mbps. All other Bailey buildings have 1000Mbps available.</p>\n\n<dl class=\"alacartefaq\">\n<dt>Service FAQs (click to open)</dt>\n<dd>\n  <dl class=\"alacartefaq\">\n    <dt>What does an ethernet port look like?</dt>\n    <dd>It's like a phone port except larger</dd>\n    <dt>Does your service need a modem?</dt>\n    <dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>\n    <dt>Can I use a router with your service?</dt>\n    <dd>Yes, our service is compatible with routers. It should work with any router you have.</dd>\n    <dt>Does Volo sell routers?</dt>\n    <dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>\n    <dt>I need help configuring my wireless router</dt>\n    <dd>Volo can setup a router for you for $50.</dd>\n    <dt question='tiers'>What is the difference between the service tiers?</dt>\n    <dd>\n    <p>Our fiber pricing is designed to give even light users affordable access to the highest speeds.  All our high speed fiber packages offer speeds up to 1000mbps; they only differ in the expected customer usage level. We do not enforce hard data limits--you do not have to worry about overage charges or speed throttling.  Instead, each tier of service has a target usage level; if you go over the target usage more than three times in a month, we may call and ask you to upgrade to tier of service more appropriate for your usage.</p>\n    <p>The difference between the service tiers is how much usage they are designed for. We usually describe our tiers in terms of video streaming because it is the biggest user of bandwidth on the internet:</p>\n    <p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage.</p>\n    <p>Medium is for customers who want to watch up to 12 hours of Netflix or other streaming video per day, or equivalent other usage.</p>\n    <p>Heavy is for customers who use more than that.</p>\n    <p class='dont-say'>You may need to remind the potential customer that watching a steam on two different devices at the same time counts double (or triple with 3, etc)</p>\n    </dd>\n    <dt question='whytiers'>Why do you have usage based tiers instead of speed based?</dt>\n    <dd>\n    <p>Our costs are based on how much total bandwidth you use, not how fast you use it. By separating our tiers into usage levels we can deliver our fastest service to all customers whether they use it a lot or a little.</p>\n    <p>By doing this we are able to offer our high tier for only &#36;60 compared to over &#36;100 with some of our competitors, and we can offer 1000 mbps to our light users.</p>\n    </dd>\n    <dt question='overage'>What happens if I go over my tier?</dt>\n    <dd>\n    We will not throttle your speed, cut you off, or charge you for overages. Each tier has a target usage amount, and if you exceed than amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.\n    </dd>\n  </dl>\n</dd>\n</dl>\n\n[screen:usagecalc]\n\n<script type=\"text/javascript\">\n    $('dl.alacartefaq dd').hide();\n    $('dl.alacartefaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.alacartefaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n"
-    ,buttons: {conclude: "Nevermind",robot: "Signup"}
-    ,buttonOrder: ['robot','conclude']
-    ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','email','ncservice','servicestart','message?','operator']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,message: 1,operator: 1,email: 1,servicestart: 1,ncservice: 1}
-};
-screens['potentialshlens'] = {
-    title: "Potential A La Carte Customer",
-    body: "<p>At your location, we offer superfast internet starting at &#36;19.95. There are no installation or setup fees.</p>\n\n<p>You should find an ethernet port in the unit you can plug into and you can sign up through the capture portal or I can sign you up over the phone.</p>\n\n<p>We offer 4 tiers of service at your location. Light, Medium, Heavy all run at 1000Mbps (or Gigabit) and are differentiated based on how much you use the service. As a special offer to certain apartments (including yours), we also have an Aparment 10 tier. This has the same target usage amount as the Light tier, but runs at 10Mbps not the full gigabit speed the rest do.</p>\n\n\n<dl class=\"alacartefaq\">\n<dt>Service FAQs (click to open)</dt>\n<dd>\n  <dl class=\"alacartefaq\">\n    <dt>What does an ethernet port look like?</dt>\n    <dd>It's like a phone port except larger</dd>\n    <dt>Does your service need a modem?</dt>\n    <dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>\n    <dt>Can I use a router with your service?</dt>\n    <dd>Yes, our service is compatible with routers. It should work with any router you have.</dd>\n    <dt>Does Volo sell routers?</dt>\n    <dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>\n    <dt>I need help configuring my wireless router</dt>\n    <dd>Volo can setup a router for you for $50.</dd>\n    <dt question='tiers'>What is the difference between the service tiers?</dt>\n    <dd>\n    <p>The difference between the service tiers is how much usage they are designed for. None of the tiers will throttle your speed, cut you off, or charge you for overages, but each tier has a target usage amount. If you exceed than amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.</p>\n    <p>We usually describe our tiers in terms of video streaming because it is the biggest user of bandwidth on the internet.</p>\n    <p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage.</p>\n    <p>Medium is for customers who want to watch up to 12 hours of Netflix (streaming) per day or equivalent amount of usage.</p>\n    <p>Heavy is for customers who use more than that.</p>\n    <p class='dont-say'>You may need to remind the potential customer that watching a steam on two different devices at the same time counts double (or triple with 3, etc)</p>\n    </dd>\n    <dt question='whytiers'>Why do you have usage based tiers instead of speed based?</dt>\n    <dd>\n    <p>Our costs are based on how much total bandwidth you use, not how fast you use it. By separating our tiers into usage levels we can deliver our fastest service to all customers whether they use it a lot or a little.</p>\n    <p>By doing this we are able to offer our high tier for only &#36;60 compared to over &#36;100 with some of our competitors, and we can offer 1000 mbps to our light users.</p>\n    </dd>\n    <dt question='overage'>What happens if I go over my tier?</dt>\n    <dd>\n    We will not throttle your speed, cut you off, or charge you for overages. Each tier has a target usage amount, and if you exceed than amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.\n    </dd>\n  </dl>\n</dd>\n</dl>\n\n[screen:usagecalc]\n\n<script type=\"text/javascript\">\n    $('dl.alacartefaq dd').hide();\n    $('dl.alacartefaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.alacartefaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n"
-    ,buttons: {conclude: "Nevermind",robot: "Signup"}
-    ,buttonOrder: ['robot','conclude']
-    ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','email','ncservice','servicestart','message?','operator']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,message: 1,operator: 1,email: 1,servicestart: 1,ncservice: 1}
-};
-screens['potentialsmithapts'] = {
-    title: "Potential A La Carte Customer",
-    body: "<p>At your location, we offer superfast internet starting at &#36;19.95. There are no installation or setup fees.</p>\n\n<p>You should find an ethernet port in the unit you can plug into and you can sign up through the capture portal or I can sign you up over the phone.</p>\n\n<p>We offer 4 tiers of service at your location. Light, Medium, Heavy all run at 1000Mbps (or Gigabit) and are differentiated based on how much you use the service. As a special offer to certain apartments (including yours), we also have an Aparment 10 tier. This has the same target usage amount as the Light tier, but runs at 10Mbps not the full gigabit speed the rest do.</p>\n\n\n<dl class=\"alacartefaq\">\n<dt>Service FAQs (click to open)</dt>\n<dd>\n  <dl class=\"alacartefaq\">\n    <dt>What does an ethernet port look like?</dt>\n    <dd>It's like a phone port except larger</dd>\n    <dt>Does your service need a modem?</dt>\n    <dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>\n    <dt>Can I use a router with your service?</dt>\n    <dd>Yes, our service is compatible with routers. It should work with any router you have.</dd>\n    <dt>Does Volo sell routers?</dt>\n    <dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>\n    <dt>I need help configuring my wireless router</dt>\n    <dd>Volo can setup a router for you for $50.</dd>\n    <dt question='tiers'>What is the difference between the service tiers?</dt>\n    <dd>\n    <p>The difference between the service tiers is how much usage they are designed for. None of the tiers will throttle your speed, cut you off, or charge you for overages, but each tier has a target usage amount. If you exceed than amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.</p>\n    <p>We usually describe our tiers in terms of video streaming because it is the biggest user of bandwidth on the internet.</p>\n    <p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage.</p>\n    <p>Medium is for customers who want to watch up to 12 hours of Netflix (streaming) per day or equivalent amount of usage.</p>\n    <p>Heavy is for customers who use more than that.</p>\n    <p class='dont-say'>You may need to remind the potential customer that watching a steam on two different devices at the same time counts double (or triple with 3, etc)</p>\n    </dd>\n    <dt question='whytiers'>Why do you have usage based tiers instead of speed based?</dt>\n    <dd>\n    <p>Our costs are based on how much total bandwidth you use, not how fast you use it. By separating our tiers into usage levels we can deliver our fastest service to all customers whether they use it a lot or a little.</p>\n    <p>By doing this we are able to offer our high tier for only &#36;60 compared to over &#36;100 with some of our competitors, and we can offer 1000 mbps to our light users.</p>\n    </dd>\n    <dt question='overage'>What happens if I go over my tier?</dt>\n    <dd>\n    We will not throttle your speed, cut you off, or charge you for overages. Each tier has a target usage amount, and if you exceed than amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.\n    </dd>\n  </dl>\n</dd>\n</dl>\n\n[screen:usagecalc]\n\n<script type=\"text/javascript\">\n    $('dl.alacartefaq dd').hide();\n    $('dl.alacartefaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.alacartefaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n"
-    ,buttons: {conclude: "Nevermind",robot: "Signup"}
-    ,buttonOrder: ['robot','conclude']
-    ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','email','ncservice','servicestart','message?','operator']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,message: 1,operator: 1,email: 1,servicestart: 1,ncservice: 1}
-};
-screens['potentialstjoe'] = {
-    title: "Potential Customer",
-    body: "<p class=\"dont-say\">Check coverage area by looking at the <a class='coverage' href=\"https://volo.net/coverage-map\" target=\"_blank\">coverage map</a>.</p>\n\n<script type=\"text/javascript\">\n    $('div.screen-potentialstjoe dd.menu').hide();\n    $('div.screen-potentialstjoe dt.menu').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-potentialstjoe dt.menu a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n<p>We are excited about expanding to the St Joseph area and look forward to having you as a customer. We are entering the area in phases, beginning with the North side of town. From there we will continue our build out and hope to have service to the entire town in the next 12 to 18 months.</p>\n\n<p>If you like, I can explain our services to you now, or we can call you back when we're ready to install your area and go over everything.</p>\n\n<br />\n\n<p class=\"dont-say\">Only read the following if the caller wants. Otherwise just fill out their information and file a ticket.</p>\n\n[screen:fiberfaq]\n"
-    ,buttons: {robot: "File Ticket"}
-    ,buttonOrder: ['robot']
-    ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','referredby?','message?','operator']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,message: 1,operator: 1,referredby: 1}
-};
-screens['potentialthomasboro'] = {
-    title: "Potential Customer",
-    body: "<script type=\"text/javascript\">\n#    $('div.screen-potentialthomasboro dd').hide();\n#    $('div.screen-potentialthomasboro dt').wrapInner('<a href=\"#\"></a>');\n#    $('div.screen-potentialthomasboro dt a').click(function() {\n#        var $dd=$(this).parents('dt').next();\n#        if($dd.hasClass('open')) $dd.hide('fast');\n#        else $dd.show('fast');\n#        $dd.toggleClass('open');\n#        return(false);\n#    });\n<"+"/script>\n\n<p>In your area we offer Volo's Superfast Fiber service. This is the fastest residential internet service available in the nation.</p>\n<p>Volo has built a brand new state of the art fiber optic network.</p>\n<p>Other companies offer services with typical speeds in the 8 to 20 megabit \nrange. Volo's Fiber service will be 1000 megabits (also known as \ngigabit).</p>\n<p>So, would you like to pay less money for faster service?</p>\n<p class='dont-say'>This part is optional</p>\n<p>Other companies offer no guaranteed minimum speed--this translates to \nincreased time waiting while pages load, no guarantee that your phone will \nwork or that Netflix will stream at full quality. Volo's services offers \nguaranteed minimum bandwidth from 1mbps (appropriate for voice) and up.</p>\n<dl>\n\n[screen:fiberfaq]\n"
-    ,buttons: {robot: "File Ticket"}
-    ,buttonOrder: ['robot']
-    ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip','phone','referredby?','message?','operator']]
-    ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,message: 1,operator: 1,referredby: 1}
 };
 screens['problem'] = {
     title: "Connection problem",
@@ -1876,15 +1737,23 @@ screens['problememailsend_oe'] = {
 };
 screens['problememailsend_outlook'] = {
     title: "Outgoing email for Outlook",
-    body: "<p>Okay, we need to make sure your outgoing email settings are correct.</p>\n\n<ol>\n    <li>Go to the <strong>Tools</strong> menu and choose <strong>Email Accounts</strong></li>\n    <li>Select the button next to <i>View or change existing email accounts</i>and click <b>Next</b>, then select the account you want to change and click <strong>Change</strong>.</li>\n    <li>Fill in your name and email address, enter <b>volomail.net</b> as both the incoming and outgoing servers, and enter your username and password per the above</li>\n    <li>Click the <b>More Settings</b> button</li>\n    <li>Check the box next to <i>My outgoing server (SMTP) requires authentication</i> on the <b>Outgoing Server</b> tab.</li>\n    <li>Enter <b>587</b> in the box next to <i>Outgoing server (SMTP)</i> in the <b>Advanced</b> tab</li>\n    <li>Click <b>OK</b></li>\n    <li>Click <b>Next</b></li>\n    <li>Click <b>Finish</b></li>\n</ol>\n\n<p>Can you try sending an email now?</p>\n\n<p class=\"dont-say\">Wait for the caller to try it out...</p>\n\n<p>Did that fix the problem?</p>\n\n"
+    body: "<p>Okay, we need to make sure your outgoing email settings are correct.</p>\n\n<ol>\n    <li>Go to the <strong>Tools</strong> menu and choose <strong>Email Accounts</strong></li>\n    <li>Select the button next to <i>View or change existing email accounts</i> and click <b>Next</b>, then select the account you want to change and click <strong>Change</strong>.</li>\n    <li>Fill in your name and email address, enter <b>volomail.net</b> as both the incoming and outgoing servers, and enter your username and password per the above</li>\n    <li>Click the <b>More Settings</b> button</li>\n    <li>Check the box next to <i>My outgoing server (SMTP) requires authentication</i> on the <b>Outgoing Server</b> tab.</li>\n    <li>Enter <b>587</b> in the box next to <i>Outgoing server (SMTP)</i> in the <b>Advanced</b> tab</li>\n    <li>Click <b>OK</b></li>\n    <li>Click <b>Next</b></li>\n    <li>Click <b>Finish</b></li>\n</ol>\n\n<p>Can you try sending an email now?</p>\n\n<p class=\"dont-say\">Wait for the caller to try it out...</p>\n\n<p>Did that fix the problem?</p>\n\n"
     ,buttons: {conclude: "Yes",problememailticket: "No"}
     ,buttonOrder: ['conclude','problememailticket']
 };
 screens['problememailsend_tb'] = {
-    title: "Outgoing email for Outlook",
+    title: "Outgoing email for Thunderbird",
     body: "<p>Okay, we need to make sure your outgoing email settings are correct.</p>\n\n<ol>\n    <li>Go to the <strong>Tools</strong> menu, then select <strong>Account Settings</strong></li>\n    <li>Click on <strong>Outgoing Server (SMTP)</strong></li>\n    <li>Select the server in the box and click <strong>Edit</strong></li>\n    <li>The SMTP server should be <strong>volomail.net</strong></li>\n    <li>The port number should be <strong>587</strong></li>\n    <li>The box next to \"Use name and password\" under \"Security and Authentication\" should be checked.</li>\n</ol>\n\n<p>Can you try sending an email now?</p>\n\n<p class=\"dont-say\">Wait for the caller to try it out...</p>\n\n<p>Did that fix the problem?</p>\n\n"
     ,buttons: {conclude: "Yes",problememailticket: "No"}
     ,buttonOrder: ['conclude','problememailticket']
+};
+screens['problememailstart'] = {
+    title: "Email Problem",
+    body: "Let me check on that. Have you already reported the problem?\n"
+    ,buttons: {ticketcheck: "Yes",problememail: "No"}
+    ,buttonOrder: ['problememail','ticketcheck']
+    ,requires: [['callerphone?','customer?']]
+    ,requiresSet: {callerphone: 1,customer: 1}
 };
 screens['problememailticket'] = {
     title: "File Ticket",
@@ -2054,11 +1923,17 @@ screens['roboterror'] = {
 };
 screens['root'] = {
     title: "",
-    body: "<p>Volo Broadband this is _____, how can I help you?</p>\n\n<p class=\"dont-say\">Not everyone we serve has an account or customer number. Just continue and fill their information in manually</p>\n\n<p class=\"dont-say\">If the person says they just moved into an apartment and needs instructions or needs to set up an account, use \"Potential Customer\"</p>\n\n<p class=\"dont-say\">217-367-8656 is the Volo Office number. If that comes up as the caller ID, you have to ask the customer for their phone number and use that.</p>\n"
-    ,buttons: {problemaccountstart: "Pay Bill / Billing / Account",potentialcustomerstart: "Potential Customer/New Customer Info",ticketcheck: "ticketcheck",problememail: "Email Problem",faqs: "FAQs",message: "Message / Other",problemwebstart: "Internet Problem/Outage Check",problemphone: "Phone Problem",calltech: "Forward to tech "}
-    ,buttonOrder: ['potentialcustomerstart','problemwebstart','problemphone','problememail','problemaccountstart','ticketcheck','message','faqs','calltech']
+    body: "<p>Thank you for calling Volo Broadband! This is _____, how can I help you?</p>\n\n<p class=\"dont-say\">Not everyone we serve has an account or customer number. Just continue and fill their information in manually</p>\n\n<p class=\"dont-say\">If the person says they just moved into an apartment and needs instructions or needs to set up an account, use \"Potential Customer\"</p>\n\n<p class=\"dont-say\">217-367-8656 is the Volo Office number. If that comes up as the caller ID, you have to ask the customer for their phone number and use that.</p>\n\n<p class=\"dont-say\">If the customer inquires about Champaign Computer or computer repair services, use the new Champaign Computer branch</p>\n"
+    ,buttons: {outagestart: "Outage Check",problemaccountstart: "Pay Bill / Billing / Account",potentialcustomerstart: "Potential Customer/New Customer Info",ticketcheck: "ticketcheck",faqs: "FAQs",message: "Message / Other",problememailstart: "Email Problem",problemwebstart: "Internet Problem",problemphone: "Phone Problem",calltech: "Forward to tech",ccomputer: "Champaign Computer"}
+    ,buttonOrder: ['potentialcustomerstart','problemwebstart','outagestart','problemphone','problememailstart','problemaccountstart','ticketcheck','message','faqs','calltech','ccomputer']
     ,requires: [['callerphone?','customer?','operator']]
     ,requiresSet: {operator: 1,callerphone: 1,customer: 1}
+};
+screens['routerfaq'] = {
+    title: "",
+    body: "<script type=\"text/javascript\">\n    $('dl.routerfaq dd.routerfaq').hide();\n    $('dl.routerfaq dt.routerfaq').wrapInner('<a href=\"#\"></a>');\n    $('dl.routerfaq dt.routerfaq a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n<p>Our service bypasses the need for modems-in fact, <strong>modem and router/modem combos will not work</strong> with our service. However, any standard router should function with our internet service; simply plug the Internet, WAN, or Modem port in the back of the router to the ethernet port in the wall. </p>\n\n<dl class=\"fiberfaq\">\n<dt class=\"fiberfaq\" question='brand'>Do you have any recommendations for routers?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>We don't have any restrictions on brands or models of router; however, we do recommend two general specifications for optimal functionality. \nWe do suggest confirming the router is gigabit capable (often noted as 10/100/1000), to make full use of our fiber service.\nAC or Dualband routers will give you a strong WiFi capability within your location.</p>\n<p>Some routers do require you to complete a setup process, prior to giving access to the internet. (Netgears are especially notorious for this.) If your new router doesn't seem to be working with the service, try bypassing the router and plugging into the service directly. If the service works with a direct connection, it's possible your router simply requires that setup.</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='resettrouble'>I'm having issues with my router after resetting it.</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>Routers have two types of Reset: hard and soft. A soft reset you can complete by unplugging the power to your router, waiting about ten or fifteen seconds, and plugging it back in. This will cause it to refresh it's network settings, without losing any firmware updates. Using the Reset button on the back of the router will cause a hard reset--this reverts the router to factory defaults, and may require it to go through a setup process in order to reconnect to the internet. Network names and passwords will reset as well on a hard reset.</p>\n<p>As routers can vary from brand to model, we recommend contacting your router's customer support to assist with any router setup process first. If you would like, we can schedule for a technician to come and help set up your router for you; however this would incur a &#36;60/hour service charge, as our techs would be working on a personal device rather than resolving an issue with the service itself.</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='routerspeeds'>What sorts of speeds can I expect from my router?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>WiFi speeds <strong>will be slower</strong> than a hardwired connection. Router companies often advertise WiFi speeds of the router's hypothesized total capacity; though actual speeds on individual devices are often only 1/10th this quoted figure. Additionally, there are a number of environmental factors which may impact your router's WiFi performance. Though WiFi is convenient, for best speed and reliability on your devices, we do strongly recommend a hardwired connection whenever possible. Streaming video devices, gaming consoles, and smart TVs especially will benefit from a hardwired connection either to the service directly or to your router.</p>\n</dd> <!--}}}-->\n<dt class=\"fiberfaq\" question='cannotbypass'>I can't bypass my router; my computer doesn't have an ethernet port. What do I do?</dt> <!--{{{-->\n<dd class=\"fiberfaq\">\n<p>If your computer lacks an Ethernet Port, we do strongly recommend purchasing a USB to Ethernet adapter, which permits you to connect to the internet through a standard USB port. This is useful both for utilizing the higher speeds and reliability you find with a hardwired connection, but also for troubleshooting with a direct connection to the service in case your router causes connectivity problems.</p>\n</dd> <!--}}}-->\n</dl>\n<!-- \nvi:foldmethod=marker: \n-->\n"
+    ,buttons: {conclude: "conclude"}
+    ,buttonOrder: ['conclude']
 };
 screens['routerreset'] = {
     title: "Reset customer router",
@@ -2090,7 +1965,7 @@ screens['routingticket'] = {
 };
 screens['schedule'] = {
     title: "File ticket regarding problem",
-    body: "%MESSAGE\n\nI can schedule a technician to come to your location. The earliest time we have available is %TECHTIME. When would you like the technician to come by?\n\n<p class=\"dont-say\">The system will give you the earliest time. If that doesn't work pick any time later than that between 9-5 Mon-Fri. If the customer requires a time outside that let them know you can't schedule that, and a manager will have to reach out to them for scheduling.</p>\n\n<p class=\"dont-say\"><strong>Make sure the customer understands that the technician is scheduled to arrive AT SOME POINT during the hour following the time above. The technician will also need time to fix the problem. The customer should expect to be home for at least 2 hours to account for arrival and repair time.</strong></p>\n"
+    body: "<p>Your ticket has been filed. If you need to follow up, please refer to ticket number <strong>%TICKET</strong>. </p>\n\n<p>Given the troubleshooting so far has not restored your connection, I would recommend scheduling for a technician to come to your location, to further troubleshoot and verify the service is working as expected. </p>\n\n<p>Once they confirm the service is working as expected, they can work to resolve any remaining issues on your personal devices (including routers); however, service work pertaining to personal devices is billed at a rate of &#36;60/hr. \n\n<p>If a technician is able to resolve your connectivity problems remotely before the scheduled time, we will call back to confirm functionality is restored and to cancel the tech visit.</p>\n\n<p>The earliest time we have available is %TECHTIME. When would you like the technician to come by? </p>\n\n<p class=\"dont-say\">The system will give you the earliest time. If that doesn't work pick any time later than that between 9-5 Mon-Fri. If the customer requires a time outside that let them know you can't schedule that, and a manager will have to reach out to them for scheduling.</p>\n\n<p class=\"dont-say\"><strong>Make sure the customer understands that the technician is scheduled to arrive AT SOME POINT during the hour following the time above. The technician will also need time to fix the problem. Thus, once a timeframe is selected, please confirm with the customer: </strong></p>\n\n<p>I am scheduling for a (X am/pm appointment). The tech should arrive between at (X) and (X + 1 hours). If the tech HASN'T arrived by (X + 1 hours), feel free to call and check their status with ticket number <strong>%TICKET</strong>. Our tech will need some time to work after their arrival, but should hopefully complete the visit before (X + 2 hours). Does this timeframe work for you, or would you need a different time? </p>\n"
     ,buttons: {conclude: "Conclude without scheduling",robot: "Schedule"}
     ,buttonOrder: ['robot','conclude']
     ,requires: [['hour','date','ticket']]
@@ -2116,7 +1991,7 @@ screens['signupcheck'] = {
 };
 screens['speedtest'] = {
     title: "Speedtest",
-    body: "<p>Lets do a test to see what speed your service is running at right now.</p>\n<p>Please go to <strong>speedtest.net</strong> in your browser. Click \"go\" or \"begin test\", don't click on \"start\" that's an ad.</p>\n<p>You will get 3 numbers, ping, download, and upload. Please report them as the tests finish.</p>\n\n%MESSAGE\n"
+    body: "<p>Lets do a test to see what speed your service is running at right now.</p>\n<p>Please go to <strong>speedtest.net</strong> in your browser. Click \"go\" or \"begin test\", don't click on \"start\" that's an ad.</p>\n<p>If you're testing from a tablet or smart phone, go to the App Store or Play Store and download the \"SpeedTest by Ookla\" application.</p>\n<p>You will get 3 numbers, ping, download, and upload. Please report them as the tests finish.</p>\n\n%MESSAGE\n"
     ,buttons: {conclude: "Good",problemslowticket: "Slow"}
     ,buttonOrder: ['conclude','problemslowticket']
     ,requires: [['pingtime','speedtestdown','speedtestup']]
@@ -2159,20 +2034,6 @@ screens['tnccaptivatedunit'] = {
     ,buttonOrder: ['robot','conclude']
     ,requires: [['firstname','lastname','serviceaddress','aptunit','servicezip']]
     ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1}
-};
-screens['tnccheck'] = {
-    title: "Confirm as Town and Country resident",
-    body: "Are you a resident of Town and Country?\n"
-    ,buttons: {tncsignup: "Yes",voloinfo: "No"}
-    ,buttonOrder: ['tncsignup','voloinfo']
-};
-screens['tncproblem'] = {
-    title: "Problem at Town and Country",
-    body: "<p>Let me take down some information, and we'll run some automatic tests and reset the switch you're connected to.</p>\n\n<script type=\"text/javascript\">\n    $(function() {\n        $('#v-ticket').val('');\n    });\n<"+"/script>\n"
-    ,buttons: {robot: "Continue"}
-    ,buttonOrder: ['robot']
-    ,requires: [['customer'],['username'],['serviceaddress']]
-    ,requiresSet: {serviceaddress: 1,customer: 1,username: 1}
 };
 screens['tncsignup'] = {
     title: "Town and Country",
@@ -2234,6 +2095,14 @@ screens['unknownprobticket'] = {
     ,requires: [['firstname?','lastname','company?','serviceaddress','aptunit','servicezip','phone','problem?','ip?','operator']]
     ,requiresSet: {firstname: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,ip: 1,lastname: 1,phone: 1,operator: 1,problem: 1,company: 1}
 };
+screens['updatestatements'] = {
+    title: "Update Statement Delivery Preference",
+    body: ">>TODO>> Insert into callcenter.php sections\n\n                    <div class=\"element\" id=\"r-statementtype\">\n                        <label for=\"v-statementtype\">Statement Type</label>\n                        <div class=\"value\">\n                            <input type=\"text\" name=\"v-statementtype\" id=\"v-statementtype\" size=\"10\"/>\n                        </div>\n                    </div>\n                    \n                    \n        <div class=\"element input-statementtype\">\n            <label for=\"statementtype\">Statement Type</label>\n            <div class=\"input\">\n                <select name=\"statementtype\" id=\"statementtype\">\n                    <option>email</option>\n                    <option>paper</option>\n                    <option>paper, email</option>\n                    <option>Invoice</option>\n                    <option>Email Invoice</option>\n                </select>\n            </div>\n        </div>\n\n>>TODO>> Implement v_command to query current billing preference - noted as %BILLING (probably update to %MESSAGE?)\n>>TODO>> Probaby also auto-fill their email, if robot has not done so already\n\n<p>I can certainly help out with updating your statement delivery method. I'm showing you are currently set to %BILLING.</p>\n\n<p>Please note: effective June 16th, 2019, paper statements and invoices will have a $1.50 paper billing fee applied each billing cycle.</p>\n\n<p>How would you like your bills delivered?</p>\n\n<p class=\"dont-say\">Also confirm email address is accurate, especially when changing to email statements/invoices.</p>\n"
+    ,buttons: {conclude: "Cancel",robot: "Update"}
+    ,buttonOrder: ['robot','conclude']
+    ,requires: [['statementtype','email?']]
+    ,requiresSet: {email: 1,statementtype: 1}
+};
 screens['upgraded'] = {
     title: "Service upgraded",
     body: "<p>Your upgrade has been confirmed. It will show up on your next bill and\nis effective immediately.</p>\n\n<p>Your new bandwidth limit is %LIMIT megabytes per day.</p>\n\n"
@@ -2242,7 +2111,7 @@ screens['upgraded'] = {
 };
 screens['usagecalc'] = {
     title: "Usage Calc",
-    body: "<script>\n    function calculate() {\n        var video = parseInt($('#fiber-video').val(), 10);\n        var games = parseInt($('#fiber-games').val(), 10);\n        var other = parseInt($('#fiber-other').val(), 10);\n\n        var bandwidth = parseFloat((video * 2) + (games * 1) + (other * 1));\n        if (bandwidth < 9) {\n            $('#fiber-output').text(\"Light Fiber service at $29.95 per month\");\n        } else if (bandwidth < 29) {\n            $('#fiber-output').text(\"Medium Fiber service at $49.95 per month\");\n        } else {\n            $('#fiber-output').text(\"Heavy Fiber service at $59.95 per month\");\n        }\n    }\n    $('div.fiberfaq input.fiber-calc').change(calculate()); \n<"+"/script>\n\n<form>\n<p>If you can answer 3 quick questions for me, I can recommend the best tier to match your needs.</p>\n<label for=\"fiber-video\">How many hours of streaming video would you like to watch in a day, if any?</label>\n<input type=\"number\" class=\"fiber-calc\" id=\"fiber-video\" onkeyup=calculate() value=0>\n<br />\n<label for=\"fiber-games\">How many hours of gaming would you like to do in one day, if any?</label>\n<input type=\"number\" class=\"fiber-calc\" id=\"fiber-games\" onkeyup=calculate() value=0>\n<br />\n<label for=\"fiber-peer\">How much peer to peer or other high bandwidth activities do you do in gigabytes per day, if any?</label>\n<input type=\"number\" class=\"fiber-calc\" id=\"fiber-other\" onkeyup=calculate() value=0>\n<br />\n<p>We recommend: <span style=\"font-weight: bold;\" id=\"fiber-output\"></span> based on you usage level.</p>\n</form>\n\n"
+    body: "<script>\n    function calculate() {\n        var video = parseInt($('#fiber-video').val(), 10);\n        var games = parseInt($('#fiber-games').val(), 10);\n        var other = parseInt($('#fiber-other').val(), 10);\n        \n        var $bandwidth = (parseFloat((video * 3) + (games * 1) + (other * 1))) * 1000;\n        var $service_info = [];\n        if (typeof(servicelevels) == 'undefined') {\n            if ($bandwidth < 9000) {\n                $service_info = ['118', 'SFI:Light', 'Light Fiber service', '$29.95'];\n            } else if ($bandwidth < 29000) {\n                $service_info = ['142', 'SFI:Medium', 'Medium Fiber service', '$49.95'];\n            } else {\n                $service_info = ['117', 'SFI:Heavy', 'Heavy Fiber service', '$59.95'];\n            }\n        } else {\n            for (var $i in servicelevels) {\n                //1 MXU:SHLENS-MED\n                //2 Shlens Apartments Medium Fiber Service\n                //3 $49.95\n                //4 $0.00\n                //5 80000221-1513711059\n                //6 32400\n                //7 1000000000\n                //8 25\n                //9 1\n                if ($bandwidth < servicelevels[$i][6]) {\n                    if ($service_info[6] < servicelevels[$i][6]) {\n                        continue;\n                    } else {\n                        $service_info = servicelevels[$i];\n                    }\n                }\n            }\n        }\n        $('#fiber-output').text($service_info[2] + \" at \" + $service_info[3] + \" per month\");\n    }\n    $('div.fiberfaq input.fiber-calc').change(calculate()); \n<"+"/script>\n\n<form>\n<p>If you can answer 3 quick questions for me, I can recommend the best tier to match your needs.</p>\n<label for=\"fiber-video\">How many hours of streaming video would you like to watch in a day, if any?</label>\n<input type=\"number\" class=\"fiber-calc\" id=\"fiber-video\" onkeyup=calculate() value=0>\n<br />\n<label for=\"fiber-games\">How many hours of gaming would you like to do in one day, if any?</label>\n<input type=\"number\" class=\"fiber-calc\" id=\"fiber-games\" onkeyup=calculate() value=0>\n<br />\n<label for=\"fiber-peer\">How much peer to peer or other high bandwidth activities do you do in gigabytes per day, if any?</label>\n<input type=\"number\" class=\"fiber-calc\" id=\"fiber-other\" onkeyup=calculate() value=0>\n<br />\n<p>We recommend: <span style=\"font-weight: bold;\" id=\"fiber-output\"></span> based on you usage level.</p>\n</form>\n\n"
 };
 screens['volodown'] = {
     title: "Volo connection down",
@@ -2261,24 +2130,6 @@ screens['voloequipmentticket'] = {
 screens['volofaq'] = {
     title: "Volo FAQ",
     body: "<script type=\"text/javascript\">\n    $('div.screen-faqs dd.menu').hide();\n    $('div.screen-faqs dt.menu').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-faqs dt.menu a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n<dl>\n<dt class=\"menu\" category='fiber'>What are Volo's Fiber Services?</dt>\n<dd class=\"menu\">[screen:fiberfaq]</dd>\n<dt class=\"menu\" category='wireless'>What are Volo's Wireless Services?</dt>\n<dd class=\"menu\">[screen:wirelessfaq]</dd>\n</dl>\n"
-};
-screens['voloinfo'] = {
-    title: "About Volo",
-    body: "<script type=\"text/javascript\">\n    $('div.screen-voloinfo dd').hide();\n    $('div.screen-voloinfo dt').wrapInner('<a href=\"#\"></a>');\n    $('div.screen-voloinfo dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n[screen:volospiel]\n\n[screen:volofaq]\n\n<p><strong>Are you interested in getting Volo Broadband?</strong></p>\n\n"
-    ,buttons: {conclude: "No",potentialinstall: "Yes"}
-    ,buttonOrder: ['potentialinstall','conclude']
-};
-screens['voloinfo_nogeo'] = {
-    title: "About Volo",
-    body: "[screen:volospiel]\n\n[screen:volofaq]\n\n<p><strong>If you're interested, I'll first need to take down some\ninformation so we can schedule a coverage survey for your site.</strong></p>\n"
-    ,buttons: {conclude: "No thanks",schedulesurvey: "Schedule survey"}
-    ,buttonOrder: ['schedulesurvey','conclude']
-};
-screens['voloinfo_nosched'] = {
-    title: "About Volo",
-    body: "[screen:volospiel]\n\n[screen:volofaq]\n\n"
-    ,buttons: {conclude: "conclude",checkcoverage: "checkcoverage"}
-    ,buttonOrder: ['checkcoverage','conclude']
 };
 screens['voloreset'] = {
     title: "Reset the Volo equipment",
@@ -2312,7 +2163,7 @@ screens['wamplerinfo'] = {
 };
 screens['wirelessfaq'] = {
     title: "",
-    body: "<script type=\"text/javascript\">\n    $('dl.wirelessfaq dd').hide();\n    $('dl.wirelessfaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.wirelessfaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n<p>Our Wireless service connects you to the Internet through a receiver we install on the roof of your building: Volo has two wireless Internet service choices available.</p>\n\n<p>You still need a router to use WiFi, it's called wireless because that's how it's delievered to the location.</p>\n\n<p>Our basic service starts at &#36;39.95 per month, and our streaming service costs &#36;75 per month.</p>\n\n<p><strong>Basic Broadband</strong> is ideal for someone looking for basic high-speed Internet service.  This service works like the cell phone service where you have a limit each day, except if you exceed your limit your service slows down instead of incurring additional charges. It includes 250 Mega Bytes per day of Priority Bandwidth delivered over the trademark Volo connection. Basic Broadband includes, in our experience, ample bandwidth to browse the Internet and check your email. Other usage (particularly, streaming video like Netflix) can use that bandwidth up quickly.</p>\n<p><strong>Streaming</strong> service is designed for users who enjoy watching Youtbe, Netflix, Hulu, other video streaming sites, or listening to online radio for more than four hours per day. This service is not available in all locations. Streaming service doesn't permit peer-to-peer file sharing and do contain a data cap to prevent runaway processes like virus infections, but that cap will be tailored to your needs and even by default is ample for most streaming media uses (about 10GB/day).\n\n<dl class=\"wirelessfaq\">\n<dt question='1'>How much does Volo Wireless cost?</dt><!--{{{-->\n<dd>\n<p>The basic rate is &#36;39.95/month. That covers 250 MB/day of usage. You can add additional bandwith in increments of 250/day at &#36;10/month.</p>\n<p>The streaming price is &#36;$75 per month.</p>\n<p>There is also an installation fee of &#36;200-&#36;300 depending on location. The installation fee can be paid over the first 3 months of service.</p>\n<p>If you sign up for a qualilfying DirectTV or Dish Network service through us, we will reduce the installation by &#36;150.</p>\n</dd><!--}}}-->\n<dt question='2'>What's the difference between megabits and megabytes?</dt><!--{{{-->\n<dd>\n<p>One megabyte is equal to eight megabits, but the terms are used in specific ways: Megai<strong>bits</strong> per second (mbps) are generally used to describe the <strong>speed</strong> of an Internet connection, whereas mega<strong>bytes</strong> (MB) usually refer to the <strong>size</strong> of a file or storage space.</p>\n<p>In practical terms, one megabit per second is slow but usable broadband Internet. Five to ten web pages, one minute of music, or a half a minute of video is about one megabyte of data.</p>\n</dd><!--}}}-->\n<dt question='3'>How the Service works</dt><!--{{{-->\n<dd>\n<p>Our Wireless service connects you to the Internet through a receiver we install on the roof of your building: The receiver hooks into our wireless network in town. We run a cable from that receiver to an appropriate place on the outside of your house, near where your computer or network hub is located. The cable enters your house there, and plugs into a small black box that provides electrical power for the receiver.</p>\n</dd><!--}}}-->\n<dt question='4'>Coverage - Do you serve [location]?</dt><!--{{{-->\n<dd>\n<p>We provide service to most locations within about 7 miles of downtown Champaign. If you'd like, I can have a technician call you back shortly to discuss details of our coverage in your area.</p>\n<p>We do not cover Mahomet, St Joe, Tolono Pesotum, Rantoul, Monticello or White Heath.</p>\n</dd><!--}}}-->\n<dt question='5'>Do I own the equipment?</dt><!--{{{-->\n<dd>\n<p>For security reasons, we can't sell the equipment to you. Even if we could, it wouldn't do you much good. The equipment is designed to work with our system, and wouldn't be much use without it.</p>\n</dd><!--}}}-->\n<dt question='6'>What does the Volo receiver look like / How big is your antenna?</dt><!--{{{-->\n<dd>\n<p>Customers in strong coverage areas use a receiver that's 12 inches square, either white or a medium gray.</p>\n<p>Some customers require a larger antenna, a 36-inch wide wire grid. Usually the larger antenna would be in addition to the smaller one.</p>\n</dd><!--}}}-->\n<dt question='7'>What do I get for my Installation?</dt><!--{{{-->\n<dd>\n<p>Your installation cost pays for a professional installation of the receiver, running cabling, mounting hardware, and setting up your computer or router. It also covers maintenance of the Volo equipment at your location for as long as you are a customer.</p>\n</dd><!--}}}-->\n<dt question='8'>If I move, do I pay for installation again?</dt><!--{{{-->\n<dd>\n<p>If you move to an area that Volo serves, we will transfer your service to your new location for a nominal fee.</p>\n</dd><!--}}}-->\n<dt question='9'>Speed: Volo vs Cable/DSL/Dialup</dt><!--{{{-->\n<dd>\n<p>Volo Wireless speeds vary based on location. Customers can see download speeds up to 20 megabits per second, and upload speeds up to 12 megabits per second. Typical speeds are 2-5 megabits per seconds down and 1-2 megabits per second up.</p>\n</dd><!--}}}-->\n<dt question='10'>I have Unlimited Service, how can I go over a bandwidth allocation?</dt><!--{{{-->\n<dd>\n<p>On our unlimited streaming connections we still set a technical bandwidth limit. This is intended to catch problems such as viruses on our customer's computers. Sudden increases in bandwidth usage are often a sign that a computer has been comprimised.</p>\n<p>If you are hitting the limit with regular usage, we will raise the technical limit to a level where it does not interfere with your enjoyment of the internet.</p>\n</dd><!--}}}-->\n</dl>\n<!--\nvi:foldmethod=marker:\n-->\n"
+    body: "<script type=\"text/javascript\">\n    $('dl.wirelessfaq dd').hide();\n    $('dl.wirelessfaq dt').wrapInner('<a href=\"#\"></a>');\n    $('dl.wirelessfaq dt a').click(function() {\n        var $dd=$(this).parents('dt').next();\n        if($dd.hasClass('open')) $dd.hide('fast');\n        else $dd.show('fast');\n        $dd.toggleClass('open');\n        return(false);\n    });\n<"+"/script>\n\n<p>Our Wireless service connects you to the Internet through a receiver we install on the roof of your building: Volo has two wireless Internet service choices available.</p>\n\n<p>You still need a router to use WiFi, it's called wireless because that's how it's delievered to the location.</p>\n\n<p>Our basic service starts at &#36;39.95 per month, and our streaming service costs &#36;75 per month.</p>\n\n<p><strong>Basic Broadband</strong> is ideal for someone looking for basic high-speed Internet service.  This service works like the cell phone service where you have a limit each day, except if you exceed your limit your service slows down instead of incurring additional charges. It includes 250 Mega Bytes per day of Priority Bandwidth delivered over the trademark Volo connection. Basic Broadband includes, in our experience, ample bandwidth to browse the Internet and check your email. Other usage (particularly, streaming video like Netflix) can use that bandwidth up quickly.</p>\n<p><strong>Streaming</strong> service is designed for users who enjoy watching Youtube, Netflix, Hulu, other video streaming sites, or listening to online radio for more than four hours per day. This service is not available in all locations. Streaming service doesn't permit peer-to-peer file sharing and do contain a data cap to prevent runaway processes like virus infections, but that cap will be tailored to your needs and even by default is ample for most streaming media uses (about 10GB/day).\n\n<dl class=\"wirelessfaq\">\n<dt question='1'>How much does Volo Wireless cost?</dt><!--{{{-->\n<dd>\n<p>The basic rate is &#36;39.95/month. That covers 250 MB/day of usage. You can add additional bandwith in increments of 250/day at &#36;10/month.</p>\n<p>The streaming price is &#36;75 per month.</p>\n<p>There is also an installation fee of &#36;300 depending on location. The installation fee can be paid over the first 3 months of service.</p>\n<p>If you sign up for a qualifying DirectTV or Dish Network service through us, we will reduce the installation by &#36;150.</p>\n</dd><!--}}}-->\n<dt question='2'>What's the difference between megabits and megabytes?</dt><!--{{{-->\n<dd>\n<p>One megabyte is equal to eight megabits, but the terms are used in specific ways: Mega<strong>bits</strong> per second (mbps) are generally used to describe the <strong>speed</strong> of an Internet connection, whereas mega<strong>bytes</strong> (MB) usually refer to the <strong>size</strong> of a file or storage space.</p>\n<p>In practical terms, one megabit per second is slow but usable broadband Internet. Five to ten web pages, one minute of music, or a half a minute of video is about one megabyte of data.</p>\n</dd><!--}}}-->\n<dt question='3'>How the Service works</dt><!--{{{-->\n<dd>\n<p>Our Wireless service connects you to the Internet through a receiver we install on the roof of your building: The receiver hooks into our wireless network in town. We run a cable from that receiver to an appropriate place on the outside of your house, near where your computer or network hub is located. The cable enters your house there, and plugs into a small black box that provides electrical power for the receiver.</p>\n</dd><!--}}}-->\n<dt question='4'>Coverage - Do you serve [location]?</dt><!--{{{-->\n<dd>\n<p>We provide service to most locations within about 7 miles of downtown Champaign. If you'd like, I can have a technician call you back shortly to discuss details of our coverage in your area.</p>\n<p>We do not cover Mahomet, St Joe, Tolono Pesotum, Rantoul, Monticello or White Heath.</p>\n</dd><!--}}}-->\n<dt question='5'>Do I own the equipment?</dt><!--{{{-->\n<dd>\n<p>For security reasons, we can't sell the equipment to you. Beyond security reasons, the equipment is designed to work with our system, and wouldn't be much use outside of our network.</p>\n</dd><!--}}}-->\n<dt question='6'>What does the Volo receiver look like / How big is your antenna?</dt><!--{{{-->\n<dd>\n<p>Customers in strong coverage areas use a receiver that's 12 inches square, either white or a medium gray.</p>\n<p>Some customers require a larger antenna, a 36-inch wide wire grid. Usually the larger antenna would be in addition to the smaller one.</p>\n</dd><!--}}}-->\n<dt question='7'>What do I get for my Installation?</dt><!--{{{-->\n<dd>\n<p>Your installation cost pays for a professional installation of the receiver, running cabling, mounting hardware, and setting up your computer or router. It also covers maintenance of the Volo equipment at your location for as long as you are a customer.</p>\n</dd><!--}}}-->\n<dt question='8'>If I move, do I pay for installation again?</dt><!--{{{-->\n<dd>\n<p>If you move to an area that Volo serves, we will transfer your service to your new location for a nominal fee.</p>\n</dd><!--}}}-->\n<dt question='9'>How fast is Volo's wireless service</dt><!--{{{-->\n<dd>\n<p>Volo Wireless speeds vary based on location. Customers can see download speeds between 2 to 20 megabits per second. There are many factors that affect speed so we cannot promise anything specific but I can file a ticket and have a technician attempt to provide a more precise estimate if needed.</p>\n<p>For a sense of what this means, Netflix requires a 3mbps connection for DVD quality streaming.</p>\n</dd><!--}}}-->\n<dt question='10'>I have Unlimited Service, how can I go over a bandwidth allocation?</dt><!--{{{-->\n<dd>\n<p>On our unlimited streaming connections we still set a technical bandwidth limit. This is intended to catch problems such as viruses on our customer's computers. Sudden increases in bandwidth usage are often a sign that a computer has been comprimised.</p>\n<p>If you are hitting the limit with regular usage, we will raise the technical limit to a level where it does not interfere with your enjoyment of the internet.</p>\n</dd><!--}}}-->\n</dl>\n<!--\nvi:foldmethod=marker:\n-->\n"
     ,buttons: {conclude: "conclude"}
     ,buttonOrder: ['conclude']
 };
@@ -2561,7 +2412,7 @@ function show_screen(id, params, $s) { //{{{1
       },
     });
   }
-  
+
   // Attach validation behavior to inputs
   behave($s);
 
@@ -2652,7 +2503,10 @@ function robot_check($s) { //{{{1
   $s.find('div.input-set input, div.input-set textarea, div.input-set select').validate();
   
   var $b=$s.find("input.b-robot");
-  if($s.find('div.input-set').length && ($b.length || $s.find('input.b-root'))&& !$s.find(".invalid").length) {
+  if($s.find('div.input-set').length && 
+     ($b.length || $s.find('input.b-root')) && 
+     !$s.find(".invalid").length) 
+  {
     var good_set=false;
     $s.find("div.input-set").each(function() {
       var requirements_met=true;
@@ -2678,7 +2532,7 @@ function add_button(sid, $s, tid, title, requires) { //{{{1
   $s.append('<input type="button" value="'+title+'" class="b-'+tid+'"/>');
   var $b=$s.find("input:last-child").attr('tid', tid);
   
-  if(tid == "robot") {
+  if(tid == "robot") { //{{{2
     $b.val(title == 'Robot' ? 'Submit' : title).attr('roboval', $b.val());
     $b.click(function() {
       $(this).addClass('selected');
@@ -2686,6 +2540,7 @@ function add_button(sid, $s, tid, title, requires) { //{{{1
       $('div.screen:last-child input.b-robot').val("Waiting...").prop('disabled', true);
       $.ajax({ data: data,
         success: function(response) {
+          if (debug) console.log("robot response: "+JSON.stringify(response));
           if(response.screen && screens[response.screen])
             show_screen(response.screen, response);
           else {
@@ -2701,7 +2556,8 @@ function add_button(sid, $s, tid, title, requires) { //{{{1
     $b.ajaxStop(function() {
         $(this).val($(this).attr('roboval'));
     });
-  } else {
+  } //}}}2
+  else { //{{{2
     $b.click(function() {
       $(this).addClass('selected');
       var data=build_data(sid);
@@ -2711,7 +2567,10 @@ function add_button(sid, $s, tid, title, requires) { //{{{1
         global: false,
         success: function(response) {
           for(var param in response) {
-            if(param.match(/^v-/)) $("#"+param).val(response[param]);
+            if(param.match(/^v-/)) {
+              $("#"+param).val(response[param]);
+              if(debug) console.log("[add_button]#"+param+": "+response[param]);
+            }
           }
           $("#i div.screen:last-child input").each(function() {
             // copy info into input fields
@@ -2728,18 +2587,19 @@ function add_button(sid, $s, tid, title, requires) { //{{{1
         complete: function(data, status) {
         },
       });
-
+      
       show_screen($(this).attr('tid'));
     });
-      if(sid == "root") {
-          $b.val(title).attr('class', 'b-root');
-          $b.val(title).attr('roboval', $b.val());
-          $b.val(title).prop('disabled', true);
-          $b.ajaxStop(function() {
-              $(this).val($(this).attr('roboval'));
-          });
-      }
+    if(sid == "root") {
+      $b.val(title).attr('class', 'b-root');
+      $b.val(title).attr('roboval', $b.val());
+      $b.val(title).prop('disabled', true);
+      $b.ajaxStop(function() {
+        $(this).val($(this).attr('roboval'));
+      });
     }
+  } //}}}2
+  
 } //}}}
 
 function build_data(sid) { //#{{{1
@@ -2749,6 +2609,7 @@ function build_data(sid) { //#{{{1
         if($("#v-"+field).val() && screens[sid].requires && screens[sid].requiresSet[field])
             data[field]=$("#v-"+field).val();
     });
+    if (debug) console.log("[build_data] data: "+JSON.stringify(data));
     return data;
 } //}}}
 
@@ -3172,706 +3033,13 @@ Date.DATE_ISO8601 = "Y-m-d%TH:i:sO";
 Date.DATE_RFC2822 = "D, d M Y H:i:s O";
 // W3C       "2005-08-15 15:52:01+00:00"
 Date.DATE_W3C     = "Y-m-d%TH:i:sP";
+//}}}1
 
 // vim:foldmethod=marker
 //]]>
 </script>
-<script type="text/javascript">
-//<![CDATA[
-/*
- * jQuery Autocomplete plugin 1.1
- *
- * Copyright (c) 2009 Jörn Zaefferer
- *
- * Dual licensed under the MIT and GPL licenses:
- *   http://www.opensource.org/licenses/mit-license.php
- *   http://www.gnu.org/licenses/gpl.html
- *
- * Revision: $Id: jquery.autocomplete.js 15 2009-08-22 10:30:27Z joern.zaefferer $
- */
 
-;(function($) {
-	
-$.fn.extend({
-	autocomplete: function(urlOrData, options) {
-		var isUrl = typeof urlOrData == "string";
-		options = $.extend({}, $.Autocompleter.defaults, {
-			url: isUrl ? urlOrData : null,
-			data: isUrl ? null : urlOrData,
-			delay: isUrl ? $.Autocompleter.defaults.delay : 10,
-			max: options && !options.scroll ? 10 : 150
-		}, options);
-		
-		// if highlight is set to false, replace it with a do-nothing function
-		options.highlight = options.highlight || function(value) { return value; };
-		
-		// if the formatMatch option is not specified, then use formatItem for backwards compatibility
-		options.formatMatch = options.formatMatch || options.formatItem;
-		
-		return this.each(function() {
-			new $.Autocompleter(this, options);
-		});
-	},
-	result: function(handler) {
-		return this.bind("result", handler);
-	},
-	search: function(handler) {
-		return this.trigger("search", [handler]);
-	},
-	flushCache: function() {
-		return this.trigger("flushCache");
-	},
-	setOptions: function(options){
-		return this.trigger("setOptions", [options]);
-	},
-	unautocomplete: function() {
-		return this.trigger("unautocomplete");
-	}
-}); 
-
-$.Autocompleter = function(input, options) {
-
-	var KEY = {
-		UP: 38,
-		DOWN: 40,
-		DEL: 46,
-		TAB: 9,
-		RETURN: 13,
-		ESC: 27,
-		COMMA: 188,
-		PAGEUP: 33,
-		PAGEDOWN: 34,
-		BACKSPACE: 8
-	};
-
-	// Create $ object for input element
-	var $input = $(input).attr("autocomplete", "off").addClass(options.inputClass);
-
-	var timeout;
-	var previousValue = "";
-	var cache = $.Autocompleter.Cache(options);
-	var hasFocus = 0;
-	var lastKeyPressCode;
-	var config = {
-		mouseDownOnSelect: false
-	};
-	var select = $.Autocompleter.Select(options, input, selectCurrent, config);
-	
-	var blockSubmit;
-	
-
-	
-	function selectCurrent() {
-		var selected = select.selected();
-		if( !selected )
-			return false;
-		
-		var v = selected.result;
-		previousValue = v;
-		
-		if ( options.multiple ) {
-			var words = trimWords($input.val());
-			if ( words.length > 1 ) {
-				var seperator = options.multipleSeparator.length;
-				var cursorAt = $(input).selection().start;
-				var wordAt, progress = 0;
-				$.each(words, function(i, word) {
-					progress += word.length;
-					if (cursorAt <= progress) {
-						wordAt = i;
-						return false;
-					}
-					progress += seperator;
-				});
-				words[wordAt] = v;
-				// TODO this should set the cursor to the right position, but it gets overriden somewhere
-				//$.Autocompleter.Selection(input, progress + seperator, progress + seperator);
-				v = words.join( options.multipleSeparator );
-			}
-			v += options.multipleSeparator;
-		}
-		
-		$input.val(v);
-		hideResultsNow();
-		$input.trigger("result", [selected.data, selected.value]);
-		return true;
-	}
-	
-	function onChange(crap, skipPrevCheck) {
-		if( lastKeyPressCode == KEY.DEL ) {
-			select.hide();
-			return;
-		}
-		
-		var currentValue = $input.val();
-		
-		if ( !skipPrevCheck && currentValue == previousValue )
-			return;
-		
-		previousValue = currentValue;
-		
-		currentValue = lastWord(currentValue);
-		if ( currentValue.length >= options.minChars) {
-			$input.addClass(options.loadingClass);
-			if (!options.matchCase)
-				currentValue = currentValue.toLowerCase();
-			request(currentValue, receiveData, hideResultsNow);
-		} else {
-			stopLoading();
-			select.hide();
-		}
-	};
-	
-	function trimWords(value) {
-		if (!value)
-			return [""];
-		if (!options.multiple)
-			return [$.trim(value)];
-		return $.map(value.split(options.multipleSeparator), function(word) {
-			return $.trim(value).length ? $.trim(word) : null;
-		});
-	}
-	
-	function lastWord(value) {
-		if ( !options.multiple )
-			return value;
-		var words = trimWords(value);
-		if (words.length == 1) 
-			return words[0];
-		var cursorAt = $(input).selection().start;
-		if (cursorAt == value.length) {
-			words = trimWords(value)
-		} else {
-			words = trimWords(value.replace(value.substring(cursorAt), ""));
-		}
-		return words[words.length - 1];
-	}
-	
-	// fills in the input box w/the first match (assumed to be the best match)
-	// q: the term entered
-	// sValue: the first matching result
-	function autoFill(q, sValue){
-		// autofill in the complete box w/the first match as long as the user hasn't entered in more data
-		// if the last user key pressed was backspace, don't autofill
-		if( options.autoFill && (lastWord($input.val()).toLowerCase() == q.toLowerCase()) && lastKeyPressCode != KEY.BACKSPACE ) {
-			// fill in the value (keep the case the user has typed)
-			$input.val($input.val() + sValue.substring(lastWord(previousValue).length));
-			// select the portion of the value not typed by the user (so the next character will erase)
-			$(input).selection(previousValue.length, previousValue.length + sValue.length);
-		}
-	};
-
-	function hideResults() {
-		clearTimeout(timeout);
-		timeout = setTimeout(hideResultsNow, 200);
-	};
-
-	function hideResultsNow() {
-		var wasVisible = select.visible();
-		select.hide();
-		clearTimeout(timeout);
-		stopLoading();
-		if (options.mustMatch) {
-			// call search and run callback
-			$input.search(
-				function (result){
-					// if no value found, clear the input box
-					if( !result ) {
-						if (options.multiple) {
-							var words = trimWords($input.val()).slice(0, -1);
-							$input.val( words.join(options.multipleSeparator) + (words.length ? options.multipleSeparator : "") );
-						}
-						else {
-							$input.val( "" );
-							$input.trigger("result", null);
-						}
-					}
-				}
-			);
-		}
-	};
-
-	function receiveData(q, data) {
-		if ( data && data.length && hasFocus ) {
-			stopLoading();
-			select.display(data, q);
-			autoFill(q, data[0].value);
-			select.show();
-		} else {
-			hideResultsNow();
-		}
-	};
-
-	function request(term, success, failure) {
-		if (!options.matchCase)
-			term = term.toLowerCase();
-		var data = cache.load(term);
-		// recieve the cached data
-		if (data && data.length) {
-			success(term, data);
-		// if an AJAX url has been supplied, try loading the data now
-		} else if( (typeof options.url == "string") && (options.url.length > 0) ){
-			
-			var extraParams = {
-				timestamp: +new Date()
-			};
-			$.each(options.extraParams, function(key, param) {
-				extraParams[key] = typeof param == "function" ? param() : param;
-			});
-			
-			$.ajax({
-				// try to leverage ajaxQueue plugin to abort previous requests
-				mode: "abort",
-				// limit abortion to this input
-				port: "autocomplete" + input.name,
-				dataType: options.dataType,
-				url: options.url,
-				data: $.extend({
-					q: lastWord(term),
-					limit: options.max
-				}, extraParams),
-				success: function(data) {
-					var parsed = options.parse && options.parse(data) || parse(data);
-					cache.add(term, parsed);
-					success(term, parsed);
-				}
-			});
-		} else {
-			// if we have a failure, we need to empty the list -- this prevents the the [TAB] key from selecting the last successful match
-			select.emptyList();
-			failure(term);
-		}
-	};
-	
-	function parse(data) {
-		var parsed = [];
-		var rows = data.split("\n");
-		for (var i=0; i < rows.length; i++) {
-			var row = $.trim(rows[i]);
-			if (row) {
-				row = row.split("|");
-				parsed[parsed.length] = {
-					data: row,
-					value: row[0],
-					result: options.formatResult && options.formatResult(row, row[0]) || row[0]
-				};
-			}
-		}
-		return parsed;
-	};
-
-	function stopLoading() {
-		$input.removeClass(options.loadingClass);
-	};
-
-};
-
-$.Autocompleter.defaults = {
-	inputClass: "ac_input",
-	resultsClass: "ac_results",
-	loadingClass: "ac_loading",
-	minChars: 1,
-	delay: 400,
-	matchCase: false,
-	matchSubset: true,
-	matchContains: false,
-	cacheLength: 10,
-	max: 100,
-	mustMatch: false,
-	extraParams: {},
-	selectFirst: true,
-	formatItem: function(row) { return row[0]; },
-	formatMatch: null,
-	autoFill: false,
-	width: 0,
-	multiple: false,
-	multipleSeparator: ", ",
-	highlight: function(value, term) {
-		return value.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + term.replace(/([\^\$\(\)\[\]\{\}\*\.\+\?\|\\])/gi, "\\$1") + ")(?![^<>]*>)(?![^&;]+;)", "gi"), "<strong>$1</strong>");
-	},
-    scroll: true,
-    scrollHeight: 180
-};
-
-$.Autocompleter.Cache = function(options) {
-
-	var data = {};
-	var length = 0;
-	
-	function matchSubset(s, sub) {
-		if (!options.matchCase) 
-			s = s.toLowerCase();
-		var i = s.indexOf(sub);
-		if (options.matchContains == "word"){
-			i = s.toLowerCase().search("\\b" + sub.toLowerCase());
-		}
-		if (i == -1) return false;
-		return i == 0 || options.matchContains;
-	};
-	
-	function add(q, value) {
-		if (length > options.cacheLength){
-			flush();
-		}
-		if (!data[q]){ 
-			length++;
-		}
-		data[q] = value;
-	}
-	
-	function populate(){
-		if( !options.data ) return false;
-		// track the matches
-		var stMatchSets = {},
-			nullData = 0;
-
-		// no url was specified, we need to adjust the cache length to make sure it fits the local data store
-		if( !options.url ) options.cacheLength = 1;
-		
-		// track all options for minChars = 0
-		stMatchSets[""] = [];
-		
-		// loop through the array and create a lookup structure
-		for ( var i = 0, ol = options.data.length; i < ol; i++ ) {
-			var rawValue = options.data[i];
-			// if rawValue is a string, make an array otherwise just reference the array
-			rawValue = (typeof rawValue == "string") ? [rawValue] : rawValue;
-			
-			var value = options.formatMatch(rawValue, i+1, options.data.length);
-			if ( value === false )
-				continue;
-				
-			var firstChar = value.charAt(0).toLowerCase();
-			// if no lookup array for this character exists, look it up now
-			if( !stMatchSets[firstChar] ) 
-				stMatchSets[firstChar] = [];
-
-			// if the match is a string
-			var row = {
-				value: value,
-				data: rawValue,
-				result: options.formatResult && options.formatResult(rawValue) || value
-			};
-			
-			// push the current match into the set list
-			stMatchSets[firstChar].push(row);
-
-			// keep track of minChars zero items
-			if ( nullData++ < options.max ) {
-				stMatchSets[""].push(row);
-			}
-		};
-
-		// add the data items to the cache
-		$.each(stMatchSets, function(i, value) {
-			// increase the cache size
-			options.cacheLength++;
-			// add to the cache
-			add(i, value);
-		});
-	}
-	
-	// populate any existing data
-	setTimeout(populate, 25);
-	
-	function flush(){
-		data = {};
-		length = 0;
-	}
-	
-	return {
-		flush: flush,
-		add: add,
-		populate: populate,
-		load: function(q) {
-			if (!options.cacheLength || !length)
-				return null;
-			/* 
-			 * if dealing w/local data and matchContains than we must make sure
-			 * to loop through all the data collections looking for matches
-			 */
-			if( !options.url && options.matchContains ){
-				// track all matches
-				var csub = [];
-				// loop through all the data grids for matches
-				for( var k in data ){
-					// don't search through the stMatchSets[""] (minChars: 0) cache
-					// this prevents duplicates
-					if( k.length > 0 ){
-						var c = data[k];
-						$.each(c, function(i, x) {
-							// if we've got a match, add it to the array
-							if (matchSubset(x.value, q)) {
-								csub.push(x);
-							}
-						});
-					}
-				}				
-				return csub;
-			} else 
-			// if the exact item exists, use it
-			if (data[q]){
-				return data[q];
-			} else
-			if (options.matchSubset) {
-				for (var i = q.length - 1; i >= options.minChars; i--) {
-					var c = data[q.substr(0, i)];
-					if (c) {
-						var csub = [];
-						$.each(c, function(i, x) {
-							if (matchSubset(x.value, q)) {
-								csub[csub.length] = x;
-							}
-						});
-						return csub;
-					}
-				}
-			}
-			return null;
-		}
-	};
-};
-
-$.Autocompleter.Select = function (options, input, select, config) {
-	var CLASSES = {
-		ACTIVE: "ac_over"
-	};
-	
-	var listItems,
-		active = -1,
-		data,
-		term = "",
-		needsInit = true,
-		element,
-		list;
-	
-	// Create results
-	function init() {
-		if (!needsInit)
-			return;
-		element = $("<div/>")
-		.hide()
-		.addClass(options.resultsClass)
-		.css("position", "absolute")
-		.appendTo(document.body);
-	
-		list = $("<ul/>").appendTo(element).mouseover( function(event) {
-			if(target(event).nodeName && target(event).nodeName.toUpperCase() == 'LI') {
-	            active = $("li", list).removeClass(CLASSES.ACTIVE).index(target(event));
-			    $(target(event)).addClass(CLASSES.ACTIVE);            
-	        }
-		}).click(function(event) {
-			$(target(event)).addClass(CLASSES.ACTIVE);
-			select();
-			// TODO provide option to avoid setting focus again after selection? useful for cleanup-on-focus
-			input.focus();
-			return false;
-		}).mousedown(function() {
-			config.mouseDownOnSelect = true;
-		}).mouseup(function() {
-			config.mouseDownOnSelect = false;
-		});
-		
-		if( options.width > 0 )
-			element.css("width", options.width);
-			
-		needsInit = false;
-	} 
-	
-	function target(event) {
-		var element = event.target;
-		while(element && element.tagName != "LI")
-			element = element.parentNode;
-		// more fun with IE, sometimes event.target is empty, just ignore it then
-		if(!element)
-			return [];
-		return element;
-	}
-
-	function moveSelect(step) {
-		listItems.slice(active, active + 1).removeClass(CLASSES.ACTIVE);
-		movePosition(step);
-        var activeItem = listItems.slice(active, active + 1).addClass(CLASSES.ACTIVE);
-        if(options.scroll) {
-            var offset = 0;
-            listItems.slice(0, active).each(function() {
-				offset += this.offsetHeight;
-			});
-            if((offset + activeItem[0].offsetHeight - list.scrollTop()) > list[0].clientHeight) {
-                list.scrollTop(offset + activeItem[0].offsetHeight - list.innerHeight());
-            } else if(offset < list.scrollTop()) {
-                list.scrollTop(offset);
-            }
-        }
-	};
-	
-	function movePosition(step) {
-		active += step;
-		if (active < 0) {
-			active = listItems.size() - 1;
-		} else if (active >= listItems.size()) {
-			active = 0;
-		}
-	}
-	
-	function limitNumberOfItems(available) {
-		return options.max && options.max < available
-			? options.max
-			: available;
-	}
-	
-	function fillList() {
-		list.empty();
-		var max = limitNumberOfItems(data.length);
-		for (var i=0; i < max; i++) {
-			if (!data[i])
-				continue;
-			var formatted = options.formatItem(data[i].data, i+1, max, data[i].value, term);
-			if ( formatted === false )
-				continue;
-			var li = $("<li/>").html( options.highlight(formatted, term) ).addClass(i%2 == 0 ? "ac_even" : "ac_odd").appendTo(list)[0];
-			$.data(li, "ac_data", data[i]);
-		}
-		listItems = list.find("li");
-		if ( options.selectFirst ) {
-			listItems.slice(0, 1).addClass(CLASSES.ACTIVE);
-			active = 0;
-		}
-		// apply bgiframe if available
-		if ( $.fn.bgiframe )
-			list.bgiframe();
-	}
-	
-	return {
-		display: function(d, q) {
-			init();
-			data = d;
-			term = q;
-			fillList();
-		},
-		next: function() {
-			moveSelect(1);
-		},
-		prev: function() {
-			moveSelect(-1);
-		},
-		pageUp: function() {
-			if (active != 0 && active - 8 < 0) {
-				moveSelect( -active );
-			} else {
-				moveSelect(-8);
-			}
-		},
-		pageDown: function() {
-			if (active != listItems.size() - 1 && active + 8 > listItems.size()) {
-				moveSelect( listItems.size() - 1 - active );
-			} else {
-				moveSelect(8);
-			}
-		},
-		hide: function() {
-			element && element.hide();
-			listItems && listItems.removeClass(CLASSES.ACTIVE);
-			active = -1;
-		},
-		visible : function() {
-			return element && element.is(":visible");
-		},
-		current: function() {
-			return this.visible() && (listItems.filter("." + CLASSES.ACTIVE)[0] || options.selectFirst && listItems[0]);
-		},
-		show: function() {
-			var offset = $(input).offset();
-			element.css({
-				width: typeof options.width == "string" || options.width > 0 ? options.width : $(input).width(),
-				top: offset.top + input.offsetHeight,
-				left: offset.left
-			}).show();
-            if(options.scroll) {
-                list.scrollTop(0);
-                list.css({
-					maxHeight: options.scrollHeight,
-					overflow: 'auto'
-				});
-				
-                if($.browser.msie && typeof document.body.style.maxHeight === "undefined") {
-					var listHeight = 0;
-					listItems.each(function() {
-						listHeight += this.offsetHeight;
-					});
-					var scrollbarsVisible = listHeight > options.scrollHeight;
-                    list.css('height', scrollbarsVisible ? options.scrollHeight : listHeight );
-					if (!scrollbarsVisible) {
-						// IE doesn't recalculate width when scrollbar disappears
-						listItems.width( list.width() - parseInt(listItems.css("padding-left")) - parseInt(listItems.css("padding-right")) );
-					}
-                }
-                
-            }
-		},
-		selected: function() {
-			var selected = listItems && listItems.filter("." + CLASSES.ACTIVE).removeClass(CLASSES.ACTIVE);
-			return selected && selected.length && $.data(selected[0], "ac_data");
-		},
-		emptyList: function (){
-			list && list.empty();
-		},
-		unbind: function() {
-			element && element.remove();
-		}
-	};
-};
-
-$.fn.selection = function(start, end) {
-	if (start !== undefined) {
-		return this.each(function() {
-			if( this.createTextRange ){
-				var selRange = this.createTextRange();
-				if (end === undefined || start == end) {
-					selRange.move("character", start);
-					selRange.select();
-				} else {
-					selRange.collapse(true);
-					selRange.moveStart("character", start);
-					selRange.moveEnd("character", end);
-					selRange.select();
-				}
-			} else if( this.setSelectionRange ){
-				this.setSelectionRange(start, end);
-			} else if( this.selectionStart ){
-				this.selectionStart = start;
-				this.selectionEnd = end;
-			}
-		});
-	}
-	var field = this[0];
-	if ( field.createTextRange ) {
-		var range = document.selection.createRange(),
-			orig = field.value,
-			teststring = "<->",
-			textLength = range.text.length;
-		range.text = teststring;
-		var caretAt = field.value.indexOf(teststring);
-		field.value = orig;
-		this.selection(caretAt, caretAt + textLength);
-		return {
-			start: caretAt,
-			end: caretAt + textLength
-		}
-	} else if( field.selectionStart !== undefined ){
-		return {
-			start: field.selectionStart,
-			end: field.selectionEnd
-		}
-	}
-};
-
-})(jQuery);
-//]]>
-</script>
-
-<script type="text/javascript" src="geolocate.js" async defer></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW05P51PQsDWL8JUjUlI7no-ds2FdaI8E&libraries=places" async defer></script>
+<?php require_once(".includes.php") ?>
 </body>
 
 </html>

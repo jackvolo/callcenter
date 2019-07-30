@@ -1,7 +1,11 @@
-title: Champaign Computer Inquiry
+title: Champaign Computer In Store
 buttons: robot: File ticket, conclude: Abandon ticket
-requires: firstname+lastname+company?+phone+problem?
+requires: firstname+lastname+company?+phone+problem?+eta?
 
-<p>To reach Champaign Computer, you should call 217-356-9770. Our office hours are 9am to 5pm, Monday through Friday.</p>
+<p>Our technicians would be happy to take a look at your device.</p>
 
-<p>If you'd like, I can leave a message for you and one of the Champaign Computer representatives will respond within the next business day.</p>
+<p>Our office is located at 3310 N Cunningham Ave, Urbana IL 61802, north on US45 from Urbana, at the intersection of Cunningham and Oaks Road.</p>
+
+<p>Our technicians may be in the field when you arrive, but we'll investigate the issues you're experiencing at our earliest opportunity. Our In-store rate is $60/hour, and many repairs take one hour or less to fix.  If it looks like it is going to take more than one hour, or require parts, our technicians will get your approval before proceeding.</p>
+
+<p>Let me take down some information regarding the problem you're experiencing so our technicians can have an idea of how best to assist you.</p>

@@ -69,7 +69,7 @@
                     <div class="element" id="r-serviceaddress">
                         <label for="v-serviceaddress">Service addr</label>
                         <div class="value">
-                            <input type="text" name="v-serviceaddress" id="v-serviceaddress" size="36"/>
+                            <input type="text" name="v-serviceaddress" id="v-serviceaddress" size="18"/>
                         </div>
                     </div>
                     <div class="element" id="r-aptunit">
@@ -134,22 +134,22 @@
                             <input type="text" name="v-service" id="v-service" size="15"/>
                         </div>
                     </div>
-                    <div class="element" id="r-tncplan">
-                        <label for="v-tncplan">TNC Plan</label>
-                        <div class="value">
-                            <input type="text" name="v-tncplan" id="v-tncplan" size="15"/>
-                        </div>
-                    </div>
-                    <div class="element" id="r-winfieldplan">
-                        <label for="v-winfieldplan">Winfield Plan</label>
-                        <div class="value">
-                            <input type="text" name="v-winfieldplan" id="v-winfieldplan" size="15"/>
-                        </div>
-                    </div>
                     <div class="element" id="r-baileyplan">
                         <label for="v-baileyplan">Bailey Plan</label>
                         <div class="value">
                             <input type="text" name="v-baileyplan" id="v-baileyplan" size="15"/>
+                        </div>
+                    </div>
+                    <div class="element" id="r-ncservice">
+                        <label for="v-ncservice">Nextchapter Service Level</label>
+                        <div class="value">
+                            <input type="text" name="v-ncservice" id="v-ncservice" size="10"/>
+                        </div>
+                    </div>
+                    <div class="element" id="r-aptservice">
+                        <label for="v-aptservice">Service Level</label>
+                        <div class="value">
+                            <input type="text" name="v-aptservice" id="v-aptservice" size="10"/>
                         </div>
                     </div>
                     <div class="element" id="r-company">
@@ -373,22 +373,14 @@
                         </div>
                     </div>
                     <div class="element" id="r-node">
-                        <label for="v-node">Service</label>
+                        <label for="v-node">Node</label>
                         <div class="value">
                             <input type="text" name="v-node" id="v-node" size="15"/>
-                        </div>
-                    </div>
-                    <div class="element" id="r-aptservice">
-                        <label for="v-aptservice">Service Level</label>
-                        <div class="value">
-                            <input type="text" name="v-aptservice" id="v-aptservice" size="10"/>
                         </div>
                     </div>
                 </fieldset>
             </div><!--2}}}-->
 
-            <button id="start_chat">Open Chat</button>
-            
         </div><!--#o }}}-->
     </div>
 
@@ -496,26 +488,6 @@
             <label for="node">Node</label>
             <div class="input">
                 <input type="text" name="node" id="node" size="6"/>
-            </div>
-        </div>
-        <div class="element input-tncplan">
-            <label for="tncplan">TNC Plan</label>
-            <div class="input">
-                <select name="tncplan" id="tncplan">
-                    <option value="">&mdash; Select one &mdash;</option>
-                    <option value="128">75 Mbs - $29.95/month</option>
-                </select>
-            </div>
-        </div>
-        <div class="element input-winfieldplan">
-            <label for="winfieldplan">Winfield Plan</label>
-            <div class="input">
-                <select name="winfieldplan" id="winfieldplan">
-                    <option value="">&mdash; Select one &mdash;</option>
-                    <option value="59">250 MB/day - $20/month</option>
-                    <option value="60">500 MB/day - $25/month</option>
-                    <option value="61">Bulk (unlimited) - $25/month</option>
-                </select>
             </div>
         </div>
         <div class="element input-baileyplan">
@@ -785,7 +757,7 @@
             </div>
         </div>
         <div class="element input-ncservice">
-            <label for="ncservice">Service level</label>
+            <label for="ncservice">NC Service level</label>
             <div class="input">
                 <select name="ncservice" id="ncservice">
                     <option selected>Choose Service Level</option>
@@ -811,23 +783,6 @@
     </div><!--#inputs }}}-->
 
 </div>
-
-<!-- JSXC Javascript
-<script src="jsxc/lib/jquery.min.js"></script>
-<script src="jsxc/lib/jquery.ui.min.js"></script>
-<script src="jsxc/lib/jquery.slimscroll.js"></script>
-<script src="jsxc/lib/jquery.fullscreen.js"></script>
-<script src="jsxc/lib/jsxc.dep.js"></script>
-<script src="jsxc/jsxc.js"></script>
-<script src="jsxc.volo.js"></script>
-
-<!-- JSXC Stylesheets -->
-<link href="jsxc/css/jquery-ui.min.css" media="all" rel="stylesheet" type="text/css" />
-<!-- link href="jsxc/css/jquery.mCustomScrollbar.css" media="all" rel="stylesheet" type="text/css" / -->
-<link href="jsxc/css/jsxc.css" media="all" rel="stylesheet" type="text/css" />
-<link href="jsxc/css/jsxc.webrtc.css" media="all" rel="stylesheet" type="text/css" />
-<link href="jsxc.volo.css" media="all" rel="stylesheet" type="text/css" />
--->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
 <script type="text/javascript" src="screens.js"></script>

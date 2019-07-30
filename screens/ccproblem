@@ -1,0 +1,7 @@
+title: Champaign Computer Inquiry
+buttons: ccemergency: Emergency, cconsite: Schedule a Tech, ccomputer: In Store Dropoff
+requires: firstname+lastname+company?+phone+problem?
+
+<p>Do you need immediate help with the problem you're experiencing? I can try to get you in touch with a technician immediately. (If after-hours: Please be aware there is a $100 surcharge for after-hours emergency service.)</p>
+
+<p>If you don't need immediate assistance, you have a few options: if it's a hardware problem you could bring the computer in for us to look at in the office or we can schedule a tech to work on it at your location.  If it's a software problem, we can schedule a tech to work on it at your location or remotely. Our in-store and on-site support is $60/hour, and there's a flat $30 charge for on-site troubleshooting or pickup and delivery.</p>
