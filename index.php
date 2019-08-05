@@ -2168,12 +2168,14 @@ screens['wirelessfaq'] = {
 var debug=false || Boolean(document.location.search.match(/debug/));
 var test=false  || Boolean(document.location.search.match(/test/));
 var ALWAYS_SHOW_INPUTS=true; // Always, or only when not yet filled out?
+var servicelevels = null;
 
 $(function() { //{{{1
   $("#restart-call").click(function() {
     $("#i div.panel-content").empty();
     $("#o div.element input").add("#o div.element textarea")
       .not('#v-call-id, #v-calltime, #v-ticket').val('');
+    servicelevels = null;
     show_screen('root');
     return(false);
   });
@@ -2439,13 +2441,11 @@ function parameterize(body, params) { //{{{1
         $("#"+param).val(params[param]);
       }
       else if (param == 'servicelevels') {
+        servicelevels = params[param];
         $('#aptservice').html('<option selected>Choose Service Level</option>');
         for (var $i in params[param]) {
           if(debug) console.log("[parameterize]# "+params[param][$i][0]+": "+params[param][$i][2]);
           $('#aptservice').append('<option value="'+params[param][$i][0]+'">'+params[param][$i][2]+'</option>');
-          //for (var $j in params[param][$i]) {
-          //  if(debug) console.log("[parameterize]# "+params[param][$i][0]+"-"+$j+": "+params[param][$i][$j]);
-          //}
         }
       }
       else {

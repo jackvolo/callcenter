@@ -273,6 +273,9 @@ function parameterize(body, params) { //{{{1
         for (var $i in params[param]) {
           //if(debug) console.log("[parameterize]# "+params[param][$i][0]+": "+params[param][$i][2]);
           $('#aptservice').append('<option value="'+params[param][$i][0]+'">'+params[param][$i][2]+'</option>');
+          //for (var $j in params[param][$i]) {
+          //  if(debug) console.log("[parameterize]# "+params[param][$i][0]+"-"+$j+": "+params[param][$i][$j]);
+          //}
         }
       }
       else {
