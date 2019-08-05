@@ -51,12 +51,6 @@ screens['bulksuspended'] = {
     ,buttons: {conclude: "Continue"}
     ,buttonOrder: ['conclude']
 };
-screens['bulksuspended'] = {
-    title: "Bulk Apartment - Service Suspended",
-    body: "<p> Your service has been suspended by your apartment management group. Typically this is due to nonpayment of rent, though may be for other reasons. We recommend getting in touch with your property manager and confirm the reason why they suspended your service, and once the situation is resolved they should be able to reactivate internet service to your apartment from there. </p>\n\n<p class='dont-say'> Unfortunately, we are not given a specific reason for suspensions by the property management, and they should contact them directly. </p>\n"
-    ,buttons: {conclude: "Continue"}
-    ,buttonOrder: ['conclude']
-};
 screens['bwtempup'] = {
     title: "Increase bandwidth temporarily",
     body: "<p>I'll increase your bandwidth for one day, but I can only do this once.</p>\n\n"

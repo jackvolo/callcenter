@@ -11,6 +11,7 @@ digraph callcenter {
     badpassword -> conclude [ label = "No" ];
     badpassword -> drupaladdemail [ label = "Retry" ];
     badticket -> findtickets [ label = "Try to find ticket" ];
+    badticket -> robot [ label = "Look up status" ];
     billingfaq -> conclude [ label = "conclude" ];
     bulksuspended -> conclude [ label = "Continue" ];
     bwtempup -> robot [ label = "Perform upgrade" ];
