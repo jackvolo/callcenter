@@ -97,7 +97,7 @@ function showInfo(point) {
                                   + geoXml.docs[0].placemarks[i].name + ']=1">'
                                   + geoXml.docs[0].placemarks[i].name + '</a>, ';
                 } else if (geoXml.docs[0].placemarks[i].name == 'custom fiber') {
-                    serviceString = '<a href=business/apartment-complex-services>'
+                    serviceString = '<a href="/business/apartment-complex-services">'
                                   + geoXml.docs[0].placemarks[i].name + '</a>, ';
                 } else {
                     console.log("No text for service name: "+geoXml.docs[0].placemarks[i].name);
