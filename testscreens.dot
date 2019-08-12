@@ -267,6 +267,8 @@ digraph callcenter {
     services -> robot [ label = "robot" ];
     signupcheck -> custendprobticket [ label = "Problem still exists" ];
     signupcheck -> conclude [ label = "Customer Satisfied" ];
+    smithinfo -> conclude [ label = "Conclude" ];
+    smithinfo -> problemweb [ label = "I need help" ];
     speedtest -> conclude [ label = "Good" ];
     speedtest -> problemslowticket [ label = "Slow" ];
     switchdown -> conclude [ label = "Abandon ticket" ];
@@ -309,5 +311,7 @@ digraph callcenter {
     waholdingsinfo -> problemweb [ label = "I need help" ];
     wamplerinfo -> conclude [ label = "Conclude" ];
     wamplerinfo -> problemweb [ label = "I need help" ];
+    weinerinfo -> conclude [ label = "Conclude" ];
+    weinerinfo -> problemweb [ label = "I need help" ];
     wirelessfaq -> conclude [ label = "conclude" ];
 }

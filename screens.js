@@ -949,6 +949,12 @@ screens['signupcheck'] = {
     ,buttons: {custendprobticket: "Problem still exists",conclude: "Customer Satisfied"}
     ,buttonOrder: ['custendprobticket','conclude']
 };
+screens['smithinfo'] = {
+    title: "Weiner Company ",
+    body: "<p>Weiner Company is providing Volo's highspeed internet to your unit as an included amenity. The provided service provides speeds up to 1 gigabit (1000mbps), just about the fastest service in the country. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. Do not use a modem, our service is proved directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>This is an included ammenity, you do not have to pay for it. Just connect to the ethernet port and start enjoying it!</p>\n"
+    ,buttons: {conclude: "Conclude",problemweb: "I need help"}
+    ,buttonOrder: ['conclude','problemweb']
+};
 screens['speedtest'] = {
     title: "Speedtest",
     body: "<p>Lets do a test to see what speed your service is running at right now.</p>\n<p>Please go to <strong>speedtest.net</strong> in your browser. Click \"go\" or \"begin test\", don't click on \"start\" that's an ad.</p>\n<p>If you're testing from a tablet or smart phone, go to the App Store or Play Store and download the \"SpeedTest by Ookla\" application.</p>\n<p>You will get 3 numbers, ping, download, and upload. Please report them as the tests finish.</p>\n\n%MESSAGE\n"
@@ -1118,6 +1124,12 @@ screens['waholdingsinfo'] = {
 screens['wamplerinfo'] = {
     title: "Wampler Apartments",
     body: "<p>Wampler Apartments is providing Volo's fiber internet to your unit as an included amenity. The provided service provides speeds up to 1 gigabit (1000mbps), just about the fastest service in the country. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. <b>Do not use a modem or modem/router combo device</b>, our service is provided directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>The internet at Wampler is very fast, so to take full advantage of the service you will need to get a router that is capable of 1000 megabits on all its ports, and supports 802.11AC wi-fi.</p>\n\n<p>Your service should be active now, you don't need to sign up.  If you pay anything for the service, you'd pay that directly to Wampler Apartments along with your rent.</p>\n"
+    ,buttons: {conclude: "Conclude",problemweb: "I need help"}
+    ,buttonOrder: ['conclude','problemweb']
+};
+screens['weinerinfo'] = {
+    title: "Weiner Company ",
+    body: "<p>Weiner Company is providing Volo's highspeed internet to your unit as an included amenity. The provided service provides speeds up to 1 gigabit (1000mbps), just about the fastest service in the country. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. Do not use a modem, our service is proved directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>This is an included ammenity, you do not have to pay for it. Just connect to the ethernet port and start enjoying it!</p>\n"
     ,buttons: {conclude: "Conclude",problemweb: "I need help"}
     ,buttonOrder: ['conclude','problemweb']
 };
