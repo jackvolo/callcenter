@@ -14,48 +14,19 @@ requires: firstname+lastname+serviceaddress+aptunit+servicezip+phone+email+baile
 
 <p>Due to internal wiring at 111 S Lincoln Ave and 911 W Springfield Ave, those buildings are limited to 100Mbps. All other Bailey buildings have 1000Mbps available.</p>
 
-<dl class="alacartefaq">
-<dt>Service FAQs (click to open)</dt>
-<dd>
-  <dl class="alacartefaq">
-    <dt>What does an ethernet port look like?</dt>
-    <dd>It's like a phone port except larger</dd>
-    <dt>Does your service need a modem?</dt>
-    <dd>No our service doesn't use modems. There should be an ethernet port you can plug into directly.</dd>
-    <dt>Can I use a router with your service?</dt>
-    <dd>Yes, our service is compatible with routers. It should work with any router you have.</dd>
-    <dt>Does Volo sell routers?</dt>
-    <dd>Yes. Volo sells routers for $50, if you want the wireless configured for your devices, it's $85</dd>
-    <dt>I need help configuring my wireless router</dt>
-    <dd>Volo can setup a router for you for $50.</dd>
-    <dt question='tiers'>What is the difference between the service tiers?</dt>
-    <dd>
-    <p>Our fiber pricing is designed to give even light users affordable access to the highest speeds.  All our high speed fiber packages offer speeds up to 1000mbps; they only differ in the expected customer usage level. We do not enforce hard data limits--you do not have to worry about overage charges or speed throttling.  Instead, each tier of service has a target usage level; if you go over the target usage more than three times in a month, we may call and ask you to upgrade to tier of service more appropriate for your usage.</p>
-    <p>The difference between the service tiers is how much usage they are designed for. We usually describe our tiers in terms of video streaming because it is the biggest user of bandwidth on the internet:</p>
-    <p>Light is plenty for everyday usage and one or two Netflix (or other streaming) movies per day or an equivalent amount of usage.</p>
-    <p>Medium is for customers who want to watch up to 12 hours of Netflix or other streaming video per day, or equivalent other usage.</p>
-    <p>Heavy is for customers who use more than that.</p>
-    <p class='dont-say'>You may need to remind the potential customer that watching a steam on two different devices at the same time counts double (or triple with 3, etc)</p>
-    </dd>
-    <dt question='whytiers'>Why do you have usage based tiers instead of speed based?</dt>
-    <dd>
-    <p>Our costs are based on how much total bandwidth you use, not how fast you use it. By separating our tiers into usage levels we can deliver our fastest service to all customers whether they use it a lot or a little.</p>
-    <p>By doing this we are able to offer our high tier for only &#36;60 compared to over &#36;100 with some of our competitors, and we can offer 1000 mbps to our light users.</p>
-    </dd>
-    <dt question='overage'>What happens if I go over my tier?</dt>
-    <dd>
-    We will not throttle your speed, cut you off, or charge you for overages. Each tier has a target usage amount, and if you exceed the amount more than 3 times in a month, we will ask you to upgrade to an appropriate tier.
-    </dd>
-  </dl>
-</dd>
-</dl>
-
 [screen:usagecalc]
 
+<dl>
+<dt category='fiber' class='menu'>Services FAQs</dt>
+<dd class='menu'>[screen:mxualacartefaq]</dd>
+<dt category='router' class="menu">Router Questions</dt>
+<dd class='menu'>[screen:routerfaq]</dd>
+</dl>
+
 <script type="text/javascript">
-    $('dl.alacartefaq dd').hide();
-    $('dl.alacartefaq dt').wrapInner('<a href="#"></a>');
-    $('dl.alacartefaq dt a').click(function() {
+    $('div.screen-potentialbaileyapts dd.menu').hide();
+    $('div.screen-potentialbaileyapts dt.menu').wrapInner('<a href="#"></a>');
+    $('div.screen-potentialbaileyapts dt.menu a').click(function() {
         var $dd=$(this).parents('dt').next();
         if($dd.hasClass('open')) $dd.hide('fast');
         else $dd.show('fast');
