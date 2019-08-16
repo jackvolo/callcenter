@@ -1425,6 +1425,12 @@ screens['hvcustomer'] = {
     ,requires: [['firstname','lastname','company?','phone','email?','customer?','serviceaddress?','aptunit?','servicezip?','messagetype','forwhom?','urgency','message','operator']]
     ,requiresSet: {firstname: 1,urgency: 1,servicezip: 1,aptunit: 1,serviceaddress: 1,lastname: 1,phone: 1,message: 1,operator: 1,email: 1,forwhom: 1,messagetype: 1,customer: 1,company: 1}
 };
+screens['jsjinfo'] = {
+    title: "Campus Property Management",
+    body: "<p>JSJ Management is providing Volo's gigabit fiber internet to your unit as an included amenity. The provided service provides speeds up to 1 gigabit (1000mbps), just about the fastest service in the country. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. Do not use a modem, our service is proved directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>This is an included ammenity, you do not have to pay for it. Just connect to the ethernet port and start enjoying it!</p>\n"
+    ,buttons: {conclude: "Conclude",problemweb: "I need help"}
+    ,buttonOrder: ['conclude','problemweb']
+};
 screens['kennedywilsoninfo'] = {
     title: "Kennedy Wilson",
     body: "<p>Kennedy-Wilson is providing Volo's gigabit fiber internet to your unit as an included amenity. The provided service provides speeds up to 1 gigabit (1000mbps), just about the fastest service in the country. You can start using it immediately by connecting your computer or router to the ethernet port in your apartment. Do not use a modem, our service is proved directly through ethernet ports in the wall. You are a free to use a router, just connect the internet, WAN, or modem port to the wall port. You can also connect a computer directly.</p>\n\n<p>This is an included ammenity, you do not have to pay for it. Just connect to the ethernet port and start enjoying it!</p>\n"
