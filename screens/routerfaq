@@ -36,6 +36,11 @@ AC or Dualband routers will give you a strong WiFi capability within your locati
 <dd class="routerfaq">
 <p>If your computer lacks an Ethernet Port, we do strongly recommend purchasing a USB to Ethernet adapter, which permits you to connect to the internet through a standard USB port. This is useful both for utilizing the higher speeds and reliability you find with a hardwired connection, but also for troubleshooting with a direct connection to the service in case your router causes connectivity problems.</p>
 </dd> <!--}}}-->
+<dt class="routerfaq" question='cannotbypass'>Should I use a Cat5, a Cat5e, or a Cat6 cable?</dt> <!--{{{-->
+<dd class="routerfaq">
+<p>We strongly recommend to use at least a CAT5e cable, as it is designed for gigabit connections. While Cat6 has benefits for running connections over long distances, it provides no benefits over Cat5e on lines less than 100 feet long. Today, Cat5e is the most common ethernet cable.</p>
+</dd> <!--}}}-->
+</dl>
 </dl>
 <!-- 
 vi:foldmethod=marker: 
